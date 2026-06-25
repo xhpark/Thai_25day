@@ -759,7 +759,7 @@
       "category": "mission",
       "korean": "예수님 믿으세요",
       "english": "Believe in Jesus.",
-      "source_korean_pronunciation": "츄아 나이 프라예쑤 크랍/카",
+      "source_korean_pronunciation": "츠아 나이 프라예쑤 크랍/카",
       "caution": "Use with sensitivity to the relationship, setting, and the listener's response.",
       "variants": [
         {
@@ -770,12 +770,12 @@
             "male": {
               "thai": "เชื่อในพระเยซูครับ",
               "romanization": "chûea nai Phrá-yeh-suu khráp",
-              "korean_pronunciation": "츄아 나이 프라예쑤 크랍"
+              "korean_pronunciation": "츠아 나이 프라예쑤 크랍"
             },
             "female": {
               "thai": "เชื่อในพระเยซูค่ะ",
               "romanization": "chûea nai Phrá-yeh-suu khâ",
-              "korean_pronunciation": "츄아 나이 프라예쑤 카"
+              "korean_pronunciation": "츠아 나이 프라예쑤 카"
             }
           }
         }

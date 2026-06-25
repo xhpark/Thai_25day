@@ -751,12 +751,12 @@
         "male": {
           "thai": "เชื่อในพระเยซูครับ",
           "romanization": "chûea nai Phrá-yeh-suu khráp",
-          "korean_pronunciation": "츄아 나이 프라예쑤 크랍"
+          "korean_pronunciation": "츠아 나이 프라예쑤 크랍"
         },
         "female": {
           "thai": "เชื่อในพระเยซูค่ะ",
           "romanization": "chûea nai Phrá-yeh-suu khâ",
-          "korean_pronunciation": "츄아 나이 프라예쑤 카"
+          "korean_pronunciation": "츠아 나이 프라예쑤 카"
         }
       },
       "audio": {
@@ -1027,7 +1027,7 @@
       "english": "believe",
       "thai": "เชื่อ",
       "romanization": "chûea",
-      "koreanPronunciation": "츄아",
+      "koreanPronunciation": "츠아",
       "tier": "core",
       "days": [
         21,
