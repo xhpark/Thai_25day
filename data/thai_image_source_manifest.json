@@ -99,10 +99,6 @@
       "sceneId": "greeting_church_gate",
       "useFor": [
         "W1D1",
-        "W1D2",
-        "W1D3",
-        "W1D4",
-        "W1D5",
         "W5D21",
         "W1SAT"
       ],
@@ -370,6 +366,131 @@
         "attributionRequired": null,
         "attributionText": null,
         "approvalStatus": "pending"
+      }
+    },
+    {
+      "sceneId": "good_morning_good_evening",
+      "useFor": [
+        "W1D2"
+      ],
+      "localAsset": "assets/images/scenes/good_morning_good_evening.jpg",
+      "stockSearchQueries": [
+        "Thai wai greeting morning bedroom",
+        "Thai wai greeting sunset guesthouse"
+      ],
+      "aiPrompt": {
+        "scene": "split scene: morning wai greeting indoors, evening wai greeting outdoors at sunset",
+        "peopleAndAction": "two adults exchanging a gentle wai greeting",
+        "setting": "Thai home interior at morning; Thai guesthouse courtyard at sunset",
+        "mood": "warm, calm, respectful",
+        "cameraFraming": "medium two-shot, split composition",
+        "lighting": "soft morning light / warm sunset light",
+        "avoidList": [
+          "tourist pose",
+          "crowded street chaos",
+          "dramatic religious painting style"
+        ]
+      },
+      "altTextKo": "아침에는 실내에서, 저녁에는 노을 진 마당에서 와이 인사를 나누는 두 장면",
+      "licensing": {
+        "licenseType": "user_provided",
+        "sourceUrl": null,
+        "attributionRequired": false,
+        "attributionText": null,
+        "approvalStatus": "approved_for_pilot"
+      }
+    },
+    {
+      "sceneId": "thanks_a_lot_youre_welcome",
+      "useFor": [
+        "W1D3"
+      ],
+      "localAsset": "assets/images/scenes/thanks_a_lot_youre_welcome.jpg",
+      "stockSearchQueries": [
+        "gratitude gift giving scene",
+        "thank you ceremony illustration"
+      ],
+      "aiPrompt": {
+        "scene": "stylized scene representing thanks and a gracious response",
+        "peopleAndAction": "one person offering thanks, the other responding warmly",
+        "setting": "stylized illustrative setting",
+        "mood": "grateful, warm",
+        "cameraFraming": "medium two-shot",
+        "lighting": "soft dramatic light",
+        "avoidList": [
+          "tourist pose",
+          "crowded street chaos"
+        ]
+      },
+      "altTextKo": "감사를 전하고 따뜻하게 응답받는 장면",
+      "licensing": {
+        "licenseType": "user_provided",
+        "sourceUrl": null,
+        "attributionRequired": false,
+        "attributionText": null,
+        "approvalStatus": "approved_for_pilot"
+      }
+    },
+    {
+      "sceneId": "yes_no_checkpoint",
+      "useFor": [
+        "W1D4"
+      ],
+      "localAsset": "assets/images/scenes/yes_no_checkpoint.jpg",
+      "stockSearchQueries": [
+        "Thai police checkpoint passport question",
+        "short yes no question scene church gate"
+      ],
+      "aiPrompt": {
+        "scene": "Thai official asking a short yes/no nationality question near a church",
+        "peopleAndAction": "official asking a short question, visitor answering yes or no with a gesture",
+        "setting": "church courtyard, daytime",
+        "mood": "calm, respectful, slightly formal",
+        "cameraFraming": "medium two-shot, split composition",
+        "lighting": "bright daylight",
+        "avoidList": [
+          "tense or confrontational mood",
+          "dramatic religious painting style"
+        ]
+      },
+      "altTextKo": "짧은 질문에 예/아니오로 대답하는 장면",
+      "licensing": {
+        "licenseType": "user_provided",
+        "sourceUrl": null,
+        "attributionRequired": false,
+        "attributionText": null,
+        "approvalStatus": "approved_for_pilot"
+      }
+    },
+    {
+      "sceneId": "believe_in_jesus",
+      "useFor": [
+        "W1D5"
+      ],
+      "localAsset": "assets/images/scenes/believe_in_jesus.jpg",
+      "stockSearchQueries": [
+        "handing gospel tract Thailand church",
+        "Korean missionary greeting Thai novice monk"
+      ],
+      "aiPrompt": {
+        "scene": "Korean missionary gently offering a gospel tract to a young Thai person near a church",
+        "peopleAndAction": "warm offering gesture, respectful eye contact",
+        "setting": "church entrance in Thailand, daytime",
+        "mood": "warm, respectful, hopeful",
+        "cameraFraming": "medium two-shot",
+        "lighting": "soft natural daylight",
+        "avoidList": [
+          "confrontational or pressuring mood",
+          "dramatic religious painting style"
+        ]
+      },
+      "altTextKo": "교회 앞에서 따뜻하게 전도지를 건네며 예수님을 믿으라고 권하는 장면",
+      "licensing": {
+        "licenseType": "user_provided",
+        "sourceUrl": null,
+        "attributionRequired": false,
+        "attributionText": null,
+        "approvalStatus": "approved_for_pilot"
       }
     }
   ],

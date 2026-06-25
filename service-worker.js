@@ -1,16 +1,16 @@
-const CACHE_NAME = "thai25-day1-v10";
+const CACHE_NAME = "thai25-day1-v12";
 const SHELL_ASSETS = [
-  "/",
-  "/index.html",
-  "/styles.css",
-  "/app.js",
-  "/manifest.webmanifest",
-  "/assets/generated/pwa/w1d1.json",
-  "/assets/generated/pwa/w1d2.json",
-  "/assets/generated/pwa/w1d3.json",
-  "/assets/generated/pwa/w1d4.json",
-  "/assets/generated/pwa/w1d5.json",
-  "/assets/generated/pwa-icon.svg"
+  "./",
+  "./index.html",
+  "./styles.css",
+  "./app.js",
+  "./manifest.webmanifest",
+  "./assets/generated/pwa/w1d1.json",
+  "./assets/generated/pwa/w1d2.json",
+  "./assets/generated/pwa/w1d3.json",
+  "./assets/generated/pwa/w1d4.json",
+  "./assets/generated/pwa/w1d5.json",
+  "./assets/generated/pwa-icon.svg"
 ];
 
 self.addEventListener("install", (event) => {

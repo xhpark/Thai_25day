@@ -26,7 +26,7 @@ function requestedDay() {
 
 function specUrlForDay(day) {
   const week = Math.ceil(day / 5);
-  return `/assets/generated/pwa/w${week}d${day}.json`;
+  return `assets/generated/pwa/w${week}d${day}.json`;
 }
 
 function readStorage(key, fallback) {
@@ -205,7 +205,7 @@ function renderDayNav(spec) {
     <nav class="day-nav" aria-label="${spec.week}주차 일차 선택">
       ${days
         .map((day) => `
-          <a class="day-nav-link ${day === spec.day ? "active" : ""}" href="/?day=${day}" ${day === spec.day ? 'aria-current="page"' : ""}>
+          <a class="day-nav-link ${day === spec.day ? "active" : ""}" href="?day=${day}" ${day === spec.day ? 'aria-current="page"' : ""}>
             ${day}일
           </a>
         `)
@@ -263,7 +263,7 @@ function renderScene(spec) {
   if (path && localPlan.status === "ready") {
     return `
       <figure class="scene-frame has-image">
-        <img src="/${escapeHtml(path)}" alt="${escapeHtml(spec.primaryImage.altTextKo)}" />
+        <img src="${escapeHtml(path)}" alt="${escapeHtml(spec.primaryImage.altTextKo)}" />
       </figure>
     `;
   }
@@ -356,7 +356,7 @@ function bindEvents() {
       if (!audioPath) return;
       state.audioMode = mode;
       writeStorage(STORAGE_KEYS.audioSpeedPreference, mode);
-      playAudio(`/${audioPath}`, label);
+      playAudio(audioPath, label);
       renderAudioPressedState(mode);
     });
   });
@@ -448,7 +448,7 @@ async function boot() {
     render();
 
     if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("/service-worker.js").catch(() => {});
+      navigator.serviceWorker.register("service-worker.js").catch(() => {});
     }
   } catch (error) {
     renderError(error);

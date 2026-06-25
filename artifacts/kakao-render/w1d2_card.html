@@ -1,71 +1,4 @@
-const fs = require("fs");
-const path = require("path");
-const os = require("os");
-const { spawnSync } = require("child_process");
-
-const lessonId = process.argv[2] || "w1d1";
-
-const repoRoot = path.resolve(__dirname, "..");
-const specPath = path.join(repoRoot, "assets", "generated", "kakao", `${lessonId}.json`);
-const outputPath = path.join(repoRoot, "assets", "generated", "kakao", `${lessonId}_card.png`);
-const tempDir = path.join(repoRoot, "artifacts", "kakao-render");
-const tempHtmlPath = path.join(tempDir, `${lessonId}_card.html`);
-const edgeProfilePath = path.join(tempDir, `edge-profile-${lessonId}`);
-
-function escapeHtml(value) {
-  return String(value ?? "")
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&#039;");
-}
-
-function findEdge() {
-  const candidates = [
-    path.join(process.env["ProgramFiles(x86)"] || "", "Microsoft", "Edge", "Application", "msedge.exe"),
-    path.join(process.env.ProgramFiles || "", "Microsoft", "Edge", "Application", "msedge.exe"),
-    "msedge"
-  ];
-
-  for (const candidate of candidates) {
-    if (candidate === "msedge") return candidate;
-    if (candidate && fs.existsSync(candidate)) return candidate;
-  }
-
-  throw new Error("Microsoft Edge executable not found.");
-}
-
-function cardHtml(spec) {
-  const phrases = (spec.mainPhrases || spec.newPhrases).slice(0, 2);
-  const compact = phrases.length > 1;
-  const keywords = (
-    spec.displayKeywords?.length ? spec.displayKeywords : spec.keywords || []
-  ).slice(0, 3);
-  const localImage = spec.primaryImage?.sourcePlan?.find(
-    (item) => item.type === "local_preferred" && item.status === "ready"
-  );
-  const imagePath = localImage ? path.join(repoRoot, localImage.assetPath) : null;
-  const imageUrl = imagePath && fs.existsSync(imagePath)
-    ? `file:///${imagePath.replaceAll("\\", "/")}`
-    : null;
-
-  const phraseBlock = (phrase) => {
-    const female = phrase.speech.female;
-    const male = phrase.speech.male;
-    return `<article class="phrase${compact ? " compact" : ""}">
-        <div class="phrase-head">
-          <div class="label">오늘의 문장</div>
-          <div class="speaker">여성 발화 먼저 연습</div>
-        </div>
-        <p class="thai" lang="th">${escapeHtml(female.thai)}</p>
-        <p class="pronunciation">${escapeHtml(female.korean_pronunciation)}</p>
-        <p class="roman">${escapeHtml(female.romanization)}</p>
-        <div class="male-line">남성: ${escapeHtml(male.korean_pronunciation)} · ${escapeHtml(male.romanization)}</div>
-      </article>`;
-  };
-
-  return `<!doctype html>
+<!doctype html>
 <html lang="ko">
   <head>
     <meta charset="utf-8" />
@@ -440,87 +373,74 @@ function cardHtml(spec) {
     </style>
   </head>
   <body>
-    <section class="card${compact ? " compact" : ""}">
+    <section class="card compact">
       <div class="top">
         <div class="brand"><div class="logo">✚</div><div>태국어 선교회화 25일</div></div>
-        <div class="day-pill">${spec.day} / 25</div>
+        <div class="day-pill">2 / 25</div>
       </div>
 
       <div class="title-band">
-        <h1>${escapeHtml(spec.day)}일차 ${escapeHtml(spec.title)}</h1>
+        <h1>2일차 시간대 인사 익히기</h1>
       </div>
 
       <div class="theme-row">
         <div>태국 교회 첫 방문</div>
-        <div>오늘의 문장 ${phrases.length > 1 ? "1~2" : "1"}</div>
+        <div>오늘의 문장 1~2</div>
       </div>
 
-      <div class="hero${compact ? " compact" : ""}" role="img" aria-label="${escapeHtml(spec.primaryImage.altTextKo)}">
-        ${imageUrl ? `<img src="${escapeHtml(imageUrl)}" alt="${escapeHtml(spec.primaryImage.altTextKo)}" />` : `<div class="hero-label">장면 이미지 준비 중</div>`}
-        <div class="hero-copy">${escapeHtml(spec.primaryImage.altTextKo)}</div>
+      <div class="hero compact" role="img" aria-label="아침에는 실내에서, 저녁에는 노을 진 마당에서 와이 인사를 나누는 두 장면">
+        <img src="file:///C:/Users/xhpar/OneDrive/Documents/Thai_25day/assets/images/scenes/good_morning_good_evening.jpg" alt="아침에는 실내에서, 저녁에는 노을 진 마당에서 와이 인사를 나누는 두 장면" />
+        <div class="hero-copy">아침에는 실내에서, 저녁에는 노을 진 마당에서 와이 인사를 나누는 두 장면</div>
       </div>
 
-      ${phrases.map(phraseBlock).join("")}
+      <article class="phrase compact">
+        <div class="phrase-head">
+          <div class="label">오늘의 문장</div>
+          <div class="speaker">여성 발화 먼저 연습</div>
+        </div>
+        <p class="thai" lang="th">สวัสดีตอนเช้าค่ะ</p>
+        <p class="pronunciation">싸왓디 떤 차오 카</p>
+        <p class="roman">sà-wàt-dii dtaawn-cháao khâ</p>
+        <div class="male-line">남성: 싸왓디 떤 차오 크랍 · sà-wàt-dii dtaawn-cháao khráp</div>
+      </article><article class="phrase compact">
+        <div class="phrase-head">
+          <div class="label">오늘의 문장</div>
+          <div class="speaker">여성 발화 먼저 연습</div>
+        </div>
+        <p class="thai" lang="th">สวัสดีตอนเย็นค่ะ</p>
+        <p class="pronunciation">싸왓디 떤 옌 카</p>
+        <p class="roman">sà-wàt-dii dtaawn-yen khâ</p>
+        <div class="male-line">남성: 싸왓디 떤 옌 크랍 · sà-wàt-dii dtaawn-yen khráp</div>
+      </article>
 
       <section class="keywords">
         <h2 class="keywords-title">핵심 단어</h2>
         <div class="chips">
-          ${keywords
-            .map(
-              (keyword) => `<div class="chip">
-                <div class="chip-pronunciation">${escapeHtml(keyword.koreanPronunciation)}</div>
-                <div class="chip-meaning">${escapeHtml(keyword.korean)}</div>
-              </div>`
-            )
-            .join("")}
+          <div class="chip">
+                <div class="chip-pronunciation">떤 차오</div>
+                <div class="chip-meaning">아침</div>
+              </div><div class="chip">
+                <div class="chip-pronunciation">떤 옌</div>
+                <div class="chip-meaning">저녁</div>
+              </div>
         </div>
       </section>
 
       <section class="mission">
         <div class="box guide">
           <h2 class="box-title">선교 가이드</h2>
-          <p>${escapeHtml(spec.ministryGuide)}</p>
+          <p>아침에는 도착 인사로, 저녁에는 예배나 모임 후 작별 전 인사로 사용하면 자연스럽다. 시간대에 맞춰 말하면 상대가 더 세심하게 느낀다.</p>
         </div>
         <div class="box practice">
           <h2 class="box-title">말하기 미션</h2>
-          <p>${escapeHtml(spec.speakingMission)}</p>
+          <p>좋은 아침과 좋은 저녁을 각각 3회 말하고, 안녕하세요와 이어서 한 세트로 2회 연습한다.</p>
         </div>
       </section>
 
       <div class="footer">
         <div>오디오: 보통 · 느리게 · 3회 반복</div>
-        <div>ID ${escapeHtml(spec.id)}</div>
+        <div>ID W1D2</div>
       </div>
     </section>
   </body>
-</html>`;
-}
-
-function render() {
-  const spec = JSON.parse(fs.readFileSync(specPath, "utf8"));
-  fs.mkdirSync(tempDir, { recursive: true });
-  fs.writeFileSync(tempHtmlPath, cardHtml(spec), "utf8");
-
-  const edge = findEdge();
-  const args = [
-    "--headless",
-    "--disable-gpu",
-    "--hide-scrollbars",
-    `--user-data-dir=${edgeProfilePath}`,
-    "--window-size=1080,1350",
-    "--virtual-time-budget=5000",
-    `--screenshot=${outputPath}`,
-    `file:///${tempHtmlPath.replaceAll("\\", "/")}`
-  ];
-
-  const result = spawnSync(edge, args, { encoding: "utf8" });
-  if (result.error) throw result.error;
-  if (!fs.existsSync(outputPath)) {
-    throw new Error(`Screenshot not written. stderr=${result.stderr || ""}`);
-  }
-
-  fs.rmSync(edgeProfilePath, { recursive: true, force: true });
-  console.log(outputPath);
-}
-
-render();
+</html>

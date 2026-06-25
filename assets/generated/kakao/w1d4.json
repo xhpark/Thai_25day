@@ -30,35 +30,33 @@
   "ministryGuide": "짧은 예/아니오 대답은 손짓이나 표정과 함께 사용한다. 모르는 질문에는 억지로 길게 답하지 말고 짧게 반응한 뒤 도움을 요청하는 흐름으로 이어 간다.",
   "speakingMission": "예와 아니오를 각각 5회 말하고, 감사 문답 뒤에 이어 붙여 3회 말한다.",
   "primaryImage": {
-    "sceneId": "greeting_church_gate",
-    "altTextKo": "교회 입구에서 태국 성도에게 와이 인사로 반갑게 인사하는 장면",
+    "sceneId": "yes_no_checkpoint",
+    "altTextKo": "짧은 질문에 예/아니오로 대답하는 장면",
     "sourcePlan": [
       {
         "type": "local_preferred",
-        "assetPath": "assets/images/scenes/greeting_church_gate.jpg",
+        "assetPath": "assets/images/scenes/yes_no_checkpoint.jpg",
         "status": "ready"
       },
       {
         "type": "stock_preferred",
         "queries": [
-          "Thai church entrance greeting people smiling wai",
-          "Asian church greeting outside entrance",
-          "warm greeting at church gate Thailand"
+          "Thai police checkpoint passport question",
+          "short yes no question scene church gate"
         ],
         "status": "search_required"
       },
       {
         "type": "ai_fallback",
         "prompt": {
-          "scene": "Korean mission team greeting Thai church member",
-          "peopleAndAction": "two or three adults smiling, gentle wai greeting, warm eye contact",
-          "setting": "church entrance in Thailand, daytime",
-          "mood": "welcoming, respectful, calm",
-          "cameraFraming": "medium wide documentary photo",
-          "lighting": "soft natural daylight",
+          "scene": "Thai official asking a short yes/no nationality question near a church",
+          "peopleAndAction": "official asking a short question, visitor answering yes or no with a gesture",
+          "setting": "church courtyard, daytime",
+          "mood": "calm, respectful, slightly formal",
+          "cameraFraming": "medium two-shot, split composition",
+          "lighting": "bright daylight",
           "avoidList": [
-            "tourist pose",
-            "crowded street chaos",
+            "tense or confrontational mood",
             "dramatic religious painting style"
           ]
         },

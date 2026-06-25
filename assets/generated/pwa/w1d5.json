@@ -12,35 +12,33 @@
   "ministryGuide": "이 문장은 관계가 열린 뒤 사랑과 축복의 흐름 속에서 말하면 훨씬 부드럽게 들린다.",
   "speakingMission": "예수님 믿으세요를 5회 말하고, 앞에서 배운 인사와 감사 문장 뒤에 이어 2회 연습한다.",
   "primaryImage": {
-    "sceneId": "greeting_church_gate",
-    "altTextKo": "교회 입구에서 태국 성도에게 와이 인사로 반갑게 인사하는 장면",
+    "sceneId": "believe_in_jesus",
+    "altTextKo": "교회 앞에서 따뜻하게 전도지를 건네며 예수님을 믿으라고 권하는 장면",
     "sourcePlan": [
       {
         "type": "local_preferred",
-        "assetPath": "assets/images/scenes/greeting_church_gate.jpg",
+        "assetPath": "assets/images/scenes/believe_in_jesus.jpg",
         "status": "ready"
       },
       {
         "type": "stock_preferred",
         "queries": [
-          "Thai church entrance greeting people smiling wai",
-          "Asian church greeting outside entrance",
-          "warm greeting at church gate Thailand"
+          "handing gospel tract Thailand church",
+          "Korean missionary greeting Thai novice monk"
         ],
         "status": "search_required"
       },
       {
         "type": "ai_fallback",
         "prompt": {
-          "scene": "Korean mission team greeting Thai church member",
-          "peopleAndAction": "two or three adults smiling, gentle wai greeting, warm eye contact",
+          "scene": "Korean missionary gently offering a gospel tract to a young Thai person near a church",
+          "peopleAndAction": "warm offering gesture, respectful eye contact",
           "setting": "church entrance in Thailand, daytime",
-          "mood": "welcoming, respectful, calm",
-          "cameraFraming": "medium wide documentary photo",
+          "mood": "warm, respectful, hopeful",
+          "cameraFraming": "medium two-shot",
           "lighting": "soft natural daylight",
           "avoidList": [
-            "tourist pose",
-            "crowded street chaos",
+            "confrontational or pressuring mood",
             "dramatic religious painting style"
           ]
         },

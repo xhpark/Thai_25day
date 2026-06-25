@@ -12,32 +12,31 @@
   "ministryGuide": "아침에는 도착 인사로, 저녁에는 예배나 모임 후 작별 전 인사로 사용하면 자연스럽다. 시간대에 맞춰 말하면 상대가 더 세심하게 느낀다.",
   "speakingMission": "좋은 아침과 좋은 저녁을 각각 3회 말하고, 안녕하세요와 이어서 한 세트로 2회 연습한다.",
   "primaryImage": {
-    "sceneId": "greeting_church_gate",
-    "altTextKo": "교회 입구에서 태국 성도에게 와이 인사로 반갑게 인사하는 장면",
+    "sceneId": "good_morning_good_evening",
+    "altTextKo": "아침에는 실내에서, 저녁에는 노을 진 마당에서 와이 인사를 나누는 두 장면",
     "sourcePlan": [
       {
         "type": "local_preferred",
-        "assetPath": "assets/images/scenes/greeting_church_gate.jpg",
+        "assetPath": "assets/images/scenes/good_morning_good_evening.jpg",
         "status": "ready"
       },
       {
         "type": "stock_preferred",
         "queries": [
-          "Thai church entrance greeting people smiling wai",
-          "Asian church greeting outside entrance",
-          "warm greeting at church gate Thailand"
+          "Thai wai greeting morning bedroom",
+          "Thai wai greeting sunset guesthouse"
         ],
         "status": "search_required"
       },
       {
         "type": "ai_fallback",
         "prompt": {
-          "scene": "Korean mission team greeting Thai church member",
-          "peopleAndAction": "two or three adults smiling, gentle wai greeting, warm eye contact",
-          "setting": "church entrance in Thailand, daytime",
-          "mood": "welcoming, respectful, calm",
-          "cameraFraming": "medium wide documentary photo",
-          "lighting": "soft natural daylight",
+          "scene": "split scene: morning wai greeting indoors, evening wai greeting outdoors at sunset",
+          "peopleAndAction": "two adults exchanging a gentle wai greeting",
+          "setting": "Thai home interior at morning; Thai guesthouse courtyard at sunset",
+          "mood": "warm, calm, respectful",
+          "cameraFraming": "medium two-shot, split composition",
+          "lighting": "soft morning light / warm sunset light",
           "avoidList": [
             "tourist pose",
             "crowded street chaos",

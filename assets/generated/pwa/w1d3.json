@@ -12,36 +12,34 @@
   "ministryGuide": "도움을 받거나 자리를 안내받은 직후 바로 감사 문장을 말한다. 감사 뒤에 가볍게 미소를 더하면 이후 대화가 이어지기 쉽다.",
   "speakingMission": "정말 고마워요와 천만에요를 한 쌍으로 5회 연습한다.",
   "primaryImage": {
-    "sceneId": "greeting_church_gate",
-    "altTextKo": "교회 입구에서 태국 성도에게 와이 인사로 반갑게 인사하는 장면",
+    "sceneId": "thanks_a_lot_youre_welcome",
+    "altTextKo": "감사를 전하고 따뜻하게 응답받는 장면",
     "sourcePlan": [
       {
         "type": "local_preferred",
-        "assetPath": "assets/images/scenes/greeting_church_gate.jpg",
+        "assetPath": "assets/images/scenes/thanks_a_lot_youre_welcome.jpg",
         "status": "ready"
       },
       {
         "type": "stock_preferred",
         "queries": [
-          "Thai church entrance greeting people smiling wai",
-          "Asian church greeting outside entrance",
-          "warm greeting at church gate Thailand"
+          "gratitude gift giving scene",
+          "thank you ceremony illustration"
         ],
         "status": "search_required"
       },
       {
         "type": "ai_fallback",
         "prompt": {
-          "scene": "Korean mission team greeting Thai church member",
-          "peopleAndAction": "two or three adults smiling, gentle wai greeting, warm eye contact",
-          "setting": "church entrance in Thailand, daytime",
-          "mood": "welcoming, respectful, calm",
-          "cameraFraming": "medium wide documentary photo",
-          "lighting": "soft natural daylight",
+          "scene": "stylized scene representing thanks and a gracious response",
+          "peopleAndAction": "one person offering thanks, the other responding warmly",
+          "setting": "stylized illustrative setting",
+          "mood": "grateful, warm",
+          "cameraFraming": "medium two-shot",
+          "lighting": "soft dramatic light",
           "avoidList": [
             "tourist pose",
-            "crowded street chaos",
-            "dramatic religious painting style"
+            "crowded street chaos"
           ]
         },
         "status": "generate_if_needed"
