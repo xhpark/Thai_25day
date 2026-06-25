@@ -1,0 +1,362 @@
+{
+  "version": 1,
+  "generatedFrom": "data/generated/thai_lesson_bundles.json",
+  "sourceHashes": {
+    "curriculum": "e01bb8d76ed5d6a555d475dde0e40a88c6e7f3b391ba24410ba54cca0c197e73",
+    "assets": "75d7e967d9b293d63d9a3aba622bc8d51d034849e7cc22dbfb573341ed44f038",
+    "templateSpecs": "b02f47651239e478b3156c95a4e2ea064d9a9d6989b048d54f4a8ffbbc725811",
+    "imageManifest": "590454a6e3a9db533dd979dad843268c78ea830a222d8097f3965cf3f98f9395"
+  },
+  "files": [
+    {
+      "id": "W1D1",
+      "kind": "kakao_card_spec",
+      "path": "assets/generated/kakao/w1d1.json"
+    },
+    {
+      "id": "W1D1",
+      "kind": "pwa_lesson_spec",
+      "path": "assets/generated/pwa/w1d1.json"
+    },
+    {
+      "id": "W1D2",
+      "kind": "kakao_card_spec",
+      "path": "assets/generated/kakao/w1d2.json"
+    },
+    {
+      "id": "W1D2",
+      "kind": "pwa_lesson_spec",
+      "path": "assets/generated/pwa/w1d2.json"
+    },
+    {
+      "id": "W1D3",
+      "kind": "kakao_card_spec",
+      "path": "assets/generated/kakao/w1d3.json"
+    },
+    {
+      "id": "W1D3",
+      "kind": "pwa_lesson_spec",
+      "path": "assets/generated/pwa/w1d3.json"
+    },
+    {
+      "id": "W1D4",
+      "kind": "kakao_card_spec",
+      "path": "assets/generated/kakao/w1d4.json"
+    },
+    {
+      "id": "W1D4",
+      "kind": "pwa_lesson_spec",
+      "path": "assets/generated/pwa/w1d4.json"
+    },
+    {
+      "id": "W1D5",
+      "kind": "kakao_card_spec",
+      "path": "assets/generated/kakao/w1d5.json"
+    },
+    {
+      "id": "W1D5",
+      "kind": "pwa_lesson_spec",
+      "path": "assets/generated/pwa/w1d5.json"
+    },
+    {
+      "id": "W2D6",
+      "kind": "kakao_card_spec",
+      "path": "assets/generated/kakao/w2d6.json"
+    },
+    {
+      "id": "W2D6",
+      "kind": "pwa_lesson_spec",
+      "path": "assets/generated/pwa/w2d6.json"
+    },
+    {
+      "id": "W2D7",
+      "kind": "kakao_card_spec",
+      "path": "assets/generated/kakao/w2d7.json"
+    },
+    {
+      "id": "W2D7",
+      "kind": "pwa_lesson_spec",
+      "path": "assets/generated/pwa/w2d7.json"
+    },
+    {
+      "id": "W2D8",
+      "kind": "kakao_card_spec",
+      "path": "assets/generated/kakao/w2d8.json"
+    },
+    {
+      "id": "W2D8",
+      "kind": "pwa_lesson_spec",
+      "path": "assets/generated/pwa/w2d8.json"
+    },
+    {
+      "id": "W2D9",
+      "kind": "kakao_card_spec",
+      "path": "assets/generated/kakao/w2d9.json"
+    },
+    {
+      "id": "W2D9",
+      "kind": "pwa_lesson_spec",
+      "path": "assets/generated/pwa/w2d9.json"
+    },
+    {
+      "id": "W2D10",
+      "kind": "kakao_card_spec",
+      "path": "assets/generated/kakao/w2d10.json"
+    },
+    {
+      "id": "W2D10",
+      "kind": "pwa_lesson_spec",
+      "path": "assets/generated/pwa/w2d10.json"
+    },
+    {
+      "id": "W3D11",
+      "kind": "kakao_card_spec",
+      "path": "assets/generated/kakao/w3d11.json"
+    },
+    {
+      "id": "W3D11",
+      "kind": "pwa_lesson_spec",
+      "path": "assets/generated/pwa/w3d11.json"
+    },
+    {
+      "id": "W3D12",
+      "kind": "kakao_card_spec",
+      "path": "assets/generated/kakao/w3d12.json"
+    },
+    {
+      "id": "W3D12",
+      "kind": "pwa_lesson_spec",
+      "path": "assets/generated/pwa/w3d12.json"
+    },
+    {
+      "id": "W3D13",
+      "kind": "kakao_card_spec",
+      "path": "assets/generated/kakao/w3d13.json"
+    },
+    {
+      "id": "W3D13",
+      "kind": "pwa_lesson_spec",
+      "path": "assets/generated/pwa/w3d13.json"
+    },
+    {
+      "id": "W3D14",
+      "kind": "kakao_card_spec",
+      "path": "assets/generated/kakao/w3d14.json"
+    },
+    {
+      "id": "W3D14",
+      "kind": "pwa_lesson_spec",
+      "path": "assets/generated/pwa/w3d14.json"
+    },
+    {
+      "id": "W3D15",
+      "kind": "kakao_card_spec",
+      "path": "assets/generated/kakao/w3d15.json"
+    },
+    {
+      "id": "W3D15",
+      "kind": "pwa_lesson_spec",
+      "path": "assets/generated/pwa/w3d15.json"
+    },
+    {
+      "id": "W4D16",
+      "kind": "kakao_card_spec",
+      "path": "assets/generated/kakao/w4d16.json"
+    },
+    {
+      "id": "W4D16",
+      "kind": "pwa_lesson_spec",
+      "path": "assets/generated/pwa/w4d16.json"
+    },
+    {
+      "id": "W4D17",
+      "kind": "kakao_card_spec",
+      "path": "assets/generated/kakao/w4d17.json"
+    },
+    {
+      "id": "W4D17",
+      "kind": "pwa_lesson_spec",
+      "path": "assets/generated/pwa/w4d17.json"
+    },
+    {
+      "id": "W4D18",
+      "kind": "kakao_card_spec",
+      "path": "assets/generated/kakao/w4d18.json"
+    },
+    {
+      "id": "W4D18",
+      "kind": "pwa_lesson_spec",
+      "path": "assets/generated/pwa/w4d18.json"
+    },
+    {
+      "id": "W4D19",
+      "kind": "kakao_card_spec",
+      "path": "assets/generated/kakao/w4d19.json"
+    },
+    {
+      "id": "W4D19",
+      "kind": "pwa_lesson_spec",
+      "path": "assets/generated/pwa/w4d19.json"
+    },
+    {
+      "id": "W4D20",
+      "kind": "kakao_card_spec",
+      "path": "assets/generated/kakao/w4d20.json"
+    },
+    {
+      "id": "W4D20",
+      "kind": "pwa_lesson_spec",
+      "path": "assets/generated/pwa/w4d20.json"
+    },
+    {
+      "id": "W5D21",
+      "kind": "kakao_card_spec",
+      "path": "assets/generated/kakao/w5d21.json"
+    },
+    {
+      "id": "W5D21",
+      "kind": "pwa_lesson_spec",
+      "path": "assets/generated/pwa/w5d21.json"
+    },
+    {
+      "id": "W5D22",
+      "kind": "kakao_card_spec",
+      "path": "assets/generated/kakao/w5d22.json"
+    },
+    {
+      "id": "W5D22",
+      "kind": "pwa_lesson_spec",
+      "path": "assets/generated/pwa/w5d22.json"
+    },
+    {
+      "id": "W5D23",
+      "kind": "kakao_card_spec",
+      "path": "assets/generated/kakao/w5d23.json"
+    },
+    {
+      "id": "W5D23",
+      "kind": "pwa_lesson_spec",
+      "path": "assets/generated/pwa/w5d23.json"
+    },
+    {
+      "id": "W5D24",
+      "kind": "kakao_card_spec",
+      "path": "assets/generated/kakao/w5d24.json"
+    },
+    {
+      "id": "W5D24",
+      "kind": "pwa_lesson_spec",
+      "path": "assets/generated/pwa/w5d24.json"
+    },
+    {
+      "id": "W5D25",
+      "kind": "kakao_card_spec",
+      "path": "assets/generated/kakao/w5d25.json"
+    },
+    {
+      "id": "W5D25",
+      "kind": "pwa_lesson_spec",
+      "path": "assets/generated/pwa/w5d25.json"
+    },
+    {
+      "id": "W1SAT",
+      "kind": "saturday_ppt_spec",
+      "path": "assets/generated/ppt/w1sat.json"
+    },
+    {
+      "id": "W1SAT",
+      "kind": "teacher_script_spec",
+      "path": "assets/generated/ppt/w1sat_script.json"
+    },
+    {
+      "id": "W2SAT",
+      "kind": "saturday_ppt_spec",
+      "path": "assets/generated/ppt/w2sat.json"
+    },
+    {
+      "id": "W2SAT",
+      "kind": "teacher_script_spec",
+      "path": "assets/generated/ppt/w2sat_script.json"
+    },
+    {
+      "id": "W3SAT",
+      "kind": "saturday_ppt_spec",
+      "path": "assets/generated/ppt/w3sat.json"
+    },
+    {
+      "id": "W3SAT",
+      "kind": "teacher_script_spec",
+      "path": "assets/generated/ppt/w3sat_script.json"
+    },
+    {
+      "id": "W4SAT",
+      "kind": "saturday_ppt_spec",
+      "path": "assets/generated/ppt/w4sat.json"
+    },
+    {
+      "id": "W4SAT",
+      "kind": "teacher_script_spec",
+      "path": "assets/generated/ppt/w4sat_script.json"
+    },
+    {
+      "id": "W5SAT",
+      "kind": "saturday_ppt_spec",
+      "path": "assets/generated/ppt/w5sat.json"
+    },
+    {
+      "id": "W5SAT",
+      "kind": "teacher_script_spec",
+      "path": "assets/generated/ppt/w5sat_script.json"
+    },
+    {
+      "id": "W1SUN",
+      "kind": "kakao_card_spec",
+      "path": "assets/generated/kakao/w1sun.json"
+    },
+    {
+      "id": "W1SUN",
+      "kind": "review_sheet_spec",
+      "path": "assets/generated/print/w1sun.json"
+    },
+    {
+      "id": "W2SUN",
+      "kind": "kakao_card_spec",
+      "path": "assets/generated/kakao/w2sun.json"
+    },
+    {
+      "id": "W2SUN",
+      "kind": "review_sheet_spec",
+      "path": "assets/generated/print/w2sun.json"
+    },
+    {
+      "id": "W3SUN",
+      "kind": "kakao_card_spec",
+      "path": "assets/generated/kakao/w3sun.json"
+    },
+    {
+      "id": "W3SUN",
+      "kind": "review_sheet_spec",
+      "path": "assets/generated/print/w3sun.json"
+    },
+    {
+      "id": "W4SUN",
+      "kind": "kakao_card_spec",
+      "path": "assets/generated/kakao/w4sun.json"
+    },
+    {
+      "id": "W4SUN",
+      "kind": "review_sheet_spec",
+      "path": "assets/generated/print/w4sun.json"
+    },
+    {
+      "id": "W5SUN",
+      "kind": "kakao_card_spec",
+      "path": "assets/generated/kakao/w5sun.json"
+    },
+    {
+      "id": "W5SUN",
+      "kind": "review_sheet_spec",
+      "path": "assets/generated/print/w5sun.json"
+    }
+  ]
+}

@@ -1,0 +1,351 @@
+{
+  "version": 1,
+  "kind": "review_sheet_spec",
+  "id": "W4SUN",
+  "week": 4,
+  "theme": "사랑과 축복 전하기",
+  "title": "사랑·축복 문장을 천천히 말해 보기",
+  "missionGoal": "선교 문장을 기계적으로 외우지 않고 진심과 함께 말한다.",
+  "ministryGuide": "마음을 담아 천천히 말할수록 같은 문장도 훨씬 깊게 전달된다.",
+  "personalMission": "가까운 사람 한 명을 떠올리며 사랑 문장 1회, 축복 문장 1회를 진심으로 말한다.",
+  "primaryImage": {
+    "sceneId": "encouragement_and_blessing",
+    "altTextKo": "교회 안에서 사랑과 축복의 말을 따뜻하게 전하는 장면",
+    "sourcePlan": [
+      {
+        "type": "local_preferred",
+        "assetPath": "assets/images/scenes/encouragement_and_blessing.jpg",
+        "status": "missing"
+      },
+      {
+        "type": "stock_preferred",
+        "queries": [
+          "gentle church encouragement conversation",
+          "supportive conversation church smiling",
+          "blessing prayer church community"
+        ],
+        "status": "search_required"
+      },
+      {
+        "type": "ai_fallback",
+        "prompt": {
+          "scene": "gentle encouragement and blessing",
+          "peopleAndAction": "two adults speaking warmly, one encouraging the other, caring expression",
+          "setting": "church yard or fellowship room",
+          "mood": "comforting, hopeful, respectful",
+          "cameraFraming": "medium close conversation shot",
+          "lighting": "warm daylight",
+          "avoidList": [
+            "preaching at someone",
+            "dramatic spotlight"
+          ]
+        },
+        "status": "generate_if_needed"
+      }
+    ]
+  },
+  "keywordImages": [
+    {
+      "keywordId": "W033",
+      "priority": "optional",
+      "sourcePlan": [
+        {
+          "type": "local_preferred",
+          "assetPath": "assets/images/keywords/W033.jpg",
+          "status": "missing"
+        },
+        {
+          "type": "stock_preferred",
+          "queries": [
+            "Jesus realistic photo",
+            "예수님 learning image"
+          ],
+          "status": "search_required"
+        },
+        {
+          "type": "ai_fallback",
+          "prompt": {
+            "scene": "single concept image for Jesus",
+            "peopleAndAction": "show the concept clearly and simply",
+            "setting": "clean realistic learning image",
+            "mood": "warm and easy to recognize",
+            "cameraFraming": "close or medium crop",
+            "lighting": "bright neutral light",
+            "avoidList": [
+              "blurry or noisy image",
+              "heavy watermark",
+              "text embedded in photo",
+              "theological symbolism without a real scene",
+              "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
+            ]
+          },
+          "status": "generate_if_needed"
+        }
+      ]
+    },
+    {
+      "keywordId": "W036",
+      "priority": "optional",
+      "sourcePlan": [
+        {
+          "type": "local_preferred",
+          "assetPath": "assets/images/keywords/W036.jpg",
+          "status": "missing"
+        },
+        {
+          "type": "stock_preferred",
+          "queries": [
+            "God realistic photo",
+            "하나님 learning image"
+          ],
+          "status": "search_required"
+        },
+        {
+          "type": "ai_fallback",
+          "prompt": {
+            "scene": "single concept image for God",
+            "peopleAndAction": "show the concept clearly and simply",
+            "setting": "clean realistic learning image",
+            "mood": "warm and easy to recognize",
+            "cameraFraming": "close or medium crop",
+            "lighting": "bright neutral light",
+            "avoidList": [
+              "blurry or noisy image",
+              "heavy watermark",
+              "text embedded in photo",
+              "theological symbolism without a real scene",
+              "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
+            ]
+          },
+          "status": "generate_if_needed"
+        }
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "variantId": "17",
+      "phraseId": 17,
+      "category": "mission",
+      "korean": "예수님이 당신을 사랑해요",
+      "english": "Jesus loves you.",
+      "speech": {
+        "male": {
+          "thai": "พระเยซูทรงรักคุณครับ",
+          "romanization": "Phrá-yeh-suu song-rák khun khráp",
+          "korean_pronunciation": "프라예쑤 쏭 락 쿤 크랍"
+        },
+        "female": {
+          "thai": "พระเยซูทรงรักคุณค่ะ",
+          "romanization": "Phrá-yeh-suu song-rák khun khâ",
+          "korean_pronunciation": "프라예쑤 쏭 락 쿤 카"
+        }
+      },
+      "audio": {
+        "male": {
+          "normal": "assets/audio/sentences/S17_male_normal.mp3",
+          "slow": "assets/audio/sentences/S17_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S17_male_repeat3.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/sentences/S17_female_normal.mp3",
+          "slow": "assets/audio/sentences/S17_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S17_female_repeat3.mp3"
+        }
+      }
+    },
+    {
+      "variantId": "18",
+      "phraseId": 18,
+      "category": "mission",
+      "korean": "하나님은 당신을 사랑해요",
+      "english": "God loves you.",
+      "speech": {
+        "male": {
+          "thai": "พระเจ้าทรงรักคุณครับ",
+          "romanization": "Phrá-jâo song-rák khun khráp",
+          "korean_pronunciation": "프라짜오 쏭 락 쿤 크랍"
+        },
+        "female": {
+          "thai": "พระเจ้าทรงรักคุณค่ะ",
+          "romanization": "Phrá-jâo song-rák khun khâ",
+          "korean_pronunciation": "프라짜오 쏭 락 쿤 카"
+        }
+      },
+      "audio": {
+        "male": {
+          "normal": "assets/audio/sentences/S18_male_normal.mp3",
+          "slow": "assets/audio/sentences/S18_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S18_male_repeat3.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/sentences/S18_female_normal.mp3",
+          "slow": "assets/audio/sentences/S18_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S18_female_repeat3.mp3"
+        }
+      }
+    },
+    {
+      "variantId": "19",
+      "phraseId": 19,
+      "category": "mission",
+      "korean": "하나님의 축복을!",
+      "english": "God bless you!",
+      "speech": {
+        "male": {
+          "thai": "ขอพระเจ้าอวยพรคุณครับ",
+          "romanization": "khŏr Phrá-jâo uay-phon khun khráp",
+          "korean_pronunciation": "커 프라짜오 우아이폰 쿤 크랍"
+        },
+        "female": {
+          "thai": "ขอพระเจ้าอวยพรคุณค่ะ",
+          "romanization": "khŏr Phrá-jâo uay-phon khun khâ",
+          "korean_pronunciation": "커 프라짜오 우아이폰 쿤 카"
+        }
+      },
+      "audio": {
+        "male": {
+          "normal": "assets/audio/sentences/S19_male_normal.mp3",
+          "slow": "assets/audio/sentences/S19_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S19_male_repeat3.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/sentences/S19_female_normal.mp3",
+          "slow": "assets/audio/sentences/S19_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S19_female_repeat3.mp3"
+        }
+      }
+    },
+    {
+      "variantId": "20",
+      "phraseId": 20,
+      "category": "mission",
+      "korean": "하나님은 사랑이십니다",
+      "english": "God is love.",
+      "speech": {
+        "male": {
+          "thai": "พระเจ้าทรงเป็นความรักครับ",
+          "romanization": "Phrá-jâo song-pen khwaam-rák khráp",
+          "korean_pronunciation": "프라짜오 쏭 뻰 콰락 크랍"
+        },
+        "female": {
+          "thai": "พระเจ้าทรงเป็นความรักค่ะ",
+          "romanization": "Phrá-jâo song-pen khwaam-rák khâ",
+          "korean_pronunciation": "프라짜오 쏭 뻰 콰락 카"
+        }
+      },
+      "audio": {
+        "male": {
+          "normal": "assets/audio/sentences/S20_male_normal.mp3",
+          "slow": "assets/audio/sentences/S20_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S20_male_repeat3.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/sentences/S20_female_normal.mp3",
+          "slow": "assets/audio/sentences/S20_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S20_female_repeat3.mp3"
+        }
+      }
+    }
+  ],
+  "keywords": [
+    {
+      "id": "W033",
+      "variantIds": [
+        "17",
+        "21"
+      ],
+      "korean": "예수님",
+      "english": "Jesus",
+      "thai": "พระเยซู",
+      "romanization": "Phrá-yeh-suu",
+      "koreanPronunciation": "프라예쑤",
+      "tier": "core",
+      "days": [
+        16,
+        20,
+        21,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W033_male_normal.mp3",
+          "slow": "assets/audio/words/W033_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W033_female_normal.mp3",
+          "slow": "assets/audio/words/W033_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W036",
+      "variantIds": [
+        "18",
+        "19",
+        "20"
+      ],
+      "korean": "하나님",
+      "english": "God",
+      "thai": "พระเจ้า",
+      "romanization": "Phrá-jâo",
+      "koreanPronunciation": "프라짜오",
+      "tier": "core",
+      "days": [
+        17,
+        18,
+        19,
+        20,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W036_male_normal.mp3",
+          "slow": "assets/audio/words/W036_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W036_female_normal.mp3",
+          "slow": "assets/audio/words/W036_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W040",
+      "variantIds": [
+        "20"
+      ],
+      "korean": "사랑",
+      "english": "love",
+      "thai": "ความรัก",
+      "romanization": "khwaam-rák",
+      "koreanPronunciation": "콰락",
+      "tier": "core",
+      "days": [
+        19,
+        20,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W040_male_normal.mp3",
+          "slow": "assets/audio/words/W040_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W040_female_normal.mp3",
+          "slow": "assets/audio/words/W040_female_slow.mp3"
+        }
+      }
+    }
+  ],
+  "print": {
+    "pageSize": "A4",
+    "orientation": "portrait",
+    "sections": [
+      "weekSummary",
+      "corePhrases",
+      "keywordBoxes",
+      "writeAndSpeak",
+      "prayerAndBlessing"
+    ]
+  }
+}

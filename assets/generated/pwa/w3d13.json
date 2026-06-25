@@ -1,0 +1,340 @@
+{
+  "version": 1,
+  "kind": "pwa_lesson_spec",
+  "id": "W3D13",
+  "week": 3,
+  "day": 13,
+  "theme": "교회 식사와 작별",
+  "title": "격려하기",
+  "hook": "짧고 밝은 칭찬을 익힌다.",
+  "story": "어린이와 봉사자를 향해 격려한다.",
+  "missionGoal": "짧은 칭찬으로 기쁨과 친밀감을 전한다.",
+  "ministryGuide": "따뜻한 격려는 관계를 깊게 하고 복음적 메시지를 들을 마음도 열어 준다.",
+  "speakingMission": "참 잘했어요를 미소와 함께 5회 말한다.",
+  "primaryImage": {
+    "sceneId": null,
+    "altTextKo": "격려하기 학습 장면",
+    "sourcePlan": [
+      {
+        "type": "stock_preferred",
+        "queries": [
+          "격려하기",
+          "어린이와 봉사자를 향해 격려한다."
+        ],
+        "status": "search_required"
+      },
+      {
+        "type": "ai_fallback",
+        "prompt": {
+          "scene": "격려하기",
+          "peopleAndAction": "어린이와 봉사자를 향해 격려한다.",
+          "setting": "Thai church or daily-life mission context",
+          "mood": "warm, respectful, practical",
+          "cameraFraming": "documentary style",
+          "lighting": "bright natural light",
+          "avoidList": [
+            "blurry or noisy image",
+            "heavy watermark",
+            "text embedded in photo",
+            "theological symbolism without a real scene",
+            "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
+          ]
+        },
+        "status": "generate_if_needed"
+      }
+    ]
+  },
+  "keywordImages": [
+    {
+      "keywordId": "W028",
+      "priority": "optional",
+      "sourcePlan": [
+        {
+          "type": "local_preferred",
+          "assetPath": "assets/images/keywords/W028.jpg",
+          "status": "missing"
+        },
+        {
+          "type": "stock_preferred",
+          "queries": [
+            "good/skilled realistic photo",
+            "잘하다/똑똑하다 learning image"
+          ],
+          "status": "search_required"
+        },
+        {
+          "type": "ai_fallback",
+          "prompt": {
+            "scene": "single concept image for good/skilled",
+            "peopleAndAction": "show the concept clearly and simply",
+            "setting": "clean realistic learning image",
+            "mood": "warm and easy to recognize",
+            "cameraFraming": "close or medium crop",
+            "lighting": "bright neutral light",
+            "avoidList": [
+              "blurry or noisy image",
+              "heavy watermark",
+              "text embedded in photo",
+              "theological symbolism without a real scene",
+              "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
+            ]
+          },
+          "status": "generate_if_needed"
+        }
+      ]
+    }
+  ],
+  "newPhrases": [
+    {
+      "variantId": "14",
+      "phraseId": 14,
+      "category": "daily",
+      "korean": "참 잘했어요",
+      "english": "Very good!",
+      "speech": {
+        "male": {
+          "thai": "เก่งมากครับ",
+          "romanization": "gèng mâak khráp",
+          "korean_pronunciation": "깽 막 크랍"
+        },
+        "female": {
+          "thai": "เก่งมากค่ะ",
+          "romanization": "gèng mâak khâ",
+          "korean_pronunciation": "깽 막 카"
+        }
+      },
+      "audio": {
+        "male": {
+          "normal": "assets/audio/sentences/S14_male_normal.mp3",
+          "slow": "assets/audio/sentences/S14_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S14_male_repeat3.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/sentences/S14_female_normal.mp3",
+          "slow": "assets/audio/sentences/S14_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S14_female_repeat3.mp3"
+        }
+      }
+    }
+  ],
+  "reviewPhrases": [
+    {
+      "variantId": "12",
+      "phraseId": 12,
+      "category": "daily",
+      "korean": "맛있게 드세요",
+      "english": "Enjoy your meal.",
+      "speech": {
+        "male": {
+          "thai": "ทานให้อร่อยนะครับ",
+          "romanization": "thaan hâi a-ròi ná khráp",
+          "korean_pronunciation": "탄하이 아러이 나 크랍"
+        },
+        "female": {
+          "thai": "ทานให้อร่อยนะคะ",
+          "romanization": "thaan hâi a-ròi ná khá",
+          "korean_pronunciation": "탄하이 아러이 나 카"
+        }
+      },
+      "audio": {
+        "male": {
+          "normal": "assets/audio/sentences/S12_male_normal.mp3",
+          "slow": "assets/audio/sentences/S12_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S12_male_repeat3.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/sentences/S12_female_normal.mp3",
+          "slow": "assets/audio/sentences/S12_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S12_female_repeat3.mp3"
+        }
+      }
+    },
+    {
+      "variantId": "13",
+      "phraseId": 13,
+      "category": "daily",
+      "korean": "정말 맛있어요",
+      "english": "It's really delicious.",
+      "speech": {
+        "male": {
+          "thai": "อร่อยมากจริง ๆ ครับ",
+          "romanization": "a-ròi mâak jing-jing khráp",
+          "korean_pronunciation": "아러이 막 찡찡 크랍"
+        },
+        "female": {
+          "thai": "อร่อยมากจริง ๆ ค่ะ",
+          "romanization": "a-ròi mâak jing-jing khâ",
+          "korean_pronunciation": "아러이 막 찡찡 카"
+        }
+      },
+      "audio": {
+        "male": {
+          "normal": "assets/audio/sentences/S13_male_normal.mp3",
+          "slow": "assets/audio/sentences/S13_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S13_male_repeat3.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/sentences/S13_female_normal.mp3",
+          "slow": "assets/audio/sentences/S13_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S13_female_repeat3.mp3"
+        }
+      }
+    }
+  ],
+  "keywords": [
+    {
+      "id": "W028",
+      "variantIds": [
+        "14"
+      ],
+      "korean": "잘하다/똑똑하다",
+      "english": "good/skilled",
+      "thai": "เก่ง",
+      "romanization": "gèng",
+      "koreanPronunciation": "깽",
+      "tier": "core",
+      "days": [
+        13,
+        15,
+        20,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W028_male_normal.mp3",
+          "slow": "assets/audio/words/W028_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W028_female_normal.mp3",
+          "slow": "assets/audio/words/W028_female_slow.mp3"
+        }
+      }
+    }
+  ],
+  "displayKeywords": [
+    {
+      "id": "W028",
+      "variantIds": [
+        "14"
+      ],
+      "korean": "잘하다/똑똑하다",
+      "english": "good/skilled",
+      "thai": "เก่ง",
+      "romanization": "gèng",
+      "koreanPronunciation": "깽",
+      "tier": "core",
+      "days": [
+        13,
+        15,
+        20,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W028_male_normal.mp3",
+          "slow": "assets/audio/words/W028_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W028_female_normal.mp3",
+          "slow": "assets/audio/words/W028_female_slow.mp3"
+        }
+      }
+    }
+  ],
+  "supplementalKeywords": [],
+  "keywordDisplayPolicy": {
+    "default": "core_only",
+    "toggleSupplemental": true,
+    "emptyCoreFallback": "show_first_three_keywords"
+  },
+  "learnerProfile": {
+    "ageRange": "primarily older Korean adults; source plan average age about 58",
+    "smartphoneLiteracy": "low_to_moderate",
+    "uxDefaults": {
+      "minimumTapTargetPx": 48,
+      "audioPlayback": "manual_user_triggered",
+      "localStorageFailure": "silent_degrade_with_reset_option",
+      "defaultTextScale": "large"
+    }
+  },
+  "statePolicy": {
+    "storage": "localStorage",
+    "schemaVersion": 1,
+    "namespace": "thai25",
+    "keys": {
+      "schemaVersion": {
+        "key": "thai25.schemaVersion",
+        "type": "number",
+        "default": 1
+      },
+      "currentDay": {
+        "key": "thai25.currentDay",
+        "type": "number",
+        "default": 1
+      },
+      "completedLessonIds": {
+        "key": "thai25.completedLessonIds",
+        "type": "string[]",
+        "default": []
+      },
+      "lastOpenedLessonId": {
+        "key": "thai25.lastOpenedLessonId",
+        "type": "string|null",
+        "default": null
+      },
+      "speakerPreference": {
+        "key": "thai25.speakerPreference",
+        "type": "\"male\"|\"female\"",
+        "default": "female"
+      },
+      "audioSpeedPreference": {
+        "key": "thai25.audioSpeedPreference",
+        "type": "\"normal\"|\"slow\"|\"repeat3\"",
+        "default": "normal"
+      },
+      "showSupplementalKeywords": {
+        "key": "thai25.showSupplementalKeywords",
+        "type": "boolean",
+        "default": false
+      }
+    },
+    "resetSupported": true,
+    "fallback": "If localStorage is unavailable, keep the lesson usable with stateless navigation and show no blocking error."
+  },
+  "imageMissingFallback": {
+    "behavior": "show_placeholder_panel",
+    "placeholderTextSource": "primaryImage.altTextKo",
+    "visualStyle": "light neutral panel with scene label; preserve image aspect ratio so layout does not shift when real image is added",
+    "allowRenderWithoutImageFile": true
+  },
+  "controls": {
+    "sentenceAudioModes": [
+      "normal",
+      "slow",
+      "repeat3"
+    ],
+    "wordAudioModes": [
+      "normal",
+      "slow"
+    ],
+    "speakerModes": [
+      "male",
+      "female"
+    ],
+    "audioSpeedControlPlacement": {
+      "placement": "inline_sentence_audio_toolbar",
+      "visibleOptions": [
+        "normal",
+        "slow",
+        "repeat3"
+      ],
+      "default": "normal",
+      "reason": "Older learners should not have to find a settings screen to slow down audio."
+    }
+  },
+  "completion": {
+    "checkAction": "lesson_complete",
+    "shareAction": "open_kakao_share_card",
+    "nextAction": "next_day_or_review"
+  }
+}

@@ -1,0 +1,438 @@
+{
+  "version": 1,
+  "kind": "kakao_card_spec",
+  "id": "W2SUN",
+  "dayType": "sunday",
+  "contentMode": "review_recap",
+  "sundayFormat": {
+    "rendererTemplate": "same_canvas_same_renderer",
+    "contentMode": "review_recap",
+    "rule": "Sunday cards use the same mobile card renderer as weekdays, but emphasize review phrases and personalMission instead of newPhrases.",
+    "contentSource": {
+      "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show up to 3 primary review phrases on the card.",
+      "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show up to 4 core keywords.",
+      "missionText": "Sunday personalMission rendered as the main action box.",
+      "ministryGuide": "Sunday ministryGuide rendered as the relational guide line."
+    }
+  },
+  "contentSource": {
+    "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show up to 3 primary review phrases on the card.",
+    "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show up to 4 core keywords.",
+    "missionText": "Sunday personalMission rendered as the main action box.",
+    "ministryGuide": "Sunday ministryGuide rendered as the relational guide line."
+  },
+  "week": 2,
+  "day": null,
+  "theme": "새 친구 만나기",
+  "title": "자기소개를 가족·친구에게 말해 보기",
+  "hook": "자기 이름을 넣어 3회 말하고, 가까운 사람 한 명에게 태국어로 자기소개한다.",
+  "missionGoal": "배운 소개 문장을 실제 생활에 붙인다.",
+  "ministryGuide": "자기소개가 편해지면 현장 첫 만남의 긴장도 훨씬 줄어든다.",
+  "speakingMission": "자기 이름을 넣어 3회 말하고, 가까운 사람 한 명에게 태국어로 자기소개한다.",
+  "primaryImage": {
+    "sceneId": null,
+    "altTextKo": "자기소개를 가족·친구에게 말해 보기 학습 장면",
+    "sourcePlan": [
+      {
+        "type": "stock_preferred",
+        "queries": [
+          "자기소개를 가족·친구에게 말해 보기",
+          ""
+        ],
+        "status": "search_required"
+      },
+      {
+        "type": "ai_fallback",
+        "prompt": {
+          "scene": "자기소개를 가족·친구에게 말해 보기",
+          "peopleAndAction": "",
+          "setting": "Thai church or daily-life mission context",
+          "mood": "warm, respectful, practical",
+          "cameraFraming": "documentary style",
+          "lighting": "bright natural light",
+          "avoidList": [
+            "blurry or noisy image",
+            "heavy watermark",
+            "text embedded in photo",
+            "theological symbolism without a real scene",
+            "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
+          ]
+        },
+        "status": "generate_if_needed"
+      }
+    ]
+  },
+  "keywordImages": [
+    {
+      "keywordId": "W014",
+      "priority": "optional",
+      "sourcePlan": [
+        {
+          "type": "local_preferred",
+          "assetPath": "assets/images/keywords/W014.jpg",
+          "status": "missing"
+        },
+        {
+          "type": "stock_preferred",
+          "queries": [
+            "name realistic photo",
+            "이름 learning image"
+          ],
+          "status": "search_required"
+        },
+        {
+          "type": "ai_fallback",
+          "prompt": {
+            "scene": "single concept image for name",
+            "peopleAndAction": "show the concept clearly and simply",
+            "setting": "clean realistic learning image",
+            "mood": "warm and easy to recognize",
+            "cameraFraming": "close or medium crop",
+            "lighting": "bright neutral light",
+            "avoidList": [
+              "blurry or noisy image",
+              "heavy watermark",
+              "text embedded in photo",
+              "theological symbolism without a real scene",
+              "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
+            ]
+          },
+          "status": "generate_if_needed"
+        }
+      ]
+    }
+  ],
+  "mainPhrases": [
+    {
+      "variantId": "8",
+      "phraseId": 8,
+      "category": "daily",
+      "korean": "이름이 무엇인가요?",
+      "english": "What's your name?",
+      "speech": {
+        "male": {
+          "thai": "คุณชื่ออะไรครับ",
+          "romanization": "khun chûue à-rai khráp",
+          "korean_pronunciation": "쿤 츠 아라이 크랍"
+        },
+        "female": {
+          "thai": "คุณชื่ออะไรคะ",
+          "romanization": "khun chûue à-rai khá",
+          "korean_pronunciation": "쿤 츠 아라이 카"
+        }
+      },
+      "audio": {
+        "male": {
+          "normal": "assets/audio/sentences/S8_male_normal.mp3",
+          "slow": "assets/audio/sentences/S8_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S8_male_repeat3.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/sentences/S8_female_normal.mp3",
+          "slow": "assets/audio/sentences/S8_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S8_female_repeat3.mp3"
+        }
+      }
+    },
+    {
+      "variantId": "9",
+      "phraseId": 9,
+      "category": "daily",
+      "korean": "제 이름은 ~입니다",
+      "english": "My name is ~",
+      "speech": {
+        "male": {
+          "thai": "ผมชื่อ ~ ครับ",
+          "romanization": "phŏm chûue ~ khráp",
+          "korean_pronunciation": "폼 츠 ~ 크랍"
+        },
+        "female": {
+          "thai": "ฉันชื่อ ~ ค่ะ",
+          "romanization": "chăn chûue ~ khâ",
+          "korean_pronunciation": "찬 츠 ~ 카"
+        }
+      },
+      "audio": {
+        "male": {
+          "normal": "assets/audio/sentences/S9_male_normal.mp3",
+          "slow": "assets/audio/sentences/S9_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S9_male_repeat3.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/sentences/S9_female_normal.mp3",
+          "slow": "assets/audio/sentences/S9_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S9_female_repeat3.mp3"
+        }
+      }
+    }
+  ],
+  "reviewPhrases": [
+    {
+      "variantId": "8",
+      "phraseId": 8,
+      "category": "daily",
+      "korean": "이름이 무엇인가요?",
+      "english": "What's your name?",
+      "speech": {
+        "male": {
+          "thai": "คุณชื่ออะไรครับ",
+          "romanization": "khun chûue à-rai khráp",
+          "korean_pronunciation": "쿤 츠 아라이 크랍"
+        },
+        "female": {
+          "thai": "คุณชื่ออะไรคะ",
+          "romanization": "khun chûue à-rai khá",
+          "korean_pronunciation": "쿤 츠 아라이 카"
+        }
+      },
+      "audio": {
+        "male": {
+          "normal": "assets/audio/sentences/S8_male_normal.mp3",
+          "slow": "assets/audio/sentences/S8_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S8_male_repeat3.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/sentences/S8_female_normal.mp3",
+          "slow": "assets/audio/sentences/S8_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S8_female_repeat3.mp3"
+        }
+      }
+    },
+    {
+      "variantId": "9",
+      "phraseId": 9,
+      "category": "daily",
+      "korean": "제 이름은 ~입니다",
+      "english": "My name is ~",
+      "speech": {
+        "male": {
+          "thai": "ผมชื่อ ~ ครับ",
+          "romanization": "phŏm chûue ~ khráp",
+          "korean_pronunciation": "폼 츠 ~ 크랍"
+        },
+        "female": {
+          "thai": "ฉันชื่อ ~ ค่ะ",
+          "romanization": "chăn chûue ~ khâ",
+          "korean_pronunciation": "찬 츠 ~ 카"
+        }
+      },
+      "audio": {
+        "male": {
+          "normal": "assets/audio/sentences/S9_male_normal.mp3",
+          "slow": "assets/audio/sentences/S9_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S9_male_repeat3.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/sentences/S9_female_normal.mp3",
+          "slow": "assets/audio/sentences/S9_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S9_female_repeat3.mp3"
+        }
+      }
+    }
+  ],
+  "keywords": [
+    {
+      "id": "W014",
+      "variantIds": [
+        "8",
+        "9"
+      ],
+      "korean": "이름",
+      "english": "name",
+      "thai": "ชื่อ",
+      "romanization": "chûue",
+      "koreanPronunciation": "츠",
+      "tier": "core",
+      "days": [
+        7,
+        8,
+        10,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W014_male_normal.mp3",
+          "slow": "assets/audio/words/W014_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W014_female_normal.mp3",
+          "slow": "assets/audio/words/W014_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W016",
+      "variantIds": [
+        "9",
+        "23"
+      ],
+      "korean": "나(남성)",
+      "english": "I/me, male speaker",
+      "thai": "ผม",
+      "romanization": "phŏm",
+      "koreanPronunciation": "폼",
+      "voices": [
+        "male"
+      ],
+      "tier": "core",
+      "days": [
+        8,
+        10,
+        15,
+        23,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W016_male_normal.mp3",
+          "slow": "assets/audio/words/W016_male_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W017",
+      "variantIds": [
+        "9",
+        "23"
+      ],
+      "korean": "나(여성)",
+      "english": "I/me, female speaker",
+      "thai": "ฉัน",
+      "romanization": "chăn",
+      "koreanPronunciation": "찬",
+      "voices": [
+        "female"
+      ],
+      "tier": "core",
+      "days": [
+        8,
+        10,
+        15,
+        23,
+        25
+      ],
+      "audio": {
+        "female": {
+          "normal": "assets/audio/words/W017_female_normal.mp3",
+          "slow": "assets/audio/words/W017_female_slow.mp3"
+        }
+      }
+    }
+  ],
+  "displayKeywords": [
+    {
+      "id": "W014",
+      "variantIds": [
+        "8",
+        "9"
+      ],
+      "korean": "이름",
+      "english": "name",
+      "thai": "ชื่อ",
+      "romanization": "chûue",
+      "koreanPronunciation": "츠",
+      "tier": "core",
+      "days": [
+        7,
+        8,
+        10,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W014_male_normal.mp3",
+          "slow": "assets/audio/words/W014_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W014_female_normal.mp3",
+          "slow": "assets/audio/words/W014_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W016",
+      "variantIds": [
+        "9",
+        "23"
+      ],
+      "korean": "나(남성)",
+      "english": "I/me, male speaker",
+      "thai": "ผม",
+      "romanization": "phŏm",
+      "koreanPronunciation": "폼",
+      "voices": [
+        "male"
+      ],
+      "tier": "core",
+      "days": [
+        8,
+        10,
+        15,
+        23,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W016_male_normal.mp3",
+          "slow": "assets/audio/words/W016_male_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W017",
+      "variantIds": [
+        "9",
+        "23"
+      ],
+      "korean": "나(여성)",
+      "english": "I/me, female speaker",
+      "thai": "ฉัน",
+      "romanization": "chăn",
+      "koreanPronunciation": "찬",
+      "voices": [
+        "female"
+      ],
+      "tier": "core",
+      "days": [
+        8,
+        10,
+        15,
+        23,
+        25
+      ],
+      "audio": {
+        "female": {
+          "normal": "assets/audio/words/W017_female_normal.mp3",
+          "slow": "assets/audio/words/W017_female_slow.mp3"
+        }
+      }
+    }
+  ],
+  "supplementalKeywords": [],
+  "keywordDisplayPolicy": {
+    "default": "core_only",
+    "toggleSupplemental": false
+  },
+  "audioModes": [
+    "normal",
+    "slow",
+    "repeat3"
+  ],
+  "layout": {
+    "canvas": {
+      "width": 1080,
+      "height": 1350
+    },
+    "sections": [
+      "header",
+      "heroImage",
+      "mainPhrases",
+      "reviewStrip",
+      "keywordStrip",
+      "missionBox",
+      "footer"
+    ]
+  }
+}

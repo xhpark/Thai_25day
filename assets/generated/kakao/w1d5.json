@@ -1,0 +1,460 @@
+{
+  "version": 1,
+  "kind": "kakao_card_spec",
+  "id": "W1D5",
+  "dayType": "weekday",
+  "contentMode": "daily_lesson",
+  "sundayFormat": {
+    "rendererTemplate": "same_canvas_same_renderer",
+    "contentMode": "review_recap",
+    "rule": "Sunday cards use the same mobile card renderer as weekdays, but emphasize review phrases and personalMission instead of newPhrases.",
+    "contentSource": {
+      "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show up to 3 primary review phrases on the card.",
+      "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show up to 4 core keywords.",
+      "missionText": "Sunday personalMission rendered as the main action box.",
+      "ministryGuide": "Sunday ministryGuide rendered as the relational guide line."
+    }
+  },
+  "contentSource": {
+    "phrases": "Weekday lesson newPhrases rendered as mainPhrases; review-only weekdays fall back to reviewPhrases.",
+    "keywords": "Weekday lesson keyWordIds filtered through displayKeywords.",
+    "missionText": "Weekday speakingMission rendered as the main action box.",
+    "ministryGuide": "Weekday ministryGuide rendered as the relational guide line."
+  },
+  "week": 1,
+  "day": 5,
+  "theme": "태국 교회 첫 방문",
+  "title": "예수님 믿으세요",
+  "hook": "사랑의 대화 뒤에 믿음의 초대를 더한다.",
+  "missionGoal": "사랑과 축복 뒤에 믿음의 초대를 자연스럽게 말한다.",
+  "ministryGuide": "이 문장은 관계가 열린 뒤 사랑과 축복의 흐름 속에서 말하면 훨씬 부드럽게 들린다.",
+  "speakingMission": "예수님 믿으세요를 5회 말하고, 앞에서 배운 인사와 감사 문장 뒤에 이어 2회 연습한다.",
+  "primaryImage": {
+    "sceneId": "greeting_church_gate",
+    "altTextKo": "교회 입구에서 태국 성도에게 와이 인사로 반갑게 인사하는 장면",
+    "sourcePlan": [
+      {
+        "type": "local_preferred",
+        "assetPath": "assets/images/scenes/greeting_church_gate.jpg",
+        "status": "ready"
+      },
+      {
+        "type": "stock_preferred",
+        "queries": [
+          "Thai church entrance greeting people smiling wai",
+          "Asian church greeting outside entrance",
+          "warm greeting at church gate Thailand"
+        ],
+        "status": "search_required"
+      },
+      {
+        "type": "ai_fallback",
+        "prompt": {
+          "scene": "Korean mission team greeting Thai church member",
+          "peopleAndAction": "two or three adults smiling, gentle wai greeting, warm eye contact",
+          "setting": "church entrance in Thailand, daytime",
+          "mood": "welcoming, respectful, calm",
+          "cameraFraming": "medium wide documentary photo",
+          "lighting": "soft natural daylight",
+          "avoidList": [
+            "tourist pose",
+            "crowded street chaos",
+            "dramatic religious painting style"
+          ]
+        },
+        "status": "generate_if_needed"
+      }
+    ]
+  },
+  "keywordImages": [
+    {
+      "keywordId": "W033",
+      "priority": "optional",
+      "sourcePlan": [
+        {
+          "type": "local_preferred",
+          "assetPath": "assets/images/keywords/W033.jpg",
+          "status": "missing"
+        },
+        {
+          "type": "stock_preferred",
+          "queries": [
+            "Jesus realistic photo",
+            "예수님 learning image"
+          ],
+          "status": "search_required"
+        },
+        {
+          "type": "ai_fallback",
+          "prompt": {
+            "scene": "single concept image for Jesus",
+            "peopleAndAction": "show the concept clearly and simply",
+            "setting": "clean realistic learning image",
+            "mood": "warm and easy to recognize",
+            "cameraFraming": "close or medium crop",
+            "lighting": "bright neutral light",
+            "avoidList": [
+              "blurry or noisy image",
+              "heavy watermark",
+              "text embedded in photo",
+              "theological symbolism without a real scene",
+              "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
+            ]
+          },
+          "status": "generate_if_needed"
+        }
+      ]
+    }
+  ],
+  "mainPhrases": [
+    {
+      "variantId": "21",
+      "phraseId": 21,
+      "category": "mission",
+      "korean": "예수님 믿으세요",
+      "english": "Believe in Jesus.",
+      "speech": {
+        "male": {
+          "thai": "เชื่อในพระเยซูครับ",
+          "romanization": "chûea nai Phrá-yeh-suu khráp",
+          "korean_pronunciation": "츄아 나이 프라예쑤 크랍"
+        },
+        "female": {
+          "thai": "เชื่อในพระเยซูค่ะ",
+          "romanization": "chûea nai Phrá-yeh-suu khâ",
+          "korean_pronunciation": "츄아 나이 프라예쑤 카"
+        }
+      },
+      "audio": {
+        "male": {
+          "normal": "assets/audio/sentences/S21_male_normal.mp3",
+          "slow": "assets/audio/sentences/S21_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S21_male_repeat3.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/sentences/S21_female_normal.mp3",
+          "slow": "assets/audio/sentences/S21_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S21_female_repeat3.mp3"
+        }
+      }
+    }
+  ],
+  "reviewPhrases": [
+    {
+      "variantId": "1",
+      "phraseId": 1,
+      "category": "daily",
+      "korean": "안녕하세요",
+      "english": "Hello / Hi",
+      "speech": {
+        "male": {
+          "thai": "สวัสดีครับ",
+          "romanization": "sà-wàt-dii khráp",
+          "korean_pronunciation": "싸왓디 크랍"
+        },
+        "female": {
+          "thai": "สวัสดีค่ะ",
+          "romanization": "sà-wàt-dii khâ",
+          "korean_pronunciation": "싸왓디 카"
+        }
+      },
+      "audio": {
+        "male": {
+          "normal": "assets/audio/sentences/S1_male_normal.mp3",
+          "slow": "assets/audio/sentences/S1_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S1_male_repeat3.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/sentences/S1_female_normal.mp3",
+          "slow": "assets/audio/sentences/S1_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S1_female_repeat3.mp3"
+        }
+      }
+    },
+    {
+      "variantId": "2-1",
+      "phraseId": 2,
+      "category": "daily",
+      "korean": "좋은 아침",
+      "english": "Good morning.",
+      "speech": {
+        "male": {
+          "thai": "สวัสดีตอนเช้าครับ",
+          "romanization": "sà-wàt-dii dtaawn-cháao khráp",
+          "korean_pronunciation": "싸왓디 떤 차오 크랍"
+        },
+        "female": {
+          "thai": "สวัสดีตอนเช้าค่ะ",
+          "romanization": "sà-wàt-dii dtaawn-cháao khâ",
+          "korean_pronunciation": "싸왓디 떤 차오 카"
+        }
+      },
+      "audio": {
+        "male": {
+          "normal": "assets/audio/sentences/S2_1_male_normal.mp3",
+          "slow": "assets/audio/sentences/S2_1_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S2_1_male_repeat3.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/sentences/S2_1_female_normal.mp3",
+          "slow": "assets/audio/sentences/S2_1_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S2_1_female_repeat3.mp3"
+        }
+      }
+    },
+    {
+      "variantId": "2-2",
+      "phraseId": 2,
+      "category": "daily",
+      "korean": "좋은 저녁",
+      "english": "Good evening.",
+      "speech": {
+        "male": {
+          "thai": "สวัสดีตอนเย็นครับ",
+          "romanization": "sà-wàt-dii dtaawn-yen khráp",
+          "korean_pronunciation": "싸왓디 떤 옌 크랍"
+        },
+        "female": {
+          "thai": "สวัสดีตอนเย็นค่ะ",
+          "romanization": "sà-wàt-dii dtaawn-yen khâ",
+          "korean_pronunciation": "싸왓디 떤 옌 카"
+        }
+      },
+      "audio": {
+        "male": {
+          "normal": "assets/audio/sentences/S2_2_male_normal.mp3",
+          "slow": "assets/audio/sentences/S2_2_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S2_2_male_repeat3.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/sentences/S2_2_female_normal.mp3",
+          "slow": "assets/audio/sentences/S2_2_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S2_2_female_repeat3.mp3"
+        }
+      }
+    },
+    {
+      "variantId": "3",
+      "phraseId": 3,
+      "category": "daily",
+      "korean": "정말 고마워요",
+      "english": "Thanks a lot!",
+      "speech": {
+        "male": {
+          "thai": "ขอบคุณมากครับ",
+          "romanization": "khàawp-khun mâak khráp",
+          "korean_pronunciation": "콥 쿤 막 크랍"
+        },
+        "female": {
+          "thai": "ขอบคุณมากค่ะ",
+          "romanization": "khàawp-khun mâak khâ",
+          "korean_pronunciation": "콥 쿤 막 카"
+        }
+      },
+      "audio": {
+        "male": {
+          "normal": "assets/audio/sentences/S3_male_normal.mp3",
+          "slow": "assets/audio/sentences/S3_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S3_male_repeat3.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/sentences/S3_female_normal.mp3",
+          "slow": "assets/audio/sentences/S3_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S3_female_repeat3.mp3"
+        }
+      }
+    }
+  ],
+  "keywords": [
+    {
+      "id": "W041",
+      "variantIds": [
+        "21"
+      ],
+      "korean": "믿다",
+      "english": "believe",
+      "thai": "เชื่อ",
+      "romanization": "chûea",
+      "koreanPronunciation": "츄아",
+      "tier": "core",
+      "days": [
+        21,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W041_male_normal.mp3",
+          "slow": "assets/audio/words/W041_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W041_female_normal.mp3",
+          "slow": "assets/audio/words/W041_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W042",
+      "variantIds": [
+        "21"
+      ],
+      "korean": "~안에/~을",
+      "english": "in",
+      "thai": "ใน",
+      "romanization": "nai",
+      "koreanPronunciation": "나이",
+      "tier": "supplemental",
+      "days": [
+        21,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W042_male_normal.mp3",
+          "slow": "assets/audio/words/W042_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W042_female_normal.mp3",
+          "slow": "assets/audio/words/W042_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W033",
+      "variantIds": [
+        "17",
+        "21"
+      ],
+      "korean": "예수님",
+      "english": "Jesus",
+      "thai": "พระเยซู",
+      "romanization": "Phrá-yeh-suu",
+      "koreanPronunciation": "프라예쑤",
+      "tier": "core",
+      "days": [
+        16,
+        20,
+        21,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W033_male_normal.mp3",
+          "slow": "assets/audio/words/W033_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W033_female_normal.mp3",
+          "slow": "assets/audio/words/W033_female_slow.mp3"
+        }
+      }
+    }
+  ],
+  "displayKeywords": [
+    {
+      "id": "W041",
+      "variantIds": [
+        "21"
+      ],
+      "korean": "믿다",
+      "english": "believe",
+      "thai": "เชื่อ",
+      "romanization": "chûea",
+      "koreanPronunciation": "츄아",
+      "tier": "core",
+      "days": [
+        21,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W041_male_normal.mp3",
+          "slow": "assets/audio/words/W041_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W041_female_normal.mp3",
+          "slow": "assets/audio/words/W041_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W033",
+      "variantIds": [
+        "17",
+        "21"
+      ],
+      "korean": "예수님",
+      "english": "Jesus",
+      "thai": "พระเยซู",
+      "romanization": "Phrá-yeh-suu",
+      "koreanPronunciation": "프라예쑤",
+      "tier": "core",
+      "days": [
+        16,
+        20,
+        21,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W033_male_normal.mp3",
+          "slow": "assets/audio/words/W033_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W033_female_normal.mp3",
+          "slow": "assets/audio/words/W033_female_slow.mp3"
+        }
+      }
+    }
+  ],
+  "supplementalKeywords": [
+    {
+      "id": "W042",
+      "variantIds": [
+        "21"
+      ],
+      "korean": "~안에/~을",
+      "english": "in",
+      "thai": "ใน",
+      "romanization": "nai",
+      "koreanPronunciation": "나이",
+      "tier": "supplemental",
+      "days": [
+        21,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W042_male_normal.mp3",
+          "slow": "assets/audio/words/W042_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W042_female_normal.mp3",
+          "slow": "assets/audio/words/W042_female_slow.mp3"
+        }
+      }
+    }
+  ],
+  "keywordDisplayPolicy": {
+    "default": "core_only",
+    "toggleSupplemental": false
+  },
+  "audioModes": [
+    "normal",
+    "slow",
+    "repeat3"
+  ],
+  "layout": {
+    "canvas": {
+      "width": 1080,
+      "height": 1350
+    },
+    "sections": [
+      "header",
+      "heroImage",
+      "mainPhrases",
+      "reviewStrip",
+      "keywordStrip",
+      "missionBox",
+      "footer"
+    ]
+  }
+}

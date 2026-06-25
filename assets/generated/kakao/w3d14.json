@@ -1,0 +1,510 @@
+{
+  "version": 1,
+  "kind": "kakao_card_spec",
+  "id": "W3D14",
+  "dayType": "weekday",
+  "contentMode": "daily_lesson",
+  "sundayFormat": {
+    "rendererTemplate": "same_canvas_same_renderer",
+    "contentMode": "review_recap",
+    "rule": "Sunday cards use the same mobile card renderer as weekdays, but emphasize review phrases and personalMission instead of newPhrases.",
+    "contentSource": {
+      "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show up to 3 primary review phrases on the card.",
+      "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show up to 4 core keywords.",
+      "missionText": "Sunday personalMission rendered as the main action box.",
+      "ministryGuide": "Sunday ministryGuide rendered as the relational guide line."
+    }
+  },
+  "contentSource": {
+    "phrases": "Weekday lesson newPhrases rendered as mainPhrases; review-only weekdays fall back to reviewPhrases.",
+    "keywords": "Weekday lesson keyWordIds filtered through displayKeywords.",
+    "missionText": "Weekday speakingMission rendered as the main action box.",
+    "ministryGuide": "Weekday ministryGuide rendered as the relational guide line."
+  },
+  "week": 3,
+  "day": 14,
+  "theme": "교회 식사와 작별",
+  "title": "작별 인사",
+  "hook": "따뜻하게 헤어지고 다시 만날 약속을 남긴다.",
+  "missionGoal": "헤어질 때도 관계를 이어 주는 표현을 익힌다.",
+  "ministryGuide": "좋은 작별 인사는 다음 만남의 문을 열어 주고, 선교 관계를 계속 이어 가게 한다.",
+  "speakingMission": "잘 가요와 다시 만나요를 한 세트로 5회 연습한다.",
+  "primaryImage": {
+    "sceneId": null,
+    "altTextKo": "작별 인사 학습 장면",
+    "sourcePlan": [
+      {
+        "type": "stock_preferred",
+        "queries": [
+          "작별 인사",
+          "식사와 행사가 끝난 뒤 자연스럽게 헤어진다."
+        ],
+        "status": "search_required"
+      },
+      {
+        "type": "ai_fallback",
+        "prompt": {
+          "scene": "작별 인사",
+          "peopleAndAction": "식사와 행사가 끝난 뒤 자연스럽게 헤어진다.",
+          "setting": "Thai church or daily-life mission context",
+          "mood": "warm, respectful, practical",
+          "cameraFraming": "documentary style",
+          "lighting": "bright natural light",
+          "avoidList": [
+            "blurry or noisy image",
+            "heavy watermark",
+            "text embedded in photo",
+            "theological symbolism without a real scene",
+            "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
+          ]
+        },
+        "status": "generate_if_needed"
+      }
+    ]
+  },
+  "keywordImages": [
+    {
+      "keywordId": "W029",
+      "priority": "preferred",
+      "sourcePlan": [
+        {
+          "type": "local_preferred",
+          "assetPath": "assets/images/keywords/W029.jpg",
+          "status": "missing"
+        },
+        {
+          "type": "stock_preferred",
+          "queries": [
+            "goodbye realistic photo",
+            "안녕히 가세요 learning image"
+          ],
+          "status": "search_required"
+        },
+        {
+          "type": "ai_fallback",
+          "prompt": {
+            "scene": "single concept image for goodbye",
+            "peopleAndAction": "show the concept clearly and simply",
+            "setting": "clean realistic learning image",
+            "mood": "warm and easy to recognize",
+            "cameraFraming": "close or medium crop",
+            "lighting": "bright neutral light",
+            "avoidList": [
+              "blurry or noisy image",
+              "heavy watermark",
+              "text embedded in photo",
+              "theological symbolism without a real scene",
+              "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
+            ]
+          },
+          "status": "generate_if_needed"
+        }
+      ]
+    }
+  ],
+  "mainPhrases": [
+    {
+      "variantId": "15",
+      "phraseId": 15,
+      "category": "daily",
+      "korean": "잘 가요",
+      "english": "Good bye.",
+      "speech": {
+        "male": {
+          "thai": "ลาก่อนครับ",
+          "romanization": "laa-gàawn khráp",
+          "korean_pronunciation": "라껀 크랍"
+        },
+        "female": {
+          "thai": "ลาก่อนค่ะ",
+          "romanization": "laa-gàawn khâ",
+          "korean_pronunciation": "라껀 카"
+        }
+      },
+      "audio": {
+        "male": {
+          "normal": "assets/audio/sentences/S15_male_normal.mp3",
+          "slow": "assets/audio/sentences/S15_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S15_male_repeat3.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/sentences/S15_female_normal.mp3",
+          "slow": "assets/audio/sentences/S15_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S15_female_repeat3.mp3"
+        }
+      }
+    },
+    {
+      "variantId": "16",
+      "phraseId": 16,
+      "category": "daily",
+      "korean": "다시 만나요",
+      "english": "See you again.",
+      "speech": {
+        "male": {
+          "thai": "แล้วพบกันใหม่ครับ",
+          "romanization": "láew phóp-gan mài khráp",
+          "korean_pronunciation": "래우 폽깐 마이 크랍"
+        },
+        "female": {
+          "thai": "แล้วพบกันใหม่ค่ะ",
+          "romanization": "láew phóp-gan mài khâ",
+          "korean_pronunciation": "래우 폽깐 마이 카"
+        }
+      },
+      "audio": {
+        "male": {
+          "normal": "assets/audio/sentences/S16_male_normal.mp3",
+          "slow": "assets/audio/sentences/S16_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S16_male_repeat3.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/sentences/S16_female_normal.mp3",
+          "slow": "assets/audio/sentences/S16_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S16_female_repeat3.mp3"
+        }
+      }
+    }
+  ],
+  "reviewPhrases": [
+    {
+      "variantId": "12",
+      "phraseId": 12,
+      "category": "daily",
+      "korean": "맛있게 드세요",
+      "english": "Enjoy your meal.",
+      "speech": {
+        "male": {
+          "thai": "ทานให้อร่อยนะครับ",
+          "romanization": "thaan hâi a-ròi ná khráp",
+          "korean_pronunciation": "탄하이 아러이 나 크랍"
+        },
+        "female": {
+          "thai": "ทานให้อร่อยนะคะ",
+          "romanization": "thaan hâi a-ròi ná khá",
+          "korean_pronunciation": "탄하이 아러이 나 카"
+        }
+      },
+      "audio": {
+        "male": {
+          "normal": "assets/audio/sentences/S12_male_normal.mp3",
+          "slow": "assets/audio/sentences/S12_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S12_male_repeat3.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/sentences/S12_female_normal.mp3",
+          "slow": "assets/audio/sentences/S12_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S12_female_repeat3.mp3"
+        }
+      }
+    },
+    {
+      "variantId": "13",
+      "phraseId": 13,
+      "category": "daily",
+      "korean": "정말 맛있어요",
+      "english": "It's really delicious.",
+      "speech": {
+        "male": {
+          "thai": "อร่อยมากจริง ๆ ครับ",
+          "romanization": "a-ròi mâak jing-jing khráp",
+          "korean_pronunciation": "아러이 막 찡찡 크랍"
+        },
+        "female": {
+          "thai": "อร่อยมากจริง ๆ ค่ะ",
+          "romanization": "a-ròi mâak jing-jing khâ",
+          "korean_pronunciation": "아러이 막 찡찡 카"
+        }
+      },
+      "audio": {
+        "male": {
+          "normal": "assets/audio/sentences/S13_male_normal.mp3",
+          "slow": "assets/audio/sentences/S13_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S13_male_repeat3.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/sentences/S13_female_normal.mp3",
+          "slow": "assets/audio/sentences/S13_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S13_female_repeat3.mp3"
+        }
+      }
+    },
+    {
+      "variantId": "14",
+      "phraseId": 14,
+      "category": "daily",
+      "korean": "참 잘했어요",
+      "english": "Very good!",
+      "speech": {
+        "male": {
+          "thai": "เก่งมากครับ",
+          "romanization": "gèng mâak khráp",
+          "korean_pronunciation": "깽 막 크랍"
+        },
+        "female": {
+          "thai": "เก่งมากค่ะ",
+          "romanization": "gèng mâak khâ",
+          "korean_pronunciation": "깽 막 카"
+        }
+      },
+      "audio": {
+        "male": {
+          "normal": "assets/audio/sentences/S14_male_normal.mp3",
+          "slow": "assets/audio/sentences/S14_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S14_male_repeat3.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/sentences/S14_female_normal.mp3",
+          "slow": "assets/audio/sentences/S14_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S14_female_repeat3.mp3"
+        }
+      }
+    }
+  ],
+  "keywords": [
+    {
+      "id": "W029",
+      "variantIds": [
+        "15"
+      ],
+      "korean": "안녕히 가세요",
+      "english": "goodbye",
+      "thai": "ลาก่อน",
+      "romanization": "laa-gàawn",
+      "koreanPronunciation": "라껀",
+      "tier": "core",
+      "days": [
+        14,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W029_male_normal.mp3",
+          "slow": "assets/audio/words/W029_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W029_female_normal.mp3",
+          "slow": "assets/audio/words/W029_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W030",
+      "variantIds": [
+        "16"
+      ],
+      "korean": "그리고/그 후",
+      "english": "then/and then",
+      "thai": "แล้ว",
+      "romanization": "láew",
+      "koreanPronunciation": "래우",
+      "tier": "supplemental",
+      "days": [
+        14,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W030_male_normal.mp3",
+          "slow": "assets/audio/words/W030_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W030_female_normal.mp3",
+          "slow": "assets/audio/words/W030_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W031",
+      "variantIds": [
+        "16"
+      ],
+      "korean": "만나다",
+      "english": "meet",
+      "thai": "พบกัน",
+      "romanization": "phóp-gan",
+      "koreanPronunciation": "폽깐",
+      "tier": "supplemental",
+      "days": [
+        14,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W031_male_normal.mp3",
+          "slow": "assets/audio/words/W031_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W031_female_normal.mp3",
+          "slow": "assets/audio/words/W031_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W032",
+      "variantIds": [
+        "16"
+      ],
+      "korean": "다시/새로",
+      "english": "again/new",
+      "thai": "ใหม่",
+      "romanization": "mài",
+      "koreanPronunciation": "마이",
+      "tier": "supplemental",
+      "days": [
+        14,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W032_male_normal.mp3",
+          "slow": "assets/audio/words/W032_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W032_female_normal.mp3",
+          "slow": "assets/audio/words/W032_female_slow.mp3"
+        }
+      }
+    }
+  ],
+  "displayKeywords": [
+    {
+      "id": "W029",
+      "variantIds": [
+        "15"
+      ],
+      "korean": "안녕히 가세요",
+      "english": "goodbye",
+      "thai": "ลาก่อน",
+      "romanization": "laa-gàawn",
+      "koreanPronunciation": "라껀",
+      "tier": "core",
+      "days": [
+        14,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W029_male_normal.mp3",
+          "slow": "assets/audio/words/W029_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W029_female_normal.mp3",
+          "slow": "assets/audio/words/W029_female_slow.mp3"
+        }
+      }
+    }
+  ],
+  "supplementalKeywords": [
+    {
+      "id": "W030",
+      "variantIds": [
+        "16"
+      ],
+      "korean": "그리고/그 후",
+      "english": "then/and then",
+      "thai": "แล้ว",
+      "romanization": "láew",
+      "koreanPronunciation": "래우",
+      "tier": "supplemental",
+      "days": [
+        14,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W030_male_normal.mp3",
+          "slow": "assets/audio/words/W030_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W030_female_normal.mp3",
+          "slow": "assets/audio/words/W030_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W031",
+      "variantIds": [
+        "16"
+      ],
+      "korean": "만나다",
+      "english": "meet",
+      "thai": "พบกัน",
+      "romanization": "phóp-gan",
+      "koreanPronunciation": "폽깐",
+      "tier": "supplemental",
+      "days": [
+        14,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W031_male_normal.mp3",
+          "slow": "assets/audio/words/W031_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W031_female_normal.mp3",
+          "slow": "assets/audio/words/W031_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W032",
+      "variantIds": [
+        "16"
+      ],
+      "korean": "다시/새로",
+      "english": "again/new",
+      "thai": "ใหม่",
+      "romanization": "mài",
+      "koreanPronunciation": "마이",
+      "tier": "supplemental",
+      "days": [
+        14,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W032_male_normal.mp3",
+          "slow": "assets/audio/words/W032_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W032_female_normal.mp3",
+          "slow": "assets/audio/words/W032_female_slow.mp3"
+        }
+      }
+    }
+  ],
+  "keywordDisplayPolicy": {
+    "default": "core_only",
+    "toggleSupplemental": false
+  },
+  "audioModes": [
+    "normal",
+    "slow",
+    "repeat3"
+  ],
+  "layout": {
+    "canvas": {
+      "width": 1080,
+      "height": 1350
+    },
+    "sections": [
+      "header",
+      "heroImage",
+      "mainPhrases",
+      "reviewStrip",
+      "keywordStrip",
+      "missionBox",
+      "footer"
+    ]
+  }
+}

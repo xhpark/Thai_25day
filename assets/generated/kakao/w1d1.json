@@ -1,0 +1,477 @@
+{
+  "version": 1,
+  "kind": "kakao_card_spec",
+  "id": "W1D1",
+  "dayType": "weekday",
+  "contentMode": "daily_lesson",
+  "sundayFormat": {
+    "rendererTemplate": "same_canvas_same_renderer",
+    "contentMode": "review_recap",
+    "rule": "Sunday cards use the same mobile card renderer as weekdays, but emphasize review phrases and personalMission instead of newPhrases.",
+    "contentSource": {
+      "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show up to 3 primary review phrases on the card.",
+      "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show up to 4 core keywords.",
+      "missionText": "Sunday personalMission rendered as the main action box.",
+      "ministryGuide": "Sunday ministryGuide rendered as the relational guide line."
+    }
+  },
+  "contentSource": {
+    "phrases": "Weekday lesson newPhrases rendered as mainPhrases; review-only weekdays fall back to reviewPhrases.",
+    "keywords": "Weekday lesson keyWordIds filtered through displayKeywords.",
+    "missionText": "Weekday speakingMission rendered as the main action box.",
+    "ministryGuide": "Weekday ministryGuide rendered as the relational guide line."
+  },
+  "week": 1,
+  "day": 1,
+  "theme": "태국 교회 첫 방문",
+  "title": "첫 인사 시작하기",
+  "hook": "와이 인사와 함께 첫 문장을 입에 붙인다.",
+  "missionGoal": "첫 만남에서 따뜻한 분위기를 여는 태국어 인사를 익힌다.",
+  "ministryGuide": "처음 만난 사람에게는 문장을 길게 설명하기보다 와이 인사와 미소를 먼저 보여 주고, 상대가 웃거나 고개를 끄덕이면 같은 인사를 한 번 더 천천히 말한다.",
+  "speakingMission": "화면에서 선택한 발화로 \"사-왓-디 카\"(여성) 또는 \"사-왓-디 크랍\"(남성)을 5회 또렷하게 말해요. 그다음 두 손을 모아 와이 인사를 하면서 같은 말을 2회 더 말해요.",
+  "primaryImage": {
+    "sceneId": "greeting_church_gate",
+    "altTextKo": "교회 입구에서 태국 성도에게 와이 인사로 반갑게 인사하는 장면",
+    "sourcePlan": [
+      {
+        "type": "local_preferred",
+        "assetPath": "assets/images/scenes/greeting_church_gate.jpg",
+        "status": "ready"
+      },
+      {
+        "type": "stock_preferred",
+        "queries": [
+          "Thai church entrance greeting people smiling wai",
+          "Asian church greeting outside entrance",
+          "warm greeting at church gate Thailand"
+        ],
+        "status": "search_required"
+      },
+      {
+        "type": "ai_fallback",
+        "prompt": {
+          "scene": "Korean mission team greeting Thai church member",
+          "peopleAndAction": "two or three adults smiling, gentle wai greeting, warm eye contact",
+          "setting": "church entrance in Thailand, daytime",
+          "mood": "welcoming, respectful, calm",
+          "cameraFraming": "medium wide documentary photo",
+          "lighting": "soft natural daylight",
+          "avoidList": [
+            "tourist pose",
+            "crowded street chaos",
+            "dramatic religious painting style"
+          ]
+        },
+        "status": "generate_if_needed"
+      }
+    ]
+  },
+  "keywordImages": [],
+  "mainPhrases": [
+    {
+      "variantId": "1",
+      "phraseId": 1,
+      "category": "daily",
+      "korean": "안녕하세요",
+      "english": "Hello / Hi",
+      "speech": {
+        "male": {
+          "thai": "สวัสดีครับ",
+          "romanization": "sà-wàt-dii khráp",
+          "korean_pronunciation": "싸왓디 크랍"
+        },
+        "female": {
+          "thai": "สวัสดีค่ะ",
+          "romanization": "sà-wàt-dii khâ",
+          "korean_pronunciation": "싸왓디 카"
+        }
+      },
+      "audio": {
+        "male": {
+          "normal": "assets/audio/sentences/S1_male_normal.mp3",
+          "slow": "assets/audio/sentences/S1_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S1_male_repeat3.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/sentences/S1_female_normal.mp3",
+          "slow": "assets/audio/sentences/S1_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S1_female_repeat3.mp3"
+        }
+      }
+    }
+  ],
+  "reviewPhrases": [],
+  "keywords": [
+    {
+      "id": "W001",
+      "variantIds": [
+        "1",
+        "2-1",
+        "2-2"
+      ],
+      "korean": "안녕하세요",
+      "english": "hello",
+      "thai": "สวัสดี",
+      "romanization": "sà-wàt-dii",
+      "koreanPronunciation": "싸왓디",
+      "tier": "core",
+      "days": [
+        1,
+        2,
+        5,
+        10,
+        15,
+        20,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W001_male_normal.mp3",
+          "slow": "assets/audio/words/W001_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W001_female_normal.mp3",
+          "slow": "assets/audio/words/W001_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W002",
+      "variantIds": [
+        "1",
+        "2-1",
+        "2-2",
+        "3",
+        "4",
+        "5-1",
+        "5-2",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24"
+      ],
+      "korean": "남성 존칭 어미",
+      "english": "male polite particle",
+      "thai": "ครับ",
+      "romanization": "khráp",
+      "koreanPronunciation": "크랍",
+      "voices": [
+        "male"
+      ],
+      "tier": "core",
+      "days": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W002_male_normal.mp3",
+          "slow": "assets/audio/words/W002_male_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W003",
+      "variantIds": [
+        "1",
+        "2-1",
+        "2-2",
+        "3",
+        "4",
+        "5-1",
+        "5-2",
+        "6",
+        "7",
+        "9",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24"
+      ],
+      "korean": "여성 존칭 어미",
+      "english": "female polite particle",
+      "thai": "ค่ะ",
+      "romanization": "khâ",
+      "koreanPronunciation": "카",
+      "voices": [
+        "female"
+      ],
+      "tier": "core",
+      "days": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ],
+      "audio": {
+        "female": {
+          "normal": "assets/audio/words/W003_female_normal.mp3",
+          "slow": "assets/audio/words/W003_female_slow.mp3"
+        }
+      }
+    }
+  ],
+  "displayKeywords": [
+    {
+      "id": "W001",
+      "variantIds": [
+        "1",
+        "2-1",
+        "2-2"
+      ],
+      "korean": "안녕하세요",
+      "english": "hello",
+      "thai": "สวัสดี",
+      "romanization": "sà-wàt-dii",
+      "koreanPronunciation": "싸왓디",
+      "tier": "core",
+      "days": [
+        1,
+        2,
+        5,
+        10,
+        15,
+        20,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W001_male_normal.mp3",
+          "slow": "assets/audio/words/W001_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W001_female_normal.mp3",
+          "slow": "assets/audio/words/W001_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W002",
+      "variantIds": [
+        "1",
+        "2-1",
+        "2-2",
+        "3",
+        "4",
+        "5-1",
+        "5-2",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24"
+      ],
+      "korean": "남성 존칭 어미",
+      "english": "male polite particle",
+      "thai": "ครับ",
+      "romanization": "khráp",
+      "koreanPronunciation": "크랍",
+      "voices": [
+        "male"
+      ],
+      "tier": "core",
+      "days": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W002_male_normal.mp3",
+          "slow": "assets/audio/words/W002_male_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W003",
+      "variantIds": [
+        "1",
+        "2-1",
+        "2-2",
+        "3",
+        "4",
+        "5-1",
+        "5-2",
+        "6",
+        "7",
+        "9",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24"
+      ],
+      "korean": "여성 존칭 어미",
+      "english": "female polite particle",
+      "thai": "ค่ะ",
+      "romanization": "khâ",
+      "koreanPronunciation": "카",
+      "voices": [
+        "female"
+      ],
+      "tier": "core",
+      "days": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ],
+      "audio": {
+        "female": {
+          "normal": "assets/audio/words/W003_female_normal.mp3",
+          "slow": "assets/audio/words/W003_female_slow.mp3"
+        }
+      }
+    }
+  ],
+  "supplementalKeywords": [],
+  "keywordDisplayPolicy": {
+    "default": "core_only",
+    "toggleSupplemental": false
+  },
+  "audioModes": [
+    "normal",
+    "slow",
+    "repeat3"
+  ],
+  "layout": {
+    "canvas": {
+      "width": 1080,
+      "height": 1350
+    },
+    "sections": [
+      "header",
+      "heroImage",
+      "mainPhrases",
+      "reviewStrip",
+      "keywordStrip",
+      "missionBox",
+      "footer"
+    ]
+  }
+}

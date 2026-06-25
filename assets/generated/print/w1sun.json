@@ -1,0 +1,286 @@
+{
+  "version": 1,
+  "kind": "review_sheet_spec",
+  "id": "W1SUN",
+  "week": 1,
+  "theme": "태국 교회 첫 방문",
+  "title": "인사와 감사를 실제로 말해 보기",
+  "missionGoal": "배운 표현을 생활 안에서 바로 입 밖으로 꺼낸다.",
+  "ministryGuide": "가까운 사람에게 먼저 말해 보며 입을 풀고, 다음 실제 만남에서 첫 문장으로 무엇을 사용할지 하나만 정한다.",
+  "personalMission": "가족이나 가까운 사람에게 태국어 인사 1회, 감사 1회, 천만에요 1회를 실제로 말한다.",
+  "primaryImage": {
+    "sceneId": null,
+    "altTextKo": "인사와 감사를 실제로 말해 보기 학습 장면",
+    "sourcePlan": [
+      {
+        "type": "stock_preferred",
+        "queries": [
+          "인사와 감사를 실제로 말해 보기",
+          ""
+        ],
+        "status": "search_required"
+      },
+      {
+        "type": "ai_fallback",
+        "prompt": {
+          "scene": "인사와 감사를 실제로 말해 보기",
+          "peopleAndAction": "",
+          "setting": "Thai church or daily-life mission context",
+          "mood": "warm, respectful, practical",
+          "cameraFraming": "documentary style",
+          "lighting": "bright natural light",
+          "avoidList": [
+            "blurry or noisy image",
+            "heavy watermark",
+            "text embedded in photo",
+            "theological symbolism without a real scene",
+            "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
+          ]
+        },
+        "status": "generate_if_needed"
+      }
+    ]
+  },
+  "keywordImages": [
+    {
+      "keywordId": "W007",
+      "priority": "optional",
+      "sourcePlan": [
+        {
+          "type": "local_preferred",
+          "assetPath": "assets/images/keywords/W007.jpg",
+          "status": "missing"
+        },
+        {
+          "type": "stock_preferred",
+          "queries": [
+            "thank you realistic photo",
+            "감사합니다 learning image"
+          ],
+          "status": "search_required"
+        },
+        {
+          "type": "ai_fallback",
+          "prompt": {
+            "scene": "single concept image for thank you",
+            "peopleAndAction": "show the concept clearly and simply",
+            "setting": "clean realistic learning image",
+            "mood": "warm and easy to recognize",
+            "cameraFraming": "close or medium crop",
+            "lighting": "bright neutral light",
+            "avoidList": [
+              "blurry or noisy image",
+              "heavy watermark",
+              "text embedded in photo",
+              "theological symbolism without a real scene",
+              "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
+            ]
+          },
+          "status": "generate_if_needed"
+        }
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "variantId": "1",
+      "phraseId": 1,
+      "category": "daily",
+      "korean": "안녕하세요",
+      "english": "Hello / Hi",
+      "speech": {
+        "male": {
+          "thai": "สวัสดีครับ",
+          "romanization": "sà-wàt-dii khráp",
+          "korean_pronunciation": "싸왓디 크랍"
+        },
+        "female": {
+          "thai": "สวัสดีค่ะ",
+          "romanization": "sà-wàt-dii khâ",
+          "korean_pronunciation": "싸왓디 카"
+        }
+      },
+      "audio": {
+        "male": {
+          "normal": "assets/audio/sentences/S1_male_normal.mp3",
+          "slow": "assets/audio/sentences/S1_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S1_male_repeat3.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/sentences/S1_female_normal.mp3",
+          "slow": "assets/audio/sentences/S1_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S1_female_repeat3.mp3"
+        }
+      }
+    },
+    {
+      "variantId": "3",
+      "phraseId": 3,
+      "category": "daily",
+      "korean": "정말 고마워요",
+      "english": "Thanks a lot!",
+      "speech": {
+        "male": {
+          "thai": "ขอบคุณมากครับ",
+          "romanization": "khàawp-khun mâak khráp",
+          "korean_pronunciation": "콥 쿤 막 크랍"
+        },
+        "female": {
+          "thai": "ขอบคุณมากค่ะ",
+          "romanization": "khàawp-khun mâak khâ",
+          "korean_pronunciation": "콥 쿤 막 카"
+        }
+      },
+      "audio": {
+        "male": {
+          "normal": "assets/audio/sentences/S3_male_normal.mp3",
+          "slow": "assets/audio/sentences/S3_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S3_male_repeat3.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/sentences/S3_female_normal.mp3",
+          "slow": "assets/audio/sentences/S3_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S3_female_repeat3.mp3"
+        }
+      }
+    },
+    {
+      "variantId": "4",
+      "phraseId": 4,
+      "category": "daily",
+      "korean": "천만에요",
+      "english": "You are welcome.",
+      "speech": {
+        "male": {
+          "thai": "ไม่เป็นไรครับ",
+          "romanization": "mâi-pen-rai khráp",
+          "korean_pronunciation": "마이 뻰 라이 크랍"
+        },
+        "female": {
+          "thai": "ไม่เป็นไรค่ะ",
+          "romanization": "mâi-pen-rai khâ",
+          "korean_pronunciation": "마이 뻰 라이 카"
+        }
+      },
+      "audio": {
+        "male": {
+          "normal": "assets/audio/sentences/S4_male_normal.mp3",
+          "slow": "assets/audio/sentences/S4_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S4_male_repeat3.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/sentences/S4_female_normal.mp3",
+          "slow": "assets/audio/sentences/S4_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S4_female_repeat3.mp3"
+        }
+      }
+    }
+  ],
+  "keywords": [
+    {
+      "id": "W001",
+      "variantIds": [
+        "1",
+        "2-1",
+        "2-2"
+      ],
+      "korean": "안녕하세요",
+      "english": "hello",
+      "thai": "สวัสดี",
+      "romanization": "sà-wàt-dii",
+      "koreanPronunciation": "싸왓디",
+      "tier": "core",
+      "days": [
+        1,
+        2,
+        5,
+        10,
+        15,
+        20,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W001_male_normal.mp3",
+          "slow": "assets/audio/words/W001_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W001_female_normal.mp3",
+          "slow": "assets/audio/words/W001_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W007",
+      "variantIds": [
+        "3"
+      ],
+      "korean": "감사합니다",
+      "english": "thank you",
+      "thai": "ขอบคุณ",
+      "romanization": "khàawp-khun",
+      "koreanPronunciation": "콥 쿤",
+      "tier": "core",
+      "days": [
+        3,
+        5,
+        10,
+        15,
+        20,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W007_male_normal.mp3",
+          "slow": "assets/audio/words/W007_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W007_female_normal.mp3",
+          "slow": "assets/audio/words/W007_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W009",
+      "variantIds": [
+        "4",
+        "7"
+      ],
+      "korean": "괜찮아요",
+      "english": "never mind / it's okay",
+      "thai": "ไม่เป็นไร",
+      "romanization": "mâi-pen-rai",
+      "koreanPronunciation": "마이 뻰 라이",
+      "tier": "core",
+      "days": [
+        3,
+        5,
+        6,
+        10,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W009_male_normal.mp3",
+          "slow": "assets/audio/words/W009_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W009_female_normal.mp3",
+          "slow": "assets/audio/words/W009_female_slow.mp3"
+        }
+      }
+    }
+  ],
+  "print": {
+    "pageSize": "A4",
+    "orientation": "portrait",
+    "sections": [
+      "weekSummary",
+      "corePhrases",
+      "keywordBoxes",
+      "writeAndSpeak",
+      "prayerAndBlessing"
+    ]
+  }
+}

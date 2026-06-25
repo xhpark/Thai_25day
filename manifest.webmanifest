@@ -1,0 +1,19 @@
+{
+  "name": "Thai 25 Day Mission Learning",
+  "short_name": "Thai 25",
+  "description": "태국어 생활·선교회화 25일 학습 PWA",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#fbfaf5",
+  "theme_color": "#2f7d5a",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/assets/generated/pwa-icon.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

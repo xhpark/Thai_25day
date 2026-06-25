@@ -1,0 +1,549 @@
+{
+  "version": 1,
+  "kind": "kakao_card_spec",
+  "id": "W3D12",
+  "dayType": "weekday",
+  "contentMode": "daily_lesson",
+  "sundayFormat": {
+    "rendererTemplate": "same_canvas_same_renderer",
+    "contentMode": "review_recap",
+    "rule": "Sunday cards use the same mobile card renderer as weekdays, but emphasize review phrases and personalMission instead of newPhrases.",
+    "contentSource": {
+      "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show up to 3 primary review phrases on the card.",
+      "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show up to 4 core keywords.",
+      "missionText": "Sunday personalMission rendered as the main action box.",
+      "ministryGuide": "Sunday ministryGuide rendered as the relational guide line."
+    }
+  },
+  "contentSource": {
+    "phrases": "Weekday lesson newPhrases rendered as mainPhrases; review-only weekdays fall back to reviewPhrases.",
+    "keywords": "Weekday lesson keyWordIds filtered through displayKeywords.",
+    "missionText": "Weekday speakingMission rendered as the main action box.",
+    "ministryGuide": "Weekday ministryGuide rendered as the relational guide line."
+  },
+  "week": 3,
+  "day": 12,
+  "theme": "교회 식사와 작별",
+  "title": "식사 대화",
+  "hook": "권유와 칭찬을 한 세트로 말한다.",
+  "missionGoal": "식사 자리에서 따뜻한 권유와 칭찬을 나눈다.",
+  "ministryGuide": "식사 자리의 칭찬은 관계를 여는 강력한 표현이라 이후 대화와 섬김도 훨씬 부드럽다.",
+  "speakingMission": "맛있게 드세요와 정말 맛있어요를 한 세트로 5회 연습한다.",
+  "primaryImage": {
+    "sceneId": "meal_table_fellowship",
+    "altTextKo": "교회 식사 자리에서 음식을 나누며 대화하는 장면",
+    "sourcePlan": [
+      {
+        "type": "local_preferred",
+        "assetPath": "assets/images/scenes/meal_table_fellowship.jpg",
+        "status": "missing"
+      },
+      {
+        "type": "stock_preferred",
+        "queries": [
+          "church meal table fellowship asian family style",
+          "friends sharing meal smiling table",
+          "community lunch church"
+        ],
+        "status": "search_required"
+      },
+      {
+        "type": "ai_fallback",
+        "prompt": {
+          "scene": "sharing a meal in church fellowship",
+          "peopleAndAction": "small group smiling over food, one person offering food, another praising it",
+          "setting": "church meal table",
+          "mood": "warm, generous, communal",
+          "cameraFraming": "wide table scene",
+          "lighting": "soft natural light",
+          "avoidList": [
+            "restaurant luxury styling",
+            "food close-up without people"
+          ]
+        },
+        "status": "generate_if_needed"
+      }
+    ]
+  },
+  "keywordImages": [
+    {
+      "keywordId": "W023",
+      "priority": "preferred",
+      "sourcePlan": [
+        {
+          "type": "local_preferred",
+          "assetPath": "assets/images/keywords/W023.jpg",
+          "status": "missing"
+        },
+        {
+          "type": "stock_preferred",
+          "queries": [
+            "eat realistic photo",
+            "드시다/먹다 learning image"
+          ],
+          "status": "search_required"
+        },
+        {
+          "type": "ai_fallback",
+          "prompt": {
+            "scene": "single concept image for eat",
+            "peopleAndAction": "show the concept clearly and simply",
+            "setting": "clean realistic learning image",
+            "mood": "warm and easy to recognize",
+            "cameraFraming": "close or medium crop",
+            "lighting": "bright neutral light",
+            "avoidList": [
+              "blurry or noisy image",
+              "heavy watermark",
+              "text embedded in photo",
+              "theological symbolism without a real scene",
+              "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
+            ]
+          },
+          "status": "generate_if_needed"
+        }
+      ]
+    },
+    {
+      "keywordId": "W025",
+      "priority": "preferred",
+      "sourcePlan": [
+        {
+          "type": "local_preferred",
+          "assetPath": "assets/images/keywords/W025.jpg",
+          "status": "missing"
+        },
+        {
+          "type": "stock_preferred",
+          "queries": [
+            "delicious realistic photo",
+            "맛있다 learning image"
+          ],
+          "status": "search_required"
+        },
+        {
+          "type": "ai_fallback",
+          "prompt": {
+            "scene": "single concept image for delicious",
+            "peopleAndAction": "show the concept clearly and simply",
+            "setting": "clean realistic learning image",
+            "mood": "warm and easy to recognize",
+            "cameraFraming": "close or medium crop",
+            "lighting": "bright neutral light",
+            "avoidList": [
+              "blurry or noisy image",
+              "heavy watermark",
+              "text embedded in photo",
+              "theological symbolism without a real scene",
+              "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
+            ]
+          },
+          "status": "generate_if_needed"
+        }
+      ]
+    }
+  ],
+  "mainPhrases": [
+    {
+      "variantId": "12",
+      "phraseId": 12,
+      "category": "daily",
+      "korean": "맛있게 드세요",
+      "english": "Enjoy your meal.",
+      "speech": {
+        "male": {
+          "thai": "ทานให้อร่อยนะครับ",
+          "romanization": "thaan hâi a-ròi ná khráp",
+          "korean_pronunciation": "탄하이 아러이 나 크랍"
+        },
+        "female": {
+          "thai": "ทานให้อร่อยนะคะ",
+          "romanization": "thaan hâi a-ròi ná khá",
+          "korean_pronunciation": "탄하이 아러이 나 카"
+        }
+      },
+      "audio": {
+        "male": {
+          "normal": "assets/audio/sentences/S12_male_normal.mp3",
+          "slow": "assets/audio/sentences/S12_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S12_male_repeat3.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/sentences/S12_female_normal.mp3",
+          "slow": "assets/audio/sentences/S12_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S12_female_repeat3.mp3"
+        }
+      }
+    },
+    {
+      "variantId": "13",
+      "phraseId": 13,
+      "category": "daily",
+      "korean": "정말 맛있어요",
+      "english": "It's really delicious.",
+      "speech": {
+        "male": {
+          "thai": "อร่อยมากจริง ๆ ครับ",
+          "romanization": "a-ròi mâak jing-jing khráp",
+          "korean_pronunciation": "아러이 막 찡찡 크랍"
+        },
+        "female": {
+          "thai": "อร่อยมากจริง ๆ ค่ะ",
+          "romanization": "a-ròi mâak jing-jing khâ",
+          "korean_pronunciation": "아러이 막 찡찡 카"
+        }
+      },
+      "audio": {
+        "male": {
+          "normal": "assets/audio/sentences/S13_male_normal.mp3",
+          "slow": "assets/audio/sentences/S13_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S13_male_repeat3.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/sentences/S13_female_normal.mp3",
+          "slow": "assets/audio/sentences/S13_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S13_female_repeat3.mp3"
+        }
+      }
+    }
+  ],
+  "reviewPhrases": [
+    {
+      "variantId": "11",
+      "phraseId": 11,
+      "category": "daily",
+      "korean": "화장실 어디 있어요?",
+      "english": "Where is the restroom?",
+      "speech": {
+        "male": {
+          "thai": "ห้องน้ำอยู่ที่ไหนครับ",
+          "romanization": "hông-náam yùu thîi-năi khráp",
+          "korean_pronunciation": "헝남 유 티 나이 크랍"
+        },
+        "female": {
+          "thai": "ห้องน้ำอยู่ที่ไหนคะ",
+          "romanization": "hông-náam yùu thîi-năi khá",
+          "korean_pronunciation": "헝남 유 티 나이 카"
+        }
+      },
+      "audio": {
+        "male": {
+          "normal": "assets/audio/sentences/S11_male_normal.mp3",
+          "slow": "assets/audio/sentences/S11_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S11_male_repeat3.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/sentences/S11_female_normal.mp3",
+          "slow": "assets/audio/sentences/S11_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S11_female_repeat3.mp3"
+        }
+      }
+    }
+  ],
+  "keywords": [
+    {
+      "id": "W023",
+      "variantIds": [
+        "12"
+      ],
+      "korean": "드시다/먹다",
+      "english": "eat",
+      "thai": "ทาน",
+      "romanization": "thaan",
+      "koreanPronunciation": "탄",
+      "tier": "supplemental",
+      "days": [
+        12,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W023_male_normal.mp3",
+          "slow": "assets/audio/words/W023_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W023_female_normal.mp3",
+          "slow": "assets/audio/words/W023_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W024",
+      "variantIds": [
+        "12",
+        "23"
+      ],
+      "korean": "~에게/~하도록",
+      "english": "give/to/let",
+      "thai": "ให้",
+      "romanization": "hâi",
+      "koreanPronunciation": "하이",
+      "tier": "supplemental",
+      "days": [
+        12,
+        15,
+        23,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W024_male_normal.mp3",
+          "slow": "assets/audio/words/W024_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W024_female_normal.mp3",
+          "slow": "assets/audio/words/W024_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W025",
+      "variantIds": [
+        "12",
+        "13"
+      ],
+      "korean": "맛있다",
+      "english": "delicious",
+      "thai": "อร่อย",
+      "romanization": "a-ròi",
+      "koreanPronunciation": "아러이",
+      "tier": "core",
+      "days": [
+        12,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W025_male_normal.mp3",
+          "slow": "assets/audio/words/W025_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W025_female_normal.mp3",
+          "slow": "assets/audio/words/W025_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W026",
+      "variantIds": [
+        "12"
+      ],
+      "korean": "부드러운 권유 어미",
+      "english": "softening particle",
+      "thai": "นะ",
+      "romanization": "ná",
+      "koreanPronunciation": "나",
+      "tier": "supplemental",
+      "days": [
+        12,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W026_male_normal.mp3",
+          "slow": "assets/audio/words/W026_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W026_female_normal.mp3",
+          "slow": "assets/audio/words/W026_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W027",
+      "variantIds": [
+        "13"
+      ],
+      "korean": "정말",
+      "english": "really",
+      "thai": "จริง ๆ",
+      "romanization": "jing-jing",
+      "koreanPronunciation": "찡찡",
+      "tier": "supplemental",
+      "days": [
+        12,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W027_male_normal.mp3",
+          "slow": "assets/audio/words/W027_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W027_female_normal.mp3",
+          "slow": "assets/audio/words/W027_female_slow.mp3"
+        }
+      }
+    }
+  ],
+  "displayKeywords": [
+    {
+      "id": "W025",
+      "variantIds": [
+        "12",
+        "13"
+      ],
+      "korean": "맛있다",
+      "english": "delicious",
+      "thai": "อร่อย",
+      "romanization": "a-ròi",
+      "koreanPronunciation": "아러이",
+      "tier": "core",
+      "days": [
+        12,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W025_male_normal.mp3",
+          "slow": "assets/audio/words/W025_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W025_female_normal.mp3",
+          "slow": "assets/audio/words/W025_female_slow.mp3"
+        }
+      }
+    }
+  ],
+  "supplementalKeywords": [
+    {
+      "id": "W023",
+      "variantIds": [
+        "12"
+      ],
+      "korean": "드시다/먹다",
+      "english": "eat",
+      "thai": "ทาน",
+      "romanization": "thaan",
+      "koreanPronunciation": "탄",
+      "tier": "supplemental",
+      "days": [
+        12,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W023_male_normal.mp3",
+          "slow": "assets/audio/words/W023_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W023_female_normal.mp3",
+          "slow": "assets/audio/words/W023_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W024",
+      "variantIds": [
+        "12",
+        "23"
+      ],
+      "korean": "~에게/~하도록",
+      "english": "give/to/let",
+      "thai": "ให้",
+      "romanization": "hâi",
+      "koreanPronunciation": "하이",
+      "tier": "supplemental",
+      "days": [
+        12,
+        15,
+        23,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W024_male_normal.mp3",
+          "slow": "assets/audio/words/W024_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W024_female_normal.mp3",
+          "slow": "assets/audio/words/W024_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W026",
+      "variantIds": [
+        "12"
+      ],
+      "korean": "부드러운 권유 어미",
+      "english": "softening particle",
+      "thai": "นะ",
+      "romanization": "ná",
+      "koreanPronunciation": "나",
+      "tier": "supplemental",
+      "days": [
+        12,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W026_male_normal.mp3",
+          "slow": "assets/audio/words/W026_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W026_female_normal.mp3",
+          "slow": "assets/audio/words/W026_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W027",
+      "variantIds": [
+        "13"
+      ],
+      "korean": "정말",
+      "english": "really",
+      "thai": "จริง ๆ",
+      "romanization": "jing-jing",
+      "koreanPronunciation": "찡찡",
+      "tier": "supplemental",
+      "days": [
+        12,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W027_male_normal.mp3",
+          "slow": "assets/audio/words/W027_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W027_female_normal.mp3",
+          "slow": "assets/audio/words/W027_female_slow.mp3"
+        }
+      }
+    }
+  ],
+  "keywordDisplayPolicy": {
+    "default": "core_only",
+    "toggleSupplemental": false
+  },
+  "audioModes": [
+    "normal",
+    "slow",
+    "repeat3"
+  ],
+  "layout": {
+    "canvas": {
+      "width": 1080,
+      "height": 1350
+    },
+    "sections": [
+      "header",
+      "heroImage",
+      "mainPhrases",
+      "reviewStrip",
+      "keywordStrip",
+      "missionBox",
+      "footer"
+    ]
+  }
+}

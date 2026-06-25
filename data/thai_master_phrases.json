@@ -1,0 +1,899 @@
+{
+  "metadata": {
+    "title": "Thai 25-day mission conversation master phrases",
+    "version": "1.0.0",
+    "language": {
+      "source": "ko",
+      "target": "th"
+    },
+    "source_images": [
+      "D:/문서/태국선교/언어/개발/Mission__in_Thai1.jpg",
+      "D:/문서/태국선교/언어/개발/Misson_in_Thai2.jpg"
+    ],
+    "romanization_note": "Learner romanization with tone marks: acute=high, grave=low, circumflex=falling, breve=rising, no mark=mid. The style follows the supplied second source image, with tone corrections applied for TTS consistency.",
+    "tts_note": "Use speech.male.thai and speech.female.thai as the canonical TTS input strings.",
+    "review_policy": {
+      "nativeReviewRequiredBeforePublicRelease": true,
+      "defaultLanguageReviewStatus": "pending_native_review",
+      "defaultTtsAcousticReviewStatus": "pending_spot_check"
+    }
+  },
+  "phrases": [
+    {
+      "id": 1,
+      "category": "daily",
+      "korean": "안녕하세요",
+      "english": "Hello / Hi",
+      "source_korean_pronunciation": "싸왓디 크랍/카",
+      "variants": [
+        {
+          "id": "1",
+          "korean": "안녕하세요",
+          "english": "Hello / Hi",
+          "speech": {
+            "male": {
+              "thai": "สวัสดีครับ",
+              "romanization": "sà-wàt-dii khráp",
+              "korean_pronunciation": "싸왓디 크랍"
+            },
+            "female": {
+              "thai": "สวัสดีค่ะ",
+              "romanization": "sà-wàt-dii khâ",
+              "korean_pronunciation": "싸왓디 카"
+            }
+          }
+        }
+      ],
+      "review": {
+        "languageReviewStatus": "pending_native_review",
+        "nativeReviewedBy": null,
+        "nativeReviewDate": null,
+        "ttsAcousticReviewStatus": "pending_spot_check",
+        "ttsAcousticReviewedBy": null,
+        "ttsAcousticReviewDate": null,
+        "notes": []
+      }
+    },
+    {
+      "id": 2,
+      "category": "daily",
+      "korean": "좋은 아침/저녁",
+      "english": "Good morning. / Good evening.",
+      "source_korean_pronunciation": "싸왓디 떤 차오 / 싸왓디 떤 옌",
+      "variants": [
+        {
+          "id": "2-1",
+          "korean": "좋은 아침",
+          "english": "Good morning.",
+          "speech": {
+            "male": {
+              "thai": "สวัสดีตอนเช้าครับ",
+              "romanization": "sà-wàt-dii dtaawn-cháao khráp",
+              "korean_pronunciation": "싸왓디 떤 차오 크랍"
+            },
+            "female": {
+              "thai": "สวัสดีตอนเช้าค่ะ",
+              "romanization": "sà-wàt-dii dtaawn-cháao khâ",
+              "korean_pronunciation": "싸왓디 떤 차오 카"
+            }
+          }
+        },
+        {
+          "id": "2-2",
+          "korean": "좋은 저녁",
+          "english": "Good evening.",
+          "speech": {
+            "male": {
+              "thai": "สวัสดีตอนเย็นครับ",
+              "romanization": "sà-wàt-dii dtaawn-yen khráp",
+              "korean_pronunciation": "싸왓디 떤 옌 크랍"
+            },
+            "female": {
+              "thai": "สวัสดีตอนเย็นค่ะ",
+              "romanization": "sà-wàt-dii dtaawn-yen khâ",
+              "korean_pronunciation": "싸왓디 떤 옌 카"
+            }
+          }
+        }
+      ],
+      "review": {
+        "languageReviewStatus": "pending_native_review",
+        "nativeReviewedBy": null,
+        "nativeReviewDate": null,
+        "ttsAcousticReviewStatus": "pending_spot_check",
+        "ttsAcousticReviewedBy": null,
+        "ttsAcousticReviewDate": null,
+        "notes": []
+      }
+    },
+    {
+      "id": 3,
+      "category": "daily",
+      "korean": "정말 고마워요",
+      "english": "Thanks a lot!",
+      "source_korean_pronunciation": "콥 쿤 막 크랍/카",
+      "variants": [
+        {
+          "id": "3",
+          "korean": "정말 고마워요",
+          "english": "Thanks a lot!",
+          "speech": {
+            "male": {
+              "thai": "ขอบคุณมากครับ",
+              "romanization": "khàawp-khun mâak khráp",
+              "korean_pronunciation": "콥 쿤 막 크랍"
+            },
+            "female": {
+              "thai": "ขอบคุณมากค่ะ",
+              "romanization": "khàawp-khun mâak khâ",
+              "korean_pronunciation": "콥 쿤 막 카"
+            }
+          }
+        }
+      ],
+      "review": {
+        "languageReviewStatus": "pending_native_review",
+        "nativeReviewedBy": null,
+        "nativeReviewDate": null,
+        "ttsAcousticReviewStatus": "pending_spot_check",
+        "ttsAcousticReviewedBy": null,
+        "ttsAcousticReviewDate": null,
+        "notes": []
+      }
+    },
+    {
+      "id": 4,
+      "category": "daily",
+      "korean": "천만에요",
+      "english": "You are welcome.",
+      "source_korean_pronunciation": "마이 뻰 라이 크랍/카",
+      "variants": [
+        {
+          "id": "4",
+          "korean": "천만에요",
+          "english": "You are welcome.",
+          "speech": {
+            "male": {
+              "thai": "ไม่เป็นไรครับ",
+              "romanization": "mâi-pen-rai khráp",
+              "korean_pronunciation": "마이 뻰 라이 크랍"
+            },
+            "female": {
+              "thai": "ไม่เป็นไรค่ะ",
+              "romanization": "mâi-pen-rai khâ",
+              "korean_pronunciation": "마이 뻰 라이 카"
+            }
+          }
+        }
+      ],
+      "review": {
+        "languageReviewStatus": "pending_native_review",
+        "nativeReviewedBy": null,
+        "nativeReviewDate": null,
+        "ttsAcousticReviewStatus": "pending_spot_check",
+        "ttsAcousticReviewedBy": null,
+        "ttsAcousticReviewDate": null,
+        "notes": []
+      }
+    },
+    {
+      "id": 5,
+      "category": "daily",
+      "korean": "예/아니오",
+      "english": "Yes/No",
+      "source_korean_pronunciation": "차이/마이 차이 크랍/카",
+      "variants": [
+        {
+          "id": "5-1",
+          "korean": "예",
+          "english": "Yes",
+          "speech": {
+            "male": {
+              "thai": "ใช่ครับ",
+              "romanization": "châi khráp",
+              "korean_pronunciation": "차이 크랍"
+            },
+            "female": {
+              "thai": "ใช่ค่ะ",
+              "romanization": "châi khâ",
+              "korean_pronunciation": "차이 카"
+            }
+          }
+        },
+        {
+          "id": "5-2",
+          "korean": "아니오",
+          "english": "No",
+          "speech": {
+            "male": {
+              "thai": "ไม่ใช่ครับ",
+              "romanization": "mâi-châi khráp",
+              "korean_pronunciation": "마이 차이 크랍"
+            },
+            "female": {
+              "thai": "ไม่ใช่ค่ะ",
+              "romanization": "mâi-châi khâ",
+              "korean_pronunciation": "마이 차이 카"
+            }
+          }
+        }
+      ],
+      "review": {
+        "languageReviewStatus": "pending_native_review",
+        "nativeReviewedBy": null,
+        "nativeReviewDate": null,
+        "ttsAcousticReviewStatus": "pending_spot_check",
+        "ttsAcousticReviewedBy": null,
+        "ttsAcousticReviewDate": null,
+        "notes": []
+      }
+    },
+    {
+      "id": 6,
+      "category": "daily",
+      "korean": "실례/죄송합니다",
+      "english": "Excuse me.",
+      "source_korean_pronunciation": "커 톳 크랍/카",
+      "variants": [
+        {
+          "id": "6",
+          "korean": "실례/죄송합니다",
+          "english": "Excuse me.",
+          "speech": {
+            "male": {
+              "thai": "ขอโทษครับ",
+              "romanization": "khŏr-thôot khráp",
+              "korean_pronunciation": "커 톳 크랍"
+            },
+            "female": {
+              "thai": "ขอโทษค่ะ",
+              "romanization": "khŏr-thôot khâ",
+              "korean_pronunciation": "커 톳 카"
+            }
+          }
+        }
+      ],
+      "review": {
+        "languageReviewStatus": "pending_native_review",
+        "nativeReviewedBy": null,
+        "nativeReviewDate": null,
+        "ttsAcousticReviewStatus": "pending_spot_check",
+        "ttsAcousticReviewedBy": null,
+        "ttsAcousticReviewDate": null,
+        "notes": []
+      }
+    },
+    {
+      "id": 7,
+      "category": "daily",
+      "korean": "괜찮아요",
+      "english": "It's O.K.",
+      "source_korean_pronunciation": "마이 뻰 라이 크랍/카",
+      "variants": [
+        {
+          "id": "7",
+          "korean": "괜찮아요",
+          "english": "It's O.K.",
+          "speech": {
+            "male": {
+              "thai": "ไม่เป็นไรครับ",
+              "romanization": "mâi-pen-rai khráp",
+              "korean_pronunciation": "마이 뻰 라이 크랍"
+            },
+            "female": {
+              "thai": "ไม่เป็นไรค่ะ",
+              "romanization": "mâi-pen-rai khâ",
+              "korean_pronunciation": "마이 뻰 라이 카"
+            }
+          }
+        }
+      ],
+      "review": {
+        "languageReviewStatus": "pending_native_review",
+        "nativeReviewedBy": null,
+        "nativeReviewDate": null,
+        "ttsAcousticReviewStatus": "pending_spot_check",
+        "ttsAcousticReviewedBy": null,
+        "ttsAcousticReviewDate": null,
+        "notes": []
+      }
+    },
+    {
+      "id": 8,
+      "category": "daily",
+      "korean": "이름이 무엇인가요?",
+      "english": "What's your name?",
+      "source_korean_pronunciation": "쿤 츠 아라이 크랍/카",
+      "variants": [
+        {
+          "id": "8",
+          "korean": "이름이 무엇인가요?",
+          "english": "What's your name?",
+          "speech": {
+            "male": {
+              "thai": "คุณชื่ออะไรครับ",
+              "romanization": "khun chûue à-rai khráp",
+              "korean_pronunciation": "쿤 츠 아라이 크랍"
+            },
+            "female": {
+              "thai": "คุณชื่ออะไรคะ",
+              "romanization": "khun chûue à-rai khá",
+              "korean_pronunciation": "쿤 츠 아라이 카"
+            }
+          }
+        }
+      ],
+      "review": {
+        "languageReviewStatus": "pending_native_review",
+        "nativeReviewedBy": null,
+        "nativeReviewDate": null,
+        "ttsAcousticReviewStatus": "pending_spot_check",
+        "ttsAcousticReviewedBy": null,
+        "ttsAcousticReviewDate": null,
+        "notes": []
+      }
+    },
+    {
+      "id": 9,
+      "category": "daily",
+      "korean": "제 이름은 ~입니다",
+      "english": "My name is ~",
+      "source_korean_pronunciation": "폼/찬 츠 ~ 크랍/카",
+      "variants": [
+        {
+          "id": "9",
+          "korean": "제 이름은 ~입니다",
+          "english": "My name is ~",
+          "speech": {
+            "male": {
+              "thai": "ผมชื่อ ~ ครับ",
+              "romanization": "phŏm chûue ~ khráp",
+              "korean_pronunciation": "폼 츠 ~ 크랍"
+            },
+            "female": {
+              "thai": "ฉันชื่อ ~ ค่ะ",
+              "romanization": "chăn chûue ~ khâ",
+              "korean_pronunciation": "찬 츠 ~ 카"
+            }
+          }
+        }
+      ],
+      "review": {
+        "languageReviewStatus": "pending_native_review",
+        "nativeReviewedBy": null,
+        "nativeReviewDate": null,
+        "ttsAcousticReviewStatus": "pending_spot_check",
+        "ttsAcousticReviewedBy": null,
+        "ttsAcousticReviewDate": null,
+        "notes": []
+      }
+    },
+    {
+      "id": 10,
+      "category": "daily",
+      "korean": "몇 살이니?",
+      "english": "How old are you?",
+      "source_korean_pronunciation": "아유 타오 라이 크랍/카",
+      "caution": "Use only with children or close relationships. Avoid asking newly met adults.",
+      "variants": [
+        {
+          "id": "10",
+          "korean": "몇 살이니?",
+          "english": "How old are you?",
+          "speech": {
+            "male": {
+              "thai": "คุณอายุเท่าไหร่ครับ",
+              "romanization": "khun aa-yú thâo-rài khráp",
+              "korean_pronunciation": "아유 타오 라이 크랍"
+            },
+            "female": {
+              "thai": "คุณอายุเท่าไหร่คะ",
+              "romanization": "khun aa-yú thâo-rài khá",
+              "korean_pronunciation": "아유 타오 라이 카"
+            }
+          }
+        }
+      ],
+      "review": {
+        "languageReviewStatus": "pending_native_review",
+        "nativeReviewedBy": null,
+        "nativeReviewDate": null,
+        "ttsAcousticReviewStatus": "pending_spot_check",
+        "ttsAcousticReviewedBy": null,
+        "ttsAcousticReviewDate": null,
+        "notes": []
+      }
+    },
+    {
+      "id": 11,
+      "category": "daily",
+      "korean": "화장실 어디 있어요?",
+      "english": "Where is the restroom?",
+      "source_korean_pronunciation": "헝남 유 티 나이 크랍/카",
+      "variants": [
+        {
+          "id": "11",
+          "korean": "화장실 어디 있어요?",
+          "english": "Where is the restroom?",
+          "speech": {
+            "male": {
+              "thai": "ห้องน้ำอยู่ที่ไหนครับ",
+              "romanization": "hông-náam yùu thîi-năi khráp",
+              "korean_pronunciation": "헝남 유 티 나이 크랍"
+            },
+            "female": {
+              "thai": "ห้องน้ำอยู่ที่ไหนคะ",
+              "romanization": "hông-náam yùu thîi-năi khá",
+              "korean_pronunciation": "헝남 유 티 나이 카"
+            }
+          }
+        }
+      ],
+      "review": {
+        "languageReviewStatus": "pending_native_review",
+        "nativeReviewedBy": null,
+        "nativeReviewDate": null,
+        "ttsAcousticReviewStatus": "pending_spot_check",
+        "ttsAcousticReviewedBy": null,
+        "ttsAcousticReviewDate": null,
+        "notes": []
+      }
+    },
+    {
+      "id": 12,
+      "category": "daily",
+      "korean": "맛있게 드세요",
+      "english": "Enjoy your meal.",
+      "source_korean_pronunciation": "탄하이 아러이 나 크랍/카",
+      "variants": [
+        {
+          "id": "12",
+          "korean": "맛있게 드세요",
+          "english": "Enjoy your meal.",
+          "speech": {
+            "male": {
+              "thai": "ทานให้อร่อยนะครับ",
+              "romanization": "thaan hâi a-ròi ná khráp",
+              "korean_pronunciation": "탄하이 아러이 나 크랍"
+            },
+            "female": {
+              "thai": "ทานให้อร่อยนะคะ",
+              "romanization": "thaan hâi a-ròi ná khá",
+              "korean_pronunciation": "탄하이 아러이 나 카"
+            }
+          }
+        }
+      ],
+      "review": {
+        "languageReviewStatus": "pending_native_review",
+        "nativeReviewedBy": null,
+        "nativeReviewDate": null,
+        "ttsAcousticReviewStatus": "pending_spot_check",
+        "ttsAcousticReviewedBy": null,
+        "ttsAcousticReviewDate": null,
+        "notes": []
+      }
+    },
+    {
+      "id": 13,
+      "category": "daily",
+      "korean": "정말 맛있어요",
+      "english": "It's really delicious.",
+      "source_korean_pronunciation": "아러이 막 찡찡 크랍/카",
+      "variants": [
+        {
+          "id": "13",
+          "korean": "정말 맛있어요",
+          "english": "It's really delicious.",
+          "speech": {
+            "male": {
+              "thai": "อร่อยมากจริง ๆ ครับ",
+              "romanization": "a-ròi mâak jing-jing khráp",
+              "korean_pronunciation": "아러이 막 찡찡 크랍"
+            },
+            "female": {
+              "thai": "อร่อยมากจริง ๆ ค่ะ",
+              "romanization": "a-ròi mâak jing-jing khâ",
+              "korean_pronunciation": "아러이 막 찡찡 카"
+            }
+          }
+        }
+      ],
+      "review": {
+        "languageReviewStatus": "pending_native_review",
+        "nativeReviewedBy": null,
+        "nativeReviewDate": null,
+        "ttsAcousticReviewStatus": "pending_spot_check",
+        "ttsAcousticReviewedBy": null,
+        "ttsAcousticReviewDate": null,
+        "notes": []
+      }
+    },
+    {
+      "id": 14,
+      "category": "daily",
+      "korean": "참 잘했어요",
+      "english": "Very good!",
+      "source_korean_pronunciation": "깽 막 크랍/카",
+      "variants": [
+        {
+          "id": "14",
+          "korean": "참 잘했어요",
+          "english": "Very good!",
+          "speech": {
+            "male": {
+              "thai": "เก่งมากครับ",
+              "romanization": "gèng mâak khráp",
+              "korean_pronunciation": "깽 막 크랍"
+            },
+            "female": {
+              "thai": "เก่งมากค่ะ",
+              "romanization": "gèng mâak khâ",
+              "korean_pronunciation": "깽 막 카"
+            }
+          }
+        }
+      ],
+      "review": {
+        "languageReviewStatus": "pending_native_review",
+        "nativeReviewedBy": null,
+        "nativeReviewDate": null,
+        "ttsAcousticReviewStatus": "pending_spot_check",
+        "ttsAcousticReviewedBy": null,
+        "ttsAcousticReviewDate": null,
+        "notes": []
+      }
+    },
+    {
+      "id": 15,
+      "category": "daily",
+      "korean": "잘 가요",
+      "english": "Good bye.",
+      "source_korean_pronunciation": "라껀 크랍/카",
+      "variants": [
+        {
+          "id": "15",
+          "korean": "잘 가요",
+          "english": "Good bye.",
+          "speech": {
+            "male": {
+              "thai": "ลาก่อนครับ",
+              "romanization": "laa-gàawn khráp",
+              "korean_pronunciation": "라껀 크랍"
+            },
+            "female": {
+              "thai": "ลาก่อนค่ะ",
+              "romanization": "laa-gàawn khâ",
+              "korean_pronunciation": "라껀 카"
+            }
+          }
+        }
+      ],
+      "review": {
+        "languageReviewStatus": "pending_native_review",
+        "nativeReviewedBy": null,
+        "nativeReviewDate": null,
+        "ttsAcousticReviewStatus": "pending_spot_check",
+        "ttsAcousticReviewedBy": null,
+        "ttsAcousticReviewDate": null,
+        "notes": []
+      }
+    },
+    {
+      "id": 16,
+      "category": "daily",
+      "korean": "다시 만나요",
+      "english": "See you again.",
+      "source_korean_pronunciation": "래우 폽깐 마이 크랍/카",
+      "variants": [
+        {
+          "id": "16",
+          "korean": "다시 만나요",
+          "english": "See you again.",
+          "speech": {
+            "male": {
+              "thai": "แล้วพบกันใหม่ครับ",
+              "romanization": "láew phóp-gan mài khráp",
+              "korean_pronunciation": "래우 폽깐 마이 크랍"
+            },
+            "female": {
+              "thai": "แล้วพบกันใหม่ค่ะ",
+              "romanization": "láew phóp-gan mài khâ",
+              "korean_pronunciation": "래우 폽깐 마이 카"
+            }
+          }
+        }
+      ],
+      "review": {
+        "languageReviewStatus": "pending_native_review",
+        "nativeReviewedBy": null,
+        "nativeReviewDate": null,
+        "ttsAcousticReviewStatus": "pending_spot_check",
+        "ttsAcousticReviewedBy": null,
+        "ttsAcousticReviewDate": null,
+        "notes": []
+      }
+    },
+    {
+      "id": 17,
+      "category": "mission",
+      "korean": "예수님이 당신을 사랑해요",
+      "english": "Jesus loves you.",
+      "source_korean_pronunciation": "프라예쑤 쏭 락 쿤 크랍/카",
+      "variants": [
+        {
+          "id": "17",
+          "korean": "예수님이 당신을 사랑해요",
+          "english": "Jesus loves you.",
+          "speech": {
+            "male": {
+              "thai": "พระเยซูทรงรักคุณครับ",
+              "romanization": "Phrá-yeh-suu song-rák khun khráp",
+              "korean_pronunciation": "프라예쑤 쏭 락 쿤 크랍"
+            },
+            "female": {
+              "thai": "พระเยซูทรงรักคุณค่ะ",
+              "romanization": "Phrá-yeh-suu song-rák khun khâ",
+              "korean_pronunciation": "프라예쑤 쏭 락 쿤 카"
+            }
+          }
+        }
+      ],
+      "review": {
+        "languageReviewStatus": "pending_native_review",
+        "nativeReviewedBy": null,
+        "nativeReviewDate": null,
+        "ttsAcousticReviewStatus": "pending_spot_check",
+        "ttsAcousticReviewedBy": null,
+        "ttsAcousticReviewDate": null,
+        "notes": []
+      }
+    },
+    {
+      "id": 18,
+      "category": "mission",
+      "korean": "하나님은 당신을 사랑해요",
+      "english": "God loves you.",
+      "source_korean_pronunciation": "프라짜오 쏭 락 쿤 크랍/카",
+      "variants": [
+        {
+          "id": "18",
+          "korean": "하나님은 당신을 사랑해요",
+          "english": "God loves you.",
+          "speech": {
+            "male": {
+              "thai": "พระเจ้าทรงรักคุณครับ",
+              "romanization": "Phrá-jâo song-rák khun khráp",
+              "korean_pronunciation": "프라짜오 쏭 락 쿤 크랍"
+            },
+            "female": {
+              "thai": "พระเจ้าทรงรักคุณค่ะ",
+              "romanization": "Phrá-jâo song-rák khun khâ",
+              "korean_pronunciation": "프라짜오 쏭 락 쿤 카"
+            }
+          }
+        }
+      ],
+      "review": {
+        "languageReviewStatus": "pending_native_review",
+        "nativeReviewedBy": null,
+        "nativeReviewDate": null,
+        "ttsAcousticReviewStatus": "pending_spot_check",
+        "ttsAcousticReviewedBy": null,
+        "ttsAcousticReviewDate": null,
+        "notes": []
+      }
+    },
+    {
+      "id": 19,
+      "category": "mission",
+      "korean": "하나님의 축복을!",
+      "english": "God bless you!",
+      "source_korean_pronunciation": "커 프라짜오 우아이폰 크랍/카",
+      "variants": [
+        {
+          "id": "19",
+          "korean": "하나님의 축복을!",
+          "english": "God bless you!",
+          "speech": {
+            "male": {
+              "thai": "ขอพระเจ้าอวยพรคุณครับ",
+              "romanization": "khŏr Phrá-jâo uay-phon khun khráp",
+              "korean_pronunciation": "커 프라짜오 우아이폰 쿤 크랍"
+            },
+            "female": {
+              "thai": "ขอพระเจ้าอวยพรคุณค่ะ",
+              "romanization": "khŏr Phrá-jâo uay-phon khun khâ",
+              "korean_pronunciation": "커 프라짜오 우아이폰 쿤 카"
+            }
+          }
+        }
+      ],
+      "review": {
+        "languageReviewStatus": "pending_native_review",
+        "nativeReviewedBy": null,
+        "nativeReviewDate": null,
+        "ttsAcousticReviewStatus": "pending_spot_check",
+        "ttsAcousticReviewedBy": null,
+        "ttsAcousticReviewDate": null,
+        "notes": []
+      }
+    },
+    {
+      "id": 20,
+      "category": "mission",
+      "korean": "하나님은 사랑이십니다",
+      "english": "God is love.",
+      "source_korean_pronunciation": "프라짜오 쏭 뻰 콰락 크랍/카",
+      "variants": [
+        {
+          "id": "20",
+          "korean": "하나님은 사랑이십니다",
+          "english": "God is love.",
+          "speech": {
+            "male": {
+              "thai": "พระเจ้าทรงเป็นความรักครับ",
+              "romanization": "Phrá-jâo song-pen khwaam-rák khráp",
+              "korean_pronunciation": "프라짜오 쏭 뻰 콰락 크랍"
+            },
+            "female": {
+              "thai": "พระเจ้าทรงเป็นความรักค่ะ",
+              "romanization": "Phrá-jâo song-pen khwaam-rák khâ",
+              "korean_pronunciation": "프라짜오 쏭 뻰 콰락 카"
+            }
+          }
+        }
+      ],
+      "review": {
+        "languageReviewStatus": "pending_native_review",
+        "nativeReviewedBy": null,
+        "nativeReviewDate": null,
+        "ttsAcousticReviewStatus": "pending_spot_check",
+        "ttsAcousticReviewedBy": null,
+        "ttsAcousticReviewDate": null,
+        "notes": []
+      }
+    },
+    {
+      "id": 21,
+      "category": "mission",
+      "korean": "예수님 믿으세요",
+      "english": "Believe in Jesus.",
+      "source_korean_pronunciation": "츄아 나이 프라예쑤 크랍/카",
+      "caution": "Use with sensitivity to the relationship, setting, and the listener's response.",
+      "variants": [
+        {
+          "id": "21",
+          "korean": "예수님 믿으세요",
+          "english": "Believe in Jesus.",
+          "speech": {
+            "male": {
+              "thai": "เชื่อในพระเยซูครับ",
+              "romanization": "chûea nai Phrá-yeh-suu khráp",
+              "korean_pronunciation": "츄아 나이 프라예쑤 크랍"
+            },
+            "female": {
+              "thai": "เชื่อในพระเยซูค่ะ",
+              "romanization": "chûea nai Phrá-yeh-suu khâ",
+              "korean_pronunciation": "츄아 나이 프라예쑤 카"
+            }
+          }
+        }
+      ],
+      "review": {
+        "languageReviewStatus": "pending_native_review",
+        "nativeReviewedBy": null,
+        "nativeReviewDate": null,
+        "ttsAcousticReviewStatus": "pending_spot_check",
+        "ttsAcousticReviewedBy": null,
+        "ttsAcousticReviewDate": null,
+        "notes": []
+      }
+    },
+    {
+      "id": 22,
+      "category": "mission",
+      "korean": "우리는 당신들을 사랑해요",
+      "english": "We love you.",
+      "source_korean_pronunciation": "푸악 라오 락 쿤 크랍/카",
+      "variants": [
+        {
+          "id": "22",
+          "korean": "우리는 당신들을 사랑해요",
+          "english": "We love you.",
+          "speech": {
+            "male": {
+              "thai": "พวกเรารักคุณครับ",
+              "romanization": "phûak-rao rák khun khráp",
+              "korean_pronunciation": "푸악 라오 락 쿤 크랍"
+            },
+            "female": {
+              "thai": "พวกเรารักคุณค่ะ",
+              "romanization": "phûak-rao rák khun khâ",
+              "korean_pronunciation": "푸악 라오 락 쿤 카"
+            }
+          }
+        }
+      ],
+      "review": {
+        "languageReviewStatus": "pending_native_review",
+        "nativeReviewedBy": null,
+        "nativeReviewDate": null,
+        "ttsAcousticReviewStatus": "pending_spot_check",
+        "ttsAcousticReviewedBy": null,
+        "ttsAcousticReviewDate": null,
+        "notes": []
+      }
+    },
+    {
+      "id": 23,
+      "category": "mission",
+      "korean": "기도해 드릴게요",
+      "english": "I will pray for you.",
+      "source_korean_pronunciation": "폼/찬 짜 아팃탄 하이 쿤 크랍/카",
+      "variants": [
+        {
+          "id": "23",
+          "korean": "기도해 드릴게요",
+          "english": "I will pray for you.",
+          "speech": {
+            "male": {
+              "thai": "ผมจะอธิษฐานให้คุณครับ",
+              "romanization": "phŏm jà à-thít-thăan hâi khun khráp",
+              "korean_pronunciation": "폼 짜 아팃탄 하이 쿤 크랍"
+            },
+            "female": {
+              "thai": "ฉันจะอธิษฐานให้คุณค่ะ",
+              "romanization": "chăn jà à-thít-thăan hâi khun khâ",
+              "korean_pronunciation": "찬 짜 아팃탄 하이 쿤 카"
+            }
+          }
+        }
+      ],
+      "review": {
+        "languageReviewStatus": "pending_native_review",
+        "nativeReviewedBy": null,
+        "nativeReviewDate": null,
+        "ttsAcousticReviewStatus": "pending_spot_check",
+        "ttsAcousticReviewedBy": null,
+        "ttsAcousticReviewDate": null,
+        "notes": []
+      }
+    },
+    {
+      "id": 24,
+      "category": "mission",
+      "korean": "함께 찬양해요",
+      "english": "Let's sing praise together.",
+      "source_korean_pronunciation": "마 롱 플렝 깐 크랍/카",
+      "variants": [
+        {
+          "id": "24",
+          "korean": "함께 찬양해요",
+          "english": "Let's sing praise together.",
+          "speech": {
+            "male": {
+              "thai": "มาร้องเพลงสรรเสริญด้วยกันครับ",
+              "romanization": "maa-róng-phleeng săn-sĕern dûuai-gan khráp",
+              "korean_pronunciation": "마 롱 플렝 싼쓴 두아이깐 크랍"
+            },
+            "female": {
+              "thai": "มาร้องเพลงสรรเสริญด้วยกันค่ะ",
+              "romanization": "maa-róng-phleeng săn-sĕern dûuai-gan khâ",
+              "korean_pronunciation": "마 롱 플렝 싼쓴 두아이깐 카"
+            }
+          }
+        }
+      ],
+      "review": {
+        "languageReviewStatus": "pending_native_review",
+        "nativeReviewedBy": null,
+        "nativeReviewDate": null,
+        "ttsAcousticReviewStatus": "pending_spot_check",
+        "ttsAcousticReviewedBy": null,
+        "ttsAcousticReviewDate": null,
+        "notes": []
+      }
+    }
+  ]
+}

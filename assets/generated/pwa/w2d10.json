@@ -1,0 +1,456 @@
+{
+  "version": 1,
+  "kind": "pwa_lesson_spec",
+  "id": "W2D10",
+  "week": 2,
+  "day": 10,
+  "theme": "새 친구 만나기",
+  "title": "우리는 당신들을 사랑해요",
+  "hook": "공동체의 사랑을 전한다.",
+  "story": "예배 후 서로를 환영하며 공동체의 사랑을 전한다.",
+  "missionGoal": "공동체적 환대를 문장으로 말한다.",
+  "ministryGuide": "공동체의 사랑을 전하면 상대가 혼자가 아니라 함께 환영받는다는 느낌을 받기 쉽다.",
+  "speakingMission": "우리는 당신들을 사랑해요를 5회 말하고, 이름 묻기와 자기소개 뒤에 이어 2회 연습한다.",
+  "primaryImage": {
+    "sceneId": "encouragement_and_blessing",
+    "altTextKo": "교회 안에서 사랑과 축복의 말을 따뜻하게 전하는 장면",
+    "sourcePlan": [
+      {
+        "type": "local_preferred",
+        "assetPath": "assets/images/scenes/encouragement_and_blessing.jpg",
+        "status": "missing"
+      },
+      {
+        "type": "stock_preferred",
+        "queries": [
+          "gentle church encouragement conversation",
+          "supportive conversation church smiling",
+          "blessing prayer church community"
+        ],
+        "status": "search_required"
+      },
+      {
+        "type": "ai_fallback",
+        "prompt": {
+          "scene": "gentle encouragement and blessing",
+          "peopleAndAction": "two adults speaking warmly, one encouraging the other, caring expression",
+          "setting": "church yard or fellowship room",
+          "mood": "comforting, hopeful, respectful",
+          "cameraFraming": "medium close conversation shot",
+          "lighting": "warm daylight",
+          "avoidList": [
+            "preaching at someone",
+            "dramatic spotlight"
+          ]
+        },
+        "status": "generate_if_needed"
+      }
+    ]
+  },
+  "keywordImages": [],
+  "newPhrases": [
+    {
+      "variantId": "22",
+      "phraseId": 22,
+      "category": "mission",
+      "korean": "우리는 당신들을 사랑해요",
+      "english": "We love you.",
+      "speech": {
+        "male": {
+          "thai": "พวกเรารักคุณครับ",
+          "romanization": "phûak-rao rák khun khráp",
+          "korean_pronunciation": "푸악 라오 락 쿤 크랍"
+        },
+        "female": {
+          "thai": "พวกเรารักคุณค่ะ",
+          "romanization": "phûak-rao rák khun khâ",
+          "korean_pronunciation": "푸악 라오 락 쿤 카"
+        }
+      },
+      "audio": {
+        "male": {
+          "normal": "assets/audio/sentences/S22_male_normal.mp3",
+          "slow": "assets/audio/sentences/S22_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S22_male_repeat3.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/sentences/S22_female_normal.mp3",
+          "slow": "assets/audio/sentences/S22_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S22_female_repeat3.mp3"
+        }
+      }
+    }
+  ],
+  "reviewPhrases": [
+    {
+      "variantId": "6",
+      "phraseId": 6,
+      "category": "daily",
+      "korean": "실례/죄송합니다",
+      "english": "Excuse me.",
+      "speech": {
+        "male": {
+          "thai": "ขอโทษครับ",
+          "romanization": "khŏr-thôot khráp",
+          "korean_pronunciation": "커 톳 크랍"
+        },
+        "female": {
+          "thai": "ขอโทษค่ะ",
+          "romanization": "khŏr-thôot khâ",
+          "korean_pronunciation": "커 톳 카"
+        }
+      },
+      "audio": {
+        "male": {
+          "normal": "assets/audio/sentences/S6_male_normal.mp3",
+          "slow": "assets/audio/sentences/S6_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S6_male_repeat3.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/sentences/S6_female_normal.mp3",
+          "slow": "assets/audio/sentences/S6_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S6_female_repeat3.mp3"
+        }
+      }
+    },
+    {
+      "variantId": "7",
+      "phraseId": 7,
+      "category": "daily",
+      "korean": "괜찮아요",
+      "english": "It's O.K.",
+      "speech": {
+        "male": {
+          "thai": "ไม่เป็นไรครับ",
+          "romanization": "mâi-pen-rai khráp",
+          "korean_pronunciation": "마이 뻰 라이 크랍"
+        },
+        "female": {
+          "thai": "ไม่เป็นไรค่ะ",
+          "romanization": "mâi-pen-rai khâ",
+          "korean_pronunciation": "마이 뻰 라이 카"
+        }
+      },
+      "audio": {
+        "male": {
+          "normal": "assets/audio/sentences/S7_male_normal.mp3",
+          "slow": "assets/audio/sentences/S7_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S7_male_repeat3.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/sentences/S7_female_normal.mp3",
+          "slow": "assets/audio/sentences/S7_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S7_female_repeat3.mp3"
+        }
+      }
+    },
+    {
+      "variantId": "8",
+      "phraseId": 8,
+      "category": "daily",
+      "korean": "이름이 무엇인가요?",
+      "english": "What's your name?",
+      "speech": {
+        "male": {
+          "thai": "คุณชื่ออะไรครับ",
+          "romanization": "khun chûue à-rai khráp",
+          "korean_pronunciation": "쿤 츠 아라이 크랍"
+        },
+        "female": {
+          "thai": "คุณชื่ออะไรคะ",
+          "romanization": "khun chûue à-rai khá",
+          "korean_pronunciation": "쿤 츠 아라이 카"
+        }
+      },
+      "audio": {
+        "male": {
+          "normal": "assets/audio/sentences/S8_male_normal.mp3",
+          "slow": "assets/audio/sentences/S8_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S8_male_repeat3.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/sentences/S8_female_normal.mp3",
+          "slow": "assets/audio/sentences/S8_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S8_female_repeat3.mp3"
+        }
+      }
+    },
+    {
+      "variantId": "9",
+      "phraseId": 9,
+      "category": "daily",
+      "korean": "제 이름은 ~입니다",
+      "english": "My name is ~",
+      "speech": {
+        "male": {
+          "thai": "ผมชื่อ ~ ครับ",
+          "romanization": "phŏm chûue ~ khráp",
+          "korean_pronunciation": "폼 츠 ~ 크랍"
+        },
+        "female": {
+          "thai": "ฉันชื่อ ~ ค่ะ",
+          "romanization": "chăn chûue ~ khâ",
+          "korean_pronunciation": "찬 츠 ~ 카"
+        }
+      },
+      "audio": {
+        "male": {
+          "normal": "assets/audio/sentences/S9_male_normal.mp3",
+          "slow": "assets/audio/sentences/S9_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S9_male_repeat3.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/sentences/S9_female_normal.mp3",
+          "slow": "assets/audio/sentences/S9_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S9_female_repeat3.mp3"
+        }
+      }
+    },
+    {
+      "variantId": "10",
+      "phraseId": 10,
+      "category": "daily",
+      "korean": "몇 살이니?",
+      "english": "How old are you?",
+      "speech": {
+        "male": {
+          "thai": "คุณอายุเท่าไหร่ครับ",
+          "romanization": "khun aa-yú thâo-rài khráp",
+          "korean_pronunciation": "아유 타오 라이 크랍"
+        },
+        "female": {
+          "thai": "คุณอายุเท่าไหร่คะ",
+          "romanization": "khun aa-yú thâo-rài khá",
+          "korean_pronunciation": "아유 타오 라이 카"
+        }
+      },
+      "audio": {
+        "male": {
+          "normal": "assets/audio/sentences/S10_male_normal.mp3",
+          "slow": "assets/audio/sentences/S10_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S10_male_repeat3.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/sentences/S10_female_normal.mp3",
+          "slow": "assets/audio/sentences/S10_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S10_female_repeat3.mp3"
+        }
+      }
+    }
+  ],
+  "keywords": [
+    {
+      "id": "W035",
+      "variantIds": [
+        "17",
+        "18",
+        "22"
+      ],
+      "korean": "사랑하다",
+      "english": "love",
+      "thai": "รัก",
+      "romanization": "rák",
+      "koreanPronunciation": "락",
+      "tier": "core",
+      "days": [
+        16,
+        17,
+        20,
+        22,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W035_male_normal.mp3",
+          "slow": "assets/audio/words/W035_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W035_female_normal.mp3",
+          "slow": "assets/audio/words/W035_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W043",
+      "variantIds": [
+        "22"
+      ],
+      "korean": "우리",
+      "english": "we/us",
+      "thai": "พวกเรา",
+      "romanization": "phûak-rao",
+      "koreanPronunciation": "푸악 라오",
+      "tier": "supplemental",
+      "days": [
+        22,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W043_male_normal.mp3",
+          "slow": "assets/audio/words/W043_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W043_female_normal.mp3",
+          "slow": "assets/audio/words/W043_female_slow.mp3"
+        }
+      }
+    }
+  ],
+  "displayKeywords": [
+    {
+      "id": "W035",
+      "variantIds": [
+        "17",
+        "18",
+        "22"
+      ],
+      "korean": "사랑하다",
+      "english": "love",
+      "thai": "รัก",
+      "romanization": "rák",
+      "koreanPronunciation": "락",
+      "tier": "core",
+      "days": [
+        16,
+        17,
+        20,
+        22,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W035_male_normal.mp3",
+          "slow": "assets/audio/words/W035_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W035_female_normal.mp3",
+          "slow": "assets/audio/words/W035_female_slow.mp3"
+        }
+      }
+    }
+  ],
+  "supplementalKeywords": [
+    {
+      "id": "W043",
+      "variantIds": [
+        "22"
+      ],
+      "korean": "우리",
+      "english": "we/us",
+      "thai": "พวกเรา",
+      "romanization": "phûak-rao",
+      "koreanPronunciation": "푸악 라오",
+      "tier": "supplemental",
+      "days": [
+        22,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W043_male_normal.mp3",
+          "slow": "assets/audio/words/W043_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W043_female_normal.mp3",
+          "slow": "assets/audio/words/W043_female_slow.mp3"
+        }
+      }
+    }
+  ],
+  "keywordDisplayPolicy": {
+    "default": "core_only",
+    "toggleSupplemental": true,
+    "emptyCoreFallback": "show_first_three_keywords"
+  },
+  "learnerProfile": {
+    "ageRange": "primarily older Korean adults; source plan average age about 58",
+    "smartphoneLiteracy": "low_to_moderate",
+    "uxDefaults": {
+      "minimumTapTargetPx": 48,
+      "audioPlayback": "manual_user_triggered",
+      "localStorageFailure": "silent_degrade_with_reset_option",
+      "defaultTextScale": "large"
+    }
+  },
+  "statePolicy": {
+    "storage": "localStorage",
+    "schemaVersion": 1,
+    "namespace": "thai25",
+    "keys": {
+      "schemaVersion": {
+        "key": "thai25.schemaVersion",
+        "type": "number",
+        "default": 1
+      },
+      "currentDay": {
+        "key": "thai25.currentDay",
+        "type": "number",
+        "default": 1
+      },
+      "completedLessonIds": {
+        "key": "thai25.completedLessonIds",
+        "type": "string[]",
+        "default": []
+      },
+      "lastOpenedLessonId": {
+        "key": "thai25.lastOpenedLessonId",
+        "type": "string|null",
+        "default": null
+      },
+      "speakerPreference": {
+        "key": "thai25.speakerPreference",
+        "type": "\"male\"|\"female\"",
+        "default": "female"
+      },
+      "audioSpeedPreference": {
+        "key": "thai25.audioSpeedPreference",
+        "type": "\"normal\"|\"slow\"|\"repeat3\"",
+        "default": "normal"
+      },
+      "showSupplementalKeywords": {
+        "key": "thai25.showSupplementalKeywords",
+        "type": "boolean",
+        "default": false
+      }
+    },
+    "resetSupported": true,
+    "fallback": "If localStorage is unavailable, keep the lesson usable with stateless navigation and show no blocking error."
+  },
+  "imageMissingFallback": {
+    "behavior": "show_placeholder_panel",
+    "placeholderTextSource": "primaryImage.altTextKo",
+    "visualStyle": "light neutral panel with scene label; preserve image aspect ratio so layout does not shift when real image is added",
+    "allowRenderWithoutImageFile": true
+  },
+  "controls": {
+    "sentenceAudioModes": [
+      "normal",
+      "slow",
+      "repeat3"
+    ],
+    "wordAudioModes": [
+      "normal",
+      "slow"
+    ],
+    "speakerModes": [
+      "male",
+      "female"
+    ],
+    "audioSpeedControlPlacement": {
+      "placement": "inline_sentence_audio_toolbar",
+      "visibleOptions": [
+        "normal",
+        "slow",
+        "repeat3"
+      ],
+      "default": "normal",
+      "reason": "Older learners should not have to find a settings screen to slow down audio."
+    }
+  },
+  "completion": {
+    "checkAction": "lesson_complete",
+    "shareAction": "open_kakao_share_card",
+    "nextAction": "next_day_or_review"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "protocol": "docs/tts_acoustic_review_protocol.md",
+  "status": "pending",
+  "reviewer": {
+    "name": null,
+    "thaiFluency": null,
+    "reviewDate": null
+  },
+  "minimumSpotCheckFiles": [
+    "assets/audio/sentences/S1_male_normal.mp3",
+    "assets/audio/sentences/S1_female_normal.mp3",
+    "assets/audio/sentences/S2_1_male_normal.mp3",
+    "assets/audio/sentences/S2_1_female_normal.mp3",
+    "assets/audio/sentences/S8_female_normal.mp3",
+    "assets/audio/sentences/S10_female_normal.mp3",
+    "assets/audio/sentences/S11_female_normal.mp3",
+    "assets/audio/sentences/S12_female_normal.mp3",
+    "assets/audio/sentences/S17_male_normal.mp3",
+    "assets/audio/sentences/S18_female_normal.mp3",
+    "assets/audio/sentences/S19_male_normal.mp3",
+    "assets/audio/sentences/S20_female_normal.mp3",
+    "assets/audio/sentences/S21_male_normal.mp3",
+    "assets/audio/sentences/S23_female_normal.mp3",
+    "assets/audio/sentences/S24_male_normal.mp3"
+  ],
+  "results": [],
+  "rejects": [],
+  "releaseGate": {
+    "rendererBuildAllowed": true,
+    "learnerReleaseAllowed": false,
+    "reason": "Renderer work may continue, but learner release requires documented acoustic review results."
+  }
+}

@@ -1,0 +1,392 @@
+{
+  "metadata": {
+    "title": "Thai mission learning image source manifest",
+    "version": "1.0.0",
+    "purpose": "Stock-first, local-first image sourcing rules and scene manifest for Thai mission learning materials."
+  },
+  "sourcePriority": [
+    {
+      "order": 1,
+      "type": "local_preferred",
+      "label": "directly prepared photos",
+      "rule": "Use a manually prepared local image first when it matches the lesson scene and quality standards."
+    },
+    {
+      "order": 2,
+      "type": "stock_preferred",
+      "label": "free or licensed stock photos",
+      "rule": "Use a stock photo when no approved local photo exists and the stock image clearly matches the lesson scene."
+    },
+    {
+      "order": 3,
+      "type": "ai_fallback",
+      "label": "AI-generated realistic image",
+      "rule": "Use AI generation only when no suitable local or stock image is available."
+    }
+  ],
+  "qualityRules": {
+    "minimumResolution": {
+      "width": 1600,
+      "height": 1200
+    },
+    "requiredTraits": [
+      "clear visible subject",
+      "natural expression and body language",
+      "low background clutter",
+      "bright or neutral lighting",
+      "visually readable on mobile"
+    ],
+    "rejectTraits": [
+      "blurry or noisy image",
+      "heavy watermark",
+      "text embedded in photo",
+      "theological symbolism without a real scene",
+      "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
+    ]
+  },
+  "stockSources": [
+    {
+      "id": "unsplash",
+      "label": "Unsplash",
+      "licenseNote": "Check current photo license and attribution requirements before publishing."
+    },
+    {
+      "id": "pexels",
+      "label": "Pexels",
+      "licenseNote": "Check current photo license and attribution requirements before publishing."
+    },
+    {
+      "id": "pixabay",
+      "label": "Pixabay",
+      "licenseNote": "Check current photo license and attribution requirements before publishing."
+    }
+  ],
+  "keywordImageRules": {
+    "preferImageForKeywordIds": [
+      "W005",
+      "W006",
+      "W020",
+      "W023",
+      "W025",
+      "W029",
+      "W045",
+      "W047",
+      "W048"
+    ],
+    "optionalImageForKeywordIds": [
+      "W007",
+      "W014",
+      "W018",
+      "W028",
+      "W033",
+      "W036"
+    ],
+    "skipImageForKeywordIds": [
+      "W002",
+      "W003",
+      "W004",
+      "W024",
+      "W026",
+      "W034",
+      "W039",
+      "W042",
+      "W044",
+      "W049"
+    ]
+  },
+  "sceneAssets": [
+    {
+      "sceneId": "greeting_church_gate",
+      "useFor": [
+        "W1D1",
+        "W1D2",
+        "W1D3",
+        "W1D4",
+        "W1D5",
+        "W5D21",
+        "W1SAT"
+      ],
+      "localAsset": "assets/images/scenes/greeting_church_gate.jpg",
+      "stockSearchQueries": [
+        "Thai church entrance greeting people smiling wai",
+        "Asian church greeting outside entrance",
+        "warm greeting at church gate Thailand"
+      ],
+      "aiPrompt": {
+        "scene": "Korean mission team greeting Thai church member",
+        "peopleAndAction": "two or three adults smiling, gentle wai greeting, warm eye contact",
+        "setting": "church entrance in Thailand, daytime",
+        "mood": "welcoming, respectful, calm",
+        "cameraFraming": "medium wide documentary photo",
+        "lighting": "soft natural daylight",
+        "avoidList": [
+          "tourist pose",
+          "crowded street chaos",
+          "dramatic religious painting style"
+        ]
+      },
+      "altTextKo": "교회 입구에서 태국 성도에게 와이 인사로 반갑게 인사하는 장면",
+      "licensing": {
+        "licenseType": "ai_generated_internal_fallback",
+        "sourceUrl": "C:/Users/xhpar/.codex/generated_images/019ef9d8-1e32-7621-bf01-361f043f84ab/ig_08eb46c171a797c1016a3cae804ed481918f4e7c52c974ef97.png",
+        "attributionRequired": false,
+        "attributionText": null,
+        "approvalStatus": "approved_for_pilot"
+      }
+    },
+    {
+      "sceneId": "name_intro_conversation",
+      "useFor": [
+        "W2D7",
+        "W2D8",
+        "W5D22",
+        "W2SAT"
+      ],
+      "localAsset": null,
+      "stockSearchQueries": [
+        "church fellowship two people introducing themselves",
+        "Asian church conversation after worship",
+        "friendly introduction conversation church"
+      ],
+      "aiPrompt": {
+        "scene": "new friends meeting after worship",
+        "peopleAndAction": "two adults introducing themselves, relaxed smile, respectful posture",
+        "setting": "church fellowship hall",
+        "mood": "friendly, welcoming, personal",
+        "cameraFraming": "medium shot",
+        "lighting": "bright indoor natural light",
+        "avoidList": [
+          "formal business handshake",
+          "stage presentation feel"
+        ]
+      },
+      "altTextKo": "예배 후 처음 만나 이름을 묻고 자기소개하는 장면",
+      "licensing": {
+        "licenseType": null,
+        "sourceUrl": null,
+        "attributionRequired": null,
+        "attributionText": null,
+        "approvalStatus": "pending"
+      }
+    },
+    {
+      "sceneId": "restroom_wayfinding",
+      "useFor": [
+        "W3D11"
+      ],
+      "localAsset": null,
+      "stockSearchQueries": [
+        "restroom sign clean hallway",
+        "bathroom direction sign public building"
+      ],
+      "aiPrompt": {
+        "scene": "asking where the restroom is",
+        "peopleAndAction": "one person politely asking, another person pointing helpfully",
+        "setting": "clean church hallway near restroom sign",
+        "mood": "practical, calm, helpful",
+        "cameraFraming": "medium shot with visible sign",
+        "lighting": "clear indoor lighting",
+        "avoidList": [
+          "messy restroom interior",
+          "humor or exaggerated expressions"
+        ]
+      },
+      "altTextKo": "교회 안에서 화장실 위치를 정중하게 묻는 장면",
+      "licensing": {
+        "licenseType": null,
+        "sourceUrl": null,
+        "attributionRequired": null,
+        "attributionText": null,
+        "approvalStatus": "pending"
+      }
+    },
+    {
+      "sceneId": "meal_table_fellowship",
+      "useFor": [
+        "W3D12",
+        "W3D15",
+        "W3SAT",
+        "W3SUN"
+      ],
+      "localAsset": null,
+      "stockSearchQueries": [
+        "church meal table fellowship asian family style",
+        "friends sharing meal smiling table",
+        "community lunch church"
+      ],
+      "aiPrompt": {
+        "scene": "sharing a meal in church fellowship",
+        "peopleAndAction": "small group smiling over food, one person offering food, another praising it",
+        "setting": "church meal table",
+        "mood": "warm, generous, communal",
+        "cameraFraming": "wide table scene",
+        "lighting": "soft natural light",
+        "avoidList": [
+          "restaurant luxury styling",
+          "food close-up without people"
+        ]
+      },
+      "altTextKo": "교회 식사 자리에서 음식을 나누며 대화하는 장면",
+      "licensing": {
+        "licenseType": null,
+        "sourceUrl": null,
+        "attributionRequired": null,
+        "attributionText": null,
+        "approvalStatus": "pending"
+      }
+    },
+    {
+      "sceneId": "encouragement_and_blessing",
+      "useFor": [
+        "W2D10",
+        "W4D16",
+        "W4D17",
+        "W4D18",
+        "W4D19",
+        "W4SAT",
+        "W4SUN"
+      ],
+      "localAsset": null,
+      "stockSearchQueries": [
+        "gentle church encouragement conversation",
+        "supportive conversation church smiling",
+        "blessing prayer church community"
+      ],
+      "aiPrompt": {
+        "scene": "gentle encouragement and blessing",
+        "peopleAndAction": "two adults speaking warmly, one encouraging the other, caring expression",
+        "setting": "church yard or fellowship room",
+        "mood": "comforting, hopeful, respectful",
+        "cameraFraming": "medium close conversation shot",
+        "lighting": "warm daylight",
+        "avoidList": [
+          "preaching at someone",
+          "dramatic spotlight"
+        ]
+      },
+      "altTextKo": "교회 안에서 사랑과 축복의 말을 따뜻하게 전하는 장면",
+      "licensing": {
+        "licenseType": null,
+        "sourceUrl": null,
+        "attributionRequired": null,
+        "attributionText": null,
+        "approvalStatus": "pending"
+      }
+    },
+    {
+      "sceneId": "prayer_support",
+      "useFor": [
+        "W5D23"
+      ],
+      "localAsset": null,
+      "stockSearchQueries": [
+        "prayer support two people church",
+        "gentle prayer with friend church"
+      ],
+      "aiPrompt": {
+        "scene": "offering prayer for someone",
+        "peopleAndAction": "one person listening with care, another offering prayer support with gentle posture",
+        "setting": "quiet church corner",
+        "mood": "peaceful, caring, sincere",
+        "cameraFraming": "medium shot",
+        "lighting": "soft indoor light",
+        "avoidList": [
+          "crowded worship stage",
+          "extreme emotion"
+        ]
+      },
+      "altTextKo": "상대를 위로하며 기도해 주겠다고 말하는 장면",
+      "licensing": {
+        "licenseType": null,
+        "sourceUrl": null,
+        "attributionRequired": null,
+        "attributionText": null,
+        "approvalStatus": "pending"
+      }
+    },
+    {
+      "sceneId": "praise_invitation",
+      "useFor": [
+        "W4D20",
+        "W5D24"
+      ],
+      "localAsset": null,
+      "stockSearchQueries": [
+        "small church praise group singing together",
+        "church worship small group joyful singing",
+        "community praise gathering"
+      ],
+      "aiPrompt": {
+        "scene": "inviting people to sing praise together",
+        "peopleAndAction": "small group singing with joy, one person inviting others to join",
+        "setting": "small church worship gathering",
+        "mood": "joyful, open, communal",
+        "cameraFraming": "wide small-group scene",
+        "lighting": "bright warm light",
+        "avoidList": [
+          "concert stage lighting",
+          "celebrity worship style"
+        ]
+      },
+      "altTextKo": "작은 교회 모임에서 함께 찬양하도록 초대하는 장면",
+      "licensing": {
+        "licenseType": null,
+        "sourceUrl": null,
+        "attributionRequired": null,
+        "attributionText": null,
+        "approvalStatus": "pending"
+      }
+    },
+    {
+      "sceneId": "full_mission_roleplay_review",
+      "useFor": [
+        "W5D25",
+        "W5SAT",
+        "W5SUN"
+      ],
+      "localAsset": null,
+      "stockSearchQueries": [
+        "church mission team roleplay small group conversation",
+        "small group church fellowship greeting prayer singing",
+        "mission training roleplay church group"
+      ],
+      "aiPrompt": {
+        "scene": "full review roleplay for mission conversation",
+        "peopleAndAction": "small group practicing greeting, introduction, prayer support, and praise invitation in a friendly roleplay",
+        "setting": "Thai church fellowship room",
+        "mood": "warm, practical, encouraging, communal",
+        "cameraFraming": "wide documentary small-group scene",
+        "lighting": "bright natural indoor light",
+        "avoidList": [
+          "formal lecture podium",
+          "concert stage lighting",
+          "dramatic religious painting style"
+        ]
+      },
+      "altTextKo": "처음 만남부터 기도와 찬양 초대까지 전체 흐름을 역할극으로 복습하는 장면",
+      "licensing": {
+        "licenseType": null,
+        "sourceUrl": null,
+        "attributionRequired": null,
+        "attributionText": null,
+        "approvalStatus": "pending"
+      }
+    }
+  ],
+  "licensingPolicy": {
+    "requiredBeforePublish": true,
+    "requiredFields": [
+      "licenseType",
+      "sourceUrl",
+      "attributionRequired",
+      "attributionText",
+      "approvalStatus"
+    ],
+    "allowedApprovalStatuses": [
+      "pending",
+      "approved",
+      "rejected"
+    ],
+    "aiFallbackApprovalRequired": true
+  }
+}

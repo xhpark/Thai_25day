@@ -1,0 +1,581 @@
+{
+  "metadata": {
+    "title": "Thai mission learning output template specs",
+    "version": "1.0.0",
+    "purpose": "Generator specification for Kakao cards, PWA lessons, Saturday teaching decks, teacher scripts, and printable review sheets.",
+    "sourceFiles": {
+      "curriculumMaster": "data/thai_curriculum_master.json",
+      "phrases": "data/thai_master_phrases.json",
+      "assetsIndex": "data/thai_learning_assets_index.json"
+    }
+  },
+  "brandDirection": {
+    "tone": "warm, mission-centered, practical, relational, easy for average-age Korean learners",
+    "voice": "encouraging, respectful, simple, not academic",
+    "visualDirection": "bright natural light, real people, church visit, greeting, meal sharing, prayer, praise, community warmth",
+    "forbiddenDirection": [
+      "dark moody imagery",
+      "abstract shapes without learning value",
+      "cartoonish missionary stereotypes",
+      "text-heavy image backgrounds",
+      "images that visually conflict with church, family, meal, greeting, prayer, or praise settings"
+    ]
+  },
+  "imagePolicy": {
+    "goal": "Every learning output should include a relevant image when it helps memory, context, or warmth.",
+    "preferredImageTypes": [
+      "real photo of greeting, church entrance, meal table, prayer, praise, family, friends, or caring conversation",
+      "clean object photo for practical nouns like restroom, meal, name tag, or church bulletin",
+      "simple documentary-style scene that matches the lesson story"
+    ],
+    "fallbackImageTypes": [
+      "softly staged stock photo with clear human action",
+      "AI-generated realistic scene based on the lesson story",
+      "single-object image with plain background"
+    ],
+    "selectionRules": [
+      "Choose one primary image per day that matches the day's story and missionGoal.",
+      "Choose supporting keyword images only for nouns or actions that benefit from direct visual memory.",
+      "Prefer people-centered photos for sentence learning and object-centered photos for keyword learning.",
+      "Never use an image only as decoration; it must support memory, scene recall, or speaking confidence.",
+      "If a lesson includes prayer, blessing, or praise, choose gentle and respectful church or community imagery instead of dramatic symbolic art."
+    ],
+    "altTextRule": "Every generated image asset must have short Korean alt text describing the visible scene and its learning purpose.",
+    "promptParts": [
+      "scene",
+      "people and action",
+      "setting",
+      "mood",
+      "camera framing",
+      "lighting",
+      "avoid list"
+    ],
+    "defaultAvoidList": [
+      "blurred faces",
+      "overcrowded background",
+      "heavy text embedded in image",
+      "overly Western-only church cues when a Thai context is intended",
+      "visual clutter that hides the learning focus"
+    ],
+    "aiFallbackApprovalRequired": true
+  },
+  "assetPackaging": {
+    "baseDirs": {
+      "images": "assets/images",
+      "kakao": "assets/generated/kakao",
+      "pwa": "assets/generated/pwa",
+      "ppt": "assets/generated/ppt",
+      "print": "assets/generated/print"
+    },
+    "fileNaming": {
+      "dayPrimaryImage": "DAY{day}_hero.jpg",
+      "keywordImage": "{keywordId}.jpg",
+      "kakaoCard": "DAY{day}_kakao_card.png",
+      "pwaThumb": "DAY{day}_pwa_thumb.jpg",
+      "pptDeck": "WEEK{week}_lesson_deck.pptx",
+      "teacherScript": "WEEK{week}_teacher_script.md",
+      "reviewSheet": "WEEK{week}_review_sheet.pdf"
+    }
+  },
+  "templates": {
+    "kakaoCard": {
+      "target": "weekday and sunday shareable mobile card",
+      "canvas": {
+        "width": 1080,
+        "height": 1350,
+        "safePadding": 72
+      },
+      "sections": [
+        {
+          "name": "header",
+          "required": true,
+          "fields": [
+            "day",
+            "title",
+            "week",
+            "theme"
+          ]
+        },
+        {
+          "name": "heroImage",
+          "required": true,
+          "fields": [
+            "primaryImage",
+            "altText"
+          ],
+          "notes": "Use the day's story scene. Image occupies top 40 percent."
+        },
+        {
+          "name": "newPhrases",
+          "required": true,
+          "fields": [
+            "newPhraseVariantIds"
+          ],
+          "notes": "Show Korean, Thai, Korean pronunciation. Maximum 2 main sentence rows."
+        },
+        {
+          "name": "reviewStrip",
+          "required": true,
+          "fields": [
+            "reviewVariantIds"
+          ],
+          "notes": "Short chip-style line with 1 to 4 review expressions."
+        },
+        {
+          "name": "keywordStrip",
+          "required": true,
+          "fields": [
+            "keyWordIds"
+          ],
+          "notes": "Show 2 to 4 major words with tiny icons or thumbnails."
+        },
+        {
+          "name": "missionBox",
+          "required": true,
+          "fields": [
+            "speakingMission",
+            "ministryGuide"
+          ]
+        },
+        {
+          "name": "footer",
+          "required": true,
+          "fields": [
+            "pwaLinkQr",
+            "audioModes",
+            "dayId"
+          ]
+        }
+      ],
+      "imageRules": {
+        "primaryImageCount": 1,
+        "keywordImageCount": "0-4",
+        "preferredAspectRatio": "4:3 or 3:2",
+        "style": "friendly, documentary, easy to recognize on phone"
+      },
+      "scope": {
+        "generatedFor": [
+          "weekday",
+          "sunday"
+        ],
+        "notGeneratedFor": [
+          "saturday"
+        ],
+        "saturdayReason": "Saturday uses the offline PPT and teacher script pack instead of a Kakao card in version 1."
+      },
+      "sundayFormat": {
+        "rendererTemplate": "same_canvas_same_renderer",
+        "contentMode": "review_recap",
+        "rule": "Sunday cards use the same mobile card renderer as weekdays, but emphasize review phrases and personalMission instead of newPhrases.",
+        "contentSource": {
+          "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show up to 3 primary review phrases on the card.",
+          "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show up to 4 core keywords.",
+          "missionText": "Sunday personalMission rendered as the main action box.",
+          "ministryGuide": "Sunday ministryGuide rendered as the relational guide line."
+        }
+      }
+    },
+    "pwaLesson": {
+      "target": "interactive daily lesson page",
+      "pageSections": [
+        {
+          "name": "hero",
+          "required": true,
+          "fields": [
+            "title",
+            "hook",
+            "story",
+            "primaryImage",
+            "altText"
+          ]
+        },
+        {
+          "name": "todaySentences",
+          "required": true,
+          "fields": [
+            "newPhraseVariantIds",
+            "sentenceAudioModes"
+          ],
+          "notes": "Each sentence card includes male/female toggle, normal/slow/repeat3 controls, Thai text, Korean, romanization, Korean pronunciation."
+        },
+        {
+          "name": "reviewSentences",
+          "required": true,
+          "fields": [
+            "reviewVariantIds"
+          ]
+        },
+        {
+          "name": "keywords",
+          "required": true,
+          "fields": [
+            "keyWordIds",
+            "wordAudioModes",
+            "keywordImages"
+          ],
+          "notes": "Show image when helpful, especially concrete nouns and action verbs."
+        },
+        {
+          "name": "missionGoal",
+          "required": true,
+          "fields": [
+            "missionGoal",
+            "ministryGuide"
+          ]
+        },
+        {
+          "name": "speakingPractice",
+          "required": true,
+          "fields": [
+            "speakingMission"
+          ]
+        },
+        {
+          "name": "completion",
+          "required": true,
+          "fields": [
+            "checkAction",
+            "shareAction",
+            "nextAction"
+          ]
+        }
+      ],
+      "imageRules": {
+        "heroImageCount": 1,
+        "keywordImageCount": "0-6",
+        "minimumUsefulImageRule": "If the story describes a place, action, meal, or object, include at least one photo.",
+        "thumbnailStrategy": "Keyword images should be square thumbnails with consistent crop."
+      },
+      "statePolicy": {
+        "storage": "localStorage",
+        "schemaVersion": 1,
+        "namespace": "thai25",
+        "keys": {
+          "schemaVersion": {
+            "key": "thai25.schemaVersion",
+            "type": "number",
+            "default": 1
+          },
+          "currentDay": {
+            "key": "thai25.currentDay",
+            "type": "number",
+            "default": 1
+          },
+          "completedLessonIds": {
+            "key": "thai25.completedLessonIds",
+            "type": "string[]",
+            "default": []
+          },
+          "lastOpenedLessonId": {
+            "key": "thai25.lastOpenedLessonId",
+            "type": "string|null",
+            "default": null
+          },
+          "speakerPreference": {
+            "key": "thai25.speakerPreference",
+            "type": "\"male\"|\"female\"",
+            "default": "female"
+          },
+          "audioSpeedPreference": {
+            "key": "thai25.audioSpeedPreference",
+            "type": "\"normal\"|\"slow\"|\"repeat3\"",
+            "default": "normal"
+          },
+          "showSupplementalKeywords": {
+            "key": "thai25.showSupplementalKeywords",
+            "type": "boolean",
+            "default": false
+          }
+        },
+        "resetSupported": true,
+        "fallback": "If localStorage is unavailable, keep the lesson usable with stateless navigation and show no blocking error."
+      },
+      "learnerProfile": {
+        "ageRange": "primarily older Korean adults; source plan average age about 58",
+        "smartphoneLiteracy": "low_to_moderate",
+        "uxDefaults": {
+          "minimumTapTargetPx": 48,
+          "audioPlayback": "manual_user_triggered",
+          "localStorageFailure": "silent_degrade_with_reset_option",
+          "defaultTextScale": "large"
+        }
+      },
+      "imageMissingFallback": {
+        "behavior": "show_placeholder_panel",
+        "placeholderTextSource": "primaryImage.altTextKo",
+        "visualStyle": "light neutral panel with scene label; preserve image aspect ratio so layout does not shift when real image is added",
+        "allowRenderWithoutImageFile": true
+      },
+      "controls": {
+        "audioSpeedControlPlacement": {
+          "placement": "inline_sentence_audio_toolbar",
+          "visibleOptions": [
+            "normal",
+            "slow",
+            "repeat3"
+          ],
+          "default": "normal",
+          "reason": "Older learners should not have to find a settings screen to slow down audio."
+        }
+      }
+    },
+    "saturdayPpt": {
+      "target": "10-minute offline lesson deck",
+      "deckLength": "6-8 slides",
+      "slides": [
+        {
+          "index": 1,
+          "name": "openingScene",
+          "required": true,
+          "fields": [
+            "week",
+            "title",
+            "roleplayScene",
+            "primaryImage"
+          ]
+        },
+        {
+          "index": 2,
+          "name": "corePhrases",
+          "required": true,
+          "fields": [
+            "roleplayFocusVariantIds"
+          ],
+          "notes": "Large Thai text with Korean pronunciation and Korean meaning."
+        },
+        {
+          "index": 3,
+          "name": "keywordAndImage",
+          "required": true,
+          "fields": [
+            "keyWordIds",
+            "keywordImages"
+          ],
+          "notes": "Use 3 to 4 key words with picture support."
+        },
+        {
+          "index": 4,
+          "name": "maleFemalePractice",
+          "required": true,
+          "fields": [
+            "roleplayFocusVariantIds"
+          ],
+          "notes": "Show male/female ending contrast clearly."
+        },
+        {
+          "index": 5,
+          "name": "roleplaySteps",
+          "required": true,
+          "fields": [
+            "teacherFlow"
+          ]
+        },
+        {
+          "index": 6,
+          "name": "missionGuide",
+          "required": true,
+          "fields": [
+            "ministryGuide",
+            "missionGoal"
+          ]
+        },
+        {
+          "index": 7,
+          "name": "practiceRound",
+          "required": false,
+          "fields": [
+            "practicePrompt",
+            "pairPrompt"
+          ]
+        },
+        {
+          "index": 8,
+          "name": "sendoff",
+          "required": false,
+          "fields": [
+            "personalMission",
+            "nextWeekTeaser"
+          ]
+        }
+      ],
+      "imageRules": {
+        "coverImageCount": 1,
+        "supportingImageCount": "1-4",
+        "preferredStyle": "large full-bleed or wide photo with minimal clutter"
+      }
+    },
+    "teacherScript": {
+      "target": "Saturday instructor notes",
+      "format": "markdown",
+      "sections": [
+        "context header",
+        "lesson objective",
+        "opening words",
+        "phrase by phrase coaching notes",
+        "male and female ending reminder",
+        "image cue notes",
+        "roleplay instructions",
+        "ministryGuide summary",
+        "closing encouragement"
+      ],
+      "imageUsage": {
+        "inlineImageReference": true,
+        "notesRule": "Each image used in the PPT should have one short note telling the teacher why it helps memory or scene recall."
+      },
+      "contextHeader": {
+        "required": true,
+        "fields": [
+          "lessonGoal",
+          "learnersHaveCovered",
+          "successLooksLike"
+        ],
+        "purpose": "Make each Saturday script usable by a rotating teacher without prior context."
+      }
+    },
+    "reviewSheet": {
+      "target": "A4 printable weekly handout",
+      "pageSize": "A4 portrait",
+      "sections": [
+        {
+          "name": "weekSummary",
+          "required": true,
+          "fields": [
+            "week",
+            "theme",
+            "missionGoal"
+          ]
+        },
+        {
+          "name": "corePhrases",
+          "required": true,
+          "fields": [
+            "roleplayFocusVariantIds"
+          ]
+        },
+        {
+          "name": "keywordBoxes",
+          "required": true,
+          "fields": [
+            "keyWordIds",
+            "keywordImages"
+          ]
+        },
+        {
+          "name": "writeAndSpeak",
+          "required": true,
+          "fields": [
+            "personalMission",
+            "blankPracticeLines"
+          ]
+        },
+        {
+          "name": "prayerAndBlessing",
+          "required": true,
+          "fields": [
+            "ministryGuide"
+          ]
+        }
+      ],
+      "imageRules": {
+        "count": "1-4",
+        "printRule": "Images must remain readable in grayscale and low-ink print mode."
+      }
+    }
+  },
+  "imageSceneLibrary": [
+    {
+      "sceneId": "greeting_church_gate",
+      "useFor": [
+        "W1D1",
+        "W1D2",
+        "W1D3",
+        "W1D4",
+        "W1D5",
+        "W5D21",
+        "W1SAT"
+      ],
+      "description": "Korean mission team greeting Thai church member at church entrance with warm smile and wai",
+      "altTextKo": "교회 입구에서 태국 성도에게 와이 인사로 반갑게 인사하는 장면"
+    },
+    {
+      "sceneId": "name_intro_conversation",
+      "useFor": [
+        "W2D7",
+        "W2D8",
+        "W5D22",
+        "W2SAT"
+      ],
+      "description": "Two people meeting after worship, introducing names with gentle eye contact",
+      "altTextKo": "예배 후 처음 만나 이름을 묻고 자기소개하는 장면"
+    },
+    {
+      "sceneId": "restroom_wayfinding",
+      "useFor": [
+        "W3D11"
+      ],
+      "description": "asking where the restroom is: one person politely asking, another person pointing helpfully",
+      "altTextKo": "교회 안에서 화장실 위치를 정중하게 묻는 장면"
+    },
+    {
+      "sceneId": "meal_table_fellowship",
+      "useFor": [
+        "W3D12",
+        "W3D15",
+        "W3SAT",
+        "W3SUN"
+      ],
+      "description": "Thai church meal table, people sharing food and smiling, friendly fellowship",
+      "altTextKo": "교회 식사 자리에서 음식을 나누며 대화하는 장면"
+    },
+    {
+      "sceneId": "encouragement_and_blessing",
+      "useFor": [
+        "W2D10",
+        "W4D16",
+        "W4D17",
+        "W4D18",
+        "W4D19",
+        "W4SAT",
+        "W4SUN"
+      ],
+      "description": "gentle encouragement and blessing: two adults speaking warmly, one encouraging the other, caring expression",
+      "altTextKo": "교회 안에서 사랑과 축복의 말을 따뜻하게 전하는 장면"
+    },
+    {
+      "sceneId": "prayer_support",
+      "useFor": [
+        "W5D23"
+      ],
+      "description": "Supportive prayer moment between church members, respectful and calm",
+      "altTextKo": "상대를 위로하며 기도해 주겠다고 말하는 장면"
+    },
+    {
+      "sceneId": "praise_invitation",
+      "useFor": [
+        "W4D20",
+        "W5D24"
+      ],
+      "description": "Small church group invited to sing praise together, warm and joyful atmosphere",
+      "altTextKo": "작은 교회 모임에서 함께 찬양하도록 초대하는 장면"
+    },
+    {
+      "sceneId": "full_mission_roleplay_review",
+      "useFor": [
+        "W5D25",
+        "W5SAT",
+        "W5SUN"
+      ],
+      "description": "full review roleplay for mission conversation: small group practicing greeting, introduction, prayer support, and praise invitation in a friendly roleplay",
+      "altTextKo": "처음 만남부터 기도와 찬양 초대까지 전체 흐름을 역할극으로 복습하는 장면"
+    }
+  ],
+  "generatorChecklist": [
+    "Load thai_curriculum_master.json first, then join sentence and keyword data from thai_learning_assets_index.json.",
+    "For every output, confirm all referenced variant IDs and keyword IDs exist.",
+    "Attach at least one relevant image to each weekday card or lesson when the story has a visible scene.",
+    "Use ministryGuide as a positive relational guide, never as a warning that shuts down mission use.",
+    "Show male and female Thai outputs clearly wherever the learner needs to speak aloud.",
+    "Use Korean as the primary support language and keep sentences visually large for average-age learners.",
+    "Prefer one strong scene image over many small decorative images."
+  ]
+}

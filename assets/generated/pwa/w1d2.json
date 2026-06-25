@@ -1,0 +1,442 @@
+{
+  "version": 1,
+  "kind": "pwa_lesson_spec",
+  "id": "W1D2",
+  "week": 1,
+  "day": 2,
+  "theme": "태국 교회 첫 방문",
+  "title": "시간대 인사 익히기",
+  "hook": "아침과 저녁의 장면을 비교해 말한다.",
+  "story": "아침에 교회에 도착하고, 저녁 예배 후 인사한다.",
+  "missionGoal": "시간대에 맞는 인사로 현장 대화를 더 자연스럽게 시작한다.",
+  "ministryGuide": "아침에는 도착 인사로, 저녁에는 예배나 모임 후 작별 전 인사로 사용하면 자연스럽다. 시간대에 맞춰 말하면 상대가 더 세심하게 느낀다.",
+  "speakingMission": "좋은 아침과 좋은 저녁을 각각 3회 말하고, 안녕하세요와 이어서 한 세트로 2회 연습한다.",
+  "primaryImage": {
+    "sceneId": "greeting_church_gate",
+    "altTextKo": "교회 입구에서 태국 성도에게 와이 인사로 반갑게 인사하는 장면",
+    "sourcePlan": [
+      {
+        "type": "local_preferred",
+        "assetPath": "assets/images/scenes/greeting_church_gate.jpg",
+        "status": "ready"
+      },
+      {
+        "type": "stock_preferred",
+        "queries": [
+          "Thai church entrance greeting people smiling wai",
+          "Asian church greeting outside entrance",
+          "warm greeting at church gate Thailand"
+        ],
+        "status": "search_required"
+      },
+      {
+        "type": "ai_fallback",
+        "prompt": {
+          "scene": "Korean mission team greeting Thai church member",
+          "peopleAndAction": "two or three adults smiling, gentle wai greeting, warm eye contact",
+          "setting": "church entrance in Thailand, daytime",
+          "mood": "welcoming, respectful, calm",
+          "cameraFraming": "medium wide documentary photo",
+          "lighting": "soft natural daylight",
+          "avoidList": [
+            "tourist pose",
+            "crowded street chaos",
+            "dramatic religious painting style"
+          ]
+        },
+        "status": "generate_if_needed"
+      }
+    ]
+  },
+  "keywordImages": [
+    {
+      "keywordId": "W005",
+      "priority": "preferred",
+      "sourcePlan": [
+        {
+          "type": "local_preferred",
+          "assetPath": "assets/images/keywords/W005.jpg",
+          "status": "missing"
+        },
+        {
+          "type": "stock_preferred",
+          "queries": [
+            "morning realistic photo",
+            "아침 learning image"
+          ],
+          "status": "search_required"
+        },
+        {
+          "type": "ai_fallback",
+          "prompt": {
+            "scene": "single concept image for morning",
+            "peopleAndAction": "show the concept clearly and simply",
+            "setting": "clean realistic learning image",
+            "mood": "warm and easy to recognize",
+            "cameraFraming": "close or medium crop",
+            "lighting": "bright neutral light",
+            "avoidList": [
+              "blurry or noisy image",
+              "heavy watermark",
+              "text embedded in photo",
+              "theological symbolism without a real scene",
+              "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
+            ]
+          },
+          "status": "generate_if_needed"
+        }
+      ]
+    },
+    {
+      "keywordId": "W006",
+      "priority": "preferred",
+      "sourcePlan": [
+        {
+          "type": "local_preferred",
+          "assetPath": "assets/images/keywords/W006.jpg",
+          "status": "missing"
+        },
+        {
+          "type": "stock_preferred",
+          "queries": [
+            "evening realistic photo",
+            "저녁 learning image"
+          ],
+          "status": "search_required"
+        },
+        {
+          "type": "ai_fallback",
+          "prompt": {
+            "scene": "single concept image for evening",
+            "peopleAndAction": "show the concept clearly and simply",
+            "setting": "clean realistic learning image",
+            "mood": "warm and easy to recognize",
+            "cameraFraming": "close or medium crop",
+            "lighting": "bright neutral light",
+            "avoidList": [
+              "blurry or noisy image",
+              "heavy watermark",
+              "text embedded in photo",
+              "theological symbolism without a real scene",
+              "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
+            ]
+          },
+          "status": "generate_if_needed"
+        }
+      ]
+    }
+  ],
+  "newPhrases": [
+    {
+      "variantId": "2-1",
+      "phraseId": 2,
+      "category": "daily",
+      "korean": "좋은 아침",
+      "english": "Good morning.",
+      "speech": {
+        "male": {
+          "thai": "สวัสดีตอนเช้าครับ",
+          "romanization": "sà-wàt-dii dtaawn-cháao khráp",
+          "korean_pronunciation": "싸왓디 떤 차오 크랍"
+        },
+        "female": {
+          "thai": "สวัสดีตอนเช้าค่ะ",
+          "romanization": "sà-wàt-dii dtaawn-cháao khâ",
+          "korean_pronunciation": "싸왓디 떤 차오 카"
+        }
+      },
+      "audio": {
+        "male": {
+          "normal": "assets/audio/sentences/S2_1_male_normal.mp3",
+          "slow": "assets/audio/sentences/S2_1_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S2_1_male_repeat3.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/sentences/S2_1_female_normal.mp3",
+          "slow": "assets/audio/sentences/S2_1_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S2_1_female_repeat3.mp3"
+        }
+      }
+    },
+    {
+      "variantId": "2-2",
+      "phraseId": 2,
+      "category": "daily",
+      "korean": "좋은 저녁",
+      "english": "Good evening.",
+      "speech": {
+        "male": {
+          "thai": "สวัสดีตอนเย็นครับ",
+          "romanization": "sà-wàt-dii dtaawn-yen khráp",
+          "korean_pronunciation": "싸왓디 떤 옌 크랍"
+        },
+        "female": {
+          "thai": "สวัสดีตอนเย็นค่ะ",
+          "romanization": "sà-wàt-dii dtaawn-yen khâ",
+          "korean_pronunciation": "싸왓디 떤 옌 카"
+        }
+      },
+      "audio": {
+        "male": {
+          "normal": "assets/audio/sentences/S2_2_male_normal.mp3",
+          "slow": "assets/audio/sentences/S2_2_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S2_2_male_repeat3.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/sentences/S2_2_female_normal.mp3",
+          "slow": "assets/audio/sentences/S2_2_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S2_2_female_repeat3.mp3"
+        }
+      }
+    }
+  ],
+  "reviewPhrases": [
+    {
+      "variantId": "1",
+      "phraseId": 1,
+      "category": "daily",
+      "korean": "안녕하세요",
+      "english": "Hello / Hi",
+      "speech": {
+        "male": {
+          "thai": "สวัสดีครับ",
+          "romanization": "sà-wàt-dii khráp",
+          "korean_pronunciation": "싸왓디 크랍"
+        },
+        "female": {
+          "thai": "สวัสดีค่ะ",
+          "romanization": "sà-wàt-dii khâ",
+          "korean_pronunciation": "싸왓디 카"
+        }
+      },
+      "audio": {
+        "male": {
+          "normal": "assets/audio/sentences/S1_male_normal.mp3",
+          "slow": "assets/audio/sentences/S1_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S1_male_repeat3.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/sentences/S1_female_normal.mp3",
+          "slow": "assets/audio/sentences/S1_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S1_female_repeat3.mp3"
+        }
+      }
+    }
+  ],
+  "keywords": [
+    {
+      "id": "W005",
+      "variantIds": [
+        "2-1"
+      ],
+      "korean": "아침",
+      "english": "morning",
+      "thai": "ตอนเช้า",
+      "romanization": "dtaawn-cháao",
+      "koreanPronunciation": "떤 차오",
+      "tier": "supplemental",
+      "days": [
+        2,
+        5,
+        10,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W005_male_normal.mp3",
+          "slow": "assets/audio/words/W005_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W005_female_normal.mp3",
+          "slow": "assets/audio/words/W005_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W006",
+      "variantIds": [
+        "2-2"
+      ],
+      "korean": "저녁",
+      "english": "evening",
+      "thai": "ตอนเย็น",
+      "romanization": "dtaawn-yen",
+      "koreanPronunciation": "떤 옌",
+      "tier": "supplemental",
+      "days": [
+        2,
+        5,
+        10,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W006_male_normal.mp3",
+          "slow": "assets/audio/words/W006_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W006_female_normal.mp3",
+          "slow": "assets/audio/words/W006_female_slow.mp3"
+        }
+      }
+    }
+  ],
+  "displayKeywords": [],
+  "supplementalKeywords": [
+    {
+      "id": "W005",
+      "variantIds": [
+        "2-1"
+      ],
+      "korean": "아침",
+      "english": "morning",
+      "thai": "ตอนเช้า",
+      "romanization": "dtaawn-cháao",
+      "koreanPronunciation": "떤 차오",
+      "tier": "supplemental",
+      "days": [
+        2,
+        5,
+        10,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W005_male_normal.mp3",
+          "slow": "assets/audio/words/W005_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W005_female_normal.mp3",
+          "slow": "assets/audio/words/W005_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W006",
+      "variantIds": [
+        "2-2"
+      ],
+      "korean": "저녁",
+      "english": "evening",
+      "thai": "ตอนเย็น",
+      "romanization": "dtaawn-yen",
+      "koreanPronunciation": "떤 옌",
+      "tier": "supplemental",
+      "days": [
+        2,
+        5,
+        10,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W006_male_normal.mp3",
+          "slow": "assets/audio/words/W006_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W006_female_normal.mp3",
+          "slow": "assets/audio/words/W006_female_slow.mp3"
+        }
+      }
+    }
+  ],
+  "keywordDisplayPolicy": {
+    "default": "core_only",
+    "toggleSupplemental": true,
+    "emptyCoreFallback": "show_first_three_keywords"
+  },
+  "learnerProfile": {
+    "ageRange": "primarily older Korean adults; source plan average age about 58",
+    "smartphoneLiteracy": "low_to_moderate",
+    "uxDefaults": {
+      "minimumTapTargetPx": 48,
+      "audioPlayback": "manual_user_triggered",
+      "localStorageFailure": "silent_degrade_with_reset_option",
+      "defaultTextScale": "large"
+    }
+  },
+  "statePolicy": {
+    "storage": "localStorage",
+    "schemaVersion": 1,
+    "namespace": "thai25",
+    "keys": {
+      "schemaVersion": {
+        "key": "thai25.schemaVersion",
+        "type": "number",
+        "default": 1
+      },
+      "currentDay": {
+        "key": "thai25.currentDay",
+        "type": "number",
+        "default": 1
+      },
+      "completedLessonIds": {
+        "key": "thai25.completedLessonIds",
+        "type": "string[]",
+        "default": []
+      },
+      "lastOpenedLessonId": {
+        "key": "thai25.lastOpenedLessonId",
+        "type": "string|null",
+        "default": null
+      },
+      "speakerPreference": {
+        "key": "thai25.speakerPreference",
+        "type": "\"male\"|\"female\"",
+        "default": "female"
+      },
+      "audioSpeedPreference": {
+        "key": "thai25.audioSpeedPreference",
+        "type": "\"normal\"|\"slow\"|\"repeat3\"",
+        "default": "normal"
+      },
+      "showSupplementalKeywords": {
+        "key": "thai25.showSupplementalKeywords",
+        "type": "boolean",
+        "default": false
+      }
+    },
+    "resetSupported": true,
+    "fallback": "If localStorage is unavailable, keep the lesson usable with stateless navigation and show no blocking error."
+  },
+  "imageMissingFallback": {
+    "behavior": "show_placeholder_panel",
+    "placeholderTextSource": "primaryImage.altTextKo",
+    "visualStyle": "light neutral panel with scene label; preserve image aspect ratio so layout does not shift when real image is added",
+    "allowRenderWithoutImageFile": true
+  },
+  "controls": {
+    "sentenceAudioModes": [
+      "normal",
+      "slow",
+      "repeat3"
+    ],
+    "wordAudioModes": [
+      "normal",
+      "slow"
+    ],
+    "speakerModes": [
+      "male",
+      "female"
+    ],
+    "audioSpeedControlPlacement": {
+      "placement": "inline_sentence_audio_toolbar",
+      "visibleOptions": [
+        "normal",
+        "slow",
+        "repeat3"
+      ],
+      "default": "normal",
+      "reason": "Older learners should not have to find a settings screen to slow down audio."
+    }
+  },
+  "completion": {
+    "checkAction": "lesson_complete",
+    "shareAction": "open_kakao_share_card",
+    "nextAction": "next_day_or_review"
+  }
+}

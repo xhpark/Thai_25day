@@ -1,0 +1,449 @@
+{
+  "version": 1,
+  "kind": "pwa_lesson_spec",
+  "id": "W3D11",
+  "week": 3,
+  "day": 11,
+  "theme": "교회 식사와 작별",
+  "title": "화장실 묻기",
+  "hook": "실용적인 질문 한 문장을 익힌다.",
+  "story": "낯선 장소에서 화장실 위치를 정중하게 묻는다.",
+  "missionGoal": "현장에서 실제로 자주 필요한 질문을 익힌다.",
+  "ministryGuide": "실용 문장을 편하게 쓰면 현장 적응이 빨라지고 사람들에게도 더 자연스럽게 다가갈 수 있다.",
+  "speakingMission": "화장실 어디 있어요를 5회 말하고, 실례합니다와 이어서 2회 연습한다.",
+  "primaryImage": {
+    "sceneId": "restroom_wayfinding",
+    "altTextKo": "교회 안에서 화장실 위치를 정중하게 묻는 장면",
+    "sourcePlan": [
+      {
+        "type": "local_preferred",
+        "assetPath": "assets/images/scenes/restroom_wayfinding.jpg",
+        "status": "missing"
+      },
+      {
+        "type": "stock_preferred",
+        "queries": [
+          "restroom sign clean hallway",
+          "bathroom direction sign public building"
+        ],
+        "status": "search_required"
+      },
+      {
+        "type": "ai_fallback",
+        "prompt": {
+          "scene": "asking where the restroom is",
+          "peopleAndAction": "one person politely asking, another person pointing helpfully",
+          "setting": "clean church hallway near restroom sign",
+          "mood": "practical, calm, helpful",
+          "cameraFraming": "medium shot with visible sign",
+          "lighting": "clear indoor lighting",
+          "avoidList": [
+            "messy restroom interior",
+            "humor or exaggerated expressions"
+          ]
+        },
+        "status": "generate_if_needed"
+      }
+    ]
+  },
+  "keywordImages": [
+    {
+      "keywordId": "W020",
+      "priority": "preferred",
+      "sourcePlan": [
+        {
+          "type": "local_preferred",
+          "assetPath": "assets/images/keywords/W020.jpg",
+          "status": "missing"
+        },
+        {
+          "type": "stock_preferred",
+          "queries": [
+            "restroom realistic photo",
+            "화장실 learning image"
+          ],
+          "status": "search_required"
+        },
+        {
+          "type": "ai_fallback",
+          "prompt": {
+            "scene": "single concept image for restroom",
+            "peopleAndAction": "show the concept clearly and simply",
+            "setting": "clean realistic learning image",
+            "mood": "warm and easy to recognize",
+            "cameraFraming": "close or medium crop",
+            "lighting": "bright neutral light",
+            "avoidList": [
+              "blurry or noisy image",
+              "heavy watermark",
+              "text embedded in photo",
+              "theological symbolism without a real scene",
+              "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
+            ]
+          },
+          "status": "generate_if_needed"
+        }
+      ]
+    }
+  ],
+  "newPhrases": [
+    {
+      "variantId": "11",
+      "phraseId": 11,
+      "category": "daily",
+      "korean": "화장실 어디 있어요?",
+      "english": "Where is the restroom?",
+      "speech": {
+        "male": {
+          "thai": "ห้องน้ำอยู่ที่ไหนครับ",
+          "romanization": "hông-náam yùu thîi-năi khráp",
+          "korean_pronunciation": "헝남 유 티 나이 크랍"
+        },
+        "female": {
+          "thai": "ห้องน้ำอยู่ที่ไหนคะ",
+          "romanization": "hông-náam yùu thîi-năi khá",
+          "korean_pronunciation": "헝남 유 티 나이 카"
+        }
+      },
+      "audio": {
+        "male": {
+          "normal": "assets/audio/sentences/S11_male_normal.mp3",
+          "slow": "assets/audio/sentences/S11_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S11_male_repeat3.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/sentences/S11_female_normal.mp3",
+          "slow": "assets/audio/sentences/S11_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S11_female_repeat3.mp3"
+        }
+      }
+    }
+  ],
+  "reviewPhrases": [
+    {
+      "variantId": "1",
+      "phraseId": 1,
+      "category": "daily",
+      "korean": "안녕하세요",
+      "english": "Hello / Hi",
+      "speech": {
+        "male": {
+          "thai": "สวัสดีครับ",
+          "romanization": "sà-wàt-dii khráp",
+          "korean_pronunciation": "싸왓디 크랍"
+        },
+        "female": {
+          "thai": "สวัสดีค่ะ",
+          "romanization": "sà-wàt-dii khâ",
+          "korean_pronunciation": "싸왓디 카"
+        }
+      },
+      "audio": {
+        "male": {
+          "normal": "assets/audio/sentences/S1_male_normal.mp3",
+          "slow": "assets/audio/sentences/S1_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S1_male_repeat3.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/sentences/S1_female_normal.mp3",
+          "slow": "assets/audio/sentences/S1_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S1_female_repeat3.mp3"
+        }
+      }
+    },
+    {
+      "variantId": "6",
+      "phraseId": 6,
+      "category": "daily",
+      "korean": "실례/죄송합니다",
+      "english": "Excuse me.",
+      "speech": {
+        "male": {
+          "thai": "ขอโทษครับ",
+          "romanization": "khŏr-thôot khráp",
+          "korean_pronunciation": "커 톳 크랍"
+        },
+        "female": {
+          "thai": "ขอโทษค่ะ",
+          "romanization": "khŏr-thôot khâ",
+          "korean_pronunciation": "커 톳 카"
+        }
+      },
+      "audio": {
+        "male": {
+          "normal": "assets/audio/sentences/S6_male_normal.mp3",
+          "slow": "assets/audio/sentences/S6_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S6_male_repeat3.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/sentences/S6_female_normal.mp3",
+          "slow": "assets/audio/sentences/S6_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S6_female_repeat3.mp3"
+        }
+      }
+    }
+  ],
+  "keywords": [
+    {
+      "id": "W020",
+      "variantIds": [
+        "11"
+      ],
+      "korean": "화장실",
+      "english": "restroom",
+      "thai": "ห้องน้ำ",
+      "romanization": "hông-náam",
+      "koreanPronunciation": "헝남",
+      "tier": "core",
+      "days": [
+        11,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W020_male_normal.mp3",
+          "slow": "assets/audio/words/W020_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W020_female_normal.mp3",
+          "slow": "assets/audio/words/W020_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W021",
+      "variantIds": [
+        "11"
+      ],
+      "korean": "~에 있다",
+      "english": "to be located",
+      "thai": "อยู่",
+      "romanization": "yùu",
+      "koreanPronunciation": "유",
+      "tier": "supplemental",
+      "days": [
+        11,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W021_male_normal.mp3",
+          "slow": "assets/audio/words/W021_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W021_female_normal.mp3",
+          "slow": "assets/audio/words/W021_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W022",
+      "variantIds": [
+        "11"
+      ],
+      "korean": "어디",
+      "english": "where",
+      "thai": "ที่ไหน",
+      "romanization": "thîi-năi",
+      "koreanPronunciation": "티 나이",
+      "tier": "supplemental",
+      "days": [
+        11,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W022_male_normal.mp3",
+          "slow": "assets/audio/words/W022_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W022_female_normal.mp3",
+          "slow": "assets/audio/words/W022_female_slow.mp3"
+        }
+      }
+    }
+  ],
+  "displayKeywords": [
+    {
+      "id": "W020",
+      "variantIds": [
+        "11"
+      ],
+      "korean": "화장실",
+      "english": "restroom",
+      "thai": "ห้องน้ำ",
+      "romanization": "hông-náam",
+      "koreanPronunciation": "헝남",
+      "tier": "core",
+      "days": [
+        11,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W020_male_normal.mp3",
+          "slow": "assets/audio/words/W020_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W020_female_normal.mp3",
+          "slow": "assets/audio/words/W020_female_slow.mp3"
+        }
+      }
+    }
+  ],
+  "supplementalKeywords": [
+    {
+      "id": "W021",
+      "variantIds": [
+        "11"
+      ],
+      "korean": "~에 있다",
+      "english": "to be located",
+      "thai": "อยู่",
+      "romanization": "yùu",
+      "koreanPronunciation": "유",
+      "tier": "supplemental",
+      "days": [
+        11,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W021_male_normal.mp3",
+          "slow": "assets/audio/words/W021_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W021_female_normal.mp3",
+          "slow": "assets/audio/words/W021_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W022",
+      "variantIds": [
+        "11"
+      ],
+      "korean": "어디",
+      "english": "where",
+      "thai": "ที่ไหน",
+      "romanization": "thîi-năi",
+      "koreanPronunciation": "티 나이",
+      "tier": "supplemental",
+      "days": [
+        11,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W022_male_normal.mp3",
+          "slow": "assets/audio/words/W022_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W022_female_normal.mp3",
+          "slow": "assets/audio/words/W022_female_slow.mp3"
+        }
+      }
+    }
+  ],
+  "keywordDisplayPolicy": {
+    "default": "core_only",
+    "toggleSupplemental": true,
+    "emptyCoreFallback": "show_first_three_keywords"
+  },
+  "learnerProfile": {
+    "ageRange": "primarily older Korean adults; source plan average age about 58",
+    "smartphoneLiteracy": "low_to_moderate",
+    "uxDefaults": {
+      "minimumTapTargetPx": 48,
+      "audioPlayback": "manual_user_triggered",
+      "localStorageFailure": "silent_degrade_with_reset_option",
+      "defaultTextScale": "large"
+    }
+  },
+  "statePolicy": {
+    "storage": "localStorage",
+    "schemaVersion": 1,
+    "namespace": "thai25",
+    "keys": {
+      "schemaVersion": {
+        "key": "thai25.schemaVersion",
+        "type": "number",
+        "default": 1
+      },
+      "currentDay": {
+        "key": "thai25.currentDay",
+        "type": "number",
+        "default": 1
+      },
+      "completedLessonIds": {
+        "key": "thai25.completedLessonIds",
+        "type": "string[]",
+        "default": []
+      },
+      "lastOpenedLessonId": {
+        "key": "thai25.lastOpenedLessonId",
+        "type": "string|null",
+        "default": null
+      },
+      "speakerPreference": {
+        "key": "thai25.speakerPreference",
+        "type": "\"male\"|\"female\"",
+        "default": "female"
+      },
+      "audioSpeedPreference": {
+        "key": "thai25.audioSpeedPreference",
+        "type": "\"normal\"|\"slow\"|\"repeat3\"",
+        "default": "normal"
+      },
+      "showSupplementalKeywords": {
+        "key": "thai25.showSupplementalKeywords",
+        "type": "boolean",
+        "default": false
+      }
+    },
+    "resetSupported": true,
+    "fallback": "If localStorage is unavailable, keep the lesson usable with stateless navigation and show no blocking error."
+  },
+  "imageMissingFallback": {
+    "behavior": "show_placeholder_panel",
+    "placeholderTextSource": "primaryImage.altTextKo",
+    "visualStyle": "light neutral panel with scene label; preserve image aspect ratio so layout does not shift when real image is added",
+    "allowRenderWithoutImageFile": true
+  },
+  "controls": {
+    "sentenceAudioModes": [
+      "normal",
+      "slow",
+      "repeat3"
+    ],
+    "wordAudioModes": [
+      "normal",
+      "slow"
+    ],
+    "speakerModes": [
+      "male",
+      "female"
+    ],
+    "audioSpeedControlPlacement": {
+      "placement": "inline_sentence_audio_toolbar",
+      "visibleOptions": [
+        "normal",
+        "slow",
+        "repeat3"
+      ],
+      "default": "normal",
+      "reason": "Older learners should not have to find a settings screen to slow down audio."
+    }
+  },
+  "completion": {
+    "checkAction": "lesson_complete",
+    "shareAction": "open_kakao_share_card",
+    "nextAction": "next_day_or_review"
+  }
+}

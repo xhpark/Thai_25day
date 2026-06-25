@@ -1,0 +1,400 @@
+{
+  "version": 1,
+  "kind": "kakao_card_spec",
+  "id": "W2D9",
+  "dayType": "weekday",
+  "contentMode": "daily_lesson",
+  "sundayFormat": {
+    "rendererTemplate": "same_canvas_same_renderer",
+    "contentMode": "review_recap",
+    "rule": "Sunday cards use the same mobile card renderer as weekdays, but emphasize review phrases and personalMission instead of newPhrases.",
+    "contentSource": {
+      "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show up to 3 primary review phrases on the card.",
+      "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show up to 4 core keywords.",
+      "missionText": "Sunday personalMission rendered as the main action box.",
+      "ministryGuide": "Sunday ministryGuide rendered as the relational guide line."
+    }
+  },
+  "contentSource": {
+    "phrases": "Weekday lesson newPhrases rendered as mainPhrases; review-only weekdays fall back to reviewPhrases.",
+    "keywords": "Weekday lesson keyWordIds filtered through displayKeywords.",
+    "missionText": "Weekday speakingMission rendered as the main action box.",
+    "ministryGuide": "Weekday ministryGuide rendered as the relational guide line."
+  },
+  "week": 2,
+  "day": 9,
+  "theme": "새 친구 만나기",
+  "title": "나이 묻기",
+  "hook": "관계 안에서 조심스럽게 묻는 질문을 배운다.",
+  "missionGoal": "상대와의 관계를 살피며 질문을 자연스럽게 이어 가는 법을 배운다.",
+  "ministryGuide": "이 질문은 관계가 어느 정도 형성된 뒤 또는 어린이와의 대화에서 쓰면 훨씬 자연스럽다.",
+  "speakingMission": "질문문 전체를 5회 말하고, 이름 묻기와 연결해 2회 연습한다.",
+  "primaryImage": {
+    "sceneId": null,
+    "altTextKo": "나이 묻기 학습 장면",
+    "sourcePlan": [
+      {
+        "type": "stock_preferred",
+        "queries": [
+          "나이 묻기",
+          "친한 사이 또는 어린이에게 나이를 묻는 장면을 연습한다."
+        ],
+        "status": "search_required"
+      },
+      {
+        "type": "ai_fallback",
+        "prompt": {
+          "scene": "나이 묻기",
+          "peopleAndAction": "친한 사이 또는 어린이에게 나이를 묻는 장면을 연습한다.",
+          "setting": "Thai church or daily-life mission context",
+          "mood": "warm, respectful, practical",
+          "cameraFraming": "documentary style",
+          "lighting": "bright natural light",
+          "avoidList": [
+            "blurry or noisy image",
+            "heavy watermark",
+            "text embedded in photo",
+            "theological symbolism without a real scene",
+            "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
+          ]
+        },
+        "status": "generate_if_needed"
+      }
+    ]
+  },
+  "keywordImages": [
+    {
+      "keywordId": "W018",
+      "priority": "optional",
+      "sourcePlan": [
+        {
+          "type": "local_preferred",
+          "assetPath": "assets/images/keywords/W018.jpg",
+          "status": "missing"
+        },
+        {
+          "type": "stock_preferred",
+          "queries": [
+            "age realistic photo",
+            "나이 learning image"
+          ],
+          "status": "search_required"
+        },
+        {
+          "type": "ai_fallback",
+          "prompt": {
+            "scene": "single concept image for age",
+            "peopleAndAction": "show the concept clearly and simply",
+            "setting": "clean realistic learning image",
+            "mood": "warm and easy to recognize",
+            "cameraFraming": "close or medium crop",
+            "lighting": "bright neutral light",
+            "avoidList": [
+              "blurry or noisy image",
+              "heavy watermark",
+              "text embedded in photo",
+              "theological symbolism without a real scene",
+              "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
+            ]
+          },
+          "status": "generate_if_needed"
+        }
+      ]
+    }
+  ],
+  "mainPhrases": [
+    {
+      "variantId": "10",
+      "phraseId": 10,
+      "category": "daily",
+      "korean": "몇 살이니?",
+      "english": "How old are you?",
+      "speech": {
+        "male": {
+          "thai": "คุณอายุเท่าไหร่ครับ",
+          "romanization": "khun aa-yú thâo-rài khráp",
+          "korean_pronunciation": "아유 타오 라이 크랍"
+        },
+        "female": {
+          "thai": "คุณอายุเท่าไหร่คะ",
+          "romanization": "khun aa-yú thâo-rài khá",
+          "korean_pronunciation": "아유 타오 라이 카"
+        }
+      },
+      "audio": {
+        "male": {
+          "normal": "assets/audio/sentences/S10_male_normal.mp3",
+          "slow": "assets/audio/sentences/S10_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S10_male_repeat3.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/sentences/S10_female_normal.mp3",
+          "slow": "assets/audio/sentences/S10_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S10_female_repeat3.mp3"
+        }
+      }
+    }
+  ],
+  "reviewPhrases": [
+    {
+      "variantId": "8",
+      "phraseId": 8,
+      "category": "daily",
+      "korean": "이름이 무엇인가요?",
+      "english": "What's your name?",
+      "speech": {
+        "male": {
+          "thai": "คุณชื่ออะไรครับ",
+          "romanization": "khun chûue à-rai khráp",
+          "korean_pronunciation": "쿤 츠 아라이 크랍"
+        },
+        "female": {
+          "thai": "คุณชื่ออะไรคะ",
+          "romanization": "khun chûue à-rai khá",
+          "korean_pronunciation": "쿤 츠 아라이 카"
+        }
+      },
+      "audio": {
+        "male": {
+          "normal": "assets/audio/sentences/S8_male_normal.mp3",
+          "slow": "assets/audio/sentences/S8_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S8_male_repeat3.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/sentences/S8_female_normal.mp3",
+          "slow": "assets/audio/sentences/S8_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S8_female_repeat3.mp3"
+        }
+      }
+    },
+    {
+      "variantId": "9",
+      "phraseId": 9,
+      "category": "daily",
+      "korean": "제 이름은 ~입니다",
+      "english": "My name is ~",
+      "speech": {
+        "male": {
+          "thai": "ผมชื่อ ~ ครับ",
+          "romanization": "phŏm chûue ~ khráp",
+          "korean_pronunciation": "폼 츠 ~ 크랍"
+        },
+        "female": {
+          "thai": "ฉันชื่อ ~ ค่ะ",
+          "romanization": "chăn chûue ~ khâ",
+          "korean_pronunciation": "찬 츠 ~ 카"
+        }
+      },
+      "audio": {
+        "male": {
+          "normal": "assets/audio/sentences/S9_male_normal.mp3",
+          "slow": "assets/audio/sentences/S9_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S9_male_repeat3.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/sentences/S9_female_normal.mp3",
+          "slow": "assets/audio/sentences/S9_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S9_female_repeat3.mp3"
+        }
+      }
+    }
+  ],
+  "keywords": [
+    {
+      "id": "W018",
+      "variantIds": [
+        "10"
+      ],
+      "korean": "나이",
+      "english": "age",
+      "thai": "อายุ",
+      "romanization": "aa-yú",
+      "koreanPronunciation": "아유",
+      "tier": "supplemental",
+      "days": [
+        9,
+        10,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W018_male_normal.mp3",
+          "slow": "assets/audio/words/W018_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W018_female_normal.mp3",
+          "slow": "assets/audio/words/W018_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W019",
+      "variantIds": [
+        "10"
+      ],
+      "korean": "얼마",
+      "english": "how much/how many",
+      "thai": "เท่าไหร่",
+      "romanization": "thâo-rài",
+      "koreanPronunciation": "타오 라이",
+      "tier": "supplemental",
+      "days": [
+        9,
+        10,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W019_male_normal.mp3",
+          "slow": "assets/audio/words/W019_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W019_female_normal.mp3",
+          "slow": "assets/audio/words/W019_female_slow.mp3"
+        }
+      }
+    }
+  ],
+  "displayKeywords": [
+    {
+      "id": "W018",
+      "variantIds": [
+        "10"
+      ],
+      "korean": "나이",
+      "english": "age",
+      "thai": "อายุ",
+      "romanization": "aa-yú",
+      "koreanPronunciation": "아유",
+      "tier": "supplemental",
+      "days": [
+        9,
+        10,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W018_male_normal.mp3",
+          "slow": "assets/audio/words/W018_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W018_female_normal.mp3",
+          "slow": "assets/audio/words/W018_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W019",
+      "variantIds": [
+        "10"
+      ],
+      "korean": "얼마",
+      "english": "how much/how many",
+      "thai": "เท่าไหร่",
+      "romanization": "thâo-rài",
+      "koreanPronunciation": "타오 라이",
+      "tier": "supplemental",
+      "days": [
+        9,
+        10,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W019_male_normal.mp3",
+          "slow": "assets/audio/words/W019_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W019_female_normal.mp3",
+          "slow": "assets/audio/words/W019_female_slow.mp3"
+        }
+      }
+    }
+  ],
+  "supplementalKeywords": [
+    {
+      "id": "W018",
+      "variantIds": [
+        "10"
+      ],
+      "korean": "나이",
+      "english": "age",
+      "thai": "อายุ",
+      "romanization": "aa-yú",
+      "koreanPronunciation": "아유",
+      "tier": "supplemental",
+      "days": [
+        9,
+        10,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W018_male_normal.mp3",
+          "slow": "assets/audio/words/W018_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W018_female_normal.mp3",
+          "slow": "assets/audio/words/W018_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W019",
+      "variantIds": [
+        "10"
+      ],
+      "korean": "얼마",
+      "english": "how much/how many",
+      "thai": "เท่าไหร่",
+      "romanization": "thâo-rài",
+      "koreanPronunciation": "타오 라이",
+      "tier": "supplemental",
+      "days": [
+        9,
+        10,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W019_male_normal.mp3",
+          "slow": "assets/audio/words/W019_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W019_female_normal.mp3",
+          "slow": "assets/audio/words/W019_female_slow.mp3"
+        }
+      }
+    }
+  ],
+  "keywordDisplayPolicy": {
+    "default": "core_only",
+    "toggleSupplemental": false
+  },
+  "audioModes": [
+    "normal",
+    "slow",
+    "repeat3"
+  ],
+  "layout": {
+    "canvas": {
+      "width": 1080,
+      "height": 1350
+    },
+    "sections": [
+      "header",
+      "heroImage",
+      "mainPhrases",
+      "reviewStrip",
+      "keywordStrip",
+      "missionBox",
+      "footer"
+    ]
+  }
+}
