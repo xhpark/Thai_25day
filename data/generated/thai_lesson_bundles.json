@@ -7,7 +7,7 @@
     "imageManifest": "data/thai_image_source_manifest.json"
   },
   "sourceHashes": {
-    "curriculum": "e01bb8d76ed5d6a555d475dde0e40a88c6e7f3b391ba24410ba54cca0c197e73",
+    "curriculum": "5d9a090e3f58c80f9a0f20d6b6998b6b063b09c909a75cbd18c2880572a3c9b2",
     "assets": "75d7e967d9b293d63d9a3aba622bc8d51d034849e7cc22dbfb573341ed44f038",
     "templateSpecs": "b02f47651239e478b3156c95a4e2ea064d9a9d6989b048d54f4a8ffbbc725811",
     "imageManifest": "45ed2f942cbe71de0d2b5b30137c229807c7ce4922d67305c858e1df45f4c9ff"
@@ -529,8 +529,8 @@
         "day": 2,
         "theme": "태국 교회 첫 방문",
         "title": "시간대 인사 익히기",
-        "hook": "아침과 저녁의 장면을 비교해 말한다.",
-        "story": "아침에 교회에 도착하고, 저녁 예배 후 인사한다.",
+        "hook": "통상적으로는 1일차에 배운 \"사-왓-디 크랍/카\"로도 충분하지만, 아침과 저녁인사를 배웁니다.",
+        "story": "",
         "missionGoal": "시간대에 맞는 인사로 현장 대화를 더 자연스럽게 시작한다.",
         "ministryGuide": "아침에는 도착 인사로, 저녁에는 예배나 모임 후 작별 전 인사로 사용하면 자연스럽다. 시간대에 맞춰 말하면 상대가 더 세심하게 느낀다.",
         "speakingMission": "좋은 아침과 좋은 저녁을 각각 3회 말하고, 안녕하세요와 이어서 한 세트로 2회 연습한다.",
