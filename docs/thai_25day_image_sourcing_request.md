@@ -1,6 +1,6 @@
 # 태국어 선교회화 25일 이미지 수급 요청서
 
-작성일: 2026-06-25
+작성일: 2026-06-26
 
 ## 현재 상태
 
@@ -11,25 +11,39 @@
 ## 장면 그룹별 요청
 
 ### greeting_church_gate
-- 사용 날짜: W1D1, W1D2, W1D5, W1SAT
+- 사용 날짜: W1D1, W5D21, W1SAT
 - 필요한 장면: 교회 입구에서 태국 성도에게 와이 인사로 반갑게 인사하는 장면
 - 권장 파일명: assets/images/scenes/greeting_church_gate.jpg
 - 현재 상태: 준비됨
 - 검색어: Thai church entrance greeting people smiling wai; Asian church greeting outside entrance; warm greeting at church gate Thailand
 
-### W1D3
-- 사용 날짜: W1D3
-- 필요한 장면: 감사와 응답 학습 장면
-- 권장 파일명: assets/images/scenes/<scene_id>.jpg
-- 현재 상태: 사진 필요
-- 검색어: 감사와 응답; 도움을 받았을 때 감사하고 상대가 따뜻하게 응답한다.
+### good_morning_good_evening
+- 사용 날짜: W1D2
+- 필요한 장면: 아침에는 실내에서, 저녁에는 노을 진 마당에서 와이 인사를 나누는 두 장면
+- 권장 파일명: assets/images/scenes/good_morning_good_evening.jpg
+- 현재 상태: 준비됨
+- 검색어: Thai wai greeting morning bedroom; Thai wai greeting sunset guesthouse
 
-### W1D4
+### thanks_a_lot_youre_welcome
+- 사용 날짜: W1D3
+- 필요한 장면: 감사를 전하고 따뜻하게 응답받는 장면
+- 권장 파일명: assets/images/scenes/thanks_a_lot_youre_welcome.jpg
+- 현재 상태: 준비됨
+- 검색어: gratitude gift giving scene; thank you ceremony illustration
+
+### yes_no_checkpoint
 - 사용 날짜: W1D4
-- 필요한 장면: 짧게 대답하기 학습 장면
-- 권장 파일명: assets/images/scenes/<scene_id>.jpg
-- 현재 상태: 사진 필요
-- 검색어: 짧게 대답하기; 짧은 질문에 예/아니오로 반응한다.
+- 필요한 장면: 짧은 질문에 예/아니오로 대답하는 장면
+- 권장 파일명: assets/images/scenes/yes_no_checkpoint.jpg
+- 현재 상태: 준비됨
+- 검색어: Thai police checkpoint passport question; short yes no question scene church gate
+
+### believe_in_jesus
+- 사용 날짜: W1D5
+- 필요한 장면: 교회 앞에서 따뜻하게 전도지를 건네며 예수님을 믿으라고 권하는 장면
+- 권장 파일명: assets/images/scenes/believe_in_jesus.jpg
+- 현재 상태: 준비됨
+- 검색어: handing gospel tract Thailand church; Korean missionary greeting Thai novice monk
 
 ### W2D6
 - 사용 날짜: W2D6
@@ -39,7 +53,7 @@
 - 검색어: 정중하게 말 걸기; 사람 사이를 지나가거나 작은 실수를 했을 때 정중하게 말한다.
 
 ### name_intro_conversation
-- 사용 날짜: W2D7, W2D8, W2SAT
+- 사용 날짜: W2D7, W2D8, W5D22, W2SAT
 - 필요한 장면: 예배 후 처음 만나 이름을 묻고 자기소개하는 장면
 - 권장 파일명: assets/images/scenes/name_intro_conversation.jpg
 - 현재 상태: 사진 필요
@@ -52,12 +66,12 @@
 - 현재 상태: 사진 필요
 - 검색어: 나이 묻기; 친한 사이 또는 어린이에게 나이를 묻는 장면을 연습한다.
 
-### W2D10
-- 사용 날짜: W2D10
-- 필요한 장면: 새 친구 만나기 전체 연결 학습 장면
-- 권장 파일명: assets/images/scenes/<scene_id>.jpg
+### encouragement_and_blessing
+- 사용 날짜: W2D10, W4D16, W4D17, W4D18, W4D19, W4SAT
+- 필요한 장면: 교회 안에서 사랑과 축복의 말을 따뜻하게 전하는 장면
+- 권장 파일명: assets/images/scenes/encouragement_and_blessing.jpg
 - 현재 상태: 사진 필요
-- 검색어: 새 친구 만나기 전체 연결; 인사, 실례, 이름 묻기, 자기소개를 한 대화 안에서 이어 말한다.
+- 검색어: gentle church encouragement conversation; supportive conversation church smiling; blessing prayer church community
 
 ### restroom_wayfinding
 - 사용 날짜: W3D11
@@ -87,26 +101,12 @@
 - 현재 상태: 사진 필요
 - 검색어: 작별 인사; 식사와 행사가 끝난 뒤 자연스럽게 헤어진다.
 
-### encouragement_and_blessing
-- 사용 날짜: W4D16, W4D17, W4D18, W4D19, W4D20, W4SAT
-- 필요한 장면: 교회 안에서 사랑과 축복의 말을 따뜻하게 전하는 장면
-- 권장 파일명: assets/images/scenes/encouragement_and_blessing.jpg
+### praise_invitation
+- 사용 날짜: W4D20, W5D24
+- 필요한 장면: 작은 교회 모임에서 함께 찬양하도록 초대하는 장면
+- 권장 파일명: assets/images/scenes/praise_invitation.jpg
 - 현재 상태: 사진 필요
-- 검색어: gentle church encouragement conversation; supportive conversation church smiling; blessing prayer church community
-
-### W5D21
-- 사용 날짜: W5D21
-- 필요한 장면: 예수님 믿으세요 학습 장면
-- 권장 파일명: assets/images/scenes/<scene_id>.jpg
-- 현재 상태: 사진 필요
-- 검색어: 예수님 믿으세요; 상대의 마음을 존중하며 믿음의 권면을 전한다.
-
-### W5D22
-- 사용 날짜: W5D22
-- 필요한 장면: 우리는 당신들을 사랑해요 학습 장면
-- 권장 파일명: assets/images/scenes/<scene_id>.jpg
-- 현재 상태: 사진 필요
-- 검색어: 우리는 당신들을 사랑해요; 개인이 아니라 공동체의 환대를 전하는 장면이다.
+- 검색어: small church praise group singing together; church worship small group joyful singing; community praise gathering
 
 ### prayer_support
 - 사용 날짜: W5D23
@@ -115,12 +115,12 @@
 - 현재 상태: 사진 필요
 - 검색어: prayer support two people church; gentle prayer with friend church
 
-### praise_invitation
-- 사용 날짜: W5D24, W5D25, W5SAT
-- 필요한 장면: 작은 교회 모임에서 함께 찬양하도록 초대하는 장면
-- 권장 파일명: assets/images/scenes/praise_invitation.jpg
+### full_mission_roleplay_review
+- 사용 날짜: W5D25, W5SAT
+- 필요한 장면: 처음 만남부터 기도와 찬양 초대까지 전체 흐름을 역할극으로 복습하는 장면
+- 권장 파일명: assets/images/scenes/full_mission_roleplay_review.jpg
 - 현재 상태: 사진 필요
-- 검색어: small church praise group singing together; church worship small group joyful singing; community praise gathering
+- 검색어: church mission team roleplay small group conversation; small group church fellowship greeting prayer singing; mission training roleplay church group
 
 ## 날짜별 체크리스트
 
@@ -133,30 +133,30 @@
 
 ### W1D2 시간대 인사 익히기
 - 구분: 평일
-- 필요한 장면: 교회 입구에서 태국 성도에게 와이 인사로 반갑게 인사하는 장면
-- 스토리: 아침에 교회에 도착하고, 저녁 예배 후 인사한다.
-- 파일명: assets/images/scenes/greeting_church_gate.jpg
+- 필요한 장면: 아침에는 실내에서, 저녁에는 노을 진 마당에서 와이 인사를 나누는 두 장면
+- 스토리: 시간대에 맞는 인사로 현장 대화를 더 자연스럽게 시작한다.
+- 파일명: assets/images/scenes/good_morning_good_evening.jpg
 - 상태: 준비됨
 
 ### W1D3 감사와 응답
 - 구분: 평일
-- 필요한 장면: 감사와 응답 학습 장면
+- 필요한 장면: 감사를 전하고 따뜻하게 응답받는 장면
 - 스토리: 도움을 받았을 때 감사하고 상대가 따뜻하게 응답한다.
-- 파일명: 
-- 상태: 사진 필요
+- 파일명: assets/images/scenes/thanks_a_lot_youre_welcome.jpg
+- 상태: 준비됨
 
 ### W1D4 짧게 대답하기
 - 구분: 평일
-- 필요한 장면: 짧게 대답하기 학습 장면
+- 필요한 장면: 짧은 질문에 예/아니오로 대답하는 장면
 - 스토리: 짧은 질문에 예/아니오로 반응한다.
-- 파일명: 
-- 상태: 사진 필요
+- 파일명: assets/images/scenes/yes_no_checkpoint.jpg
+- 상태: 준비됨
 
-### W1D5 첫 만남 전체 연결
+### W1D5 예수님 믿으세요
 - 구분: 평일
-- 필요한 장면: 교회 입구에서 태국 성도에게 와이 인사로 반갑게 인사하는 장면
-- 스토리: 교회 문 앞 첫 만남 장면을 처음부터 끝까지 연결한다.
-- 파일명: assets/images/scenes/greeting_church_gate.jpg
+- 필요한 장면: 교회 앞에서 따뜻하게 전도지를 건네며 예수님을 믿으라고 권하는 장면
+- 스토리: 교회 문 앞의 따뜻한 인사 뒤에 예수님을 믿으세요를 부드럽게 전한다.
+- 파일명: assets/images/scenes/believe_in_jesus.jpg
 - 상태: 준비됨
 
 ### W2D6 정중하게 말 걸기
@@ -187,11 +187,11 @@
 - 파일명: 
 - 상태: 사진 필요
 
-### W2D10 새 친구 만나기 전체 연결
+### W2D10 우리는 당신들을 사랑해요
 - 구분: 평일
-- 필요한 장면: 새 친구 만나기 전체 연결 학습 장면
-- 스토리: 인사, 실례, 이름 묻기, 자기소개를 한 대화 안에서 이어 말한다.
-- 파일명: 
+- 필요한 장면: 교회 안에서 사랑과 축복의 말을 따뜻하게 전하는 장면
+- 스토리: 예배 후 서로를 환영하며 공동체의 사랑을 전한다.
+- 파일명: assets/images/scenes/encouragement_and_blessing.jpg
 - 상태: 사진 필요
 
 ### W3D11 화장실 묻기
@@ -222,10 +222,10 @@
 - 파일명: 
 - 상태: 사진 필요
 
-### W3D15 생활언어 전체 연결
+### W3D15 기도해 드릴게요
 - 구분: 평일
 - 필요한 장면: 교회 식사 자리에서 음식을 나누며 대화하는 장면
-- 스토리: 인사, 자기소개, 도움 요청, 식사, 칭찬, 작별을 한 흐름으로 연결한다.
+- 스토리: 교회 식사 자리나 도움 요청 장면에서 기도하겠다고 제안한다.
 - 파일명: assets/images/scenes/meal_table_fellowship.jpg
 - 상태: 사진 필요
 
@@ -257,46 +257,46 @@
 - 파일명: assets/images/scenes/encouragement_and_blessing.jpg
 - 상태: 사진 필요
 
-### W4D20 사랑과 축복 연결
+### W4D20 함께 찬양해요
 - 구분: 평일
-- 필요한 장면: 교회 안에서 사랑과 축복의 말을 따뜻하게 전하는 장면
-- 스토리: 생활언어와 선교언어를 섞어 더 자연스러운 흐름으로 말한다.
-- 파일명: assets/images/scenes/encouragement_and_blessing.jpg
+- 필요한 장면: 작은 교회 모임에서 함께 찬양하도록 초대하는 장면
+- 스토리: 교회 모임이나 기도 후에 함께 찬양하자고 부드럽게 초대한다.
+- 파일명: assets/images/scenes/praise_invitation.jpg
 - 상태: 사진 필요
 
-### W5D21 예수님 믿으세요
+### W5D21 인사와 감사 전체 복습
 - 구분: 평일
-- 필요한 장면: 예수님 믿으세요 학습 장면
-- 스토리: 상대의 마음을 존중하며 믿음의 권면을 전한다.
-- 파일명: 
+- 필요한 장면: 교회 입구에서 태국 성도에게 와이 인사로 반갑게 인사하는 장면
+- 스토리: 교회 입구에서 인사하고, 시간대 인사와 감사, 예/아니오 응답까지 한 흐름으로 복습한다.
+- 파일명: assets/images/scenes/greeting_church_gate.jpg
+- 상태: 준비됨
+
+### W5D22 새 친구와 자기소개 복습
+- 구분: 평일
+- 필요한 장면: 예배 후 처음 만나 이름을 묻고 자기소개하는 장면
+- 스토리: 예배 후 식사 자리에서 새 친구에게 실례합니다로 말을 걸고, 이름과 나이를 묻고, 공동체의 사랑까지 전한다.
+- 파일명: assets/images/scenes/name_intro_conversation.jpg
 - 상태: 사진 필요
 
-### W5D22 우리는 당신들을 사랑해요
-- 구분: 평일
-- 필요한 장면: 우리는 당신들을 사랑해요 학습 장면
-- 스토리: 개인이 아니라 공동체의 환대를 전하는 장면이다.
-- 파일명: 
-- 상태: 사진 필요
-
-### W5D23 기도해 드릴게요
+### W5D23 생활 대화와 돌봄 복습
 - 구분: 평일
 - 필요한 장면: 상대를 위로하며 기도해 주겠다고 말하는 장면
-- 스토리: 힘든 일을 들었을 때 기도하겠다고 제안한다.
+- 스토리: 교회 식사 자리에서 도움을 묻고, 식사 표현과 칭찬을 나눈 뒤, 다시 만남과 기도 약속으로 이어 간다.
 - 파일명: assets/images/scenes/prayer_support.jpg
 - 상태: 사진 필요
 
-### W5D24 함께 찬양해요
+### W5D24 사랑·축복·믿음·찬양 복습
 - 구분: 평일
 - 필요한 장면: 작은 교회 모임에서 함께 찬양하도록 초대하는 장면
-- 스토리: 기도 후 또는 교회 모임에서 함께 찬양하자고 초대한다.
+- 스토리: 하나님의 사랑과 축복을 전하고, 예수님을 믿으세요와 함께 찬양해요까지 부드럽게 이어 말한다.
 - 파일명: assets/images/scenes/praise_invitation.jpg
 - 상태: 사진 필요
 
-### W5D25 전체 종합 리허설
+### W5D25 전체 24문장 종합 리허설
 - 구분: 평일
-- 필요한 장면: 작은 교회 모임에서 함께 찬양하도록 초대하는 장면
-- 스토리: 처음 만남, 식사, 도움, 사랑·축복, 기도, 찬양, 작별의 전체 장면을 완성한다.
-- 파일명: assets/images/scenes/praise_invitation.jpg
+- 필요한 장면: 처음 만남부터 기도와 찬양 초대까지 전체 흐름을 역할극으로 복습하는 장면
+- 스토리: 처음 만남, 자기소개, 식사와 도움, 사랑과 축복, 믿음의 초대, 기도와 찬양, 작별까지 전체 장면을 연결한다.
+- 파일명: assets/images/scenes/full_mission_roleplay_review.jpg
 - 상태: 사진 필요
 
 ### W1SAT 교회 문 앞에서 만난 첫 친구
@@ -327,9 +327,9 @@
 - 파일명: assets/images/scenes/encouragement_and_blessing.jpg
 - 상태: 사진 필요
 
-### W5SAT 처음 만남에서 찬양 초대까지
+### W5SAT 전체 24문장 종합 역할극
 - 구분: 토요일
-- 필요한 장면: 작은 교회 모임에서 함께 찬양하도록 초대하는 장면
-- 스토리: 한국 선교팀, 태국 교회 성도, 처음 온 방문객이 만난다. 인사와 자기소개, 식사와 도움, 사랑과 축복, 기도와 찬양 초대, 작별까지 한 흐름으로 연습한다.
-- 파일명: assets/images/scenes/praise_invitation.jpg
+- 필요한 장면: 처음 만남부터 기도와 찬양 초대까지 전체 흐름을 역할극으로 복습하는 장면
+- 스토리: 한국 선교팀, 태국 교회 성도, 처음 온 방문객이 만난다. 인사와 자기소개, 식사와 도움, 사랑과 축복, 믿음의 초대, 기도와 찬양 초대, 작별까지 전체 흐름으로 연습한다.
+- 파일명: assets/images/scenes/full_mission_roleplay_review.jpg
 - 상태: 사진 필요
