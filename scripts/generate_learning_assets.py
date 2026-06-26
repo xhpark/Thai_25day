@@ -93,7 +93,7 @@ KEYWORDS: list[dict[str, Any]] = [
     {"id": "W037", "variantIds": ["19"], "korean": "청하다/바라다", "english": "ask/request", "thai": "ขอ", "romanization": "khŏr", "koreanPronunciation": "커"},
     {"id": "W038", "variantIds": ["19"], "korean": "축복하다", "english": "bless", "thai": "อวยพร", "romanization": "uay-phon", "koreanPronunciation": "우아이폰"},
     {"id": "W039", "variantIds": ["20"], "korean": "~이다", "english": "to be", "thai": "เป็น", "romanization": "pen", "koreanPronunciation": "뻰"},
-    {"id": "W040", "variantIds": ["20"], "korean": "사랑", "english": "love", "thai": "ความรัก", "romanization": "khwaam-rák", "koreanPronunciation": "콰락"},
+    {"id": "W040", "variantIds": ["20"], "korean": "사랑", "english": "love", "thai": "ความรัก", "romanization": "khwaam-rák", "koreanPronunciation": "쾀락"},
     {"id": "W041", "variantIds": ["21"], "korean": "믿다", "english": "believe", "thai": "เชื่อ", "romanization": "chûea", "koreanPronunciation": "츠아"},
     {"id": "W042", "variantIds": ["21"], "korean": "~안에/~을", "english": "in", "thai": "ใน", "romanization": "nai", "koreanPronunciation": "나이"},
     {"id": "W043", "variantIds": ["22"], "korean": "우리", "english": "we/us", "thai": "พวกเรา", "romanization": "phûak-rao", "koreanPronunciation": "푸악 라오"},
