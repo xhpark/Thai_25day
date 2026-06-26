@@ -47,7 +47,46 @@
       }
     ]
   },
-  "keywordImages": [],
+  "keywordImages": [
+    {
+      "keywordId": "W033",
+      "priority": "optional",
+      "sourcePlan": [
+        {
+          "type": "local_preferred",
+          "assetPath": "assets/images/keywords/W033.jpg",
+          "status": "missing"
+        },
+        {
+          "type": "stock_preferred",
+          "queries": [
+            "Jesus realistic photo",
+            "예수님 learning image"
+          ],
+          "status": "search_required"
+        },
+        {
+          "type": "ai_fallback",
+          "prompt": {
+            "scene": "single concept image for Jesus",
+            "peopleAndAction": "show the concept clearly and simply",
+            "setting": "clean realistic learning image",
+            "mood": "warm and easy to recognize",
+            "cameraFraming": "close or medium crop",
+            "lighting": "bright neutral light",
+            "avoidList": [
+              "blurry or noisy image",
+              "heavy watermark",
+              "text embedded in photo",
+              "theological symbolism without a real scene",
+              "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
+            ]
+          },
+          "status": "generate_if_needed"
+        }
+      ]
+    }
+  ],
   "newPhrases": [
     {
       "variantId": "17",
@@ -178,6 +217,35 @@
   ],
   "keywords": [
     {
+      "id": "W033",
+      "variantIds": [
+        "17",
+        "21"
+      ],
+      "korean": "예수님",
+      "english": "Jesus",
+      "thai": "พระเยซู",
+      "romanization": "Phrá-yeh-suu",
+      "koreanPronunciation": "프라예쑤",
+      "tier": "core",
+      "days": [
+        16,
+        20,
+        21,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W033_male_normal.mp3",
+          "slow": "assets/audio/words/W033_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W033_female_normal.mp3",
+          "slow": "assets/audio/words/W033_female_slow.mp3"
+        }
+      }
+    },
+    {
       "id": "W034",
       "variantIds": [
         "17",
@@ -207,9 +275,215 @@
           "slow": "assets/audio/words/W034_female_slow.mp3"
         }
       }
+    },
+    {
+      "id": "W035",
+      "variantIds": [
+        "17",
+        "18",
+        "22"
+      ],
+      "korean": "사랑하다",
+      "english": "love",
+      "thai": "รัก",
+      "romanization": "rák",
+      "koreanPronunciation": "락",
+      "tier": "core",
+      "days": [
+        16,
+        17,
+        20,
+        22,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W035_male_normal.mp3",
+          "slow": "assets/audio/words/W035_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W035_female_normal.mp3",
+          "slow": "assets/audio/words/W035_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W013",
+      "variantIds": [
+        "8",
+        "10",
+        "17",
+        "18",
+        "19",
+        "22",
+        "23"
+      ],
+      "korean": "당신",
+      "english": "you",
+      "thai": "คุณ",
+      "romanization": "khun",
+      "koreanPronunciation": "쿤",
+      "tier": "supplemental",
+      "days": [
+        7,
+        9,
+        10,
+        15,
+        16,
+        17,
+        18,
+        20,
+        22,
+        23,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W013_male_normal.mp3",
+          "slow": "assets/audio/words/W013_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W013_female_normal.mp3",
+          "slow": "assets/audio/words/W013_female_slow.mp3"
+        }
+      }
     }
   ],
-  "displayKeywords": [],
+  "displayKeywords": [
+    {
+      "id": "W033",
+      "variantIds": [
+        "17",
+        "21"
+      ],
+      "korean": "예수님",
+      "english": "Jesus",
+      "thai": "พระเยซู",
+      "romanization": "Phrá-yeh-suu",
+      "koreanPronunciation": "프라예쑤",
+      "tier": "core",
+      "days": [
+        16,
+        20,
+        21,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W033_male_normal.mp3",
+          "slow": "assets/audio/words/W033_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W033_female_normal.mp3",
+          "slow": "assets/audio/words/W033_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W034",
+      "variantIds": [
+        "17",
+        "18",
+        "20"
+      ],
+      "korean": "하시는/존칭 동사 표지",
+      "english": "royal/respectful verb marker",
+      "thai": "ทรง",
+      "romanization": "song",
+      "koreanPronunciation": "쏭",
+      "tier": "supplemental",
+      "days": [
+        16,
+        17,
+        19,
+        20,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W034_male_normal.mp3",
+          "slow": "assets/audio/words/W034_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W034_female_normal.mp3",
+          "slow": "assets/audio/words/W034_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W035",
+      "variantIds": [
+        "17",
+        "18",
+        "22"
+      ],
+      "korean": "사랑하다",
+      "english": "love",
+      "thai": "รัก",
+      "romanization": "rák",
+      "koreanPronunciation": "락",
+      "tier": "core",
+      "days": [
+        16,
+        17,
+        20,
+        22,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W035_male_normal.mp3",
+          "slow": "assets/audio/words/W035_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W035_female_normal.mp3",
+          "slow": "assets/audio/words/W035_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W013",
+      "variantIds": [
+        "8",
+        "10",
+        "17",
+        "18",
+        "19",
+        "22",
+        "23"
+      ],
+      "korean": "당신",
+      "english": "you",
+      "thai": "คุณ",
+      "romanization": "khun",
+      "koreanPronunciation": "쿤",
+      "tier": "supplemental",
+      "days": [
+        7,
+        9,
+        10,
+        15,
+        16,
+        17,
+        18,
+        20,
+        22,
+        23,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W013_male_normal.mp3",
+          "slow": "assets/audio/words/W013_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W013_female_normal.mp3",
+          "slow": "assets/audio/words/W013_female_slow.mp3"
+        }
+      }
+    }
+  ],
+  "supplementLinks": [],
   "supplementalKeywords": [
     {
       "id": "W034",
@@ -241,11 +515,52 @@
           "slow": "assets/audio/words/W034_female_slow.mp3"
         }
       }
+    },
+    {
+      "id": "W013",
+      "variantIds": [
+        "8",
+        "10",
+        "17",
+        "18",
+        "19",
+        "22",
+        "23"
+      ],
+      "korean": "당신",
+      "english": "you",
+      "thai": "คุณ",
+      "romanization": "khun",
+      "koreanPronunciation": "쿤",
+      "tier": "supplemental",
+      "days": [
+        7,
+        9,
+        10,
+        15,
+        16,
+        17,
+        18,
+        20,
+        22,
+        23,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W013_male_normal.mp3",
+          "slow": "assets/audio/words/W013_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W013_female_normal.mp3",
+          "slow": "assets/audio/words/W013_female_slow.mp3"
+        }
+      }
     }
   ],
   "keywordDisplayPolicy": {
-    "default": "core_only",
-    "toggleSupplemental": true,
+    "default": "keyWordIds_order",
+    "toggleSupplemental": false,
     "emptyCoreFallback": "show_first_three_keywords"
   },
   "learnerProfile": {

@@ -575,7 +575,7 @@
   ],
   "supplementalKeywords": [],
   "keywordDisplayPolicy": {
-    "default": "core_only",
+    "default": "keyWordIds_order",
     "toggleSupplemental": false
   },
   "audioModes": [

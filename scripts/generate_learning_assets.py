@@ -66,7 +66,7 @@ KEYWORDS: list[dict[str, Any]] = [
     {"id": "W010", "variantIds": ["5-1"], "korean": "예", "english": "yes", "thai": "ใช่", "romanization": "châi", "koreanPronunciation": "차이"},
     {"id": "W011", "variantIds": ["5-2"], "korean": "아니오", "english": "no", "thai": "ไม่ใช่", "romanization": "mâi-châi", "koreanPronunciation": "마이 차이"},
     {"id": "W012", "variantIds": ["6"], "korean": "실례합니다/죄송합니다", "english": "excuse me / sorry", "thai": "ขอโทษ", "romanization": "khŏr-thôot", "koreanPronunciation": "커 톳"},
-    {"id": "W013", "variantIds": ["8", "10", "11", "17", "18", "19", "22", "23"], "korean": "당신", "english": "you", "thai": "คุณ", "romanization": "khun", "koreanPronunciation": "쿤"},
+    {"id": "W013", "variantIds": ["8", "10", "17", "18", "19", "22", "23"], "korean": "당신", "english": "you", "thai": "คุณ", "romanization": "khun", "koreanPronunciation": "쿤"},
     {"id": "W014", "variantIds": ["8", "9"], "korean": "이름", "english": "name", "thai": "ชื่อ", "romanization": "chûue", "koreanPronunciation": "츠"},
     {"id": "W015", "variantIds": ["8"], "korean": "무엇", "english": "what", "thai": "อะไร", "romanization": "à-rai", "koreanPronunciation": "아라이"},
     {"id": "W016", "variantIds": ["9", "23"], "korean": "나(남성)", "english": "I/me, male speaker", "thai": "ผม", "romanization": "phŏm", "koreanPronunciation": "폼", "voices": ["male"]},

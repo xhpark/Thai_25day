@@ -17,7 +17,7 @@
   },
   "contentSource": {
     "phrases": "Weekday lesson newPhrases rendered as mainPhrases; review-only weekdays fall back to reviewPhrases.",
-    "keywords": "Weekday lesson keyWordIds filtered through displayKeywords.",
+    "keywords": "Weekday lesson keyWordIds rendered as displayKeywords.",
     "missionText": "Weekday speakingMission rendered as the main action box.",
     "ministryGuide": "Weekday ministryGuide rendered as the relational guide line."
   },
@@ -742,6 +742,37 @@
       }
     },
     {
+      "id": "W034",
+      "variantIds": [
+        "17",
+        "18",
+        "20"
+      ],
+      "korean": "하시는/존칭 동사 표지",
+      "english": "royal/respectful verb marker",
+      "thai": "ทรง",
+      "romanization": "song",
+      "koreanPronunciation": "쏭",
+      "tier": "supplemental",
+      "days": [
+        16,
+        17,
+        19,
+        20,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W034_male_normal.mp3",
+          "slow": "assets/audio/words/W034_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W034_female_normal.mp3",
+          "slow": "assets/audio/words/W034_female_slow.mp3"
+        }
+      }
+    },
+    {
       "id": "W035",
       "variantIds": [
         "17",
@@ -800,33 +831,6 @@
         "female": {
           "normal": "assets/audio/words/W036_female_normal.mp3",
           "slow": "assets/audio/words/W036_female_slow.mp3"
-        }
-      }
-    },
-    {
-      "id": "W038",
-      "variantIds": [
-        "19"
-      ],
-      "korean": "축복하다",
-      "english": "bless",
-      "thai": "อวยพร",
-      "romanization": "uay-phon",
-      "koreanPronunciation": "우아이폰",
-      "tier": "core",
-      "days": [
-        18,
-        20,
-        25
-      ],
-      "audio": {
-        "male": {
-          "normal": "assets/audio/words/W038_male_normal.mp3",
-          "slow": "assets/audio/words/W038_male_slow.mp3"
-        },
-        "female": {
-          "normal": "assets/audio/words/W038_female_normal.mp3",
-          "slow": "assets/audio/words/W038_female_slow.mp3"
         }
       }
     }
@@ -971,7 +975,7 @@
     }
   ],
   "keywordDisplayPolicy": {
-    "default": "core_only",
+    "default": "keyWordIds_order",
     "toggleSupplemental": false
   },
   "audioModes": [

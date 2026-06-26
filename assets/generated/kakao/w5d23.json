@@ -17,7 +17,7 @@
   },
   "contentSource": {
     "phrases": "Weekday lesson newPhrases rendered as mainPhrases; review-only weekdays fall back to reviewPhrases.",
-    "keywords": "Weekday lesson keyWordIds filtered through displayKeywords.",
+    "keywords": "Weekday lesson keyWordIds rendered as displayKeywords.",
     "missionText": "Weekday speakingMission rendered as the main action box.",
     "ministryGuide": "Weekday ministryGuide rendered as the relational guide line."
   },
@@ -835,17 +835,70 @@
       }
     },
     {
-      "id": "W025",
+      "id": "W021",
       "variantIds": [
-        "12",
-        "13"
+        "11"
       ],
-      "korean": "맛있다",
-      "english": "delicious",
-      "thai": "อร่อย",
-      "romanization": "a-ròi",
-      "koreanPronunciation": "아러이",
-      "tier": "core",
+      "korean": "~에 있다",
+      "english": "to be located",
+      "thai": "อยู่",
+      "romanization": "yùu",
+      "koreanPronunciation": "유",
+      "tier": "supplemental",
+      "days": [
+        11,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W021_male_normal.mp3",
+          "slow": "assets/audio/words/W021_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W021_female_normal.mp3",
+          "slow": "assets/audio/words/W021_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W022",
+      "variantIds": [
+        "11"
+      ],
+      "korean": "어디",
+      "english": "where",
+      "thai": "ที่ไหน",
+      "romanization": "thîi-năi",
+      "koreanPronunciation": "티 나이",
+      "tier": "supplemental",
+      "days": [
+        11,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W022_male_normal.mp3",
+          "slow": "assets/audio/words/W022_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W022_female_normal.mp3",
+          "slow": "assets/audio/words/W022_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W023",
+      "variantIds": [
+        "12"
+      ],
+      "korean": "드시다/먹다",
+      "english": "eat",
+      "thai": "ทาน",
+      "romanization": "thaan",
+      "koreanPronunciation": "탄",
+      "tier": "supplemental",
       "days": [
         12,
         15,
@@ -853,67 +906,12 @@
       ],
       "audio": {
         "male": {
-          "normal": "assets/audio/words/W025_male_normal.mp3",
-          "slow": "assets/audio/words/W025_male_slow.mp3"
+          "normal": "assets/audio/words/W023_male_normal.mp3",
+          "slow": "assets/audio/words/W023_male_slow.mp3"
         },
         "female": {
-          "normal": "assets/audio/words/W025_female_normal.mp3",
-          "slow": "assets/audio/words/W025_female_slow.mp3"
-        }
-      }
-    },
-    {
-      "id": "W028",
-      "variantIds": [
-        "14"
-      ],
-      "korean": "잘하다/똑똑하다",
-      "english": "good/skilled",
-      "thai": "เก่ง",
-      "romanization": "gèng",
-      "koreanPronunciation": "깽",
-      "tier": "core",
-      "days": [
-        13,
-        15,
-        20,
-        25
-      ],
-      "audio": {
-        "male": {
-          "normal": "assets/audio/words/W028_male_normal.mp3",
-          "slow": "assets/audio/words/W028_male_slow.mp3"
-        },
-        "female": {
-          "normal": "assets/audio/words/W028_female_normal.mp3",
-          "slow": "assets/audio/words/W028_female_slow.mp3"
-        }
-      }
-    },
-    {
-      "id": "W029",
-      "variantIds": [
-        "15"
-      ],
-      "korean": "안녕히 가세요",
-      "english": "goodbye",
-      "thai": "ลาก่อน",
-      "romanization": "laa-gàawn",
-      "koreanPronunciation": "라껀",
-      "tier": "core",
-      "days": [
-        14,
-        15,
-        25
-      ],
-      "audio": {
-        "male": {
-          "normal": "assets/audio/words/W029_male_normal.mp3",
-          "slow": "assets/audio/words/W029_male_slow.mp3"
-        },
-        "female": {
-          "normal": "assets/audio/words/W029_female_normal.mp3",
-          "slow": "assets/audio/words/W029_female_slow.mp3"
+          "normal": "assets/audio/words/W023_female_normal.mp3",
+          "slow": "assets/audio/words/W023_female_slow.mp3"
         }
       }
     }
@@ -1138,7 +1136,7 @@
     }
   ],
   "keywordDisplayPolicy": {
-    "default": "core_only",
+    "default": "keyWordIds_order",
     "toggleSupplemental": false
   },
   "audioModes": [

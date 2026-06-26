@@ -943,6 +943,64 @@
       }
     },
     {
+      "id": "W005",
+      "variantIds": [
+        "2-1"
+      ],
+      "korean": "아침",
+      "english": "morning",
+      "thai": "ตอนเช้า",
+      "romanization": "dtaawn-cháao",
+      "koreanPronunciation": "떤 차오",
+      "tier": "supplemental",
+      "days": [
+        2,
+        5,
+        10,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W005_male_normal.mp3",
+          "slow": "assets/audio/words/W005_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W005_female_normal.mp3",
+          "slow": "assets/audio/words/W005_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W006",
+      "variantIds": [
+        "2-2"
+      ],
+      "korean": "저녁",
+      "english": "evening",
+      "thai": "ตอนเย็น",
+      "romanization": "dtaawn-yen",
+      "koreanPronunciation": "떤 옌",
+      "tier": "supplemental",
+      "days": [
+        2,
+        5,
+        10,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W006_male_normal.mp3",
+          "slow": "assets/audio/words/W006_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W006_female_normal.mp3",
+          "slow": "assets/audio/words/W006_female_slow.mp3"
+        }
+      }
+    },
+    {
       "id": "W007",
       "variantIds": [
         "3"
@@ -969,6 +1027,40 @@
         "female": {
           "normal": "assets/audio/words/W007_female_normal.mp3",
           "slow": "assets/audio/words/W007_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W008",
+      "variantIds": [
+        "3",
+        "13",
+        "14"
+      ],
+      "korean": "많이/매우",
+      "english": "very/much",
+      "thai": "มาก",
+      "romanization": "mâak",
+      "koreanPronunciation": "막",
+      "tier": "supplemental",
+      "days": [
+        3,
+        5,
+        10,
+        12,
+        13,
+        15,
+        20,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W008_male_normal.mp3",
+          "slow": "assets/audio/words/W008_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W008_female_normal.mp3",
+          "slow": "assets/audio/words/W008_female_slow.mp3"
         }
       }
     },
@@ -1062,6 +1154,7 @@
       }
     }
   ],
+  "supplementLinks": [],
   "supplementalKeywords": [
     {
       "id": "W005",
@@ -1157,8 +1250,8 @@
     }
   ],
   "keywordDisplayPolicy": {
-    "default": "core_only",
-    "toggleSupplemental": true,
+    "default": "keyWordIds_order",
+    "toggleSupplemental": false,
     "emptyCoreFallback": "show_first_three_keywords"
   },
   "learnerProfile": {

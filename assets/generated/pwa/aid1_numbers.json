@@ -1,0 +1,590 @@
+{
+  "version": 1,
+  "kind": "pwa_learning_aid_spec",
+  "id": "AID1_NUMBERS",
+  "aid": 1,
+  "title": "학습보조1: 태국어 숫자",
+  "subtitle": "9일차 나이 묻기에서 바로 쓰는 숫자 연습",
+  "description": "나이를 묻고 대답할 때 필요한 기본 숫자, 십 단위, 큰 수, 서수를 한국식 발음과 TTS로 연습한다.",
+  "sourceNote": "사용자 제공 숫자표 기준",
+  "voices": {
+    "male": "th-TH-NiwatNeural",
+    "female": "th-TH-PremwadeeNeural"
+  },
+  "audioModes": [
+    "normal",
+    "slow"
+  ],
+  "backLinks": [
+    {
+      "label": "9일차 나이 묻기로 돌아가기",
+      "href": "?day=9"
+    }
+  ],
+  "sections": [
+    {
+      "id": "cardinal_0_12",
+      "title": "기본 숫자 0-12",
+      "items": [
+        {
+          "id": "N000",
+          "value": "0",
+          "english": "Zero",
+          "thai": "ศูนย์",
+          "koreanPronunciation": "쑨",
+          "romanization": "sǔun",
+          "audio": {
+            "male": {
+              "normal": "assets/audio/supplements/numbers/aid1_n000_male_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_n000_male_slow.mp3"
+            },
+            "female": {
+              "normal": "assets/audio/supplements/numbers/aid1_n000_female_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_n000_female_slow.mp3"
+            }
+          }
+        },
+        {
+          "id": "N001",
+          "value": "1",
+          "english": "One",
+          "thai": "หนึ่ง",
+          "koreanPronunciation": "능",
+          "romanization": "nʉ̀eng",
+          "audio": {
+            "male": {
+              "normal": "assets/audio/supplements/numbers/aid1_n001_male_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_n001_male_slow.mp3"
+            },
+            "female": {
+              "normal": "assets/audio/supplements/numbers/aid1_n001_female_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_n001_female_slow.mp3"
+            }
+          }
+        },
+        {
+          "id": "N002",
+          "value": "2",
+          "english": "Two",
+          "thai": "สอง",
+          "koreanPronunciation": "썽",
+          "romanization": "sǎawng",
+          "audio": {
+            "male": {
+              "normal": "assets/audio/supplements/numbers/aid1_n002_male_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_n002_male_slow.mp3"
+            },
+            "female": {
+              "normal": "assets/audio/supplements/numbers/aid1_n002_female_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_n002_female_slow.mp3"
+            }
+          }
+        },
+        {
+          "id": "N003",
+          "value": "3",
+          "english": "Three",
+          "thai": "สาม",
+          "koreanPronunciation": "쌈",
+          "romanization": "sǎam",
+          "audio": {
+            "male": {
+              "normal": "assets/audio/supplements/numbers/aid1_n003_male_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_n003_male_slow.mp3"
+            },
+            "female": {
+              "normal": "assets/audio/supplements/numbers/aid1_n003_female_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_n003_female_slow.mp3"
+            }
+          }
+        },
+        {
+          "id": "N004",
+          "value": "4",
+          "english": "Four",
+          "thai": "สี่",
+          "koreanPronunciation": "씨",
+          "romanization": "sìi",
+          "audio": {
+            "male": {
+              "normal": "assets/audio/supplements/numbers/aid1_n004_male_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_n004_male_slow.mp3"
+            },
+            "female": {
+              "normal": "assets/audio/supplements/numbers/aid1_n004_female_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_n004_female_slow.mp3"
+            }
+          }
+        },
+        {
+          "id": "N005",
+          "value": "5",
+          "english": "Five",
+          "thai": "ห้า",
+          "koreanPronunciation": "하",
+          "romanization": "hâa",
+          "audio": {
+            "male": {
+              "normal": "assets/audio/supplements/numbers/aid1_n005_male_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_n005_male_slow.mp3"
+            },
+            "female": {
+              "normal": "assets/audio/supplements/numbers/aid1_n005_female_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_n005_female_slow.mp3"
+            }
+          }
+        },
+        {
+          "id": "N006",
+          "value": "6",
+          "english": "Six",
+          "thai": "หก",
+          "koreanPronunciation": "혹",
+          "romanization": "hòk",
+          "audio": {
+            "male": {
+              "normal": "assets/audio/supplements/numbers/aid1_n006_male_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_n006_male_slow.mp3"
+            },
+            "female": {
+              "normal": "assets/audio/supplements/numbers/aid1_n006_female_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_n006_female_slow.mp3"
+            }
+          }
+        },
+        {
+          "id": "N007",
+          "value": "7",
+          "english": "Seven",
+          "thai": "เจ็ด",
+          "koreanPronunciation": "쩻",
+          "romanization": "jèt",
+          "audio": {
+            "male": {
+              "normal": "assets/audio/supplements/numbers/aid1_n007_male_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_n007_male_slow.mp3"
+            },
+            "female": {
+              "normal": "assets/audio/supplements/numbers/aid1_n007_female_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_n007_female_slow.mp3"
+            }
+          }
+        },
+        {
+          "id": "N008",
+          "value": "8",
+          "english": "Eight",
+          "thai": "แปด",
+          "koreanPronunciation": "뺏",
+          "romanization": "bpàet",
+          "audio": {
+            "male": {
+              "normal": "assets/audio/supplements/numbers/aid1_n008_male_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_n008_male_slow.mp3"
+            },
+            "female": {
+              "normal": "assets/audio/supplements/numbers/aid1_n008_female_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_n008_female_slow.mp3"
+            }
+          }
+        },
+        {
+          "id": "N009",
+          "value": "9",
+          "english": "Nine",
+          "thai": "เก้า",
+          "koreanPronunciation": "까오",
+          "romanization": "gâao",
+          "audio": {
+            "male": {
+              "normal": "assets/audio/supplements/numbers/aid1_n009_male_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_n009_male_slow.mp3"
+            },
+            "female": {
+              "normal": "assets/audio/supplements/numbers/aid1_n009_female_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_n009_female_slow.mp3"
+            }
+          }
+        },
+        {
+          "id": "N010",
+          "value": "10",
+          "english": "Ten",
+          "thai": "สิบ",
+          "koreanPronunciation": "씹",
+          "romanization": "sìp",
+          "audio": {
+            "male": {
+              "normal": "assets/audio/supplements/numbers/aid1_n010_male_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_n010_male_slow.mp3"
+            },
+            "female": {
+              "normal": "assets/audio/supplements/numbers/aid1_n010_female_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_n010_female_slow.mp3"
+            }
+          }
+        },
+        {
+          "id": "N011",
+          "value": "11",
+          "english": "Eleven",
+          "thai": "สิบเอ็ด",
+          "koreanPronunciation": "씹엣",
+          "romanization": "sìp-èt",
+          "audio": {
+            "male": {
+              "normal": "assets/audio/supplements/numbers/aid1_n011_male_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_n011_male_slow.mp3"
+            },
+            "female": {
+              "normal": "assets/audio/supplements/numbers/aid1_n011_female_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_n011_female_slow.mp3"
+            }
+          }
+        },
+        {
+          "id": "N012",
+          "value": "12",
+          "english": "Twelve",
+          "thai": "สิบสอง",
+          "koreanPronunciation": "씹썽",
+          "romanization": "sìp-sǎawng",
+          "audio": {
+            "male": {
+              "normal": "assets/audio/supplements/numbers/aid1_n012_male_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_n012_male_slow.mp3"
+            },
+            "female": {
+              "normal": "assets/audio/supplements/numbers/aid1_n012_female_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_n012_female_slow.mp3"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "tens",
+      "title": "십 단위",
+      "items": [
+        {
+          "id": "N020",
+          "value": "20",
+          "english": "Twenty",
+          "thai": "ยี่สิบ",
+          "koreanPronunciation": "이씹",
+          "romanization": "yîi-sìp",
+          "audio": {
+            "male": {
+              "normal": "assets/audio/supplements/numbers/aid1_n020_male_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_n020_male_slow.mp3"
+            },
+            "female": {
+              "normal": "assets/audio/supplements/numbers/aid1_n020_female_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_n020_female_slow.mp3"
+            }
+          }
+        },
+        {
+          "id": "N030",
+          "value": "30",
+          "english": "Thirty",
+          "thai": "สามสิบ",
+          "koreanPronunciation": "쌈씹",
+          "romanization": "sǎam-sìp",
+          "audio": {
+            "male": {
+              "normal": "assets/audio/supplements/numbers/aid1_n030_male_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_n030_male_slow.mp3"
+            },
+            "female": {
+              "normal": "assets/audio/supplements/numbers/aid1_n030_female_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_n030_female_slow.mp3"
+            }
+          }
+        },
+        {
+          "id": "N040",
+          "value": "40",
+          "english": "Forty",
+          "thai": "สี่สิบ",
+          "koreanPronunciation": "씨씹",
+          "romanization": "sìi-sìp",
+          "audio": {
+            "male": {
+              "normal": "assets/audio/supplements/numbers/aid1_n040_male_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_n040_male_slow.mp3"
+            },
+            "female": {
+              "normal": "assets/audio/supplements/numbers/aid1_n040_female_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_n040_female_slow.mp3"
+            }
+          }
+        },
+        {
+          "id": "N050",
+          "value": "50",
+          "english": "Fifty",
+          "thai": "ห้าสิบ",
+          "koreanPronunciation": "하씹",
+          "romanization": "hâa-sìp",
+          "audio": {
+            "male": {
+              "normal": "assets/audio/supplements/numbers/aid1_n050_male_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_n050_male_slow.mp3"
+            },
+            "female": {
+              "normal": "assets/audio/supplements/numbers/aid1_n050_female_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_n050_female_slow.mp3"
+            }
+          }
+        },
+        {
+          "id": "N060",
+          "value": "60",
+          "english": "Sixty",
+          "thai": "หกสิบ",
+          "koreanPronunciation": "혹씹",
+          "romanization": "hòk-sìp",
+          "audio": {
+            "male": {
+              "normal": "assets/audio/supplements/numbers/aid1_n060_male_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_n060_male_slow.mp3"
+            },
+            "female": {
+              "normal": "assets/audio/supplements/numbers/aid1_n060_female_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_n060_female_slow.mp3"
+            }
+          }
+        },
+        {
+          "id": "N070",
+          "value": "70",
+          "english": "Seventy",
+          "thai": "เจ็ดสิบ",
+          "koreanPronunciation": "쩻씹",
+          "romanization": "jèt-sìp",
+          "audio": {
+            "male": {
+              "normal": "assets/audio/supplements/numbers/aid1_n070_male_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_n070_male_slow.mp3"
+            },
+            "female": {
+              "normal": "assets/audio/supplements/numbers/aid1_n070_female_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_n070_female_slow.mp3"
+            }
+          }
+        },
+        {
+          "id": "N080",
+          "value": "80",
+          "english": "Eighty",
+          "thai": "แปดสิบ",
+          "koreanPronunciation": "뺏씹",
+          "romanization": "bpàet-sìp",
+          "audio": {
+            "male": {
+              "normal": "assets/audio/supplements/numbers/aid1_n080_male_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_n080_male_slow.mp3"
+            },
+            "female": {
+              "normal": "assets/audio/supplements/numbers/aid1_n080_female_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_n080_female_slow.mp3"
+            }
+          }
+        },
+        {
+          "id": "N090",
+          "value": "90",
+          "english": "Ninety",
+          "thai": "เก้าสิบ",
+          "koreanPronunciation": "까오씹",
+          "romanization": "gâao-sìp",
+          "audio": {
+            "male": {
+              "normal": "assets/audio/supplements/numbers/aid1_n090_male_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_n090_male_slow.mp3"
+            },
+            "female": {
+              "normal": "assets/audio/supplements/numbers/aid1_n090_female_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_n090_female_slow.mp3"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "large_numbers",
+      "title": "큰 수",
+      "items": [
+        {
+          "id": "N100",
+          "value": "100",
+          "english": "One hundred",
+          "thai": "หนึ่งร้อย",
+          "koreanPronunciation": "능 러이",
+          "romanization": "nʉ̀eng-róoi",
+          "audio": {
+            "male": {
+              "normal": "assets/audio/supplements/numbers/aid1_n100_male_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_n100_male_slow.mp3"
+            },
+            "female": {
+              "normal": "assets/audio/supplements/numbers/aid1_n100_female_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_n100_female_slow.mp3"
+            }
+          }
+        },
+        {
+          "id": "N1000",
+          "value": "1,000",
+          "english": "One thousand",
+          "thai": "หนึ่งพัน",
+          "koreanPronunciation": "능 판",
+          "romanization": "nʉ̀eng-phan",
+          "audio": {
+            "male": {
+              "normal": "assets/audio/supplements/numbers/aid1_n1000_male_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_n1000_male_slow.mp3"
+            },
+            "female": {
+              "normal": "assets/audio/supplements/numbers/aid1_n1000_female_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_n1000_female_slow.mp3"
+            }
+          }
+        },
+        {
+          "id": "N10000",
+          "value": "10,000",
+          "english": "Ten thousand",
+          "thai": "หนึ่งหมื่น",
+          "koreanPronunciation": "능 믄",
+          "romanization": "nʉ̀eng-mʉ̀uen",
+          "audio": {
+            "male": {
+              "normal": "assets/audio/supplements/numbers/aid1_n10000_male_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_n10000_male_slow.mp3"
+            },
+            "female": {
+              "normal": "assets/audio/supplements/numbers/aid1_n10000_female_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_n10000_female_slow.mp3"
+            }
+          }
+        },
+        {
+          "id": "N1000000",
+          "value": "1,000,000",
+          "english": "One million",
+          "thai": "หนึ่งล้าน",
+          "koreanPronunciation": "능 란",
+          "romanization": "nʉ̀eng-láan",
+          "audio": {
+            "male": {
+              "normal": "assets/audio/supplements/numbers/aid1_n1000000_male_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_n1000000_male_slow.mp3"
+            },
+            "female": {
+              "normal": "assets/audio/supplements/numbers/aid1_n1000000_female_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_n1000000_female_slow.mp3"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ordinals",
+      "title": "서수: 티 + 숫자",
+      "items": [
+        {
+          "id": "O001",
+          "value": "첫째",
+          "english": "First",
+          "thai": "ที่หนึ่ง",
+          "koreanPronunciation": "티능",
+          "romanization": "thîi-nʉ̀eng",
+          "audio": {
+            "male": {
+              "normal": "assets/audio/supplements/numbers/aid1_o001_male_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_o001_male_slow.mp3"
+            },
+            "female": {
+              "normal": "assets/audio/supplements/numbers/aid1_o001_female_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_o001_female_slow.mp3"
+            }
+          }
+        },
+        {
+          "id": "O002",
+          "value": "둘째",
+          "english": "Second",
+          "thai": "ที่สอง",
+          "koreanPronunciation": "티썽",
+          "romanization": "thîi-sǎawng",
+          "audio": {
+            "male": {
+              "normal": "assets/audio/supplements/numbers/aid1_o002_male_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_o002_male_slow.mp3"
+            },
+            "female": {
+              "normal": "assets/audio/supplements/numbers/aid1_o002_female_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_o002_female_slow.mp3"
+            }
+          }
+        },
+        {
+          "id": "O003",
+          "value": "셋째",
+          "english": "Third",
+          "thai": "ที่สาม",
+          "koreanPronunciation": "티쌈",
+          "romanization": "thîi-sǎam",
+          "audio": {
+            "male": {
+              "normal": "assets/audio/supplements/numbers/aid1_o003_male_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_o003_male_slow.mp3"
+            },
+            "female": {
+              "normal": "assets/audio/supplements/numbers/aid1_o003_female_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_o003_female_slow.mp3"
+            }
+          }
+        },
+        {
+          "id": "O004",
+          "value": "넷째",
+          "english": "Fourth",
+          "thai": "ที่สี่",
+          "koreanPronunciation": "티씨",
+          "romanization": "thîi-sìi",
+          "audio": {
+            "male": {
+              "normal": "assets/audio/supplements/numbers/aid1_o004_male_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_o004_male_slow.mp3"
+            },
+            "female": {
+              "normal": "assets/audio/supplements/numbers/aid1_o004_female_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_o004_female_slow.mp3"
+            }
+          }
+        },
+        {
+          "id": "O005",
+          "value": "다섯째",
+          "english": "Fifth",
+          "thai": "ที่ห้า",
+          "koreanPronunciation": "티하",
+          "romanization": "thîi-hâa",
+          "audio": {
+            "male": {
+              "normal": "assets/audio/supplements/numbers/aid1_o005_male_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_o005_male_slow.mp3"
+            },
+            "female": {
+              "normal": "assets/audio/supplements/numbers/aid1_o005_female_normal.mp3",
+              "slow": "assets/audio/supplements/numbers/aid1_o005_female_slow.mp3"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

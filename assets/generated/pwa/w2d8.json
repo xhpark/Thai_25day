@@ -9,16 +9,16 @@
   "hook": "내 이름을 넣어 바로 말해 본다.",
   "story": "처음 만난 사람에게 자기 이름을 소개한다.",
   "missionGoal": "본인 이름을 넣어 자신 있게 자기소개한다.",
-  "ministryGuide": "이름 소개는 관계를 여는 가장 기본적인 다리다. 짧아도 또렷하게 말하는 것이 중요하다.",
+  "ministryGuide": "태국인은 한국인이 성과 이름을 모두 말하면 어렵게 느낄 수 있으므로, 미리 자신의 이름과 비슷하면서 좋은 뜻을 가진 태국어 닉네임, 즉 1음절이나 2음절의 짧은 '츠렌(닉네임)'을 정해서 가면 좋다.",
   "speakingMission": "자기 이름을 넣어 남성형/여성형 기준으로 각각 3회 연습한다.",
   "primaryImage": {
     "sceneId": "name_intro_conversation",
-    "altTextKo": "예배 후 처음 만나 이름을 묻고 자기소개하는 장면",
+    "altTextKo": "교회 친교 자리에서 이름을 묻고 자기 이름을 소개하는 장면",
     "sourcePlan": [
       {
         "type": "local_preferred",
         "assetPath": "assets/images/scenes/name_intro_conversation.jpg",
-        "status": "missing"
+        "status": "ready"
       },
       {
         "type": "stock_preferred",
@@ -47,7 +47,46 @@
       }
     ]
   },
-  "keywordImages": [],
+  "keywordImages": [
+    {
+      "keywordId": "W014",
+      "priority": "optional",
+      "sourcePlan": [
+        {
+          "type": "local_preferred",
+          "assetPath": "assets/images/keywords/W014.jpg",
+          "status": "missing"
+        },
+        {
+          "type": "stock_preferred",
+          "queries": [
+            "name realistic photo",
+            "이름 learning image"
+          ],
+          "status": "search_required"
+        },
+        {
+          "type": "ai_fallback",
+          "prompt": {
+            "scene": "single concept image for name",
+            "peopleAndAction": "show the concept clearly and simply",
+            "setting": "clean realistic learning image",
+            "mood": "warm and easy to recognize",
+            "cameraFraming": "close or medium crop",
+            "lighting": "bright neutral light",
+            "avoidList": [
+              "blurry or noisy image",
+              "heavy watermark",
+              "text embedded in photo",
+              "theological symbolism without a real scene",
+              "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
+            ]
+          },
+          "status": "generate_if_needed"
+        }
+      ]
+    }
+  ],
   "newPhrases": [
     {
       "variantId": "9",
@@ -116,6 +155,36 @@
   ],
   "keywords": [
     {
+      "id": "W014",
+      "variantIds": [
+        "8",
+        "9"
+      ],
+      "korean": "이름",
+      "english": "name",
+      "thai": "ชื่อ",
+      "romanization": "chûue",
+      "koreanPronunciation": "츠",
+      "tier": "core",
+      "days": [
+        7,
+        8,
+        10,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W014_male_normal.mp3",
+          "slow": "assets/audio/words/W014_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W014_female_normal.mp3",
+          "slow": "assets/audio/words/W014_female_slow.mp3"
+        }
+      }
+    },
+    {
       "id": "W016",
       "variantIds": [
         "9",
@@ -176,6 +245,36 @@
   ],
   "displayKeywords": [
     {
+      "id": "W014",
+      "variantIds": [
+        "8",
+        "9"
+      ],
+      "korean": "이름",
+      "english": "name",
+      "thai": "ชื่อ",
+      "romanization": "chûue",
+      "koreanPronunciation": "츠",
+      "tier": "core",
+      "days": [
+        7,
+        8,
+        10,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W014_male_normal.mp3",
+          "slow": "assets/audio/words/W014_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W014_female_normal.mp3",
+          "slow": "assets/audio/words/W014_female_slow.mp3"
+        }
+      }
+    },
+    {
       "id": "W016",
       "variantIds": [
         "9",
@@ -234,10 +333,11 @@
       }
     }
   ],
+  "supplementLinks": [],
   "supplementalKeywords": [],
   "keywordDisplayPolicy": {
-    "default": "core_only",
-    "toggleSupplemental": true,
+    "default": "keyWordIds_order",
+    "toggleSupplemental": false,
     "emptyCoreFallback": "show_first_three_keywords"
   },
   "learnerProfile": {

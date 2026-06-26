@@ -880,6 +880,116 @@
       }
     },
     {
+      "id": "W021",
+      "variantIds": [
+        "11"
+      ],
+      "korean": "~에 있다",
+      "english": "to be located",
+      "thai": "อยู่",
+      "romanization": "yùu",
+      "koreanPronunciation": "유",
+      "tier": "supplemental",
+      "days": [
+        11,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W021_male_normal.mp3",
+          "slow": "assets/audio/words/W021_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W021_female_normal.mp3",
+          "slow": "assets/audio/words/W021_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W022",
+      "variantIds": [
+        "11"
+      ],
+      "korean": "어디",
+      "english": "where",
+      "thai": "ที่ไหน",
+      "romanization": "thîi-năi",
+      "koreanPronunciation": "티 나이",
+      "tier": "supplemental",
+      "days": [
+        11,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W022_male_normal.mp3",
+          "slow": "assets/audio/words/W022_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W022_female_normal.mp3",
+          "slow": "assets/audio/words/W022_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W023",
+      "variantIds": [
+        "12"
+      ],
+      "korean": "드시다/먹다",
+      "english": "eat",
+      "thai": "ทาน",
+      "romanization": "thaan",
+      "koreanPronunciation": "탄",
+      "tier": "supplemental",
+      "days": [
+        12,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W023_male_normal.mp3",
+          "slow": "assets/audio/words/W023_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W023_female_normal.mp3",
+          "slow": "assets/audio/words/W023_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W024",
+      "variantIds": [
+        "12",
+        "23"
+      ],
+      "korean": "~에게/~하도록",
+      "english": "give/to/let",
+      "thai": "ให้",
+      "romanization": "hâi",
+      "koreanPronunciation": "하이",
+      "tier": "supplemental",
+      "days": [
+        12,
+        15,
+        23,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W024_male_normal.mp3",
+          "slow": "assets/audio/words/W024_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W024_female_normal.mp3",
+          "slow": "assets/audio/words/W024_female_slow.mp3"
+        }
+      }
+    },
+    {
       "id": "W025",
       "variantIds": [
         "12",
@@ -963,6 +1073,113 @@
       }
     },
     {
+      "id": "W030",
+      "variantIds": [
+        "16"
+      ],
+      "korean": "그리고/그 후",
+      "english": "then/and then",
+      "thai": "แล้ว",
+      "romanization": "láew",
+      "koreanPronunciation": "래우",
+      "tier": "supplemental",
+      "days": [
+        14,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W030_male_normal.mp3",
+          "slow": "assets/audio/words/W030_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W030_female_normal.mp3",
+          "slow": "assets/audio/words/W030_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W031",
+      "variantIds": [
+        "16"
+      ],
+      "korean": "만나다",
+      "english": "meet",
+      "thai": "พบกัน",
+      "romanization": "phóp-gan",
+      "koreanPronunciation": "폽깐",
+      "tier": "supplemental",
+      "days": [
+        14,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W031_male_normal.mp3",
+          "slow": "assets/audio/words/W031_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W031_female_normal.mp3",
+          "slow": "assets/audio/words/W031_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W032",
+      "variantIds": [
+        "16"
+      ],
+      "korean": "다시/새로",
+      "english": "again/new",
+      "thai": "ใหม่",
+      "romanization": "mài",
+      "koreanPronunciation": "마이",
+      "tier": "supplemental",
+      "days": [
+        14,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W032_male_normal.mp3",
+          "slow": "assets/audio/words/W032_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W032_female_normal.mp3",
+          "slow": "assets/audio/words/W032_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W044",
+      "variantIds": [
+        "23"
+      ],
+      "korean": "~할 것이다",
+      "english": "will",
+      "thai": "จะ",
+      "romanization": "jà",
+      "koreanPronunciation": "짜",
+      "tier": "supplemental",
+      "days": [
+        23,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W044_male_normal.mp3",
+          "slow": "assets/audio/words/W044_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W044_female_normal.mp3",
+          "slow": "assets/audio/words/W044_female_slow.mp3"
+        }
+      }
+    },
+    {
       "id": "W045",
       "variantIds": [
         "23"
@@ -989,6 +1206,7 @@
       }
     }
   ],
+  "supplementLinks": [],
   "supplementalKeywords": [
     {
       "id": "W021",
@@ -1209,8 +1427,8 @@
     }
   ],
   "keywordDisplayPolicy": {
-    "default": "core_only",
-    "toggleSupplemental": true,
+    "default": "keyWordIds_order",
+    "toggleSupplemental": false,
     "emptyCoreFallback": "show_first_three_keywords"
   },
   "learnerProfile": {

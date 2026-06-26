@@ -138,7 +138,7 @@
         "W5D22",
         "W2SAT"
       ],
-      "localAsset": null,
+      "localAsset": "assets/images/scenes/name_intro_conversation.jpg",
       "stockSearchQueries": [
         "church fellowship two people introducing themselves",
         "Asian church conversation after worship",
@@ -156,13 +156,13 @@
           "stage presentation feel"
         ]
       },
-      "altTextKo": "예배 후 처음 만나 이름을 묻고 자기소개하는 장면",
+      "altTextKo": "교회 친교 자리에서 이름을 묻고 자기 이름을 소개하는 장면",
       "licensing": {
-        "licenseType": null,
-        "sourceUrl": null,
-        "attributionRequired": null,
+        "licenseType": "user_provided",
+        "sourceUrl": "D:/문서/태국선교/image/Whatsyourname_Mynameis.png",
+        "attributionRequired": false,
         "attributionText": null,
-        "approvalStatus": "pending"
+        "approvalStatus": "approved_for_pilot"
       }
     },
     {
@@ -234,7 +234,6 @@
     {
       "sceneId": "encouragement_and_blessing",
       "useFor": [
-        "W2D10",
         "W4D16",
         "W4D17",
         "W4D18",
@@ -488,6 +487,105 @@
       "licensing": {
         "licenseType": "user_provided",
         "sourceUrl": null,
+        "attributionRequired": false,
+        "attributionText": null,
+        "approvalStatus": "approved_for_pilot"
+      }
+    },
+    {
+      "sceneId": "polite_excuse_reassurance",
+      "useFor": [
+        "W2D6"
+      ],
+      "localAsset": "assets/images/scenes/polite_excuse_reassurance.jpg",
+      "stockSearchQueries": [
+        "polite wai greeting church hallway Thailand",
+        "church hallway polite greeting Asian adults",
+        "Thai church respectful excuse me conversation"
+      ],
+      "aiPrompt": {
+        "scene": "polite excuse and reassurance in a church hallway",
+        "peopleAndAction": "one visitor makes a gentle wai greeting while local church members respond warmly",
+        "setting": "church hallway after worship",
+        "mood": "respectful, calm, welcoming",
+        "cameraFraming": "medium documentary photo",
+        "lighting": "bright indoor natural light",
+        "avoidList": [
+          "tense confrontation",
+          "crowded chaos",
+          "comic embarrassment"
+        ]
+      },
+      "altTextKo": "교회 복도에서 정중하게 실례를 구하고 따뜻하게 응답받는 장면",
+      "licensing": {
+        "licenseType": "user_provided",
+        "sourceUrl": "D:/문서/태국선교/image/Excuseme.png",
+        "attributionRequired": false,
+        "attributionText": null,
+        "approvalStatus": "approved_for_pilot"
+      }
+    },
+    {
+      "sceneId": "age_question_child",
+      "useFor": [
+        "W2D9"
+      ],
+      "localAsset": "assets/images/scenes/age_question_child.jpg",
+      "stockSearchQueries": [
+        "friendly adult asking child age church yard",
+        "Asian woman talking with child garden",
+        "warm church courtyard child conversation"
+      ],
+      "aiPrompt": {
+        "scene": "friendly age question with a child",
+        "peopleAndAction": "adult smiles and gently talks with a child who shows age with fingers",
+        "setting": "church garden or courtyard in Thailand",
+        "mood": "warm, careful, friendly",
+        "cameraFraming": "medium shot",
+        "lighting": "soft natural daylight",
+        "avoidList": [
+          "interrogation feel",
+          "awkward adult-only age question",
+          "dark mood"
+        ]
+      },
+      "altTextKo": "교회 마당에서 어린이에게 나이를 조심스럽고 친근하게 묻는 장면",
+      "licensing": {
+        "licenseType": "user_provided",
+        "sourceUrl": "D:/문서/태국선교/image/Howoldareyou.png",
+        "attributionRequired": false,
+        "attributionText": null,
+        "approvalStatus": "approved_for_pilot"
+      }
+    },
+    {
+      "sceneId": "we_love_you_group",
+      "useFor": [
+        "W2D10"
+      ],
+      "localAsset": "assets/images/scenes/we_love_you_group.jpg",
+      "stockSearchQueries": [
+        "mission team and local church group we love you Thailand",
+        "church community welcoming mission team village Thailand",
+        "warm group greeting church village Thailand"
+      ],
+      "aiPrompt": {
+        "scene": "church community warmly saying we love you",
+        "peopleAndAction": "Korean mission team and local Thai church members smiling together in a welcoming circle",
+        "setting": "rural Thai church yard",
+        "mood": "joyful, communal, welcoming",
+        "cameraFraming": "wide group documentary photo",
+        "lighting": "bright natural daylight",
+        "avoidList": [
+          "stage performance",
+          "political rally",
+          "sad mood"
+        ]
+      },
+      "altTextKo": "태국 교회 마당에서 공동체가 우리는 당신들을 사랑해요라고 따뜻하게 전하는 장면",
+      "licensing": {
+        "licenseType": "user_provided",
+        "sourceUrl": "D:/문서/태국선교/image/Weloveyou.png",
         "attributionRequired": false,
         "attributionText": null,
         "approvalStatus": "approved_for_pilot"

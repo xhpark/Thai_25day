@@ -26,6 +26,23 @@ def check_audio(owner: str, item: dict[str, Any], errors: list[str]) -> None:
                 errors.append(f"{owner}: missing audio for {item_id} {gender}/{mode}: {rel_path}")
 
 
+def check_learning_aid(errors: list[str]) -> None:
+    aid_path = ROOT / "assets/generated/pwa/aid1_numbers.json"
+    if not aid_path.exists():
+        errors.append("missing learning aid spec: assets/generated/pwa/aid1_numbers.json")
+        return
+    aid = load_json(aid_path)
+    if aid.get("kind") != "pwa_learning_aid_spec":
+        errors.append(f"{aid_path.relative_to(ROOT)}: invalid kind {aid.get('kind')}")
+    item_count = 0
+    for section in aid.get("sections", []):
+        for item in section.get("items", []):
+            item_count += 1
+            check_audio(aid["id"], item, errors)
+    if item_count != 30:
+        errors.append(f"{aid['id']}: expected 30 number items, got {item_count}")
+
+
 def main() -> int:
     errors: list[str] = []
 
@@ -93,6 +110,8 @@ def main() -> int:
         local_asset = scene.get("localAsset")
         if local_asset and not (ROOT / local_asset).exists():
             errors.append(f"{scene['sceneId']}: missing local image {local_asset}")
+
+    check_learning_aid(errors)
 
     if errors:
         print("[FAIL] asset link validation failed")

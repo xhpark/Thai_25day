@@ -17,7 +17,7 @@
   },
   "contentSource": {
     "phrases": "Weekday lesson newPhrases rendered as mainPhrases; review-only weekdays fall back to reviewPhrases.",
-    "keywords": "Weekday lesson keyWordIds filtered through displayKeywords.",
+    "keywords": "Weekday lesson keyWordIds rendered as displayKeywords.",
     "missionText": "Weekday speakingMission rendered as the main action box.",
     "ministryGuide": "Weekday ministryGuide rendered as the relational guide line."
   },
@@ -30,32 +30,36 @@
   "ministryGuide": "정중한 첫마디는 낯선 만남을 편안하게 만들고 이후 소개도 쉬워진다.",
   "speakingMission": "실례합니다와 괜찮아요를 한 쌍으로 5회 말한다.",
   "primaryImage": {
-    "sceneId": null,
-    "altTextKo": "정중하게 말 걸기 학습 장면",
+    "sceneId": "polite_excuse_reassurance",
+    "altTextKo": "교회 복도에서 정중하게 실례를 구하고 따뜻하게 응답받는 장면",
     "sourcePlan": [
+      {
+        "type": "local_preferred",
+        "assetPath": "assets/images/scenes/polite_excuse_reassurance.jpg",
+        "status": "ready"
+      },
       {
         "type": "stock_preferred",
         "queries": [
-          "정중하게 말 걸기",
-          "사람 사이를 지나가거나 작은 실수를 했을 때 정중하게 말한다."
+          "polite wai greeting church hallway Thailand",
+          "church hallway polite greeting Asian adults",
+          "Thai church respectful excuse me conversation"
         ],
         "status": "search_required"
       },
       {
         "type": "ai_fallback",
         "prompt": {
-          "scene": "정중하게 말 걸기",
-          "peopleAndAction": "사람 사이를 지나가거나 작은 실수를 했을 때 정중하게 말한다.",
-          "setting": "Thai church or daily-life mission context",
-          "mood": "warm, respectful, practical",
-          "cameraFraming": "documentary style",
-          "lighting": "bright natural light",
+          "scene": "polite excuse and reassurance in a church hallway",
+          "peopleAndAction": "one visitor makes a gentle wai greeting while local church members respond warmly",
+          "setting": "church hallway after worship",
+          "mood": "respectful, calm, welcoming",
+          "cameraFraming": "medium documentary photo",
+          "lighting": "bright indoor natural light",
           "avoidList": [
-            "blurry or noisy image",
-            "heavy watermark",
-            "text embedded in photo",
-            "theological symbolism without a real scene",
-            "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
+            "tense confrontation",
+            "crowded chaos",
+            "comic embarrassment"
           ]
         },
         "status": "generate_if_needed"
@@ -250,6 +254,37 @@
           "slow": "assets/audio/words/W012_female_slow.mp3"
         }
       }
+    },
+    {
+      "id": "W009",
+      "variantIds": [
+        "4",
+        "7"
+      ],
+      "korean": "괜찮아요",
+      "english": "never mind / it's okay",
+      "thai": "ไม่เป็นไร",
+      "romanization": "mâi-pen-rai",
+      "koreanPronunciation": "마이 뻰 라이",
+      "tier": "core",
+      "days": [
+        3,
+        5,
+        6,
+        10,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W009_male_normal.mp3",
+          "slow": "assets/audio/words/W009_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W009_female_normal.mp3",
+          "slow": "assets/audio/words/W009_female_slow.mp3"
+        }
+      }
     }
   ],
   "displayKeywords": [
@@ -280,11 +315,42 @@
           "slow": "assets/audio/words/W012_female_slow.mp3"
         }
       }
+    },
+    {
+      "id": "W009",
+      "variantIds": [
+        "4",
+        "7"
+      ],
+      "korean": "괜찮아요",
+      "english": "never mind / it's okay",
+      "thai": "ไม่เป็นไร",
+      "romanization": "mâi-pen-rai",
+      "koreanPronunciation": "마이 뻰 라이",
+      "tier": "core",
+      "days": [
+        3,
+        5,
+        6,
+        10,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W009_male_normal.mp3",
+          "slow": "assets/audio/words/W009_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W009_female_normal.mp3",
+          "slow": "assets/audio/words/W009_female_slow.mp3"
+        }
+      }
     }
   ],
   "supplementalKeywords": [],
   "keywordDisplayPolicy": {
-    "default": "core_only",
+    "default": "keyWordIds_order",
     "toggleSupplemental": false
   },
   "audioModes": [

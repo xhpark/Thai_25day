@@ -308,6 +308,40 @@
       }
     },
     {
+      "id": "W008",
+      "variantIds": [
+        "3",
+        "13",
+        "14"
+      ],
+      "korean": "많이/매우",
+      "english": "very/much",
+      "thai": "มาก",
+      "romanization": "mâak",
+      "koreanPronunciation": "막",
+      "tier": "supplemental",
+      "days": [
+        3,
+        5,
+        10,
+        12,
+        13,
+        15,
+        20,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W008_male_normal.mp3",
+          "slow": "assets/audio/words/W008_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W008_female_normal.mp3",
+          "slow": "assets/audio/words/W008_female_slow.mp3"
+        }
+      }
+    },
+    {
       "id": "W026",
       "variantIds": [
         "12"
@@ -364,6 +398,62 @@
   ],
   "displayKeywords": [
     {
+      "id": "W023",
+      "variantIds": [
+        "12"
+      ],
+      "korean": "드시다/먹다",
+      "english": "eat",
+      "thai": "ทาน",
+      "romanization": "thaan",
+      "koreanPronunciation": "탄",
+      "tier": "supplemental",
+      "days": [
+        12,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W023_male_normal.mp3",
+          "slow": "assets/audio/words/W023_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W023_female_normal.mp3",
+          "slow": "assets/audio/words/W023_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W024",
+      "variantIds": [
+        "12",
+        "23"
+      ],
+      "korean": "~에게/~하도록",
+      "english": "give/to/let",
+      "thai": "ให้",
+      "romanization": "hâi",
+      "koreanPronunciation": "하이",
+      "tier": "supplemental",
+      "days": [
+        12,
+        15,
+        23,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W024_male_normal.mp3",
+          "slow": "assets/audio/words/W024_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W024_female_normal.mp3",
+          "slow": "assets/audio/words/W024_female_slow.mp3"
+        }
+      }
+    },
+    {
       "id": "W025",
       "variantIds": [
         "12",
@@ -390,8 +480,97 @@
           "slow": "assets/audio/words/W025_female_slow.mp3"
         }
       }
+    },
+    {
+      "id": "W008",
+      "variantIds": [
+        "3",
+        "13",
+        "14"
+      ],
+      "korean": "많이/매우",
+      "english": "very/much",
+      "thai": "มาก",
+      "romanization": "mâak",
+      "koreanPronunciation": "막",
+      "tier": "supplemental",
+      "days": [
+        3,
+        5,
+        10,
+        12,
+        13,
+        15,
+        20,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W008_male_normal.mp3",
+          "slow": "assets/audio/words/W008_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W008_female_normal.mp3",
+          "slow": "assets/audio/words/W008_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W026",
+      "variantIds": [
+        "12"
+      ],
+      "korean": "부드러운 권유 어미",
+      "english": "softening particle",
+      "thai": "นะ",
+      "romanization": "ná",
+      "koreanPronunciation": "나",
+      "tier": "supplemental",
+      "days": [
+        12,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W026_male_normal.mp3",
+          "slow": "assets/audio/words/W026_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W026_female_normal.mp3",
+          "slow": "assets/audio/words/W026_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W027",
+      "variantIds": [
+        "13"
+      ],
+      "korean": "정말",
+      "english": "really",
+      "thai": "จริง ๆ",
+      "romanization": "jing-jing",
+      "koreanPronunciation": "찡찡",
+      "tier": "supplemental",
+      "days": [
+        12,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W027_male_normal.mp3",
+          "slow": "assets/audio/words/W027_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W027_female_normal.mp3",
+          "slow": "assets/audio/words/W027_female_slow.mp3"
+        }
+      }
     }
   ],
+  "supplementLinks": [],
   "supplementalKeywords": [
     {
       "id": "W023",
@@ -446,6 +625,40 @@
         "female": {
           "normal": "assets/audio/words/W024_female_normal.mp3",
           "slow": "assets/audio/words/W024_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W008",
+      "variantIds": [
+        "3",
+        "13",
+        "14"
+      ],
+      "korean": "많이/매우",
+      "english": "very/much",
+      "thai": "มาก",
+      "romanization": "mâak",
+      "koreanPronunciation": "막",
+      "tier": "supplemental",
+      "days": [
+        3,
+        5,
+        10,
+        12,
+        13,
+        15,
+        20,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W008_male_normal.mp3",
+          "slow": "assets/audio/words/W008_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W008_female_normal.mp3",
+          "slow": "assets/audio/words/W008_female_slow.mp3"
         }
       }
     },
@@ -505,8 +718,8 @@
     }
   ],
   "keywordDisplayPolicy": {
-    "default": "core_only",
-    "toggleSupplemental": true,
+    "default": "keyWordIds_order",
+    "toggleSupplemental": false,
     "emptyCoreFallback": "show_first_three_keywords"
   },
   "learnerProfile": {

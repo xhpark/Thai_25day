@@ -17,7 +17,7 @@
   },
   "contentSource": {
     "phrases": "Weekday lesson newPhrases rendered as mainPhrases; review-only weekdays fall back to reviewPhrases.",
-    "keywords": "Weekday lesson keyWordIds filtered through displayKeywords.",
+    "keywords": "Weekday lesson keyWordIds rendered as displayKeywords.",
     "missionText": "Weekday speakingMission rendered as the main action box.",
     "ministryGuide": "Weekday ministryGuide rendered as the relational guide line."
   },
@@ -410,6 +410,32 @@
   ],
   "displayKeywords": [
     {
+      "id": "W046",
+      "variantIds": [
+        "24"
+      ],
+      "korean": "오다",
+      "english": "come",
+      "thai": "มา",
+      "romanization": "maa",
+      "koreanPronunciation": "마",
+      "tier": "supplemental",
+      "days": [
+        24,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W046_male_normal.mp3",
+          "slow": "assets/audio/words/W046_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W046_female_normal.mp3",
+          "slow": "assets/audio/words/W046_female_slow.mp3"
+        }
+      }
+    },
+    {
       "id": "W047",
       "variantIds": [
         "24"
@@ -517,7 +543,7 @@
     }
   ],
   "keywordDisplayPolicy": {
-    "default": "core_only",
+    "default": "keyWordIds_order",
     "toggleSupplemental": false
   },
   "audioModes": [

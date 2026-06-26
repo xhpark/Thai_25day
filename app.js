@@ -24,9 +24,18 @@ function requestedDay() {
   return Number.isInteger(day) && day >= 1 && day <= TOTAL_DAYS ? day : 1;
 }
 
+function requestedAid() {
+  const params = new URLSearchParams(window.location.search);
+  return params.get("aid");
+}
+
 function specUrlForDay(day) {
   const week = Math.ceil(day / 5);
   return `assets/generated/pwa/w${week}d${day}.json`;
+}
+
+function specUrlForAid(aid) {
+  return aid === "1" ? "assets/generated/pwa/aid1_numbers.json" : null;
 }
 
 function readStorage(key, fallback) {
@@ -67,6 +76,16 @@ function initState(spec) {
   writeStorage(STORAGE_KEYS.schemaVersion, String(spec.statePolicy?.schemaVersion || 1));
   writeStorage(STORAGE_KEYS.currentDay, String(spec.day));
   writeStorage(STORAGE_KEYS.lastOpenedLessonId, spec.id);
+}
+
+function initSupplementState(spec) {
+  const savedSpeaker = readStorage(STORAGE_KEYS.speakerPreference, "female");
+  const savedMode = readStorage(STORAGE_KEYS.audioSpeedPreference, "normal");
+
+  state.spec = spec;
+  state.speaker = ["male", "female"].includes(savedSpeaker) ? savedSpeaker : "female";
+  state.audioMode = ["normal", "slow"].includes(savedMode) ? savedMode : "normal";
+  state.completedIds = parseJsonStorage(STORAGE_KEYS.completedLessonIds, []);
 }
 
 function escapeHtml(value) {
@@ -177,6 +196,8 @@ function render() {
         </div>
       </section>
 
+      ${renderSupplementLinks(spec)}
+
       <section class="section" aria-labelledby="practice-heading">
         <div class="section-heading">
           <h2 id="practice-heading">말하기 미션</h2>
@@ -253,6 +274,30 @@ function renderReviewList() {
         })
         .join("")}
     </div>
+  `;
+}
+
+function renderSupplementLinks(spec) {
+  const links = spec.supplementLinks || [];
+  if (!links.length) return "";
+  return `
+    <section class="section" aria-labelledby="supplement-heading">
+      <div class="section-heading">
+        <h2 id="supplement-heading">보조 학습</h2>
+      </div>
+      <div class="supplement-panel">
+        ${links
+          .map(
+            (link) => `
+              <a class="supplement-link" href="${escapeHtml(link.href)}">
+                <span class="supplement-link-title">${escapeHtml(link.title)}</span>
+                <span class="supplement-link-copy">${escapeHtml(link.description)}</span>
+              </a>
+            `
+          )
+          .join("")}
+      </div>
+    </section>
   `;
 }
 
@@ -339,6 +384,107 @@ function renderKeyword(keyword) {
   `;
 }
 
+function renderSupplement() {
+  const spec = state.spec;
+  document.getElementById("app").innerHTML = `
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">보조</div>
+        <div>
+          <p class="brand-title">Thai 25 Day</p>
+          <p class="brand-subtitle">${escapeHtml(spec.subtitle)}</p>
+        </div>
+      </div>
+      <div class="status-pill">숫자 연습</div>
+    </header>
+
+    <nav class="day-nav single-link" aria-label="학습 보조자료 이동">
+      ${spec.backLinks
+        .map(
+          (link) => `
+            <a class="day-nav-link active" href="${escapeHtml(link.href)}">${escapeHtml(link.label)}</a>
+          `
+        )
+        .join("")}
+    </nav>
+
+    <main>
+      <section class="hero supplement-hero" aria-labelledby="aid-title">
+        <div>
+          <p class="eyebrow">학습보조${spec.aid}</p>
+          <h1 id="aid-title">${escapeHtml(spec.title)}</h1>
+          <p class="hero-copy">${escapeHtml(spec.description)}</p>
+        </div>
+        <div class="supplement-summary" aria-label="학습보조1 요약">
+          <span>0-12</span>
+          <span>20-90</span>
+          <span>100+</span>
+          <span>서수</span>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="aid-control-heading">
+        <div class="section-heading">
+          <h2 id="aid-control-heading">음성 선택</h2>
+          <p class="section-note">${escapeHtml(speakerLabel(state.speaker))} 음성</p>
+        </div>
+        <div class="supplement-control-panel">
+          ${renderSpeakerToggle()}
+          <div id="audio-status" class="audio-status" role="status">숫자 오디오 버튼을 누르면 재생 상태가 여기에 표시됩니다.</div>
+        </div>
+      </section>
+
+      ${spec.sections.map(renderSupplementSection).join("")}
+    </main>
+  `;
+
+  bindSupplementEvents();
+}
+
+function renderSupplementSection(section) {
+  return `
+    <section class="section" aria-labelledby="${escapeHtml(section.id)}-heading">
+      <div class="section-heading">
+        <h2 id="${escapeHtml(section.id)}-heading">${escapeHtml(section.title)}</h2>
+        <p class="section-note">${section.items.length}개</p>
+      </div>
+      <div class="number-grid">
+        ${section.items.map(renderNumberItem).join("")}
+      </div>
+    </section>
+  `;
+}
+
+function renderNumberItem(item) {
+  const speakerAudio = item.audio?.[state.speaker] || item.audio?.female || item.audio?.male || {};
+  return `
+    <article class="number-item">
+      <div class="number-main">
+        <span class="number-value">${escapeHtml(item.value)}</span>
+        <span class="number-korean">${escapeHtml(item.koreanPronunciation)}</span>
+        <span class="number-thai" lang="th">${escapeHtml(item.thai)}</span>
+        <span class="number-meta">${escapeHtml(item.english)} · ${escapeHtml(item.romanization)}</span>
+      </div>
+      <div class="number-audio" aria-label="${escapeHtml(item.koreanPronunciation)} 숫자 오디오">
+        ${["normal", "slow"]
+          .map((mode) => {
+            const path = speakerAudio[mode];
+            return `
+              <button class="audio-btn secondary"
+                data-audio="${escapeHtml(path || "")}"
+                data-mode="${mode}"
+                data-audio-label="${escapeHtml(item.koreanPronunciation)} ${modeLabel(mode)}"
+                ${path ? "" : "disabled"}>
+                ${playIconSvg()} ${modeLabel(mode)}
+              </button>
+            `;
+          })
+          .join("")}
+      </div>
+    </article>
+  `;
+}
+
 function bindEvents() {
   document.querySelectorAll("[data-speaker]").forEach((button) => {
     button.addEventListener("click", () => {
@@ -357,7 +503,7 @@ function bindEvents() {
       state.audioMode = mode;
       writeStorage(STORAGE_KEYS.audioSpeedPreference, mode);
       playAudio(audioPath, label);
-      renderAudioPressedState(mode);
+      renderAudioPressedState(mode, button);
     });
   });
 
@@ -378,9 +524,39 @@ function bindEvents() {
   });
 }
 
-function renderAudioPressedState(mode) {
+function bindSupplementEvents() {
+  document.querySelectorAll("[data-speaker]").forEach((button) => {
+    button.addEventListener("click", () => {
+      state.speaker = button.dataset.speaker;
+      writeStorage(STORAGE_KEYS.speakerPreference, state.speaker);
+      renderSupplement();
+    });
+  });
+
+  document.querySelectorAll("[data-audio]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const audioPath = button.dataset.audio;
+      const mode = button.dataset.mode;
+      const label = button.dataset.audioLabel || modeLabel(mode);
+      if (!audioPath) return;
+      state.audioMode = mode;
+      writeStorage(STORAGE_KEYS.audioSpeedPreference, mode);
+      playAudio(audioPath, label);
+      renderAudioPressedState(mode, button);
+    });
+  });
+}
+
+function renderAudioPressedState(mode, activeButton = null) {
   document.querySelectorAll("[data-mode]").forEach((button) => {
-    button.setAttribute("aria-pressed", String(button.dataset.mode === mode));
+    button.setAttribute("aria-pressed", "false");
+  });
+  if (activeButton) {
+    activeButton.setAttribute("aria-pressed", "true");
+    return;
+  }
+  document.querySelectorAll(`[data-mode="${mode}"]`).forEach((button) => {
+    button.setAttribute("aria-pressed", "true");
   });
 }
 
@@ -429,10 +605,12 @@ function showToast(message) {
 }
 
 function renderError(error) {
+  const aid = requestedAid();
+  const label = aid ? `학습보조${escapeHtml(aid)}` : `${requestedDay()}일차`;
   document.getElementById("app").innerHTML = `
     <div class="error-panel">
       <p class="eyebrow">불러오기 실패</p>
-      <h1>${requestedDay()}일차 자료를 열 수 없습니다</h1>
+      <h1>${label} 자료를 열 수 없습니다</h1>
       <p>${escapeHtml(error.message)}</p>
     </div>
   `;
@@ -440,12 +618,19 @@ function renderError(error) {
 
 async function boot() {
   try {
-    const specUrl = specUrlForDay(requestedDay());
+    const aid = requestedAid();
+    const specUrl = aid ? specUrlForAid(aid) : specUrlForDay(requestedDay());
+    if (!specUrl) throw new Error(`지원하지 않는 보조자료 번호입니다: ${aid}`);
     const response = await fetch(specUrl, { cache: "no-cache" });
     if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
     const spec = await response.json();
-    initState(spec);
-    render();
+    if (spec.kind === "pwa_learning_aid_spec") {
+      initSupplementState(spec);
+      renderSupplement();
+    } else {
+      initState(spec);
+      render();
+    }
 
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker.register("service-worker.js").catch(() => {});

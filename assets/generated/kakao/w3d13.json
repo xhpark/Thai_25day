@@ -17,7 +17,7 @@
   },
   "contentSource": {
     "phrases": "Weekday lesson newPhrases rendered as mainPhrases; review-only weekdays fall back to reviewPhrases.",
-    "keywords": "Weekday lesson keyWordIds filtered through displayKeywords.",
+    "keywords": "Weekday lesson keyWordIds rendered as displayKeywords.",
     "missionText": "Weekday speakingMission rendered as the main action box.",
     "ministryGuide": "Weekday ministryGuide rendered as the relational guide line."
   },
@@ -227,6 +227,40 @@
           "slow": "assets/audio/words/W028_female_slow.mp3"
         }
       }
+    },
+    {
+      "id": "W008",
+      "variantIds": [
+        "3",
+        "13",
+        "14"
+      ],
+      "korean": "많이/매우",
+      "english": "very/much",
+      "thai": "มาก",
+      "romanization": "mâak",
+      "koreanPronunciation": "막",
+      "tier": "supplemental",
+      "days": [
+        3,
+        5,
+        10,
+        12,
+        13,
+        15,
+        20,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W008_male_normal.mp3",
+          "slow": "assets/audio/words/W008_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W008_female_normal.mp3",
+          "slow": "assets/audio/words/W008_female_slow.mp3"
+        }
+      }
     }
   ],
   "displayKeywords": [
@@ -257,11 +291,80 @@
           "slow": "assets/audio/words/W028_female_slow.mp3"
         }
       }
+    },
+    {
+      "id": "W008",
+      "variantIds": [
+        "3",
+        "13",
+        "14"
+      ],
+      "korean": "많이/매우",
+      "english": "very/much",
+      "thai": "มาก",
+      "romanization": "mâak",
+      "koreanPronunciation": "막",
+      "tier": "supplemental",
+      "days": [
+        3,
+        5,
+        10,
+        12,
+        13,
+        15,
+        20,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W008_male_normal.mp3",
+          "slow": "assets/audio/words/W008_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W008_female_normal.mp3",
+          "slow": "assets/audio/words/W008_female_slow.mp3"
+        }
+      }
     }
   ],
-  "supplementalKeywords": [],
+  "supplementalKeywords": [
+    {
+      "id": "W008",
+      "variantIds": [
+        "3",
+        "13",
+        "14"
+      ],
+      "korean": "많이/매우",
+      "english": "very/much",
+      "thai": "มาก",
+      "romanization": "mâak",
+      "koreanPronunciation": "막",
+      "tier": "supplemental",
+      "days": [
+        3,
+        5,
+        10,
+        12,
+        13,
+        15,
+        20,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W008_male_normal.mp3",
+          "slow": "assets/audio/words/W008_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W008_female_normal.mp3",
+          "slow": "assets/audio/words/W008_female_slow.mp3"
+        }
+      }
+    }
+  ],
   "keywordDisplayPolicy": {
-    "default": "core_only",
+    "default": "keyWordIds_order",
     "toggleSupplemental": false
   },
   "audioModes": [

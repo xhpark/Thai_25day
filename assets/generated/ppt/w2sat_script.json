@@ -242,7 +242,6 @@
       "variantIds": [
         "8",
         "10",
-        "11",
         "17",
         "18",
         "19",
@@ -259,7 +258,6 @@
         7,
         9,
         10,
-        11,
         15,
         16,
         17,
@@ -372,12 +370,12 @@
   "imageNotes": {
     "primaryImage": {
       "sceneId": "name_intro_conversation",
-      "altTextKo": "예배 후 처음 만나 이름을 묻고 자기소개하는 장면",
+      "altTextKo": "교회 친교 자리에서 이름을 묻고 자기 이름을 소개하는 장면",
       "sourcePlan": [
         {
           "type": "local_preferred",
           "assetPath": "assets/images/scenes/name_intro_conversation.jpg",
-          "status": "missing"
+          "status": "ready"
         },
         {
           "type": "stock_preferred",

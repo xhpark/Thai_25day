@@ -9,35 +9,39 @@
   "hook": "관계 안에서 조심스럽게 묻는 질문을 배운다.",
   "story": "친한 사이 또는 어린이에게 나이를 묻는 장면을 연습한다.",
   "missionGoal": "상대와의 관계를 살피며 질문을 자연스럽게 이어 가는 법을 배운다.",
-  "ministryGuide": "이 질문은 관계가 어느 정도 형성된 뒤 또는 어린이와의 대화에서 쓰면 훨씬 자연스럽다.",
+  "ministryGuide": "자신의 나이를 태국어로 말할 수 있도록 미리 학습하여 말할 수 있도록 하자. 태국어 나이: 십의 자리 + 일의 자리, \"하씹 까오\" = 59",
   "speakingMission": "질문문 전체를 5회 말하고, 이름 묻기와 연결해 2회 연습한다.",
   "primaryImage": {
-    "sceneId": null,
-    "altTextKo": "나이 묻기 학습 장면",
+    "sceneId": "age_question_child",
+    "altTextKo": "교회 마당에서 어린이에게 나이를 조심스럽고 친근하게 묻는 장면",
     "sourcePlan": [
+      {
+        "type": "local_preferred",
+        "assetPath": "assets/images/scenes/age_question_child.jpg",
+        "status": "ready"
+      },
       {
         "type": "stock_preferred",
         "queries": [
-          "나이 묻기",
-          "친한 사이 또는 어린이에게 나이를 묻는 장면을 연습한다."
+          "friendly adult asking child age church yard",
+          "Asian woman talking with child garden",
+          "warm church courtyard child conversation"
         ],
         "status": "search_required"
       },
       {
         "type": "ai_fallback",
         "prompt": {
-          "scene": "나이 묻기",
-          "peopleAndAction": "친한 사이 또는 어린이에게 나이를 묻는 장면을 연습한다.",
-          "setting": "Thai church or daily-life mission context",
-          "mood": "warm, respectful, practical",
-          "cameraFraming": "documentary style",
-          "lighting": "bright natural light",
+          "scene": "friendly age question with a child",
+          "peopleAndAction": "adult smiles and gently talks with a child who shows age with fingers",
+          "setting": "church garden or courtyard in Thailand",
+          "mood": "warm, careful, friendly",
+          "cameraFraming": "medium shot",
+          "lighting": "soft natural daylight",
           "avoidList": [
-            "blurry or noisy image",
-            "heavy watermark",
-            "text embedded in photo",
-            "theological symbolism without a real scene",
-            "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
+            "interrogation feel",
+            "awkward adult-only age question",
+            "dark mood"
           ]
         },
         "status": "generate_if_needed"
@@ -183,6 +187,47 @@
   ],
   "keywords": [
     {
+      "id": "W013",
+      "variantIds": [
+        "8",
+        "10",
+        "17",
+        "18",
+        "19",
+        "22",
+        "23"
+      ],
+      "korean": "당신",
+      "english": "you",
+      "thai": "คุณ",
+      "romanization": "khun",
+      "koreanPronunciation": "쿤",
+      "tier": "supplemental",
+      "days": [
+        7,
+        9,
+        10,
+        15,
+        16,
+        17,
+        18,
+        20,
+        22,
+        23,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W013_male_normal.mp3",
+          "slow": "assets/audio/words/W013_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W013_female_normal.mp3",
+          "slow": "assets/audio/words/W013_female_slow.mp3"
+        }
+      }
+    },
+    {
       "id": "W018",
       "variantIds": [
         "10"
@@ -239,8 +284,155 @@
       }
     }
   ],
-  "displayKeywords": [],
+  "displayKeywords": [
+    {
+      "id": "W013",
+      "variantIds": [
+        "8",
+        "10",
+        "17",
+        "18",
+        "19",
+        "22",
+        "23"
+      ],
+      "korean": "당신",
+      "english": "you",
+      "thai": "คุณ",
+      "romanization": "khun",
+      "koreanPronunciation": "쿤",
+      "tier": "supplemental",
+      "days": [
+        7,
+        9,
+        10,
+        15,
+        16,
+        17,
+        18,
+        20,
+        22,
+        23,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W013_male_normal.mp3",
+          "slow": "assets/audio/words/W013_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W013_female_normal.mp3",
+          "slow": "assets/audio/words/W013_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W018",
+      "variantIds": [
+        "10"
+      ],
+      "korean": "나이",
+      "english": "age",
+      "thai": "อายุ",
+      "romanization": "aa-yú",
+      "koreanPronunciation": "아유",
+      "tier": "supplemental",
+      "days": [
+        9,
+        10,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W018_male_normal.mp3",
+          "slow": "assets/audio/words/W018_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W018_female_normal.mp3",
+          "slow": "assets/audio/words/W018_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W019",
+      "variantIds": [
+        "10"
+      ],
+      "korean": "얼마",
+      "english": "how much/how many",
+      "thai": "เท่าไหร่",
+      "romanization": "thâo-rài",
+      "koreanPronunciation": "타오 라이",
+      "tier": "supplemental",
+      "days": [
+        9,
+        10,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W019_male_normal.mp3",
+          "slow": "assets/audio/words/W019_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W019_female_normal.mp3",
+          "slow": "assets/audio/words/W019_female_slow.mp3"
+        }
+      }
+    }
+  ],
+  "supplementLinks": [
+    {
+      "id": "AID1_NUMBERS",
+      "title": "학습보조1: 태국어 숫자",
+      "href": "?aid=1",
+      "description": "나이 대답에 필요한 기본 숫자와 십 단위를 먼저 듣고 따라 말해 본다."
+    }
+  ],
   "supplementalKeywords": [
+    {
+      "id": "W013",
+      "variantIds": [
+        "8",
+        "10",
+        "17",
+        "18",
+        "19",
+        "22",
+        "23"
+      ],
+      "korean": "당신",
+      "english": "you",
+      "thai": "คุณ",
+      "romanization": "khun",
+      "koreanPronunciation": "쿤",
+      "tier": "supplemental",
+      "days": [
+        7,
+        9,
+        10,
+        15,
+        16,
+        17,
+        18,
+        20,
+        22,
+        23,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W013_male_normal.mp3",
+          "slow": "assets/audio/words/W013_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W013_female_normal.mp3",
+          "slow": "assets/audio/words/W013_female_slow.mp3"
+        }
+      }
+    },
     {
       "id": "W018",
       "variantIds": [
@@ -299,8 +491,8 @@
     }
   ],
   "keywordDisplayPolicy": {
-    "default": "core_only",
-    "toggleSupplemental": true,
+    "default": "keyWordIds_order",
+    "toggleSupplemental": false,
     "emptyCoreFallback": "show_first_three_keywords"
   },
   "learnerProfile": {

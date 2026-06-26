@@ -809,6 +809,37 @@
       }
     },
     {
+      "id": "W034",
+      "variantIds": [
+        "17",
+        "18",
+        "20"
+      ],
+      "korean": "하시는/존칭 동사 표지",
+      "english": "royal/respectful verb marker",
+      "thai": "ทรง",
+      "romanization": "song",
+      "koreanPronunciation": "쏭",
+      "tier": "supplemental",
+      "days": [
+        16,
+        17,
+        19,
+        20,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W034_male_normal.mp3",
+          "slow": "assets/audio/words/W034_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W034_female_normal.mp3",
+          "slow": "assets/audio/words/W034_female_slow.mp3"
+        }
+      }
+    },
+    {
       "id": "W035",
       "variantIds": [
         "17",
@@ -871,6 +902,33 @@
       }
     },
     {
+      "id": "W037",
+      "variantIds": [
+        "19"
+      ],
+      "korean": "청하다/바라다",
+      "english": "ask/request",
+      "thai": "ขอ",
+      "romanization": "khŏr",
+      "koreanPronunciation": "커",
+      "tier": "supplemental",
+      "days": [
+        18,
+        20,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W037_male_normal.mp3",
+          "slow": "assets/audio/words/W037_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W037_female_normal.mp3",
+          "slow": "assets/audio/words/W037_female_slow.mp3"
+        }
+      }
+    },
+    {
       "id": "W038",
       "variantIds": [
         "19"
@@ -894,6 +952,33 @@
         "female": {
           "normal": "assets/audio/words/W038_female_normal.mp3",
           "slow": "assets/audio/words/W038_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W039",
+      "variantIds": [
+        "20"
+      ],
+      "korean": "~이다",
+      "english": "to be",
+      "thai": "เป็น",
+      "romanization": "pen",
+      "koreanPronunciation": "뻰",
+      "tier": "supplemental",
+      "days": [
+        19,
+        20,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W039_male_normal.mp3",
+          "slow": "assets/audio/words/W039_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W039_female_normal.mp3",
+          "slow": "assets/audio/words/W039_female_slow.mp3"
         }
       }
     },
@@ -947,6 +1032,58 @@
         "female": {
           "normal": "assets/audio/words/W041_female_normal.mp3",
           "slow": "assets/audio/words/W041_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W042",
+      "variantIds": [
+        "21"
+      ],
+      "korean": "~안에/~을",
+      "english": "in",
+      "thai": "ใน",
+      "romanization": "nai",
+      "koreanPronunciation": "나이",
+      "tier": "supplemental",
+      "days": [
+        21,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W042_male_normal.mp3",
+          "slow": "assets/audio/words/W042_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W042_female_normal.mp3",
+          "slow": "assets/audio/words/W042_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W046",
+      "variantIds": [
+        "24"
+      ],
+      "korean": "오다",
+      "english": "come",
+      "thai": "มา",
+      "romanization": "maa",
+      "koreanPronunciation": "마",
+      "tier": "supplemental",
+      "days": [
+        24,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W046_male_normal.mp3",
+          "slow": "assets/audio/words/W046_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W046_female_normal.mp3",
+          "slow": "assets/audio/words/W046_female_slow.mp3"
         }
       }
     },
@@ -1029,6 +1166,7 @@
       }
     }
   ],
+  "supplementLinks": [],
   "supplementalKeywords": [
     {
       "id": "W034",
@@ -1169,8 +1307,8 @@
     }
   ],
   "keywordDisplayPolicy": {
-    "default": "core_only",
-    "toggleSupplemental": true,
+    "default": "keyWordIds_order",
+    "toggleSupplemental": false,
     "emptyCoreFallback": "show_first_three_keywords"
   },
   "learnerProfile": {

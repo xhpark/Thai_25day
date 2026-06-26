@@ -449,6 +449,32 @@
       }
     },
     {
+      "id": "W042",
+      "variantIds": [
+        "21"
+      ],
+      "korean": "~안에/~을",
+      "english": "in",
+      "thai": "ใน",
+      "romanization": "nai",
+      "koreanPronunciation": "나이",
+      "tier": "supplemental",
+      "days": [
+        21,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W042_male_normal.mp3",
+          "slow": "assets/audio/words/W042_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W042_female_normal.mp3",
+          "slow": "assets/audio/words/W042_female_slow.mp3"
+        }
+      }
+    },
+    {
       "id": "W033",
       "variantIds": [
         "17",
@@ -478,6 +504,7 @@
       }
     }
   ],
+  "supplementLinks": [],
   "supplementalKeywords": [
     {
       "id": "W042",
@@ -507,8 +534,8 @@
     }
   ],
   "keywordDisplayPolicy": {
-    "default": "core_only",
-    "toggleSupplemental": true,
+    "default": "keyWordIds_order",
+    "toggleSupplemental": false,
     "emptyCoreFallback": "show_first_three_keywords"
   },
   "learnerProfile": {

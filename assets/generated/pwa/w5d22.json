@@ -13,12 +13,12 @@
   "speakingMission": "실례합니다에서 자기소개, 우리는 당신들을 사랑해요까지 한 흐름으로 3회 역할극한다.",
   "primaryImage": {
     "sceneId": "name_intro_conversation",
-    "altTextKo": "예배 후 처음 만나 이름을 묻고 자기소개하는 장면",
+    "altTextKo": "교회 친교 자리에서 이름을 묻고 자기 이름을 소개하는 장면",
     "sourcePlan": [
       {
         "type": "local_preferred",
         "assetPath": "assets/images/scenes/name_intro_conversation.jpg",
-        "status": "missing"
+        "status": "ready"
       },
       {
         "type": "stock_preferred",
@@ -348,7 +348,6 @@
       "variantIds": [
         "8",
         "10",
-        "11",
         "17",
         "18",
         "19",
@@ -365,7 +364,6 @@
         7,
         9,
         10,
-        11,
         15,
         16,
         17,
@@ -646,6 +644,47 @@
       }
     },
     {
+      "id": "W013",
+      "variantIds": [
+        "8",
+        "10",
+        "17",
+        "18",
+        "19",
+        "22",
+        "23"
+      ],
+      "korean": "당신",
+      "english": "you",
+      "thai": "คุณ",
+      "romanization": "khun",
+      "koreanPronunciation": "쿤",
+      "tier": "supplemental",
+      "days": [
+        7,
+        9,
+        10,
+        15,
+        16,
+        17,
+        18,
+        20,
+        22,
+        23,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W013_male_normal.mp3",
+          "slow": "assets/audio/words/W013_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W013_female_normal.mp3",
+          "slow": "assets/audio/words/W013_female_slow.mp3"
+        }
+      }
+    },
+    {
       "id": "W014",
       "variantIds": [
         "8",
@@ -672,6 +711,34 @@
         "female": {
           "normal": "assets/audio/words/W014_female_normal.mp3",
           "slow": "assets/audio/words/W014_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W015",
+      "variantIds": [
+        "8"
+      ],
+      "korean": "무엇",
+      "english": "what",
+      "thai": "อะไร",
+      "romanization": "à-rai",
+      "koreanPronunciation": "아라이",
+      "tier": "supplemental",
+      "days": [
+        7,
+        10,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W015_male_normal.mp3",
+          "slow": "assets/audio/words/W015_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W015_female_normal.mp3",
+          "slow": "assets/audio/words/W015_female_slow.mp3"
         }
       }
     },
@@ -734,6 +801,88 @@
       }
     },
     {
+      "id": "W018",
+      "variantIds": [
+        "10"
+      ],
+      "korean": "나이",
+      "english": "age",
+      "thai": "อายุ",
+      "romanization": "aa-yú",
+      "koreanPronunciation": "아유",
+      "tier": "supplemental",
+      "days": [
+        9,
+        10,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W018_male_normal.mp3",
+          "slow": "assets/audio/words/W018_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W018_female_normal.mp3",
+          "slow": "assets/audio/words/W018_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W019",
+      "variantIds": [
+        "10"
+      ],
+      "korean": "얼마",
+      "english": "how much/how many",
+      "thai": "เท่าไหร่",
+      "romanization": "thâo-rài",
+      "koreanPronunciation": "타오 라이",
+      "tier": "supplemental",
+      "days": [
+        9,
+        10,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W019_male_normal.mp3",
+          "slow": "assets/audio/words/W019_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W019_female_normal.mp3",
+          "slow": "assets/audio/words/W019_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W043",
+      "variantIds": [
+        "22"
+      ],
+      "korean": "우리",
+      "english": "we/us",
+      "thai": "พวกเรา",
+      "romanization": "phûak-rao",
+      "koreanPronunciation": "푸악 라오",
+      "tier": "supplemental",
+      "days": [
+        22,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W043_male_normal.mp3",
+          "slow": "assets/audio/words/W043_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W043_female_normal.mp3",
+          "slow": "assets/audio/words/W043_female_slow.mp3"
+        }
+      }
+    },
+    {
       "id": "W035",
       "variantIds": [
         "17",
@@ -765,13 +914,13 @@
       }
     }
   ],
+  "supplementLinks": [],
   "supplementalKeywords": [
     {
       "id": "W013",
       "variantIds": [
         "8",
         "10",
-        "11",
         "17",
         "18",
         "19",
@@ -788,7 +937,6 @@
         7,
         9,
         10,
-        11,
         15,
         16,
         17,
@@ -921,8 +1069,8 @@
     }
   ],
   "keywordDisplayPolicy": {
-    "default": "core_only",
-    "toggleSupplemental": true,
+    "default": "keyWordIds_order",
+    "toggleSupplemental": false,
     "emptyCoreFallback": "show_first_three_keywords"
   },
   "learnerProfile": {

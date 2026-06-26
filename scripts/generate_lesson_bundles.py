@@ -211,6 +211,7 @@ def _weekday_bundle(
         "newPhrases": new_phrases,
         "reviewPhrases": review_phrases,
         "keywords": keywords,
+        "supplementLinks": item.get("supplementLinks", []),
         "images": image_plan,
         "delivery": {
             "kakaoCardTemplate": specs["templates"]["kakaoCard"],
@@ -362,7 +363,6 @@ def validate_bundle(bundle: dict[str, Any]) -> list[str]:
 def _kakao_spec(item: dict[str, Any]) -> dict[str, Any]:
     review = item.get("reviewPhrases", item.get("phrases", []))
     phrases = item.get("newPhrases") or review or item.get("phrases", [])
-    core_keywords = [keyword for keyword in item["keywords"] if keyword.get("tier") == "core"]
     supplemental_keywords = [keyword for keyword in item["keywords"] if keyword.get("tier") == "supplemental"]
     kakao_template = item["delivery"]["kakaoCardTemplate"]
     content_mode = "review_recap" if item["dayType"] == "sunday" or not item.get("newPhrases") else "daily_lesson"
@@ -375,7 +375,7 @@ def _kakao_spec(item: dict[str, Any]) -> dict[str, Any]:
         "sundayFormat": kakao_template.get("sundayFormat"),
         "contentSource": kakao_template.get("sundayFormat", {}).get("contentSource") if item["dayType"] == "sunday" else {
             "phrases": "Weekday lesson newPhrases rendered as mainPhrases; review-only weekdays fall back to reviewPhrases.",
-            "keywords": "Weekday lesson keyWordIds filtered through displayKeywords.",
+            "keywords": "Weekday lesson keyWordIds rendered as displayKeywords.",
             "missionText": "Weekday speakingMission rendered as the main action box.",
             "ministryGuide": "Weekday ministryGuide rendered as the relational guide line."
         },
@@ -392,10 +392,10 @@ def _kakao_spec(item: dict[str, Any]) -> dict[str, Any]:
         "mainPhrases": phrases,
         "reviewPhrases": review[:4],
         "keywords": item["keywords"][:6],
-        "displayKeywords": core_keywords[:4] or item["keywords"][:4],
+        "displayKeywords": item["keywords"][:4],
         "supplementalKeywords": supplemental_keywords,
         "keywordDisplayPolicy": {
-            "default": "core_only",
+            "default": "keyWordIds_order",
             "toggleSupplemental": False
         },
         "audioModes": ["normal", "slow", "repeat3"],
@@ -407,7 +407,6 @@ def _kakao_spec(item: dict[str, Any]) -> dict[str, Any]:
 
 
 def _pwa_spec(item: dict[str, Any]) -> dict[str, Any]:
-    core_keywords = [keyword for keyword in item["keywords"] if keyword.get("tier") == "core"]
     supplemental_keywords = [keyword for keyword in item["keywords"] if keyword.get("tier") == "supplemental"]
     pwa_template = item["delivery"]["pwaTemplate"]
     return {
@@ -428,11 +427,12 @@ def _pwa_spec(item: dict[str, Any]) -> dict[str, Any]:
         "newPhrases": item["newPhrases"],
         "reviewPhrases": item["reviewPhrases"],
         "keywords": item["keywords"],
-        "displayKeywords": core_keywords,
+        "displayKeywords": item["keywords"],
+        "supplementLinks": item.get("supplementLinks", []),
         "supplementalKeywords": supplemental_keywords,
         "keywordDisplayPolicy": {
-            "default": "core_only",
-            "toggleSupplemental": True,
+            "default": "keyWordIds_order",
+            "toggleSupplemental": False,
             "emptyCoreFallback": "show_first_three_keywords"
         },
         "learnerProfile": pwa_template["learnerProfile"],

@@ -7,10 +7,10 @@
     "imageManifest": "data/thai_image_source_manifest.json"
   },
   "sourceHashes": {
-    "curriculum": "5d9a090e3f58c80f9a0f20d6b6998b6b063b09c909a75cbd18c2880572a3c9b2",
-    "assets": "7bf750586d797e28028a9792d0113a79ec388989dfed8b4425dbeb1d744b69e7",
+    "curriculum": "ed8864cda83e0470d95ec3613b189c6727776e9fb1abc75ff60e4d83c8dd9664",
+    "assets": "de2864e88a761e891908aca4f1ff0bd958c9c65478ebd554d81042956efa325f",
     "templateSpecs": "b02f47651239e478b3156c95a4e2ea064d9a9d6989b048d54f4a8ffbbc725811",
-    "imageManifest": "45ed2f942cbe71de0d2b5b30137c229807c7ce4922d67305c858e1df45f4c9ff"
+    "imageManifest": "398c55ea66ee9547ea5b31474a06ccb713092297745a543d9cc5045200f1f25d"
   },
   "bundles": {
     "weekdayLessons": [
@@ -234,6 +234,7 @@
             }
           }
         ],
+        "supplementLinks": [],
         "images": {
           "primaryImage": {
             "sceneId": "greeting_church_gate",
@@ -691,6 +692,7 @@
             }
           }
         ],
+        "supplementLinks": [],
         "images": {
           "primaryImage": {
             "sceneId": "good_morning_good_evening",
@@ -1323,6 +1325,7 @@
             }
           }
         ],
+        "supplementLinks": [],
         "images": {
           "primaryImage": {
             "sceneId": "thanks_a_lot_youre_welcome",
@@ -1941,6 +1944,7 @@
             }
           }
         ],
+        "supplementLinks": [],
         "images": {
           "primaryImage": {
             "sceneId": "yes_no_checkpoint",
@@ -2574,6 +2578,7 @@
             }
           }
         ],
+        "supplementLinks": [],
         "images": {
           "primaryImage": {
             "sceneId": "believe_in_jesus",
@@ -3098,36 +3103,72 @@
                 "slow": "assets/audio/words/W012_female_slow.mp3"
               }
             }
+          },
+          {
+            "id": "W009",
+            "variantIds": [
+              "4",
+              "7"
+            ],
+            "korean": "괜찮아요",
+            "english": "never mind / it's okay",
+            "thai": "ไม่เป็นไร",
+            "romanization": "mâi-pen-rai",
+            "koreanPronunciation": "마이 뻰 라이",
+            "tier": "core",
+            "days": [
+              3,
+              5,
+              6,
+              10,
+              15,
+              25
+            ],
+            "audio": {
+              "male": {
+                "normal": "assets/audio/words/W009_male_normal.mp3",
+                "slow": "assets/audio/words/W009_male_slow.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/words/W009_female_normal.mp3",
+                "slow": "assets/audio/words/W009_female_slow.mp3"
+              }
+            }
           }
         ],
+        "supplementLinks": [],
         "images": {
           "primaryImage": {
-            "sceneId": null,
-            "altTextKo": "정중하게 말 걸기 학습 장면",
+            "sceneId": "polite_excuse_reassurance",
+            "altTextKo": "교회 복도에서 정중하게 실례를 구하고 따뜻하게 응답받는 장면",
             "sourcePlan": [
+              {
+                "type": "local_preferred",
+                "assetPath": "assets/images/scenes/polite_excuse_reassurance.jpg",
+                "status": "ready"
+              },
               {
                 "type": "stock_preferred",
                 "queries": [
-                  "정중하게 말 걸기",
-                  "사람 사이를 지나가거나 작은 실수를 했을 때 정중하게 말한다."
+                  "polite wai greeting church hallway Thailand",
+                  "church hallway polite greeting Asian adults",
+                  "Thai church respectful excuse me conversation"
                 ],
                 "status": "search_required"
               },
               {
                 "type": "ai_fallback",
                 "prompt": {
-                  "scene": "정중하게 말 걸기",
-                  "peopleAndAction": "사람 사이를 지나가거나 작은 실수를 했을 때 정중하게 말한다.",
-                  "setting": "Thai church or daily-life mission context",
-                  "mood": "warm, respectful, practical",
-                  "cameraFraming": "documentary style",
-                  "lighting": "bright natural light",
+                  "scene": "polite excuse and reassurance in a church hallway",
+                  "peopleAndAction": "one visitor makes a gentle wai greeting while local church members respond warmly",
+                  "setting": "church hallway after worship",
+                  "mood": "respectful, calm, welcoming",
+                  "cameraFraming": "medium documentary photo",
+                  "lighting": "bright indoor natural light",
                   "avoidList": [
-                    "blurry or noisy image",
-                    "heavy watermark",
-                    "text embedded in photo",
-                    "theological symbolism without a real scene",
-                    "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
+                    "tense confrontation",
+                    "crowded chaos",
+                    "comic embarrassment"
                   ]
                 },
                 "status": "generate_if_needed"
@@ -3499,7 +3540,6 @@
             "variantIds": [
               "8",
               "10",
-              "11",
               "17",
               "18",
               "19",
@@ -3516,7 +3556,6 @@
               7,
               9,
               10,
-              11,
               15,
               16,
               17,
@@ -3594,50 +3633,18 @@
                 "slow": "assets/audio/words/W015_female_slow.mp3"
               }
             }
-          },
-          {
-            "id": "W004",
-            "variantIds": [
-              "8",
-              "10",
-              "11",
-              "12"
-            ],
-            "korean": "여성 질문/권유 어미",
-            "english": "female question/request particle",
-            "thai": "คะ",
-            "romanization": "khá",
-            "koreanPronunciation": "카",
-            "voices": [
-              "female"
-            ],
-            "tier": "core",
-            "days": [
-              7,
-              9,
-              10,
-              11,
-              12,
-              15,
-              25
-            ],
-            "audio": {
-              "female": {
-                "normal": "assets/audio/words/W004_female_normal.mp3",
-                "slow": "assets/audio/words/W004_female_slow.mp3"
-              }
-            }
           }
         ],
+        "supplementLinks": [],
         "images": {
           "primaryImage": {
             "sceneId": "name_intro_conversation",
-            "altTextKo": "예배 후 처음 만나 이름을 묻고 자기소개하는 장면",
+            "altTextKo": "교회 친교 자리에서 이름을 묻고 자기 이름을 소개하는 장면",
             "sourcePlan": [
               {
                 "type": "local_preferred",
                 "assetPath": "assets/images/scenes/name_intro_conversation.jpg",
-                "status": "missing"
+                "status": "ready"
               },
               {
                 "type": "stock_preferred",
@@ -3965,7 +3972,7 @@
         "hook": "내 이름을 넣어 바로 말해 본다.",
         "story": "처음 만난 사람에게 자기 이름을 소개한다.",
         "missionGoal": "본인 이름을 넣어 자신 있게 자기소개한다.",
-        "ministryGuide": "이름 소개는 관계를 여는 가장 기본적인 다리다. 짧아도 또렷하게 말하는 것이 중요하다.",
+        "ministryGuide": "태국인은 한국인이 성과 이름을 모두 말하면 어렵게 느낄 수 있으므로, 미리 자신의 이름과 비슷하면서 좋은 뜻을 가진 태국어 닉네임, 즉 1음절이나 2음절의 짧은 '츠렌(닉네임)'을 정해서 가면 좋다.",
         "speakingMission": "자기 이름을 넣어 남성형/여성형 기준으로 각각 3회 연습한다.",
         "newPhrases": [
           {
@@ -4035,6 +4042,36 @@
         ],
         "keywords": [
           {
+            "id": "W014",
+            "variantIds": [
+              "8",
+              "9"
+            ],
+            "korean": "이름",
+            "english": "name",
+            "thai": "ชื่อ",
+            "romanization": "chûue",
+            "koreanPronunciation": "츠",
+            "tier": "core",
+            "days": [
+              7,
+              8,
+              10,
+              15,
+              25
+            ],
+            "audio": {
+              "male": {
+                "normal": "assets/audio/words/W014_male_normal.mp3",
+                "slow": "assets/audio/words/W014_male_slow.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/words/W014_female_normal.mp3",
+                "slow": "assets/audio/words/W014_female_slow.mp3"
+              }
+            }
+          },
+          {
             "id": "W016",
             "variantIds": [
               "9",
@@ -4093,15 +4130,16 @@
             }
           }
         ],
+        "supplementLinks": [],
         "images": {
           "primaryImage": {
             "sceneId": "name_intro_conversation",
-            "altTextKo": "예배 후 처음 만나 이름을 묻고 자기소개하는 장면",
+            "altTextKo": "교회 친교 자리에서 이름을 묻고 자기 이름을 소개하는 장면",
             "sourcePlan": [
               {
                 "type": "local_preferred",
                 "assetPath": "assets/images/scenes/name_intro_conversation.jpg",
-                "status": "missing"
+                "status": "ready"
               },
               {
                 "type": "stock_preferred",
@@ -4130,7 +4168,46 @@
               }
             ]
           },
-          "keywordImages": []
+          "keywordImages": [
+            {
+              "keywordId": "W014",
+              "priority": "optional",
+              "sourcePlan": [
+                {
+                  "type": "local_preferred",
+                  "assetPath": "assets/images/keywords/W014.jpg",
+                  "status": "missing"
+                },
+                {
+                  "type": "stock_preferred",
+                  "queries": [
+                    "name realistic photo",
+                    "이름 learning image"
+                  ],
+                  "status": "search_required"
+                },
+                {
+                  "type": "ai_fallback",
+                  "prompt": {
+                    "scene": "single concept image for name",
+                    "peopleAndAction": "show the concept clearly and simply",
+                    "setting": "clean realistic learning image",
+                    "mood": "warm and easy to recognize",
+                    "cameraFraming": "close or medium crop",
+                    "lighting": "bright neutral light",
+                    "avoidList": [
+                      "blurry or noisy image",
+                      "heavy watermark",
+                      "text embedded in photo",
+                      "theological symbolism without a real scene",
+                      "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
+                    ]
+                  },
+                  "status": "generate_if_needed"
+                }
+              ]
+            }
+          ]
         },
         "delivery": {
           "kakaoCardTemplate": {
@@ -4390,7 +4467,7 @@
         "hook": "관계 안에서 조심스럽게 묻는 질문을 배운다.",
         "story": "친한 사이 또는 어린이에게 나이를 묻는 장면을 연습한다.",
         "missionGoal": "상대와의 관계를 살피며 질문을 자연스럽게 이어 가는 법을 배운다.",
-        "ministryGuide": "이 질문은 관계가 어느 정도 형성된 뒤 또는 어린이와의 대화에서 쓰면 훨씬 자연스럽다.",
+        "ministryGuide": "자신의 나이를 태국어로 말할 수 있도록 미리 학습하여 말할 수 있도록 하자. 태국어 나이: 십의 자리 + 일의 자리, \"하씹 까오\" = 59",
         "speakingMission": "질문문 전체를 5회 말하고, 이름 묻기와 연결해 2회 연습한다.",
         "newPhrases": [
           {
@@ -4491,6 +4568,47 @@
         ],
         "keywords": [
           {
+            "id": "W013",
+            "variantIds": [
+              "8",
+              "10",
+              "17",
+              "18",
+              "19",
+              "22",
+              "23"
+            ],
+            "korean": "당신",
+            "english": "you",
+            "thai": "คุณ",
+            "romanization": "khun",
+            "koreanPronunciation": "쿤",
+            "tier": "supplemental",
+            "days": [
+              7,
+              9,
+              10,
+              15,
+              16,
+              17,
+              18,
+              20,
+              22,
+              23,
+              25
+            ],
+            "audio": {
+              "male": {
+                "normal": "assets/audio/words/W013_male_normal.mp3",
+                "slow": "assets/audio/words/W013_male_slow.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/words/W013_female_normal.mp3",
+                "slow": "assets/audio/words/W013_female_slow.mp3"
+              }
+            }
+          },
+          {
             "id": "W018",
             "variantIds": [
               "10"
@@ -4547,34 +4665,46 @@
             }
           }
         ],
+        "supplementLinks": [
+          {
+            "id": "AID1_NUMBERS",
+            "title": "학습보조1: 태국어 숫자",
+            "href": "?aid=1",
+            "description": "나이 대답에 필요한 기본 숫자와 십 단위를 먼저 듣고 따라 말해 본다."
+          }
+        ],
         "images": {
           "primaryImage": {
-            "sceneId": null,
-            "altTextKo": "나이 묻기 학습 장면",
+            "sceneId": "age_question_child",
+            "altTextKo": "교회 마당에서 어린이에게 나이를 조심스럽고 친근하게 묻는 장면",
             "sourcePlan": [
+              {
+                "type": "local_preferred",
+                "assetPath": "assets/images/scenes/age_question_child.jpg",
+                "status": "ready"
+              },
               {
                 "type": "stock_preferred",
                 "queries": [
-                  "나이 묻기",
-                  "친한 사이 또는 어린이에게 나이를 묻는 장면을 연습한다."
+                  "friendly adult asking child age church yard",
+                  "Asian woman talking with child garden",
+                  "warm church courtyard child conversation"
                 ],
                 "status": "search_required"
               },
               {
                 "type": "ai_fallback",
                 "prompt": {
-                  "scene": "나이 묻기",
-                  "peopleAndAction": "친한 사이 또는 어린이에게 나이를 묻는 장면을 연습한다.",
-                  "setting": "Thai church or daily-life mission context",
-                  "mood": "warm, respectful, practical",
-                  "cameraFraming": "documentary style",
-                  "lighting": "bright natural light",
+                  "scene": "friendly age question with a child",
+                  "peopleAndAction": "adult smiles and gently talks with a child who shows age with fingers",
+                  "setting": "church garden or courtyard in Thailand",
+                  "mood": "warm, careful, friendly",
+                  "cameraFraming": "medium shot",
+                  "lighting": "soft natural daylight",
                   "avoidList": [
-                    "blurry or noisy image",
-                    "heavy watermark",
-                    "text embedded in photo",
-                    "theological symbolism without a real scene",
-                    "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
+                    "interrogation feel",
+                    "awkward adult-only age question",
+                    "dark mood"
                   ]
                 },
                 "status": "generate_if_needed"
@@ -5074,6 +5204,32 @@
         ],
         "keywords": [
           {
+            "id": "W043",
+            "variantIds": [
+              "22"
+            ],
+            "korean": "우리",
+            "english": "we/us",
+            "thai": "พวกเรา",
+            "romanization": "phûak-rao",
+            "koreanPronunciation": "푸악 라오",
+            "tier": "supplemental",
+            "days": [
+              22,
+              25
+            ],
+            "audio": {
+              "male": {
+                "normal": "assets/audio/words/W043_male_normal.mp3",
+                "slow": "assets/audio/words/W043_male_slow.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/words/W043_female_normal.mp3",
+                "slow": "assets/audio/words/W043_female_slow.mp3"
+              }
+            }
+          },
+          {
             "id": "W035",
             "variantIds": [
               "17",
@@ -5105,63 +5261,80 @@
             }
           },
           {
-            "id": "W043",
+            "id": "W013",
             "variantIds": [
-              "22"
+              "8",
+              "10",
+              "17",
+              "18",
+              "19",
+              "22",
+              "23"
             ],
-            "korean": "우리",
-            "english": "we/us",
-            "thai": "พวกเรา",
-            "romanization": "phûak-rao",
-            "koreanPronunciation": "푸악 라오",
+            "korean": "당신",
+            "english": "you",
+            "thai": "คุณ",
+            "romanization": "khun",
+            "koreanPronunciation": "쿤",
             "tier": "supplemental",
             "days": [
+              7,
+              9,
+              10,
+              15,
+              16,
+              17,
+              18,
+              20,
               22,
+              23,
               25
             ],
             "audio": {
               "male": {
-                "normal": "assets/audio/words/W043_male_normal.mp3",
-                "slow": "assets/audio/words/W043_male_slow.mp3"
+                "normal": "assets/audio/words/W013_male_normal.mp3",
+                "slow": "assets/audio/words/W013_male_slow.mp3"
               },
               "female": {
-                "normal": "assets/audio/words/W043_female_normal.mp3",
-                "slow": "assets/audio/words/W043_female_slow.mp3"
+                "normal": "assets/audio/words/W013_female_normal.mp3",
+                "slow": "assets/audio/words/W013_female_slow.mp3"
               }
             }
           }
         ],
+        "supplementLinks": [],
         "images": {
           "primaryImage": {
-            "sceneId": "encouragement_and_blessing",
-            "altTextKo": "교회 안에서 사랑과 축복의 말을 따뜻하게 전하는 장면",
+            "sceneId": "we_love_you_group",
+            "altTextKo": "태국 교회 마당에서 공동체가 우리는 당신들을 사랑해요라고 따뜻하게 전하는 장면",
             "sourcePlan": [
               {
                 "type": "local_preferred",
-                "assetPath": "assets/images/scenes/encouragement_and_blessing.jpg",
-                "status": "missing"
+                "assetPath": "assets/images/scenes/we_love_you_group.jpg",
+                "status": "ready"
               },
               {
                 "type": "stock_preferred",
                 "queries": [
-                  "gentle church encouragement conversation",
-                  "supportive conversation church smiling",
-                  "blessing prayer church community"
+                  "mission team and local church group we love you Thailand",
+                  "church community welcoming mission team village Thailand",
+                  "warm group greeting church village Thailand"
                 ],
                 "status": "search_required"
               },
               {
                 "type": "ai_fallback",
                 "prompt": {
-                  "scene": "gentle encouragement and blessing",
-                  "peopleAndAction": "two adults speaking warmly, one encouraging the other, caring expression",
-                  "setting": "church yard or fellowship room",
-                  "mood": "comforting, hopeful, respectful",
-                  "cameraFraming": "medium close conversation shot",
-                  "lighting": "warm daylight",
+                  "scene": "church community warmly saying we love you",
+                  "peopleAndAction": "Korean mission team and local Thai church members smiling together in a welcoming circle",
+                  "setting": "rural Thai church yard",
+                  "mood": "joyful, communal, welcoming",
+                  "cameraFraming": "wide group documentary photo",
+                  "lighting": "bright natural daylight",
                   "avoidList": [
-                    "preaching at someone",
-                    "dramatic spotlight"
+                    "stage performance",
+                    "political rally",
+                    "sad mood"
                   ]
                 },
                 "status": "generate_if_needed"
@@ -5610,6 +5783,7 @@
             }
           }
         ],
+        "supplementLinks": [],
         "images": {
           "primaryImage": {
             "sceneId": "restroom_wayfinding",
@@ -6130,6 +6304,40 @@
             }
           },
           {
+            "id": "W008",
+            "variantIds": [
+              "3",
+              "13",
+              "14"
+            ],
+            "korean": "많이/매우",
+            "english": "very/much",
+            "thai": "มาก",
+            "romanization": "mâak",
+            "koreanPronunciation": "막",
+            "tier": "supplemental",
+            "days": [
+              3,
+              5,
+              10,
+              12,
+              13,
+              15,
+              20,
+              25
+            ],
+            "audio": {
+              "male": {
+                "normal": "assets/audio/words/W008_male_normal.mp3",
+                "slow": "assets/audio/words/W008_male_slow.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/words/W008_female_normal.mp3",
+                "slow": "assets/audio/words/W008_female_slow.mp3"
+              }
+            }
+          },
+          {
             "id": "W026",
             "variantIds": [
               "12"
@@ -6184,6 +6392,7 @@
             }
           }
         ],
+        "supplementLinks": [],
         "images": {
           "primaryImage": {
             "sceneId": "meal_table_fellowship",
@@ -6685,8 +6894,43 @@
                 "slow": "assets/audio/words/W028_female_slow.mp3"
               }
             }
+          },
+          {
+            "id": "W008",
+            "variantIds": [
+              "3",
+              "13",
+              "14"
+            ],
+            "korean": "많이/매우",
+            "english": "very/much",
+            "thai": "มาก",
+            "romanization": "mâak",
+            "koreanPronunciation": "막",
+            "tier": "supplemental",
+            "days": [
+              3,
+              5,
+              10,
+              12,
+              13,
+              15,
+              20,
+              25
+            ],
+            "audio": {
+              "male": {
+                "normal": "assets/audio/words/W008_male_normal.mp3",
+                "slow": "assets/audio/words/W008_male_slow.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/words/W008_female_normal.mp3",
+                "slow": "assets/audio/words/W008_female_slow.mp3"
+              }
+            }
           }
         ],
+        "supplementLinks": [],
         "images": {
           "primaryImage": {
             "sceneId": null,
@@ -7291,6 +7535,7 @@
             }
           }
         ],
+        "supplementLinks": [],
         "images": {
           "primaryImage": {
             "sceneId": null,
@@ -7849,6 +8094,64 @@
         ],
         "keywords": [
           {
+            "id": "W016",
+            "variantIds": [
+              "9",
+              "23"
+            ],
+            "korean": "나(남성)",
+            "english": "I/me, male speaker",
+            "thai": "ผม",
+            "romanization": "phŏm",
+            "koreanPronunciation": "폼",
+            "voices": [
+              "male"
+            ],
+            "tier": "core",
+            "days": [
+              8,
+              10,
+              15,
+              23,
+              25
+            ],
+            "audio": {
+              "male": {
+                "normal": "assets/audio/words/W016_male_normal.mp3",
+                "slow": "assets/audio/words/W016_male_slow.mp3"
+              }
+            }
+          },
+          {
+            "id": "W017",
+            "variantIds": [
+              "9",
+              "23"
+            ],
+            "korean": "나(여성)",
+            "english": "I/me, female speaker",
+            "thai": "ฉัน",
+            "romanization": "chăn",
+            "koreanPronunciation": "찬",
+            "voices": [
+              "female"
+            ],
+            "tier": "core",
+            "days": [
+              8,
+              10,
+              15,
+              23,
+              25
+            ],
+            "audio": {
+              "female": {
+                "normal": "assets/audio/words/W017_female_normal.mp3",
+                "slow": "assets/audio/words/W017_female_slow.mp3"
+              }
+            }
+          },
+          {
             "id": "W044",
             "variantIds": [
               "23"
@@ -7899,8 +8202,79 @@
                 "slow": "assets/audio/words/W045_female_slow.mp3"
               }
             }
+          },
+          {
+            "id": "W024",
+            "variantIds": [
+              "12",
+              "23"
+            ],
+            "korean": "~에게/~하도록",
+            "english": "give/to/let",
+            "thai": "ให้",
+            "romanization": "hâi",
+            "koreanPronunciation": "하이",
+            "tier": "supplemental",
+            "days": [
+              12,
+              15,
+              23,
+              25
+            ],
+            "audio": {
+              "male": {
+                "normal": "assets/audio/words/W024_male_normal.mp3",
+                "slow": "assets/audio/words/W024_male_slow.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/words/W024_female_normal.mp3",
+                "slow": "assets/audio/words/W024_female_slow.mp3"
+              }
+            }
+          },
+          {
+            "id": "W013",
+            "variantIds": [
+              "8",
+              "10",
+              "17",
+              "18",
+              "19",
+              "22",
+              "23"
+            ],
+            "korean": "당신",
+            "english": "you",
+            "thai": "คุณ",
+            "romanization": "khun",
+            "koreanPronunciation": "쿤",
+            "tier": "supplemental",
+            "days": [
+              7,
+              9,
+              10,
+              15,
+              16,
+              17,
+              18,
+              20,
+              22,
+              23,
+              25
+            ],
+            "audio": {
+              "male": {
+                "normal": "assets/audio/words/W013_male_normal.mp3",
+                "slow": "assets/audio/words/W013_male_slow.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/words/W013_female_normal.mp3",
+                "slow": "assets/audio/words/W013_female_slow.mp3"
+              }
+            }
           }
         ],
+        "supplementLinks": [],
         "images": {
           "primaryImage": {
             "sceneId": "meal_table_fellowship",
@@ -8369,6 +8743,35 @@
         ],
         "keywords": [
           {
+            "id": "W033",
+            "variantIds": [
+              "17",
+              "21"
+            ],
+            "korean": "예수님",
+            "english": "Jesus",
+            "thai": "พระเยซู",
+            "romanization": "Phrá-yeh-suu",
+            "koreanPronunciation": "프라예쑤",
+            "tier": "core",
+            "days": [
+              16,
+              20,
+              21,
+              25
+            ],
+            "audio": {
+              "male": {
+                "normal": "assets/audio/words/W033_male_normal.mp3",
+                "slow": "assets/audio/words/W033_male_slow.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/words/W033_female_normal.mp3",
+                "slow": "assets/audio/words/W033_female_slow.mp3"
+              }
+            }
+          },
+          {
             "id": "W034",
             "variantIds": [
               "17",
@@ -8398,8 +8801,81 @@
                 "slow": "assets/audio/words/W034_female_slow.mp3"
               }
             }
+          },
+          {
+            "id": "W035",
+            "variantIds": [
+              "17",
+              "18",
+              "22"
+            ],
+            "korean": "사랑하다",
+            "english": "love",
+            "thai": "รัก",
+            "romanization": "rák",
+            "koreanPronunciation": "락",
+            "tier": "core",
+            "days": [
+              16,
+              17,
+              20,
+              22,
+              25
+            ],
+            "audio": {
+              "male": {
+                "normal": "assets/audio/words/W035_male_normal.mp3",
+                "slow": "assets/audio/words/W035_male_slow.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/words/W035_female_normal.mp3",
+                "slow": "assets/audio/words/W035_female_slow.mp3"
+              }
+            }
+          },
+          {
+            "id": "W013",
+            "variantIds": [
+              "8",
+              "10",
+              "17",
+              "18",
+              "19",
+              "22",
+              "23"
+            ],
+            "korean": "당신",
+            "english": "you",
+            "thai": "คุณ",
+            "romanization": "khun",
+            "koreanPronunciation": "쿤",
+            "tier": "supplemental",
+            "days": [
+              7,
+              9,
+              10,
+              15,
+              16,
+              17,
+              18,
+              20,
+              22,
+              23,
+              25
+            ],
+            "audio": {
+              "male": {
+                "normal": "assets/audio/words/W013_male_normal.mp3",
+                "slow": "assets/audio/words/W013_male_slow.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/words/W013_female_normal.mp3",
+                "slow": "assets/audio/words/W013_female_slow.mp3"
+              }
+            }
           }
         ],
+        "supplementLinks": [],
         "images": {
           "primaryImage": {
             "sceneId": "encouragement_and_blessing",
@@ -8437,7 +8913,46 @@
               }
             ]
           },
-          "keywordImages": []
+          "keywordImages": [
+            {
+              "keywordId": "W033",
+              "priority": "optional",
+              "sourcePlan": [
+                {
+                  "type": "local_preferred",
+                  "assetPath": "assets/images/keywords/W033.jpg",
+                  "status": "missing"
+                },
+                {
+                  "type": "stock_preferred",
+                  "queries": [
+                    "Jesus realistic photo",
+                    "예수님 learning image"
+                  ],
+                  "status": "search_required"
+                },
+                {
+                  "type": "ai_fallback",
+                  "prompt": {
+                    "scene": "single concept image for Jesus",
+                    "peopleAndAction": "show the concept clearly and simply",
+                    "setting": "clean realistic learning image",
+                    "mood": "warm and easy to recognize",
+                    "cameraFraming": "close or medium crop",
+                    "lighting": "bright neutral light",
+                    "avoidList": [
+                      "blurry or noisy image",
+                      "heavy watermark",
+                      "text embedded in photo",
+                      "theological symbolism without a real scene",
+                      "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
+                    ]
+                  },
+                  "status": "generate_if_needed"
+                }
+              ]
+            }
+          ]
         },
         "delivery": {
           "kakaoCardTemplate": {
@@ -8796,8 +9311,112 @@
                 "slow": "assets/audio/words/W036_female_slow.mp3"
               }
             }
+          },
+          {
+            "id": "W034",
+            "variantIds": [
+              "17",
+              "18",
+              "20"
+            ],
+            "korean": "하시는/존칭 동사 표지",
+            "english": "royal/respectful verb marker",
+            "thai": "ทรง",
+            "romanization": "song",
+            "koreanPronunciation": "쏭",
+            "tier": "supplemental",
+            "days": [
+              16,
+              17,
+              19,
+              20,
+              25
+            ],
+            "audio": {
+              "male": {
+                "normal": "assets/audio/words/W034_male_normal.mp3",
+                "slow": "assets/audio/words/W034_male_slow.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/words/W034_female_normal.mp3",
+                "slow": "assets/audio/words/W034_female_slow.mp3"
+              }
+            }
+          },
+          {
+            "id": "W035",
+            "variantIds": [
+              "17",
+              "18",
+              "22"
+            ],
+            "korean": "사랑하다",
+            "english": "love",
+            "thai": "รัก",
+            "romanization": "rák",
+            "koreanPronunciation": "락",
+            "tier": "core",
+            "days": [
+              16,
+              17,
+              20,
+              22,
+              25
+            ],
+            "audio": {
+              "male": {
+                "normal": "assets/audio/words/W035_male_normal.mp3",
+                "slow": "assets/audio/words/W035_male_slow.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/words/W035_female_normal.mp3",
+                "slow": "assets/audio/words/W035_female_slow.mp3"
+              }
+            }
+          },
+          {
+            "id": "W013",
+            "variantIds": [
+              "8",
+              "10",
+              "17",
+              "18",
+              "19",
+              "22",
+              "23"
+            ],
+            "korean": "당신",
+            "english": "you",
+            "thai": "คุณ",
+            "romanization": "khun",
+            "koreanPronunciation": "쿤",
+            "tier": "supplemental",
+            "days": [
+              7,
+              9,
+              10,
+              15,
+              16,
+              17,
+              18,
+              20,
+              22,
+              23,
+              25
+            ],
+            "audio": {
+              "male": {
+                "normal": "assets/audio/words/W013_male_normal.mp3",
+                "slow": "assets/audio/words/W013_male_slow.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/words/W013_female_normal.mp3",
+                "slow": "assets/audio/words/W013_female_slow.mp3"
+              }
+            }
           }
         ],
+        "supplementLinks": [],
         "images": {
           "primaryImage": {
             "sceneId": "encouragement_and_blessing",
@@ -9235,6 +9854,37 @@
         ],
         "keywords": [
           {
+            "id": "W036",
+            "variantIds": [
+              "18",
+              "19",
+              "20"
+            ],
+            "korean": "하나님",
+            "english": "God",
+            "thai": "พระเจ้า",
+            "romanization": "Phrá-jâo",
+            "koreanPronunciation": "프라짜오",
+            "tier": "core",
+            "days": [
+              17,
+              18,
+              19,
+              20,
+              25
+            ],
+            "audio": {
+              "male": {
+                "normal": "assets/audio/words/W036_male_normal.mp3",
+                "slow": "assets/audio/words/W036_male_slow.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/words/W036_female_normal.mp3",
+                "slow": "assets/audio/words/W036_female_slow.mp3"
+              }
+            }
+          },
+          {
             "id": "W037",
             "variantIds": [
               "19"
@@ -9287,8 +9937,50 @@
                 "slow": "assets/audio/words/W038_female_slow.mp3"
               }
             }
+          },
+          {
+            "id": "W013",
+            "variantIds": [
+              "8",
+              "10",
+              "17",
+              "18",
+              "19",
+              "22",
+              "23"
+            ],
+            "korean": "당신",
+            "english": "you",
+            "thai": "คุณ",
+            "romanization": "khun",
+            "koreanPronunciation": "쿤",
+            "tier": "supplemental",
+            "days": [
+              7,
+              9,
+              10,
+              15,
+              16,
+              17,
+              18,
+              20,
+              22,
+              23,
+              25
+            ],
+            "audio": {
+              "male": {
+                "normal": "assets/audio/words/W013_male_normal.mp3",
+                "slow": "assets/audio/words/W013_male_slow.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/words/W013_female_normal.mp3",
+                "slow": "assets/audio/words/W013_female_slow.mp3"
+              }
+            }
           }
         ],
+        "supplementLinks": [],
         "images": {
           "primaryImage": {
             "sceneId": "encouragement_and_blessing",
@@ -9326,7 +10018,46 @@
               }
             ]
           },
-          "keywordImages": []
+          "keywordImages": [
+            {
+              "keywordId": "W036",
+              "priority": "optional",
+              "sourcePlan": [
+                {
+                  "type": "local_preferred",
+                  "assetPath": "assets/images/keywords/W036.jpg",
+                  "status": "missing"
+                },
+                {
+                  "type": "stock_preferred",
+                  "queries": [
+                    "God realistic photo",
+                    "하나님 learning image"
+                  ],
+                  "status": "search_required"
+                },
+                {
+                  "type": "ai_fallback",
+                  "prompt": {
+                    "scene": "single concept image for God",
+                    "peopleAndAction": "show the concept clearly and simply",
+                    "setting": "clean realistic learning image",
+                    "mood": "warm and easy to recognize",
+                    "cameraFraming": "close or medium crop",
+                    "lighting": "bright neutral light",
+                    "avoidList": [
+                      "blurry or noisy image",
+                      "heavy watermark",
+                      "text embedded in photo",
+                      "theological symbolism without a real scene",
+                      "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
+                    ]
+                  },
+                  "status": "generate_if_needed"
+                }
+              ]
+            }
+          ]
         },
         "delivery": {
           "kakaoCardTemplate": {
@@ -9718,6 +10449,68 @@
         ],
         "keywords": [
           {
+            "id": "W036",
+            "variantIds": [
+              "18",
+              "19",
+              "20"
+            ],
+            "korean": "하나님",
+            "english": "God",
+            "thai": "พระเจ้า",
+            "romanization": "Phrá-jâo",
+            "koreanPronunciation": "프라짜오",
+            "tier": "core",
+            "days": [
+              17,
+              18,
+              19,
+              20,
+              25
+            ],
+            "audio": {
+              "male": {
+                "normal": "assets/audio/words/W036_male_normal.mp3",
+                "slow": "assets/audio/words/W036_male_slow.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/words/W036_female_normal.mp3",
+                "slow": "assets/audio/words/W036_female_slow.mp3"
+              }
+            }
+          },
+          {
+            "id": "W034",
+            "variantIds": [
+              "17",
+              "18",
+              "20"
+            ],
+            "korean": "하시는/존칭 동사 표지",
+            "english": "royal/respectful verb marker",
+            "thai": "ทรง",
+            "romanization": "song",
+            "koreanPronunciation": "쏭",
+            "tier": "supplemental",
+            "days": [
+              16,
+              17,
+              19,
+              20,
+              25
+            ],
+            "audio": {
+              "male": {
+                "normal": "assets/audio/words/W034_male_normal.mp3",
+                "slow": "assets/audio/words/W034_male_slow.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/words/W034_female_normal.mp3",
+                "slow": "assets/audio/words/W034_female_slow.mp3"
+              }
+            }
+          },
+          {
             "id": "W039",
             "variantIds": [
               "20"
@@ -9772,6 +10565,7 @@
             }
           }
         ],
+        "supplementLinks": [],
         "images": {
           "primaryImage": {
             "sceneId": "encouragement_and_blessing",
@@ -9809,7 +10603,46 @@
               }
             ]
           },
-          "keywordImages": []
+          "keywordImages": [
+            {
+              "keywordId": "W036",
+              "priority": "optional",
+              "sourcePlan": [
+                {
+                  "type": "local_preferred",
+                  "assetPath": "assets/images/keywords/W036.jpg",
+                  "status": "missing"
+                },
+                {
+                  "type": "stock_preferred",
+                  "queries": [
+                    "God realistic photo",
+                    "하나님 learning image"
+                  ],
+                  "status": "search_required"
+                },
+                {
+                  "type": "ai_fallback",
+                  "prompt": {
+                    "scene": "single concept image for God",
+                    "peopleAndAction": "show the concept clearly and simply",
+                    "setting": "clean realistic learning image",
+                    "mood": "warm and easy to recognize",
+                    "cameraFraming": "close or medium crop",
+                    "lighting": "bright neutral light",
+                    "avoidList": [
+                      "blurry or noisy image",
+                      "heavy watermark",
+                      "text embedded in photo",
+                      "theological symbolism without a real scene",
+                      "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
+                    ]
+                  },
+                  "status": "generate_if_needed"
+                }
+              ]
+            }
+          ]
         },
         "delivery": {
           "kakaoCardTemplate": {
@@ -10336,6 +11169,7 @@
             }
           }
         ],
+        "supplementLinks": [],
         "images": {
           "primaryImage": {
             "sceneId": "praise_invitation",
@@ -11317,6 +12151,7 @@
             }
           }
         ],
+        "supplementLinks": [],
         "images": {
           "primaryImage": {
             "sceneId": "greeting_church_gate",
@@ -11955,7 +12790,6 @@
             "variantIds": [
               "8",
               "10",
-              "11",
               "17",
               "18",
               "19",
@@ -11972,7 +12806,6 @@
               7,
               9,
               10,
-              11,
               15,
               16,
               17,
@@ -12223,15 +13056,16 @@
             }
           }
         ],
+        "supplementLinks": [],
         "images": {
           "primaryImage": {
             "sceneId": "name_intro_conversation",
-            "altTextKo": "예배 후 처음 만나 이름을 묻고 자기소개하는 장면",
+            "altTextKo": "교회 친교 자리에서 이름을 묻고 자기 이름을 소개하는 장면",
             "sourcePlan": [
               {
                 "type": "local_preferred",
                 "assetPath": "assets/images/scenes/name_intro_conversation.jpg",
-                "status": "missing"
+                "status": "ready"
               },
               {
                 "type": "stock_preferred",
@@ -13174,6 +14008,7 @@
             }
           }
         ],
+        "supplementLinks": [],
         "images": {
           "primaryImage": {
             "sceneId": "prayer_support",
@@ -14278,6 +15113,7 @@
             }
           }
         ],
+        "supplementLinks": [],
         "images": {
           "primaryImage": {
             "sceneId": "praise_invitation",
@@ -15967,6 +16803,7 @@
             }
           }
         ],
+        "supplementLinks": [],
         "images": {
           "primaryImage": {
             "sceneId": "full_mission_roleplay_review",
@@ -17393,7 +18230,6 @@
             "variantIds": [
               "8",
               "10",
-              "11",
               "17",
               "18",
               "19",
@@ -17410,7 +18246,6 @@
               7,
               9,
               10,
-              11,
               15,
               16,
               17,
@@ -17523,12 +18358,12 @@
         "images": {
           "primaryImage": {
             "sceneId": "name_intro_conversation",
-            "altTextKo": "예배 후 처음 만나 이름을 묻고 자기소개하는 장면",
+            "altTextKo": "교회 친교 자리에서 이름을 묻고 자기 이름을 소개하는 장면",
             "sourcePlan": [
               {
                 "type": "local_preferred",
                 "assetPath": "assets/images/scenes/name_intro_conversation.jpg",
-                "status": "missing"
+                "status": "ready"
               },
               {
                 "type": "stock_preferred",

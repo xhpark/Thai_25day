@@ -380,8 +380,90 @@
           "slow": "assets/audio/words/W029_female_slow.mp3"
         }
       }
+    },
+    {
+      "id": "W030",
+      "variantIds": [
+        "16"
+      ],
+      "korean": "그리고/그 후",
+      "english": "then/and then",
+      "thai": "แล้ว",
+      "romanization": "láew",
+      "koreanPronunciation": "래우",
+      "tier": "supplemental",
+      "days": [
+        14,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W030_male_normal.mp3",
+          "slow": "assets/audio/words/W030_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W030_female_normal.mp3",
+          "slow": "assets/audio/words/W030_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W031",
+      "variantIds": [
+        "16"
+      ],
+      "korean": "만나다",
+      "english": "meet",
+      "thai": "พบกัน",
+      "romanization": "phóp-gan",
+      "koreanPronunciation": "폽깐",
+      "tier": "supplemental",
+      "days": [
+        14,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W031_male_normal.mp3",
+          "slow": "assets/audio/words/W031_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W031_female_normal.mp3",
+          "slow": "assets/audio/words/W031_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W032",
+      "variantIds": [
+        "16"
+      ],
+      "korean": "다시/새로",
+      "english": "again/new",
+      "thai": "ใหม่",
+      "romanization": "mài",
+      "koreanPronunciation": "마이",
+      "tier": "supplemental",
+      "days": [
+        14,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W032_male_normal.mp3",
+          "slow": "assets/audio/words/W032_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W032_female_normal.mp3",
+          "slow": "assets/audio/words/W032_female_slow.mp3"
+        }
+      }
     }
   ],
+  "supplementLinks": [],
   "supplementalKeywords": [
     {
       "id": "W030",
@@ -466,8 +548,8 @@
     }
   ],
   "keywordDisplayPolicy": {
-    "default": "core_only",
-    "toggleSupplemental": true,
+    "default": "keyWordIds_order",
+    "toggleSupplemental": false,
     "emptyCoreFallback": "show_first_three_keywords"
   },
   "learnerProfile": {

@@ -2057,10 +2057,11 @@
       }
     }
   ],
+  "supplementLinks": [],
   "supplementalKeywords": [],
   "keywordDisplayPolicy": {
-    "default": "core_only",
-    "toggleSupplemental": true,
+    "default": "keyWordIds_order",
+    "toggleSupplemental": false,
     "emptyCoreFallback": "show_first_three_keywords"
   },
   "learnerProfile": {

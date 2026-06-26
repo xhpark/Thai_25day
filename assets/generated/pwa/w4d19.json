@@ -47,7 +47,46 @@
       }
     ]
   },
-  "keywordImages": [],
+  "keywordImages": [
+    {
+      "keywordId": "W036",
+      "priority": "optional",
+      "sourcePlan": [
+        {
+          "type": "local_preferred",
+          "assetPath": "assets/images/keywords/W036.jpg",
+          "status": "missing"
+        },
+        {
+          "type": "stock_preferred",
+          "queries": [
+            "God realistic photo",
+            "하나님 learning image"
+          ],
+          "status": "search_required"
+        },
+        {
+          "type": "ai_fallback",
+          "prompt": {
+            "scene": "single concept image for God",
+            "peopleAndAction": "show the concept clearly and simply",
+            "setting": "clean realistic learning image",
+            "mood": "warm and easy to recognize",
+            "cameraFraming": "close or medium crop",
+            "lighting": "bright neutral light",
+            "avoidList": [
+              "blurry or noisy image",
+              "heavy watermark",
+              "text embedded in photo",
+              "theological symbolism without a real scene",
+              "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
+            ]
+          },
+          "status": "generate_if_needed"
+        }
+      ]
+    }
+  ],
   "newPhrases": [
     {
       "variantId": "20",
@@ -178,6 +217,68 @@
   ],
   "keywords": [
     {
+      "id": "W036",
+      "variantIds": [
+        "18",
+        "19",
+        "20"
+      ],
+      "korean": "하나님",
+      "english": "God",
+      "thai": "พระเจ้า",
+      "romanization": "Phrá-jâo",
+      "koreanPronunciation": "프라짜오",
+      "tier": "core",
+      "days": [
+        17,
+        18,
+        19,
+        20,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W036_male_normal.mp3",
+          "slow": "assets/audio/words/W036_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W036_female_normal.mp3",
+          "slow": "assets/audio/words/W036_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W034",
+      "variantIds": [
+        "17",
+        "18",
+        "20"
+      ],
+      "korean": "하시는/존칭 동사 표지",
+      "english": "royal/respectful verb marker",
+      "thai": "ทรง",
+      "romanization": "song",
+      "koreanPronunciation": "쏭",
+      "tier": "supplemental",
+      "days": [
+        16,
+        17,
+        19,
+        20,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W034_male_normal.mp3",
+          "slow": "assets/audio/words/W034_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W034_female_normal.mp3",
+          "slow": "assets/audio/words/W034_female_slow.mp3"
+        }
+      }
+    },
+    {
       "id": "W039",
       "variantIds": [
         "20"
@@ -234,6 +335,95 @@
   ],
   "displayKeywords": [
     {
+      "id": "W036",
+      "variantIds": [
+        "18",
+        "19",
+        "20"
+      ],
+      "korean": "하나님",
+      "english": "God",
+      "thai": "พระเจ้า",
+      "romanization": "Phrá-jâo",
+      "koreanPronunciation": "프라짜오",
+      "tier": "core",
+      "days": [
+        17,
+        18,
+        19,
+        20,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W036_male_normal.mp3",
+          "slow": "assets/audio/words/W036_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W036_female_normal.mp3",
+          "slow": "assets/audio/words/W036_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W034",
+      "variantIds": [
+        "17",
+        "18",
+        "20"
+      ],
+      "korean": "하시는/존칭 동사 표지",
+      "english": "royal/respectful verb marker",
+      "thai": "ทรง",
+      "romanization": "song",
+      "koreanPronunciation": "쏭",
+      "tier": "supplemental",
+      "days": [
+        16,
+        17,
+        19,
+        20,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W034_male_normal.mp3",
+          "slow": "assets/audio/words/W034_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W034_female_normal.mp3",
+          "slow": "assets/audio/words/W034_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W039",
+      "variantIds": [
+        "20"
+      ],
+      "korean": "~이다",
+      "english": "to be",
+      "thai": "เป็น",
+      "romanization": "pen",
+      "koreanPronunciation": "뻰",
+      "tier": "supplemental",
+      "days": [
+        19,
+        20,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W039_male_normal.mp3",
+          "slow": "assets/audio/words/W039_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W039_female_normal.mp3",
+          "slow": "assets/audio/words/W039_female_slow.mp3"
+        }
+      }
+    },
+    {
       "id": "W040",
       "variantIds": [
         "20"
@@ -261,7 +451,39 @@
       }
     }
   ],
+  "supplementLinks": [],
   "supplementalKeywords": [
+    {
+      "id": "W034",
+      "variantIds": [
+        "17",
+        "18",
+        "20"
+      ],
+      "korean": "하시는/존칭 동사 표지",
+      "english": "royal/respectful verb marker",
+      "thai": "ทรง",
+      "romanization": "song",
+      "koreanPronunciation": "쏭",
+      "tier": "supplemental",
+      "days": [
+        16,
+        17,
+        19,
+        20,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W034_male_normal.mp3",
+          "slow": "assets/audio/words/W034_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W034_female_normal.mp3",
+          "slow": "assets/audio/words/W034_female_slow.mp3"
+        }
+      }
+    },
     {
       "id": "W039",
       "variantIds": [
@@ -291,8 +513,8 @@
     }
   ],
   "keywordDisplayPolicy": {
-    "default": "core_only",
-    "toggleSupplemental": true,
+    "default": "keyWordIds_order",
+    "toggleSupplemental": false,
     "emptyCoreFallback": "show_first_three_keywords"
   },
   "learnerProfile": {

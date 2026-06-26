@@ -17,7 +17,7 @@
   },
   "contentSource": {
     "phrases": "Weekday lesson newPhrases rendered as mainPhrases; review-only weekdays fall back to reviewPhrases.",
-    "keywords": "Weekday lesson keyWordIds filtered through displayKeywords.",
+    "keywords": "Weekday lesson keyWordIds rendered as displayKeywords.",
     "missionText": "Weekday speakingMission rendered as the main action box.",
     "ministryGuide": "Weekday ministryGuide rendered as the relational guide line."
   },
@@ -31,12 +31,12 @@
   "speakingMission": "이름이 무엇인가요를 5회 말하고, 미소와 함께 2회 더 연습한다.",
   "primaryImage": {
     "sceneId": "name_intro_conversation",
-    "altTextKo": "예배 후 처음 만나 이름을 묻고 자기소개하는 장면",
+    "altTextKo": "교회 친교 자리에서 이름을 묻고 자기 이름을 소개하는 장면",
     "sourcePlan": [
       {
         "type": "local_preferred",
         "assetPath": "assets/images/scenes/name_intro_conversation.jpg",
-        "status": "missing"
+        "status": "ready"
       },
       {
         "type": "stock_preferred",
@@ -208,7 +208,6 @@
       "variantIds": [
         "8",
         "10",
-        "11",
         "17",
         "18",
         "19",
@@ -225,7 +224,6 @@
         7,
         9,
         10,
-        11,
         15,
         16,
         17,
@@ -303,42 +301,50 @@
           "slow": "assets/audio/words/W015_female_slow.mp3"
         }
       }
-    },
+    }
+  ],
+  "displayKeywords": [
     {
-      "id": "W004",
+      "id": "W013",
       "variantIds": [
         "8",
         "10",
-        "11",
-        "12"
+        "17",
+        "18",
+        "19",
+        "22",
+        "23"
       ],
-      "korean": "여성 질문/권유 어미",
-      "english": "female question/request particle",
-      "thai": "คะ",
-      "romanization": "khá",
-      "koreanPronunciation": "카",
-      "voices": [
-        "female"
-      ],
-      "tier": "core",
+      "korean": "당신",
+      "english": "you",
+      "thai": "คุณ",
+      "romanization": "khun",
+      "koreanPronunciation": "쿤",
+      "tier": "supplemental",
       "days": [
         7,
         9,
         10,
-        11,
-        12,
         15,
+        16,
+        17,
+        18,
+        20,
+        22,
+        23,
         25
       ],
       "audio": {
+        "male": {
+          "normal": "assets/audio/words/W013_male_normal.mp3",
+          "slow": "assets/audio/words/W013_male_slow.mp3"
+        },
         "female": {
-          "normal": "assets/audio/words/W004_female_normal.mp3",
-          "slow": "assets/audio/words/W004_female_slow.mp3"
+          "normal": "assets/audio/words/W013_female_normal.mp3",
+          "slow": "assets/audio/words/W013_female_slow.mp3"
         }
       }
-    }
-  ],
-  "displayKeywords": [
+    },
     {
       "id": "W014",
       "variantIds": [
@@ -370,35 +376,30 @@
       }
     },
     {
-      "id": "W004",
+      "id": "W015",
       "variantIds": [
-        "8",
-        "10",
-        "11",
-        "12"
+        "8"
       ],
-      "korean": "여성 질문/권유 어미",
-      "english": "female question/request particle",
-      "thai": "คะ",
-      "romanization": "khá",
-      "koreanPronunciation": "카",
-      "voices": [
-        "female"
-      ],
-      "tier": "core",
+      "korean": "무엇",
+      "english": "what",
+      "thai": "อะไร",
+      "romanization": "à-rai",
+      "koreanPronunciation": "아라이",
+      "tier": "supplemental",
       "days": [
         7,
-        9,
         10,
-        11,
-        12,
         15,
         25
       ],
       "audio": {
+        "male": {
+          "normal": "assets/audio/words/W015_male_normal.mp3",
+          "slow": "assets/audio/words/W015_male_slow.mp3"
+        },
         "female": {
-          "normal": "assets/audio/words/W004_female_normal.mp3",
-          "slow": "assets/audio/words/W004_female_slow.mp3"
+          "normal": "assets/audio/words/W015_female_normal.mp3",
+          "slow": "assets/audio/words/W015_female_slow.mp3"
         }
       }
     }
@@ -409,7 +410,6 @@
       "variantIds": [
         "8",
         "10",
-        "11",
         "17",
         "18",
         "19",
@@ -426,7 +426,6 @@
         7,
         9,
         10,
-        11,
         15,
         16,
         17,
@@ -477,7 +476,7 @@
     }
   ],
   "keywordDisplayPolicy": {
-    "default": "core_only",
+    "default": "keyWordIds_order",
     "toggleSupplemental": false
   },
   "audioModes": [

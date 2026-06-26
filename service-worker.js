@@ -1,15 +1,16 @@
-const CACHE_NAME = "thai25-day1-v12";
+const CACHE_NAME = "thai25-day1-v14";
 const SHELL_ASSETS = [
   "./",
   "./index.html",
-  "./styles.css",
-  "./app.js",
+  "./styles.css?v=14",
+  "./app.js?v=14",
   "./manifest.webmanifest",
   "./assets/generated/pwa/w1d1.json",
   "./assets/generated/pwa/w1d2.json",
   "./assets/generated/pwa/w1d3.json",
   "./assets/generated/pwa/w1d4.json",
   "./assets/generated/pwa/w1d5.json",
+  "./assets/generated/pwa/aid1_numbers.json",
   "./assets/generated/pwa-icon.svg"
 ];
 
