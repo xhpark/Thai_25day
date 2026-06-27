@@ -29,9 +29,21 @@ function requestedAid() {
   return params.get("aid");
 }
 
+function requestedPreview() {
+  const params = new URLSearchParams(window.location.search);
+  return params.get("preview");
+}
+
 function specUrlForDay(day) {
   const week = Math.ceil(day / 5);
   return `assets/generated/pwa/w${week}d${day}.json`;
+}
+
+function specUrlForPreview(preview) {
+  return {
+    "d-2": "assets/generated/pwa/preview_d_minus_2.json",
+    "d-1": "assets/generated/pwa/preview_d_minus_1.json"
+  }[preview] || null;
 }
 
 function specUrlForAid(aid) {
@@ -129,6 +141,10 @@ function isCompleted() {
   return state.completedIds.includes(state.spec.id);
 }
 
+function lessonLabel(spec = state.spec) {
+  return spec.displayDayLabel || `${spec.day}일차`;
+}
+
 function effectiveDisplayKeywords(spec) {
   if (spec.displayKeywords?.length) return spec.displayKeywords;
   if (spec.keywordDisplayPolicy?.emptyCoreFallback === "show_first_three_keywords") {
@@ -142,11 +158,12 @@ function render() {
   const completed = isCompleted();
   const phrases = primaryPhrases();
   const sentenceHeading = isReviewOnlyLesson() ? "오늘의 복습 문장" : "오늘의 문장";
+  document.title = `Thai 25 Day - ${lessonLabel(spec)}`;
 
   document.getElementById("app").innerHTML = `
     <header class="topbar">
       <div class="brand">
-        <div class="brand-mark" aria-hidden="true">${spec.day}</div>
+        <div class="brand-mark" aria-hidden="true">${escapeHtml(spec.displayDayLabel || spec.day)}</div>
         <div>
           <p class="brand-title">Thai 25 Day</p>
           <p class="brand-subtitle">${escapeHtml(spec.theme)}</p>
@@ -160,8 +177,8 @@ function render() {
     <main>
       <section class="hero" aria-labelledby="lesson-title">
         <div>
-          <p class="eyebrow">${spec.day}일차</p>
-          <h1 id="lesson-title">${spec.day}일차 ${escapeHtml(spec.title)}</h1>
+          <p class="eyebrow">${escapeHtml(lessonLabel(spec))}</p>
+          <h1 id="lesson-title">${escapeHtml(lessonLabel(spec))} ${escapeHtml(spec.title)}</h1>
           <p class="hero-copy">${escapeHtml(spec.hook)} ${escapeHtml(spec.story)}</p>
         </div>
         ${renderScene(spec)}
@@ -209,8 +226,8 @@ function render() {
 
       <section class="section progress-panel" aria-labelledby="progress-heading">
         <h2 id="progress-heading">오늘 학습 완료</h2>
-        <p>${completed ? `<span class="done-message">${spec.day}일차를 완료했습니다.</span>` : "문장 오디오를 듣고 직접 말한 뒤 완료를 눌러 주세요."}</p>
-        <button class="complete-btn" data-action="complete">${completed ? "완료 상태 유지하기" : `${spec.day}일차 완료하기`}</button>
+        <p>${completed ? `<span class="done-message">${escapeHtml(lessonLabel(spec))}를 완료했습니다.</span>` : "문장 오디오를 듣고 직접 말한 뒤 완료를 눌러 주세요."}</p>
+        <button class="complete-btn" data-action="complete">${completed ? "완료 상태 유지하기" : `${escapeHtml(lessonLabel(spec))} 완료하기`}</button>
         <button class="plain-btn" data-action="reset">진도 초기화</button>
       </section>
     </main>
@@ -220,6 +237,21 @@ function render() {
 }
 
 function renderDayNav(spec) {
+  if (spec.previewNavLinks?.length) {
+    return `
+      <nav class="day-nav preview-nav" aria-label="정식 학습 전 미리보기 선택">
+        ${spec.previewNavLinks
+          .map(
+            (link) => `
+              <a class="day-nav-link ${link.active ? "active" : ""}" href="${escapeHtml(link.href)}" ${link.active ? 'aria-current="page"' : ""}>
+                ${escapeHtml(link.label)}
+              </a>
+            `
+          )
+          .join("")}
+      </nav>
+    `;
+  }
   const startDay = (spec.week - 1) * 5 + 1;
   const days = Array.from({ length: 5 }, (_, index) => startDay + index);
   return `
@@ -386,6 +418,7 @@ function renderKeyword(keyword) {
 
 function renderSupplement() {
   const spec = state.spec;
+  document.title = `Thai 25 Day - 학습보조${spec.aid}`;
   document.getElementById("app").innerHTML = `
     <header class="topbar">
       <div class="brand">
@@ -512,14 +545,14 @@ function bindEvents() {
       state.completedIds = [...state.completedIds, state.spec.id];
       writeStorage(STORAGE_KEYS.completedLessonIds, JSON.stringify(state.completedIds));
     }
-    showToast(`${state.spec.day}일차 학습 완료가 저장되었습니다.`);
+    showToast(`${lessonLabel(state.spec)} 학습 완료가 저장되었습니다.`);
     render();
   });
 
   document.querySelector('[data-action="reset"]').addEventListener("click", () => {
     state.completedIds = state.completedIds.filter((id) => id !== state.spec.id);
     writeStorage(STORAGE_KEYS.completedLessonIds, JSON.stringify(state.completedIds));
-    showToast(`${state.spec.day}일차 진도를 초기화했습니다.`);
+    showToast(`${lessonLabel(state.spec)} 진도를 초기화했습니다.`);
     render();
   });
 }
@@ -606,7 +639,8 @@ function showToast(message) {
 
 function renderError(error) {
   const aid = requestedAid();
-  const label = aid ? `학습보조${escapeHtml(aid)}` : `${requestedDay()}일차`;
+  const preview = requestedPreview();
+  const label = aid ? `학습보조${escapeHtml(aid)}` : preview ? `미리보기 ${escapeHtml(preview)}` : `${requestedDay()}일차`;
   document.getElementById("app").innerHTML = `
     <div class="error-panel">
       <p class="eyebrow">불러오기 실패</p>
@@ -619,7 +653,8 @@ function renderError(error) {
 async function boot() {
   try {
     const aid = requestedAid();
-    const specUrl = aid ? specUrlForAid(aid) : specUrlForDay(requestedDay());
+    const preview = requestedPreview();
+    const specUrl = aid ? specUrlForAid(aid) : preview ? specUrlForPreview(preview) : specUrlForDay(requestedDay());
     if (!specUrl) throw new Error(`지원하지 않는 보조자료 번호입니다: ${aid}`);
     const response = await fetch(specUrl, { cache: "no-cache" });
     if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);

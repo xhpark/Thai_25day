@@ -112,6 +112,10 @@ button {
   grid-template-columns: 1fr;
 }
 
+.day-nav.preview-nav {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .day-nav-link {
   display: grid;
   min-height: 42px;
