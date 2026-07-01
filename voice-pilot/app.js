@@ -628,6 +628,7 @@ function recordHeading() {
   if (state.status === "listening") return "문장 듣는 중";
   if (state.recording) return "말씀해 주세요";
   if (state.status === "analyzing") return "내 목소리를 들으며 분석 중";
+  if (state.status === "error") return "인식 오류";
   if (state.status === "done") return "녹음과 분석 완료";
   return "준비";
 }
@@ -636,6 +637,7 @@ function recordCopy() {
   if (state.status === "listening") return "문장 오디오가 끝나면 자동으로 녹음이 시작됩니다. 준비하고 있다가 바로 따라 말하세요.";
   if (state.recording) return "4초 안에 한 번만 또렷하게 말합니다.";
   if (state.status === "analyzing") return "내 목소리를 자동으로 들려주는 동안 인식 결과를 확인합니다.";
+  if (state.status === "error") return "서버 인식 오류입니다. 잠시 후 학습대상 문장을 다시 터치해 주세요.";
   if (state.status === "done") return "필요하면 내 목소리를 다시 듣고, 학습대상 문장을 터치해 한 번 더 연습하세요.";
   if (!state.device.registered) return "먼저 이 iPhone을 등록해야 녹음 기능이 열립니다.";
   if (!state.device.verified) return "등록된 iPhone 확인을 누르면 녹음 버튼이 열립니다. 화면을 새로 열거나 시간이 지나면 다시 확인합니다.";
@@ -646,6 +648,7 @@ function practiceCardLabel() {
   if (state.status === "listening") return "재생 중 · 끝나면 자동 녹음";
   if (state.recording) return "녹음 중 · 지금 따라 말하세요";
   if (state.status === "analyzing") return "분석 중";
+  if (state.status === "error") return "인식 오류 · 다시 터치해서 재시도";
   if (state.status === "done") return "다시 연습하려면 문장을 터치";
   return "학습대상 문장 · 터치해서 듣고 바로 따라 말하기";
 }
@@ -686,6 +689,7 @@ function resultTitle() {
   if (state.status === "listening") return "듣는 중";
   if (state.status === "recording") return "녹음 중";
   if (state.status === "analyzing") return "분석 중";
+  if (state.status === "error") return "오류";
   if (state.status === "done") return "확인 완료";
   return "대기 중";
 }
@@ -1014,17 +1018,13 @@ function openSttStream() {
         completeAttempt(payload.transcript || state.transcript || state.interimTranscript || "", payload.score);
       }
       if (payload.type === "error") {
-        state.sttError = payload.message || "STT 서버 오류";
-        if (state.status === "analyzing") {
-          completeAttempt(state.transcript || state.interimTranscript || "", 0);
-        }
+        failAttempt(payload.message || "STT 서버 오류");
       }
       render();
     });
     state.websocket.addEventListener("close", () => {
       if (state.status === "analyzing" && !state.transcript && !state.interimTranscript) {
-        state.sttError = "STT 연결이 결과 없이 종료되었습니다.";
-        completeAttempt("", 0);
+        failAttempt("STT 연결이 결과 없이 종료되었습니다.");
         render();
       }
     });
@@ -1059,10 +1059,14 @@ async function finishRecording() {
   } else {
     window.setTimeout(() => {
       if (state.status !== "analyzing") return;
-      state.sttError = state.interimTranscript
-        ? "최종 결과가 늦어 임시 인식 결과로 점수를 계산했습니다."
-        : "정해진 시간 안에 인식 결과가 도착하지 않았습니다.";
-      completeAttempt(state.interimTranscript || "", state.interimTranscript ? undefined : 0);
+      if (state.sttError) {
+        failAttempt(state.sttError);
+      } else {
+        state.sttError = state.interimTranscript
+          ? "최종 결과가 늦어 임시 인식 결과로 점수를 계산했습니다."
+          : "정해진 시간 안에 인식 결과가 도착하지 않았습니다.";
+        completeAttempt(state.interimTranscript || "", state.interimTranscript ? undefined : 0);
+      }
       render();
     }, Number(CONFIG.stt?.resultTimeoutMs || 6500));
   }
@@ -1106,6 +1110,14 @@ function completeAttempt(transcript, score) {
     saveAttempt(finalTranscript, finalScore);
     state.attemptRecorded = true;
   }
+}
+
+function failAttempt(message) {
+  state.sttError = message || "STT 서버 오류";
+  state.transcript = "";
+  state.interimTranscript = "";
+  state.score = null;
+  state.status = "error";
 }
 
 function stopTracks() {

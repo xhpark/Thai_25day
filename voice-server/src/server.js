@@ -70,7 +70,9 @@ wss.on("connection", (ws) => {
     audioBytes: 0,
     startedAt: Date.now(),
     speechStream: null,
-    closed: false
+    closed: false,
+    speechFailed: false,
+    errorSent: false
   };
 
   ws.on("message", async (message, isBinary) => {
@@ -81,7 +83,7 @@ wss.on("connection", (ws) => {
       }
       handleAudioChunk(ws, session, message);
     } catch (error) {
-      send(ws, { type: "error", message: safeError(error) });
+      sendSpeechError(ws, session, error);
       closeSpeechStream(session);
     }
   });
@@ -122,11 +124,11 @@ async function startSession(ws, session, payload) {
   session.startedAt = Date.now();
 
   session.speechStream = speechClient
-    .streamingRecognize()
+    ._streamingRecognize()
     .on("data", (response) => handleSpeechResponse(ws, session, response))
     .on("error", (error) => {
-      console.error("speech_stream_error", safeError(error));
-      send(ws, { type: "error", message: safeError(error) });
+      sendSpeechError(ws, session, error);
+      closeSpeechStream(session);
     })
     .on("end", () => {
       if (!session.closed) send(ws, { type: "stream_end" });
@@ -150,12 +152,22 @@ async function startSession(ws, session, payload) {
 }
 
 function handleAudioChunk(ws, session, chunk) {
+  if (session.speechFailed || session.closed) return;
   if (!session.uid || !session.speechStream) throw new Error("session_not_started");
+  if (session.speechStream.destroyed || session.speechStream.writableEnded || session.speechStream.writableDestroyed) {
+    session.speechFailed = true;
+    return;
+  }
   if (Date.now() - session.startedAt > MAX_AUDIO_MS + 2500) throw new Error("recording_window_expired");
   session.audioBytes += chunk.byteLength;
   if (session.audioBytes > MAX_AUDIO_BYTES) throw new Error("audio_too_large");
 
-  session.speechStream.write({ audio: chunk });
+  try {
+    session.speechStream.write({ audio: chunk });
+  } catch (error) {
+    sendSpeechError(ws, session, error);
+    closeSpeechStream(session);
+  }
 }
 
 function handleSpeechResponse(ws, session, response) {
@@ -176,6 +188,9 @@ function handleSpeechResponse(ws, session, response) {
 
 async function finishSession(ws, session) {
   if (!session.uid) throw new Error("session_not_started");
+  if (session.speechFailed) {
+    return;
+  }
   closeSpeechStream(session);
 
   setTimeout(() => {
@@ -209,8 +224,22 @@ function closeSpeechStream(session) {
   if (session.closed) return;
   session.closed = true;
   if (session.speechStream) {
-    session.speechStream.end();
+    if (!session.speechStream.destroyed && !session.speechStream.writableEnded && !session.speechStream.writableDestroyed) {
+      session.speechStream.end();
+    }
     session.speechStream = null;
+  }
+}
+
+function sendSpeechError(ws, session, error) {
+  const message = safeError(error);
+  const reason = error?.reason || error?.statusDetails?.[0]?.reason || error?.errorInfoMetadata?.method || "";
+  const detail = reason ? `${message} ${reason}` : message;
+  console.error("speech_stream_error", detail);
+  session.speechFailed = true;
+  if (!session.errorSent) {
+    send(ws, { type: "error", message: detail });
+    session.errorSent = true;
   }
 }
 
