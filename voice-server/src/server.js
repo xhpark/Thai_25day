@@ -39,7 +39,8 @@ const server = http.createServer(async (request, response) => {
     return;
   }
 
-  if (request.url === "/healthz") {
+  const requestPath = new URL(request.url, `http://${request.headers.host}`).pathname.replace(/\/$/, "") || "/";
+  if (requestPath === "/healthz") {
     writeJson(response, 200, { ok: true, service: "thai-voice-pilot-server" });
     return;
   }
@@ -64,6 +65,7 @@ wss.on("connection", (ws) => {
     day: null,
     phraseId: null,
     transcript: "",
+    interimTranscript: "",
     saved: false,
     audioBytes: 0,
     startedAt: Date.now(),
@@ -122,7 +124,10 @@ async function startSession(ws, session, payload) {
   session.speechStream = speechClient
     .streamingRecognize()
     .on("data", (response) => handleSpeechResponse(ws, session, response))
-    .on("error", (error) => send(ws, { type: "error", message: safeError(error) }))
+    .on("error", (error) => {
+      console.error("speech_stream_error", safeError(error));
+      send(ws, { type: "error", message: safeError(error) });
+    })
     .on("end", () => {
       if (!session.closed) send(ws, { type: "stream_end" });
     });
@@ -164,6 +169,7 @@ function handleSpeechResponse(ws, session, response) {
     const score = scoreTranscript(session.targetThai, transcript);
     send(ws, { type: "final", transcript, score });
   } else {
+    session.interimTranscript = transcript;
     send(ws, { type: "interim", transcript });
   }
 }
@@ -180,7 +186,7 @@ async function finishSession(ws, session) {
 async function persistSession(ws, session) {
   if (session.saved) return;
   session.saved = true;
-  const transcript = session.transcript || "";
+  const transcript = session.transcript || session.interimTranscript || "";
   const score = scoreTranscript(session.targetThai, transcript);
   if (transcript) {
     await firestore.collection(FIRESTORE_COLLECTION).add({

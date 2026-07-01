@@ -41,6 +41,8 @@ const state = {
   sttReady: false,
   pendingSttChunks: [],
   sttEndPending: false,
+  sttError: "",
+  attemptRecorded: false,
   recording: false,
   countdown: 4,
   status: "idle",
@@ -119,6 +121,12 @@ function getSpeech(item) {
 function currentTargetText() {
   const speech = getSpeech(state.target);
   return speech?.thai || "";
+}
+
+function currentTargetAudio(mode = "normal") {
+  if (!state.target) return "";
+  const available = state.target.audio?.[state.speaker] || {};
+  return assetUrl(available[mode] || available.normal || "");
 }
 
 function targetKey(item) {
@@ -290,7 +298,6 @@ function render() {
   }
 
   document.title = `Thai Voice Pilot - ${readLessonLabel()} ${state.lesson.title}`;
-  const canRecord = Boolean(state.target) && state.device.verified && !state.recording;
   const phrases = primaryPhrases();
   const keywords = effectiveDisplayKeywords();
   app.innerHTML = `
@@ -373,36 +380,6 @@ function render() {
 
       ${renderPracticeTargetPanel()}
 
-      <section class="record-panel" aria-labelledby="record-heading">
-        <div>
-          <p class="section-label">4초 녹음</p>
-          <h2 id="record-heading">${recordHeading()}</h2>
-          <p class="record-copy">${recordCopy()}</p>
-        </div>
-        <div class="record-meter" data-state="${state.status}">
-          <span>${state.recording ? state.countdown : "4"}</span>
-        </div>
-        ${renderRecordGateAction(canRecord)}
-        <button class="record-btn" data-action="record" ${state.recording || !canRecord ? "disabled" : ""}>
-          ${state.recording ? "녹음 중" : canRecord ? "녹음 시작" : recordButtonLabel()}
-        </button>
-        <button class="replay-btn" data-action="replay" ${state.recordedBlob && !state.recording ? "" : "disabled"}>
-          다시 듣기
-        </button>
-      </section>
-
-      <section class="result-panel" aria-labelledby="result-heading">
-        <div class="result-head">
-          <div>
-            <p class="section-label">인식 결과</p>
-            <h2 id="result-heading">${resultTitle()}</h2>
-          </div>
-          <strong>${state.score === null ? "--" : `${state.score}점`}</strong>
-        </div>
-        <p class="transcript" lang="th">${escapeHtml(state.transcript || state.interimTranscript || "아직 인식 결과가 없습니다.")}</p>
-        <p class="result-note">${resultNote()}</p>
-      </section>
-
       ${state.auth.admin ? renderAdminPanel() : ""}
 
       <section class="target-panel progress-panel" aria-labelledby="progress-heading">
@@ -444,21 +421,12 @@ function renderScene() {
   `;
 }
 
-function renderPhraseCard(phrase, index, options = {}) {
-  const selectable = options.selectable !== false;
+function renderPhraseCard(phrase, index) {
   const speech = getSpeech(phrase);
-  const selected = selectedTargetKey() === targetKey(phrase);
   return `
-    <article class="phrase-card ${selected && selectable ? "selected" : ""}">
+    <article class="phrase-card">
       <div class="phrase-heading">
         <span>${escapeHtml(`문장 ${index + 1}`)}</span>
-        ${
-          selectable
-            ? `<button class="practice-select-btn" data-action="select-target" data-target-type="phrase" data-target-index="${index}" aria-pressed="${selected}">
-                ${selected ? "연습 대상" : "따라 말하기"}
-              </button>`
-            : ""
-        }
       </div>
       <p class="thai-text" lang="th">${escapeHtml(speech.thai)}</p>
       <p class="korean-pronunciation">${escapeHtml(speech.korean_pronunciation || speech.koreanPronunciation)}</p>
@@ -482,7 +450,7 @@ function renderReviewList() {
         <span>${reviews.length}개</span>
       </div>
       <div class="phrase-list">
-        ${reviews.map((phrase, index) => renderPhraseCard(phrase, index + 1, { selectable: false })).join("")}
+        ${reviews.map((phrase, index) => renderPhraseCard(phrase, index + 1)).join("")}
       </div>
     </section>
   `;
@@ -565,6 +533,7 @@ function renderPracticeTargetPanel() {
   }
   const speech = getSpeech(state.target);
   const targets = practicePhrases();
+  const canStart = Boolean(state.target) && state.device.verified && !state.recording && state.status !== "listening" && state.status !== "analyzing";
   return `
     <section class="target-panel current-practice-panel" aria-labelledby="target-heading">
       <p class="section-label">듣고 바로 따라하기 대상</p>
@@ -577,10 +546,22 @@ function renderPracticeTargetPanel() {
           `)
           .join("")}
       </div>
-      <h2 id="target-heading">${escapeHtml(state.target.korean || state.target.koreanPronunciation)}</h2>
-      <p class="thai-text compact-thai" lang="th">${escapeHtml(speech.thai)}</p>
-      <p class="korean-pronunciation">${escapeHtml(speech.korean_pronunciation || speech.koreanPronunciation)}</p>
-      <p class="romanization">${escapeHtml(speech.romanization)}</p>
+      <button class="practice-target-card" data-action="listen-practice" ${canStart ? "" : "disabled"}>
+        <span class="practice-card-label">${escapeHtml(practiceCardLabel())}</span>
+        <strong id="target-heading">${escapeHtml(state.target.korean || state.target.koreanPronunciation)}</strong>
+        <span class="thai-text compact-thai" lang="th">${escapeHtml(speech.thai)}</span>
+        <span class="korean-pronunciation">${escapeHtml(speech.korean_pronunciation || speech.koreanPronunciation)}</span>
+        <span class="romanization">${escapeHtml(speech.romanization)}</span>
+      </button>
+      <p class="record-copy">${escapeHtml(recordCopy())}</p>
+      ${renderPracticeGate()}
+      <div class="record-meter" data-state="${state.status}">
+        <span class="mic-dot" aria-hidden="true"></span>
+        <strong>${state.recording ? state.countdown : "4"}</strong>
+        <small>${escapeHtml(recordHeading())}</small>
+      </div>
+      ${state.recordedBlob && !state.recording ? `<button class="replay-btn" data-action="replay">내 목소리 다시 듣기</button>` : ""}
+      ${renderPracticeResult()}
     </section>
   `;
 }
@@ -644,28 +625,33 @@ function deviceCopy() {
 }
 
 function recordHeading() {
+  if (state.status === "listening") return "문장 듣는 중";
   if (state.recording) return "말씀해 주세요";
   if (state.status === "analyzing") return "내 목소리를 들으며 분석 중";
   if (state.status === "done") return "녹음과 분석 완료";
-  return "듣고 바로 따라 말하기";
+  return "준비";
 }
 
 function recordCopy() {
+  if (state.status === "listening") return "문장 오디오가 끝나면 자동으로 녹음이 시작됩니다. 준비하고 있다가 바로 따라 말하세요.";
   if (state.recording) return "4초 안에 한 번만 또렷하게 말합니다.";
-  if (state.status === "analyzing") return "녹음은 저장하지 않고 인식 결과만 확인합니다.";
-  if (state.status === "done") return "필요하면 다시 듣고 한 번 더 연습하세요.";
+  if (state.status === "analyzing") return "내 목소리를 자동으로 들려주는 동안 인식 결과를 확인합니다.";
+  if (state.status === "done") return "필요하면 내 목소리를 다시 듣고, 학습대상 문장을 터치해 한 번 더 연습하세요.";
   if (!state.device.registered) return "먼저 이 iPhone을 등록해야 녹음 기능이 열립니다.";
   if (!state.device.verified) return "등록된 iPhone 확인을 누르면 녹음 버튼이 열립니다. 화면을 새로 열거나 시간이 지나면 다시 확인합니다.";
-  return "녹음이 끝나면 내 목소리가 자동으로 재생되고, 동시에 인식 결과가 표시됩니다.";
+  return "학습대상 문장을 터치하면 먼저 문장이 재생되고, 끝나자마자 4초 녹음이 자동으로 시작됩니다.";
 }
 
-function recordButtonLabel() {
-  if (!state.device.registered) return "iPhone 등록 필요";
-  return "등록된 iPhone 확인 필요";
+function practiceCardLabel() {
+  if (state.status === "listening") return "재생 중 · 끝나면 자동 녹음";
+  if (state.recording) return "녹음 중 · 지금 따라 말하세요";
+  if (state.status === "analyzing") return "분석 중";
+  if (state.status === "done") return "다시 연습하려면 문장을 터치";
+  return "학습대상 문장 · 터치해서 듣고 바로 따라 말하기";
 }
 
-function renderRecordGateAction(canRecord) {
-  if (canRecord) return "";
+function renderPracticeGate() {
+  if (state.device.verified || state.status === "listening" || state.recording || state.status === "analyzing") return "";
   if (state.device.registered) {
     return `
       <button class="record-gate-btn" data-action="verify-device" ${state.device.busy ? "disabled" : ""}>
@@ -680,13 +666,34 @@ function renderRecordGateAction(canRecord) {
   `;
 }
 
+function renderPracticeResult() {
+  return `
+    <div class="practice-result" data-state="${state.status}">
+      <div class="result-head">
+        <div>
+          <p class="section-label">인식 결과</p>
+          <h2 id="result-heading">${resultTitle()}</h2>
+        </div>
+        <strong>${state.score === null ? "--" : `${state.score}점`}</strong>
+      </div>
+      <p class="transcript" lang="th">${escapeHtml(state.transcript || state.interimTranscript || "아직 인식 결과가 없습니다.")}</p>
+      <p class="result-note">${escapeHtml(resultNote())}</p>
+    </div>
+  `;
+}
+
 function resultTitle() {
+  if (state.status === "listening") return "듣는 중";
+  if (state.status === "recording") return "녹음 중";
   if (state.status === "analyzing") return "분석 중";
   if (state.status === "done") return "확인 완료";
   return "대기 중";
 }
 
 function resultNote() {
+  if (state.sttError) return `인식 점검: ${state.sttError}`;
+  if (state.status === "listening") return "문장 재생이 끝나면 마이크가 켜지고 시간이 줄어듭니다.";
+  if (state.status === "recording") return "마이크가 깜빡이는 동안 태국어 문장을 말해 주세요.";
   if (state.status === "analyzing") return "서버가 연결되면 말하는 동안 받은 조각을 바로 분석합니다.";
   if (state.status === "done") return "점수와 transcript만 저장하고 오디오 원본은 저장하지 않습니다.";
   return "결과는 Google STT가 알아들은 태국어와 목표 문장의 유사도로 계산합니다.";
@@ -726,7 +733,7 @@ function bindGateEvents() {
 
 function bindPilotEvents() {
   document.querySelector('[data-action="sign-out"]')?.addEventListener("click", signOut);
-  document.querySelector('[data-action="record"]')?.addEventListener("click", startRecording);
+  document.querySelector('[data-action="listen-practice"]')?.addEventListener("click", listenThenRecord);
   document.querySelector('[data-action="replay"]')?.addEventListener("click", replayRecording);
   document.querySelectorAll('[data-action="register-device"]').forEach((button) => {
     button.addEventListener("click", registerDevice);
@@ -810,6 +817,57 @@ function setAudioStatus(message, tone = "neutral") {
   status.dataset.tone = tone;
 }
 
+async function listenThenRecord() {
+  if (!state.target) {
+    state.auth.message = "오늘 따라 말할 문장을 먼저 확인해 주세요.";
+    render();
+    return;
+  }
+  if (!state.device.verified || !state.device.sessionToken) {
+    state.device.message = state.device.registered
+      ? "등록된 iPhone 확인을 먼저 완료해 주세요."
+      : "먼저 이 iPhone을 등록해 주세요.";
+    render();
+    return;
+  }
+  if (state.recording || state.status === "listening" || state.status === "analyzing") return;
+
+  if (state.audio) {
+    state.audio.pause();
+    state.audio.currentTime = 0;
+  }
+  resetRecordingState();
+  const audioPath = currentTargetAudio("normal");
+  if (!audioPath) {
+    state.auth.message = "학습대상 문장 오디오가 없어 바로 녹음을 시작합니다.";
+    render();
+    await startRecording();
+    return;
+  }
+
+  state.status = "listening";
+  state.interimTranscript = "문장 오디오가 끝나면 자동으로 녹음이 시작됩니다.";
+  state.audio = new Audio(audioPath);
+  state.audio.addEventListener("ended", () => {
+    state.audio = null;
+    startRecording();
+  }, { once: true });
+  state.audio.addEventListener("error", () => {
+    state.status = "idle";
+    state.sttError = "문장 오디오를 불러오지 못했습니다.";
+    render();
+  }, { once: true });
+  render();
+
+  try {
+    await state.audio.play();
+  } catch (error) {
+    state.status = "idle";
+    state.sttError = `문장 오디오 재생 실패: ${error.message}`;
+    render();
+  }
+}
+
 function playAudio(src, label) {
   if (state.audio) {
     state.audio.pause();
@@ -838,6 +896,8 @@ function resetRecordingState() {
   state.transcript = "";
   state.interimTranscript = "";
   state.score = null;
+  state.sttError = "";
+  state.attemptRecorded = false;
   state.status = "idle";
 }
 
@@ -948,12 +1008,25 @@ function openSttStream() {
       }
       if (payload.type === "interim") state.interimTranscript = payload.transcript || "";
       if (payload.type === "final") {
-        state.transcript = payload.transcript || "";
-        state.score = Number.isFinite(payload.score) ? payload.score : scoreTranscript(currentTargetText(), state.transcript);
-        saveAttempt(state.transcript, state.score);
-        state.status = "done";
+        completeAttempt(payload.transcript || "", payload.score);
+      }
+      if (payload.type === "saved") {
+        completeAttempt(payload.transcript || state.transcript || state.interimTranscript || "", payload.score);
+      }
+      if (payload.type === "error") {
+        state.sttError = payload.message || "STT 서버 오류";
+        if (state.status === "analyzing") {
+          completeAttempt(state.transcript || state.interimTranscript || "", 0);
+        }
       }
       render();
+    });
+    state.websocket.addEventListener("close", () => {
+      if (state.status === "analyzing" && !state.transcript && !state.interimTranscript) {
+        state.sttError = "STT 연결이 결과 없이 종료되었습니다.";
+        completeAttempt("", 0);
+        render();
+      }
     });
   } catch {
     state.interimTranscript = "서버 연결을 준비하지 못했습니다.";
@@ -980,14 +1053,18 @@ async function finishRecording() {
   if (DEMO_MODE || !CONFIG.stt?.websocketUrl) {
     window.setTimeout(() => {
       const transcript = currentTargetText();
-      const score = scoreTranscript(currentTargetText(), transcript);
-      state.transcript = transcript;
-      state.interimTranscript = "";
-      state.score = score;
-      state.status = "done";
-      saveAttempt(transcript, score);
+      completeAttempt(transcript, scoreTranscript(currentTargetText(), transcript));
       render();
     }, 700);
+  } else {
+    window.setTimeout(() => {
+      if (state.status !== "analyzing") return;
+      state.sttError = state.interimTranscript
+        ? "최종 결과가 늦어 임시 인식 결과로 점수를 계산했습니다."
+        : "정해진 시간 안에 인식 결과가 도착하지 않았습니다.";
+      completeAttempt(state.interimTranscript || "", state.interimTranscript ? undefined : 0);
+      render();
+    }, Number(CONFIG.stt?.resultTimeoutMs || 6500));
   }
 }
 
@@ -1016,6 +1093,19 @@ function saveAttempt(transcript, score) {
     createdAt: new Date().toISOString()
   };
   state.attempts = [attempt, ...state.attempts].slice(0, 10);
+}
+
+function completeAttempt(transcript, score) {
+  const finalTranscript = transcript || "";
+  const finalScore = Number.isFinite(score) ? score : scoreTranscript(currentTargetText(), finalTranscript);
+  state.transcript = finalTranscript;
+  state.interimTranscript = "";
+  state.score = finalScore;
+  state.status = "done";
+  if (!state.attemptRecorded) {
+    saveAttempt(finalTranscript, finalScore);
+    state.attemptRecorded = true;
+  }
 }
 
 function stopTracks() {
