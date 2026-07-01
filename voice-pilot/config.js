@@ -11,8 +11,8 @@ window.VOICE_PILOT_CONFIG = {
     adminUids: []
   },
   stt: {
-    apiBaseUrl: "",
-    websocketUrl: "",
+    apiBaseUrl: "https://thai25-voice-server-x6prnyl4ia-du.a.run.app",
+    websocketUrl: "wss://thai25-voice-server-x6prnyl4ia-du.a.run.app/ws/stt",
     maxRecordingMs: 4000,
     connectTimeoutMs: 2500
   }
