@@ -1,0 +1,19 @@
+{
+  "name": "thai-voice-pilot-server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "@google-cloud/firestore": "^8.6.0",
+    "@google-cloud/speech": "^7.5.0",
+    "@simplewebauthn/server": "^13.3.2",
+    "firebase-admin": "^14.1.0",
+    "ws": "^8.18.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

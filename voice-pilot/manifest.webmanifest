@@ -1,0 +1,19 @@
+{
+  "name": "Thai Voice Pilot",
+  "short_name": "Voice Pilot",
+  "description": "승인된 학습자 전용 태국어 발음 연습 파일럿",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "background_color": "#f5f8f3",
+  "theme_color": "#163f34",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "../assets/generated/pwa-icon.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

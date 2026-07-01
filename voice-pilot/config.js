@@ -1,0 +1,1 @@
+window.VOICE_PILOT_CONFIG = window.VOICE_PILOT_CONFIG || {};
