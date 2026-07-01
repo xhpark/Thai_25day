@@ -5,7 +5,8 @@ const STORAGE_KEYS = {
   speaker: "thai25.voicePilot.speaker",
   day: "thai25.voicePilot.day",
   audioSpeedPreference: "thai25.audioSpeedPreference",
-  completedLessonIds: "thai25.completedLessonIds"
+  completedLessonIds: "thai25.completedLessonIds",
+  deviceSetupSkipped: "thai25.voicePilot.deviceSetupSkipped"
 };
 
 const state = {
@@ -29,6 +30,7 @@ const state = {
   speaker: localStorage.getItem(STORAGE_KEYS.speaker) || "female",
   audioMode: localStorage.getItem(STORAGE_KEYS.audioSpeedPreference) || "normal",
   completedIds: parseJsonStorage(STORAGE_KEYS.completedLessonIds, []),
+  deviceSetupSkipped: localStorage.getItem(STORAGE_KEYS.deviceSetupSkipped) === "1",
   audio: null,
   lesson: null,
   target: null,
@@ -311,8 +313,6 @@ function render() {
     </header>
 
     <main>
-      ${renderDevicePanel()}
-
       <section class="target-panel lesson-control-panel" aria-labelledby="control-heading">
         <div>
           <p class="section-label">학습 설정</p>
@@ -332,6 +332,8 @@ function render() {
           ${renderSpeakerToggle()}
         </div>
       </section>
+
+      ${renderDeviceSetupPanel()}
 
       ${renderScene()}
 
@@ -533,7 +535,7 @@ function renderPracticeTargetPanel() {
   }
   const speech = getSpeech(state.target);
   const targets = practicePhrases();
-  const canStart = Boolean(state.target) && state.device.verified && !state.recording && state.status !== "listening" && state.status !== "analyzing";
+  const canStart = Boolean(state.target) && !state.recording && state.status !== "listening" && state.status !== "analyzing";
   return `
     <section class="target-panel current-practice-panel" aria-labelledby="target-heading">
       <p class="section-label">듣고 바로 따라하기 대상</p>
@@ -554,7 +556,6 @@ function renderPracticeTargetPanel() {
         <span class="romanization">${escapeHtml(speech.romanization)}</span>
       </button>
       <p class="record-copy">${escapeHtml(recordCopy())}</p>
-      ${renderPracticeGate()}
       <div class="record-meter" data-state="${state.status}">
         <span class="mic-dot" aria-hidden="true"></span>
         <strong>${state.recording ? state.countdown : "4"}</strong>
@@ -595,33 +596,26 @@ function renderAccessGate() {
   `;
 }
 
-function renderDevicePanel() {
-  const stateLabel = state.device.verified ? "확인 완료" : state.device.registered ? "등록됨" : "미등록";
+function renderDeviceSetupPanel() {
+  if (DEMO_MODE || state.device.registered || state.deviceSetupSkipped) return "";
   return `
     <section class="device-panel" aria-labelledby="device-heading">
       <div>
-        <p class="section-label">iPhone 바인딩</p>
-        <h2 id="device-heading">등록된 iPhone 확인</h2>
-        <p class="device-copy">${deviceCopy()}</p>
+        <p class="section-label">선택 설정</p>
+        <h2 id="device-heading">iPhone 음성 연습 등록</h2>
+        <p class="device-copy">녹음과 음성인식 연습을 사용할 학습자만 이 iPhone을 등록합니다. 일반 학습은 건너뛰어도 계속 볼 수 있습니다.</p>
         ${state.device.message ? `<p class="device-message">${escapeHtml(state.device.message)}</p>` : ""}
       </div>
-      <strong class="device-state">${escapeHtml(stateLabel)}</strong>
       <div class="device-actions">
-        <button class="device-btn" data-action="register-device" ${state.device.busy || state.device.registered ? "disabled" : ""}>
+        <button class="device-btn primary" data-action="register-device" ${state.device.busy ? "disabled" : ""}>
           이 iPhone 등록하기
         </button>
-        <button class="device-btn primary" data-action="verify-device" ${state.device.busy || !state.device.registered ? "disabled" : ""}>
-          등록된 iPhone 확인
+        <button class="device-btn" data-action="skip-device-setup" ${state.device.busy ? "disabled" : ""}>
+          건너뛰고 학습하기
         </button>
       </div>
     </section>
   `;
-}
-
-function deviceCopy() {
-  if (state.device.verified) return "이 기기 확인이 완료되어 녹음과 STT 기능을 사용할 수 있습니다.";
-  if (state.device.registered) return "녹음 전에 이 iPhone의 passkey를 한 번 더 확인합니다.";
-  return "URL을 알아도 이 계정과 등록된 iPhone passkey가 없으면 녹음 기능이 열리지 않습니다.";
 }
 
 function recordHeading() {
@@ -639,8 +633,8 @@ function recordCopy() {
   if (state.status === "analyzing") return "내 목소리를 자동으로 들려주는 동안 인식 결과를 확인합니다.";
   if (state.status === "error") return "서버 인식 오류입니다. 잠시 후 학습대상 문장을 다시 터치해 주세요.";
   if (state.status === "done") return "필요하면 내 목소리를 다시 듣고, 학습대상 문장을 터치해 한 번 더 연습하세요.";
-  if (!state.device.registered) return "먼저 이 iPhone을 등록해야 녹음 기능이 열립니다.";
-  if (!state.device.verified) return "등록된 iPhone 확인을 누르면 녹음 버튼이 열립니다. 화면을 새로 열거나 시간이 지나면 다시 확인합니다.";
+  if (!state.device.registered) return "학습대상 문장을 듣는 것은 가능하지만, 녹음 평가는 iPhone 음성 연습 등록 후 사용할 수 있습니다.";
+  if (!state.device.verified) return "학습대상 문장을 터치하면 필요한 iPhone 확인 후 듣고 바로 따라 말하기가 시작됩니다.";
   return "학습대상 문장을 터치하면 먼저 문장이 재생되고, 끝나자마자 4초 녹음이 자동으로 시작됩니다.";
 }
 
@@ -651,22 +645,6 @@ function practiceCardLabel() {
   if (state.status === "error") return "인식 오류 · 다시 터치해서 재시도";
   if (state.status === "done") return "다시 연습하려면 문장을 터치";
   return "학습대상 문장 · 터치해서 듣고 바로 따라 말하기";
-}
-
-function renderPracticeGate() {
-  if (state.device.verified || state.status === "listening" || state.recording || state.status === "analyzing") return "";
-  if (state.device.registered) {
-    return `
-      <button class="record-gate-btn" data-action="verify-device" ${state.device.busy ? "disabled" : ""}>
-        등록된 iPhone 확인하고 녹음 준비
-      </button>
-    `;
-  }
-  return `
-    <button class="record-gate-btn" data-action="register-device" ${state.device.busy ? "disabled" : ""}>
-      이 iPhone 등록하기
-    </button>
-  `;
 }
 
 function renderPracticeResult() {
@@ -743,7 +721,10 @@ function bindPilotEvents() {
     button.addEventListener("click", registerDevice);
   });
   document.querySelectorAll('[data-action="verify-device"]').forEach((button) => {
-    button.addEventListener("click", verifyDevice);
+    button.addEventListener("click", () => verifyDevice());
+  });
+  document.querySelectorAll('[data-action="skip-device-setup"]').forEach((button) => {
+    button.addEventListener("click", skipDeviceSetup);
   });
   document.querySelectorAll("[data-audio]").forEach((button) => {
     button.addEventListener("click", () => {
@@ -827,10 +808,7 @@ async function listenThenRecord() {
     render();
     return;
   }
-  if (!state.device.verified || !state.device.sessionToken) {
-    state.device.message = state.device.registered
-      ? "등록된 iPhone 확인을 먼저 완료해 주세요."
-      : "먼저 이 iPhone을 등록해 주세요.";
+  if (!(await ensureDeviceReadyForPractice())) {
     render();
     return;
   }
@@ -870,6 +848,17 @@ async function listenThenRecord() {
     state.sttError = `문장 오디오 재생 실패: ${error.message}`;
     render();
   }
+}
+
+async function ensureDeviceReadyForPractice() {
+  if (state.device.verified && state.device.sessionToken) return true;
+  if (!state.device.registered) {
+    state.device.message = "녹음 평가는 iPhone 음성 연습 등록 후 사용할 수 있습니다.";
+    state.auth.message = "문장 듣기는 계속 사용할 수 있습니다. 녹음 평가는 iPhone 음성 연습 등록 후 가능합니다.";
+    return false;
+  }
+  state.device.message = "음성 연습을 시작하기 위해 등록된 iPhone을 확인합니다.";
+  return verifyDevice({ inline: true });
 }
 
 function playAudio(src, label) {
@@ -913,7 +902,7 @@ async function startRecording() {
   }
 
   if (!state.device.verified || !state.device.sessionToken) {
-    state.device.message = "먼저 등록된 iPhone 확인을 완료해 주세요.";
+    state.device.message = "음성 평가를 시작하려면 iPhone 음성 연습 등록이 필요합니다.";
     render();
     return;
   }
@@ -1165,7 +1154,9 @@ async function registerDevice() {
     state.device.registered = Boolean(result.verified);
     state.device.verified = false;
     state.device.sessionToken = null;
-    state.device.message = "이 iPhone이 등록되었습니다. 이제 확인을 눌러 주세요.";
+    state.deviceSetupSkipped = false;
+    localStorage.removeItem(STORAGE_KEYS.deviceSetupSkipped);
+    state.device.message = "이 iPhone이 등록되었습니다. 학습 문장을 터치하면 필요한 확인 후 녹음 평가가 시작됩니다.";
   } catch (error) {
     state.device.message = `iPhone 등록 실패: ${error.message}`;
   } finally {
@@ -1174,32 +1165,41 @@ async function registerDevice() {
   }
 }
 
-async function verifyDevice() {
+async function verifyDevice(options = {}) {
   if (!window.PublicKeyCredential) {
     state.device.message = "이 브라우저는 passkey/WebAuthn을 지원하지 않습니다.";
-    render();
-    return;
+    if (!options.inline) render();
+    return false;
   }
   state.device.busy = true;
   state.device.message = "등록된 iPhone인지 확인하고 있습니다.";
-  render();
+  if (!options.inline) render();
   try {
-    const options = await apiRequest("/webauthn/auth/options");
-    const credential = await navigator.credentials.get({ publicKey: publicKeyRequestOptions(options) });
+    const authOptions = await apiRequest("/webauthn/auth/options");
+    const credential = await navigator.credentials.get({ publicKey: publicKeyRequestOptions(authOptions) });
     const result = await apiRequest("/webauthn/auth/verify", {
       credential: publicKeyCredentialToJSON(credential)
     });
     state.device.verified = Boolean(result.verified);
     state.device.sessionToken = result.pilotSessionToken || null;
     state.device.message = state.device.verified ? "확인 완료. 이제 녹음할 수 있습니다." : "iPhone 확인에 실패했습니다.";
+    return state.device.verified && Boolean(state.device.sessionToken);
   } catch (error) {
     state.device.verified = false;
     state.device.sessionToken = null;
     state.device.message = `iPhone 확인 실패: ${error.message}`;
+    return false;
   } finally {
     state.device.busy = false;
-    render();
+    if (!options.inline) render();
   }
+}
+
+function skipDeviceSetup() {
+  state.deviceSetupSkipped = true;
+  localStorage.setItem(STORAGE_KEYS.deviceSetupSkipped, "1");
+  state.device.message = "";
+  render();
 }
 
 async function apiRequest(path, body = null) {

@@ -174,16 +174,6 @@ h2 {
   color: var(--green-dark);
 }
 
-.device-state {
-  width: fit-content;
-  padding: 8px 11px;
-  border-radius: 999px;
-  background: var(--green-soft);
-  color: var(--green-dark);
-  font-size: 0.96rem;
-  font-weight: 900;
-}
-
 .device-actions {
   display: grid;
   grid-template-columns: 1fr;
@@ -369,7 +359,6 @@ input {
 .audio-btn,
 .practice-target-tab,
 .practice-target-card,
-.record-gate-btn,
 .complete-btn,
 .plain-btn {
   min-height: 48px;
@@ -441,15 +430,6 @@ input {
   color: var(--green);
   font-size: 1.02rem;
   font-weight: 900;
-}
-
-.record-gate-btn {
-  width: 100%;
-  min-height: 52px;
-  padding: 12px;
-  border-color: #b9cfc3;
-  background: var(--green-soft);
-  color: var(--green-dark);
 }
 
 .keyword-main {
