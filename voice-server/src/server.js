@@ -64,6 +64,8 @@ wss.on("connection", (ws) => {
     targetKorean: "",
     day: null,
     phraseId: null,
+    audioEncoding: "",
+    sampleRateHertz: 0,
     transcript: "",
     interimTranscript: "",
     saved: false,
@@ -122,6 +124,8 @@ async function startSession(ws, session, payload) {
   session.day = Number(payload.day || 0);
   session.phraseId = String(payload.phraseId || "").slice(0, 80);
   session.startedAt = Date.now();
+  session.audioEncoding = String(payload.audioEncoding || "").toUpperCase();
+  session.sampleRateHertz = Number(payload.sampleRateHertz || 0);
 
   session.speechStream = speechClient
     ._streamingRecognize()
@@ -138,7 +142,7 @@ async function startSession(ws, session, payload) {
     recognizer: recognizerName(),
     streamingConfig: {
       config: {
-        autoDecodingConfig: {},
+        ...recognitionDecodingConfig(session),
         languageCodes: ["th-TH"],
         model: "latest_short"
       },
@@ -149,6 +153,19 @@ async function startSession(ws, session, payload) {
   });
 
   send(ws, { type: "ready" });
+}
+
+function recognitionDecodingConfig(session) {
+  if (session.audioEncoding === "LINEAR16" && session.sampleRateHertz >= 8000) {
+    return {
+      explicitDecodingConfig: {
+        encoding: "LINEAR16",
+        sampleRateHertz: Math.round(session.sampleRateHertz),
+        audioChannelCount: 1
+      }
+    };
+  }
+  return { autoDecodingConfig: {} };
 }
 
 function handleAudioChunk(ws, session, chunk) {
@@ -203,6 +220,10 @@ async function persistSession(ws, session) {
   session.saved = true;
   const transcript = session.transcript || session.interimTranscript || "";
   const score = scoreTranscript(session.targetThai, transcript);
+  if (!transcript) {
+    send(ws, { type: "no_speech", transcript: "", score: null });
+    return;
+  }
   if (transcript) {
     await firestore.collection(FIRESTORE_COLLECTION).add({
       uid: session.uid,

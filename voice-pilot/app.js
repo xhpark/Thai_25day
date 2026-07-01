@@ -37,6 +37,11 @@ const state = {
   target: null,
   mediaRecorder: null,
   mediaStream: null,
+  audioContext: null,
+  audioSource: null,
+  audioProcessor: null,
+  audioMuteGain: null,
+  pcmSampleRate: 48000,
   chunks: [],
   recordedBlob: null,
   playbackUrl: null,
@@ -962,7 +967,7 @@ async function prepareRecording() {
     return false;
   }
 
-  if (!navigator.mediaDevices?.getUserMedia || !window.MediaRecorder) {
+  if (!navigator.mediaDevices?.getUserMedia || !window.MediaRecorder || !window.AudioContext && !window.webkitAudioContext) {
     state.auth.message = "이 브라우저는 녹음 기능을 지원하지 않습니다.";
     render();
     return false;
@@ -973,6 +978,8 @@ async function prepareRecording() {
     state.mediaStream = await navigator.mediaDevices.getUserMedia({ audio: true });
     const mimeType = pickMimeType();
     state.mediaRecorder = new MediaRecorder(state.mediaStream, mimeType ? { mimeType } : undefined);
+    preparePcmStream();
+    await startPcmStream();
     openSttStream();
     state.mediaRecorder.addEventListener("dataavailable", handleAudioChunk);
     state.mediaRecorder.addEventListener("stop", finishRecording);
@@ -995,6 +1002,7 @@ function beginPreparedRecording() {
   render();
 
   state.mediaRecorder.start(180);
+  startPcmStream();
 
   clearRecordingTimers();
   state.recordTickTimer = window.setInterval(() => {
@@ -1008,6 +1016,44 @@ function beginPreparedRecording() {
   }, MAX_RECORDING_MS);
 }
 
+function preparePcmStream() {
+  const AudioContextCtor = window.AudioContext || window.webkitAudioContext;
+  state.audioContext = new AudioContextCtor();
+  state.pcmSampleRate = Math.round(state.audioContext.sampleRate || 48000);
+  state.audioSource = state.audioContext.createMediaStreamSource(state.mediaStream);
+  state.audioProcessor = state.audioContext.createScriptProcessor(1024, 1, 1);
+  state.audioMuteGain = state.audioContext.createGain();
+  state.audioMuteGain.gain.value = 0;
+  state.audioProcessor.onaudioprocess = (event) => {
+    if (!state.recording) return;
+    const input = event.inputBuffer.getChannelData(0);
+    sendSttAudio(floatTo16BitPcm(input));
+  };
+  state.audioSource.connect(state.audioProcessor);
+  state.audioProcessor.connect(state.audioMuteGain);
+  state.audioMuteGain.connect(state.audioContext.destination);
+}
+
+async function startPcmStream() {
+  if (state.audioContext?.state === "suspended") {
+    try {
+      await state.audioContext.resume();
+    } catch {
+      state.sttError = "마이크 오디오 처리를 시작하지 못했습니다.";
+    }
+  }
+}
+
+function floatTo16BitPcm(float32Samples) {
+  const buffer = new ArrayBuffer(float32Samples.length * 2);
+  const view = new DataView(buffer);
+  for (let i = 0; i < float32Samples.length; i += 1) {
+    const sample = Math.max(-1, Math.min(1, float32Samples[i]));
+    view.setInt16(i * 2, sample < 0 ? sample * 0x8000 : sample * 0x7fff, true);
+  }
+  return buffer;
+}
+
 function pickMimeType() {
   const candidates = ["audio/webm;codecs=opus", "audio/webm", "audio/mp4", "audio/aac"];
   return candidates.find((type) => MediaRecorder.isTypeSupported(type)) || "";
@@ -1016,11 +1062,15 @@ function pickMimeType() {
 function handleAudioChunk(event) {
   if (!event.data || event.data.size === 0) return;
   state.chunks.push(event.data);
+}
+
+function sendSttAudio(chunk) {
+  if (!chunk || chunk.byteLength === 0) return;
   if (state.websocket?.readyState === WebSocket.OPEN) {
     if (state.sttReady) {
-      state.websocket.send(event.data);
+      state.websocket.send(chunk);
     } else {
-      state.pendingSttChunks.push(event.data);
+      state.pendingSttChunks.push(chunk);
     }
   }
 }
@@ -1049,7 +1099,9 @@ function openSttStream() {
         targetKorean: state.target.korean,
         day: state.day,
         phraseId: state.target.phraseId || state.target.id,
-        mimeType: state.mediaRecorder?.mimeType || ""
+        mimeType: "audio/l16",
+        audioEncoding: "LINEAR16",
+        sampleRateHertz: state.pcmSampleRate
       }));
     });
     state.websocket.addEventListener("message", (event) => {
@@ -1066,6 +1118,9 @@ function openSttStream() {
       }
       if (payload.type === "saved") {
         completeAttempt(payload.transcript || state.transcript || state.interimTranscript || "", payload.score);
+      }
+      if (payload.type === "no_speech") {
+        failAttempt("인식된 태국어가 없습니다. 마이크에 더 가까이 대고 첫 음절부터 또렷하게 말해 주세요.");
       }
       if (payload.type === "error") {
         failAttempt(payload.message || "STT 서버 오류");
@@ -1172,8 +1227,23 @@ function failAttempt(message) {
 }
 
 function stopTracks() {
+  stopPcmStream();
   state.mediaStream?.getTracks().forEach((track) => track.stop());
   state.mediaStream = null;
+}
+
+function stopPcmStream() {
+  if (state.audioProcessor) state.audioProcessor.onaudioprocess = null;
+  state.audioSource?.disconnect();
+  state.audioProcessor?.disconnect();
+  state.audioMuteGain?.disconnect();
+  if (state.audioContext && state.audioContext.state !== "closed") {
+    state.audioContext.close().catch(() => {});
+  }
+  state.audioContext = null;
+  state.audioSource = null;
+  state.audioProcessor = null;
+  state.audioMuteGain = null;
 }
 
 async function refreshDeviceStatus() {
