@@ -1,5 +1,5 @@
 // Copy this file to config.js for a real deployment.
-// Do not commit real project IDs, API keys, or approved user identifiers.
+// Do not commit approved user identifiers or server secrets.
 window.VOICE_PILOT_CONFIG = {
   firebase: {
     apiKey: "REPLACE_WITH_FIREBASE_WEB_API_KEY",
@@ -9,8 +9,9 @@ window.VOICE_PILOT_CONFIG = {
   },
   auth: {
     provider: "email_password",
-    approvedUids: ["REPLACE_WITH_APPROVED_FIREBASE_UID"],
-    adminUids: ["REPLACE_WITH_ADMIN_FIREBASE_UID"]
+    // Keep this empty for public hosting and let Cloud Run enforce the allowlist.
+    approvedUids: [],
+    adminUids: []
   },
   stt: {
     apiBaseUrl: "https://REPLACE_WITH_CLOUD_RUN_URL",

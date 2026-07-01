@@ -1,1 +1,19 @@
-window.VOICE_PILOT_CONFIG = window.VOICE_PILOT_CONFIG || {};
+window.VOICE_PILOT_CONFIG = {
+  firebase: {
+    apiKey: "AIzaSyAJv-Qn4rxTGV35d-obXMrKW2j9dwZevEs",
+    authDomain: "thai-mission-app-001.firebaseapp.com",
+    projectId: "thai-mission-app-001",
+    appId: "1:527401030399:web:edd92c368bef75d80cb2ca"
+  },
+  auth: {
+    provider: "email_password",
+    approvedUids: [],
+    adminUids: []
+  },
+  stt: {
+    apiBaseUrl: "",
+    websocketUrl: "",
+    maxRecordingMs: 4000,
+    connectTimeoutMs: 2500
+  }
+};

@@ -11,7 +11,15 @@ param(
 $ErrorActionPreference = "Stop"
 
 $gcloud = Get-Command gcloud -ErrorAction SilentlyContinue
-if (-not $gcloud) {
+$gcloudPath = if ($gcloud) { $gcloud.Source } else { "" }
+if (-not $gcloudPath) {
+  $fallback = Join-Path $env:LOCALAPPDATA "Google\Cloud SDK\google-cloud-sdk\bin\gcloud.cmd"
+  if (Test-Path $fallback) {
+    $gcloudPath = $fallback
+  }
+}
+
+if (-not $gcloudPath) {
   throw "gcloud CLI is not installed or not on PATH. Install Google Cloud CLI before deploying."
 }
 
@@ -30,7 +38,7 @@ if ($envText -match "REPLACE_WITH_") {
 Write-Host "Deploying $ServiceName to project=$ProjectId region=$Region from $sourceDir"
 Write-Host "Cloud Run will be public, but app access is enforced by Firebase UID allowlist + WebAuthn session token."
 
-gcloud run deploy $ServiceName `
+& $gcloudPath run deploy $ServiceName `
   --project $ProjectId `
   --region $Region `
   --source $sourceDir `

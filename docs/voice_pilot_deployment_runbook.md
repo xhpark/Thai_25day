@@ -64,7 +64,7 @@ cd C:\Users\xhpar\OneDrive\Documents\Thai_25day\voice-server
 
 ## 4. PWA 설정 연결
 
-Cloud Run 배포 후 나온 서비스 URL을 `voice-pilot/config.js`의 `stt` 값에 넣는다.
+Cloud Run 배포 후 나온 서비스 URL을 `voice-pilot/config.js`의 `stt` 값에 넣는다. 공개 Hosting에서는 `approvedUids`와 `adminUids`를 비워 두고, Cloud Run 환경변수의 `APPROVED_UIDS`, `ADMIN_UIDS`로만 승인자를 관리하는 것을 권장한다.
 
 ```js
 stt: {
@@ -75,7 +75,7 @@ stt: {
 }
 ```
 
-Firebase Web App 설정과 승인 UID도 같은 파일에 넣는다. 실제 보안은 서버가 다시 검증하지만, 클라이언트에서도 승인되지 않은 사용자는 화면을 열지 않는다.
+Firebase Web App 설정도 같은 파일에 넣는다. 실제 보안은 서버가 승인 UID와 WebAuthn 세션 토큰을 다시 검증한다.
 
 ## 5. iPhone 실기기 점검
 

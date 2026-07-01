@@ -1,0 +1,41 @@
+{
+  "hosting": {
+    "site": "thai-mission-app-001",
+    "public": "dist/firebase-hosting",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "headers": [
+      {
+        "source": "/voice-pilot/**",
+        "headers": [
+          {
+            "key": "Permissions-Policy",
+            "value": "microphone=(self), publickey-credentials-get=(self)"
+          },
+          {
+            "key": "Cache-Control",
+            "value": "no-cache"
+          }
+        ]
+      },
+      {
+        "source": "**/*.@(js|json|webmanifest)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache"
+          }
+        ]
+      }
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

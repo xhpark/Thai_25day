@@ -142,7 +142,7 @@ async function initAuth() {
     return;
   }
 
-  if (!CONFIG.firebase?.apiKey || !CONFIG.auth?.approvedUids?.length) {
+  if (!CONFIG.firebase?.apiKey) {
     state.auth = {
       ready: true,
       approved: false,
@@ -150,7 +150,7 @@ async function initAuth() {
       uid: null,
       email: null,
       idToken: null,
-      message: "아직 승인 사용자 설정이 연결되지 않았습니다."
+      message: "아직 Firebase 설정이 연결되지 않았습니다."
     };
     return;
   }
@@ -171,14 +171,22 @@ async function initAuth() {
       }
       const token = await user.getIdToken();
       const uid = user.uid;
+      const clientApprovedUids = CONFIG.auth?.approvedUids || [];
+      const clientAdminUids = CONFIG.auth?.adminUids || [];
+      const useClientAllowlist = clientApprovedUids.length > 0;
+      const approved = useClientAllowlist ? clientApprovedUids.includes(uid) : true;
       state.auth = {
         ready: true,
-        approved: CONFIG.auth.approvedUids.includes(uid),
-        admin: CONFIG.auth.adminUids?.includes(uid) || false,
+        approved,
+        admin: clientAdminUids.includes(uid),
         uid,
         email: user.email,
         idToken: token,
-        message: CONFIG.auth.approvedUids.includes(uid) ? "승인된 파일럿 학습자입니다." : "이 계정은 파일럿 기능 승인을 받지 않았습니다."
+        message: approved
+          ? useClientAllowlist
+            ? "승인된 파일럿 학습자입니다."
+            : "서버에서 승인 여부를 확인합니다."
+          : "이 계정은 파일럿 기능 승인을 받지 않았습니다."
       };
       state.device = { registered: false, verified: false, sessionToken: null, busy: false, message: "" };
       if (state.auth.approved) refreshDeviceStatus();
@@ -327,7 +335,7 @@ function renderAccessGate() {
             : `
               <div class="setup-note">
                 <strong>설정 필요</strong>
-                <span>Firebase 설정과 승인 UID가 연결되기 전에는 이 화면이 열리지 않습니다.</span>
+                <span>Firebase 설정이 연결되기 전에는 이 화면이 열리지 않습니다.</span>
               </div>
             `
         }
@@ -640,6 +648,13 @@ async function refreshDeviceStatus() {
     state.device.message = status.registered ? "등록된 iPhone이 있습니다. 사용 전 확인해 주세요." : "아직 등록된 iPhone이 없습니다.";
     render();
   } catch (error) {
+    if (String(error.message || "").includes("not_approved") || String(error.message || "").includes("403")) {
+      state.auth.approved = false;
+      state.auth.message = "이 계정은 파일럿 기능 승인을 받지 않았습니다.";
+      state.device = { registered: false, verified: false, sessionToken: null, busy: false, message: "" };
+      render();
+      return;
+    }
     state.device.message = `기기 상태 확인 실패: ${error.message}`;
     render();
   }
