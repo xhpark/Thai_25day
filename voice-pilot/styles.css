@@ -373,6 +373,8 @@ input {
 
 .audio-btn,
 .practice-select-btn,
+.practice-target-tab,
+.record-gate-btn,
 .complete-btn,
 .plain-btn {
   min-height: 48px;
@@ -406,9 +408,30 @@ input {
   color: #fff;
 }
 
-.practice-select-btn.compact {
+.practice-target-tabs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.practice-target-tab {
+  padding: 10px;
+  background: #fff;
+}
+
+.practice-target-tab[aria-pressed="true"] {
+  border-color: var(--blue);
+  background: var(--blue);
+  color: #fff;
+}
+
+.record-gate-btn {
   width: 100%;
-  margin-top: 10px;
+  min-height: 52px;
+  padding: 12px;
+  border-color: #b9cfc3;
+  background: var(--green-soft);
+  color: var(--green-dark);
 }
 
 .keyword-main {

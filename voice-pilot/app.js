@@ -83,6 +83,10 @@ function primaryPhrases() {
   return state.lesson?.newPhrases?.length ? state.lesson.newPhrases : state.lesson?.reviewPhrases || [];
 }
 
+function practicePhrases() {
+  return state.lesson?.newPhrases?.length ? state.lesson.newPhrases : state.lesson?.reviewPhrases || [];
+}
+
 function effectiveDisplayKeywords() {
   if (state.lesson?.displayKeywords?.length) return state.lesson.displayKeywords;
   if (state.lesson?.keywordDisplayPolicy?.emptyCoreFallback === "show_first_three_keywords") {
@@ -160,7 +164,7 @@ async function loadLesson(day) {
   if (!response.ok) throw new Error(`${boundedDay}일차 자료를 불러오지 못했습니다.`);
   state.day = boundedDay;
   state.lesson = await response.json();
-  state.target = state.lesson.newPhrases?.[0] || state.lesson.reviewPhrases?.[0] || state.lesson.displayKeywords?.[0];
+  state.target = practicePhrases()[0] || null;
   localStorage.setItem(STORAGE_KEYS.day, String(boundedDay));
 }
 
@@ -286,7 +290,7 @@ function render() {
   }
 
   document.title = `Thai Voice Pilot - ${readLessonLabel()} ${state.lesson.title}`;
-  const canRecord = state.device.verified && !state.recording;
+  const canRecord = Boolean(state.target) && state.device.verified && !state.recording;
   const phrases = primaryPhrases();
   const keywords = effectiveDisplayKeywords();
   app.innerHTML = `
@@ -378,8 +382,9 @@ function render() {
         <div class="record-meter" data-state="${state.status}">
           <span>${state.recording ? state.countdown : "4"}</span>
         </div>
+        ${renderRecordGateAction(canRecord)}
         <button class="record-btn" data-action="record" ${state.recording || !canRecord ? "disabled" : ""}>
-          ${state.recording ? "녹음 중" : canRecord ? "녹음 시작" : "iPhone 확인 필요"}
+          ${state.recording ? "녹음 중" : canRecord ? "녹음 시작" : recordButtonLabel()}
         </button>
         <button class="replay-btn" data-action="replay" ${state.recordedBlob && !state.recording ? "" : "disabled"}>
           다시 듣기
@@ -439,16 +444,21 @@ function renderScene() {
   `;
 }
 
-function renderPhraseCard(phrase, index) {
+function renderPhraseCard(phrase, index, options = {}) {
+  const selectable = options.selectable !== false;
   const speech = getSpeech(phrase);
   const selected = selectedTargetKey() === targetKey(phrase);
   return `
-    <article class="phrase-card ${selected ? "selected" : ""}">
+    <article class="phrase-card ${selected && selectable ? "selected" : ""}">
       <div class="phrase-heading">
         <span>${escapeHtml(`문장 ${index + 1}`)}</span>
-        <button class="practice-select-btn" data-action="select-target" data-target-type="phrase" data-target-index="${index}" aria-pressed="${selected}">
-          ${selected ? "연습 대상" : "따라 말하기"}
-        </button>
+        ${
+          selectable
+            ? `<button class="practice-select-btn" data-action="select-target" data-target-type="phrase" data-target-index="${index}" aria-pressed="${selected}">
+                ${selected ? "연습 대상" : "따라 말하기"}
+              </button>`
+            : ""
+        }
       </div>
       <p class="thai-text" lang="th">${escapeHtml(speech.thai)}</p>
       <p class="korean-pronunciation">${escapeHtml(speech.korean_pronunciation || speech.koreanPronunciation)}</p>
@@ -472,7 +482,7 @@ function renderReviewList() {
         <span>${reviews.length}개</span>
       </div>
       <div class="phrase-list">
-        ${reviews.map((phrase, index) => renderPhraseCard(phrase, index + primaryPhrases().length)).join("")}
+        ${reviews.map((phrase, index) => renderPhraseCard(phrase, index + 1, { selectable: false })).join("")}
       </div>
     </section>
   `;
@@ -503,17 +513,13 @@ function renderSentenceAudio(phrase, phraseIndex = 1) {
 
 function renderKeyword(keyword, index) {
   const speakerAudio = keyword.audio?.[state.speaker] || keyword.audio?.female || keyword.audio?.male || {};
-  const selected = selectedTargetKey() === targetKey(keyword);
   return `
-    <article class="keyword-item ${selected ? "selected" : ""}">
+    <article class="keyword-item">
       <div class="keyword-main">
         <span class="keyword-pronunciation">${escapeHtml(keyword.koreanPronunciation)}</span>
         <span class="keyword-meaning">${escapeHtml(keyword.korean)}</span>
         <span class="keyword-meta">${escapeHtml(keyword.romanization)}</span>
       </div>
-      <button class="practice-select-btn compact" data-action="select-target" data-target-type="keyword" data-target-index="${index}" aria-pressed="${selected}">
-        ${selected ? "연습 대상" : "따라하기"}
-      </button>
       <div class="keyword-audio" aria-label="${escapeHtml(keyword.korean)} 단어 오디오">
         ${["normal", "slow"]
           .map((mode) => {
@@ -549,10 +555,28 @@ function renderSupplementLinks() {
 }
 
 function renderPracticeTargetPanel() {
+  if (!state.target) {
+    return `
+      <section class="target-panel current-practice-panel" aria-labelledby="target-heading">
+        <p class="section-label">듣고 바로 따라하기 대상</p>
+        <h2 id="target-heading">오늘 연습할 문장이 없습니다</h2>
+      </section>
+    `;
+  }
   const speech = getSpeech(state.target);
+  const targets = practicePhrases();
   return `
     <section class="target-panel current-practice-panel" aria-labelledby="target-heading">
       <p class="section-label">듣고 바로 따라하기 대상</p>
+      <div class="practice-target-tabs" aria-label="따라 말하기 문장 선택">
+        ${targets
+          .map((phrase, index) => `
+            <button class="practice-target-tab" data-action="select-target" data-target-type="phrase" data-target-index="${index}" aria-pressed="${selectedTargetKey() === targetKey(phrase)}">
+              문장 ${index + 1}
+            </button>
+          `)
+          .join("")}
+      </div>
       <h2 id="target-heading">${escapeHtml(state.target.korean || state.target.koreanPronunciation)}</h2>
       <p class="thai-text compact-thai" lang="th">${escapeHtml(speech.thai)}</p>
       <p class="korean-pronunciation">${escapeHtml(speech.korean_pronunciation || speech.koreanPronunciation)}</p>
@@ -630,7 +654,30 @@ function recordCopy() {
   if (state.recording) return "4초 안에 한 번만 또렷하게 말합니다.";
   if (state.status === "analyzing") return "녹음은 저장하지 않고 인식 결과만 확인합니다.";
   if (state.status === "done") return "필요하면 다시 듣고 한 번 더 연습하세요.";
+  if (!state.device.registered) return "먼저 이 iPhone을 등록해야 녹음 기능이 열립니다.";
+  if (!state.device.verified) return "등록된 iPhone 확인을 누르면 녹음 버튼이 열립니다. 화면을 새로 열거나 시간이 지나면 다시 확인합니다.";
   return "녹음이 끝나면 내 목소리가 자동으로 재생되고, 동시에 인식 결과가 표시됩니다.";
+}
+
+function recordButtonLabel() {
+  if (!state.device.registered) return "iPhone 등록 필요";
+  return "등록된 iPhone 확인 필요";
+}
+
+function renderRecordGateAction(canRecord) {
+  if (canRecord) return "";
+  if (state.device.registered) {
+    return `
+      <button class="record-gate-btn" data-action="verify-device" ${state.device.busy ? "disabled" : ""}>
+        등록된 iPhone 확인하고 녹음 준비
+      </button>
+    `;
+  }
+  return `
+    <button class="record-gate-btn" data-action="register-device" ${state.device.busy ? "disabled" : ""}>
+      이 iPhone 등록하기
+    </button>
+  `;
 }
 
 function resultTitle() {
@@ -681,8 +728,12 @@ function bindPilotEvents() {
   document.querySelector('[data-action="sign-out"]')?.addEventListener("click", signOut);
   document.querySelector('[data-action="record"]')?.addEventListener("click", startRecording);
   document.querySelector('[data-action="replay"]')?.addEventListener("click", replayRecording);
-  document.querySelector('[data-action="register-device"]')?.addEventListener("click", registerDevice);
-  document.querySelector('[data-action="verify-device"]')?.addEventListener("click", verifyDevice);
+  document.querySelectorAll('[data-action="register-device"]').forEach((button) => {
+    button.addEventListener("click", registerDevice);
+  });
+  document.querySelectorAll('[data-action="verify-device"]').forEach((button) => {
+    button.addEventListener("click", verifyDevice);
+  });
   document.querySelectorAll("[data-audio]").forEach((button) => {
     button.addEventListener("click", () => {
       const audioPath = button.dataset.audio;
@@ -698,7 +749,7 @@ function bindPilotEvents() {
   document.querySelectorAll('[data-action="select-target"]').forEach((button) => {
     button.addEventListener("click", () => {
       const index = Number(button.dataset.targetIndex);
-      const source = button.dataset.targetType === "keyword" ? effectiveDisplayKeywords() : [...primaryPhrases(), ...(state.lesson.reviewPhrases || [])];
+      const source = practicePhrases();
       const target = source[index];
       if (!target) return;
       state.target = target;
@@ -791,6 +842,12 @@ function resetRecordingState() {
 }
 
 async function startRecording() {
+  if (!state.target) {
+    state.auth.message = "오늘 따라 말할 문장을 먼저 확인해 주세요.";
+    render();
+    return;
+  }
+
   if (!state.device.verified || !state.device.sessionToken) {
     state.device.message = "먼저 등록된 iPhone 확인을 완료해 주세요.";
     render();
