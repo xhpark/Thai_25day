@@ -131,6 +131,31 @@ h2 {
   margin-top: 16px;
 }
 
+.lesson-control-panel,
+.lesson-section,
+.guide-panel,
+.practice-mission-panel,
+.current-practice-panel,
+.progress-panel {
+  display: grid;
+  gap: 14px;
+}
+
+.section-heading,
+.phrase-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.section-heading span,
+.phrase-heading span {
+  color: var(--muted);
+  font-size: 1rem;
+  font-weight: 900;
+}
+
 .device-panel {
   display: grid;
   gap: 14px;
@@ -267,6 +292,190 @@ input {
   color: var(--green-dark);
   font-size: 1.12rem;
   font-weight: 900;
+}
+
+.scene-frame {
+  min-height: 190px;
+  margin: 16px 0 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+  background: #edf5ef;
+  box-shadow: var(--shadow);
+}
+
+.scene-frame img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.scene-frame:not(.has-image) {
+  display: grid;
+  align-content: center;
+  gap: 10px;
+  padding: 18px;
+  color: var(--green-dark);
+  font-weight: 900;
+}
+
+.phrase-list,
+.keyword-list {
+  display: grid;
+  gap: 12px;
+}
+
+.phrase-card,
+.keyword-item {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  padding: 14px;
+}
+
+.phrase-card.selected,
+.keyword-item.selected {
+  border-color: #7dbb94;
+  box-shadow: 0 0 0 3px rgba(31, 107, 82, 0.13);
+}
+
+.phrase-card .thai-text {
+  font-size: 2.45rem;
+}
+
+.compact-thai {
+  font-size: 2.35rem;
+}
+
+.korean-meaning,
+.guide-panel p,
+.practice-mission-panel p,
+.progress-panel p {
+  margin: 10px 0 0;
+  color: var(--ink);
+  font-size: 1.16rem;
+  font-weight: 800;
+  line-height: 1.55;
+}
+
+.audio-toolbar,
+.keyword-audio {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.keyword-audio {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.audio-btn,
+.practice-select-btn,
+.complete-btn,
+.plain-btn {
+  min-height: 48px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--green-dark);
+  cursor: pointer;
+  font-weight: 900;
+}
+
+.audio-btn {
+  padding: 10px 8px;
+  font-size: 0.96rem;
+}
+
+.audio-btn[aria-pressed="true"] {
+  border-color: var(--green);
+  background: var(--green-soft);
+}
+
+.practice-select-btn {
+  padding: 9px 11px;
+  background: var(--blue-soft);
+  color: var(--blue);
+  white-space: nowrap;
+}
+
+.practice-select-btn[aria-pressed="true"] {
+  background: var(--blue);
+  color: #fff;
+}
+
+.practice-select-btn.compact {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.keyword-main {
+  display: grid;
+  gap: 4px;
+}
+
+.keyword-pronunciation {
+  color: var(--blue);
+  font-size: 1.46rem;
+  font-weight: 900;
+}
+
+.keyword-meaning,
+.keyword-meta {
+  color: var(--muted);
+  font-size: 1.02rem;
+  font-weight: 800;
+}
+
+.audio-status {
+  min-height: 46px;
+  padding: 12px;
+  border: 1px dashed #b9cfc3;
+  border-radius: 8px;
+  background: #f8fbf8;
+  color: var(--green-dark);
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+.audio-status[data-tone="playing"] {
+  border-color: #8bbf99;
+  background: #edf8ef;
+}
+
+.audio-status[data-tone="error"] {
+  border-color: #e6c2b8;
+  background: #fff2ef;
+  color: var(--danger);
+}
+
+.supplement-links {
+  display: grid;
+  gap: 8px;
+}
+
+.supplement-links a {
+  min-height: 48px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--blue);
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.complete-btn {
+  width: 100%;
+  background: var(--green);
+  color: #fff;
+}
+
+.plain-btn {
+  width: 100%;
+  background: #fff;
 }
 
 .record-panel {
@@ -447,5 +656,14 @@ button:disabled {
 
   .thai-text {
     font-size: 2.5rem;
+  }
+
+  .phrase-card .thai-text,
+  .compact-thai {
+    font-size: 2.16rem;
+  }
+
+  .audio-toolbar {
+    grid-template-columns: 1fr;
   }
 }

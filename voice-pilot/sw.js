@@ -1,9 +1,10 @@
-const CACHE_NAME = "thai25-voice-pilot-v2";
+const CACHE_NAME = "thai25-voice-pilot-v4";
 const SHELL_ASSETS = [
   "./",
   "./index.html",
-  "./styles.css?v=2",
-  "./app.js?v=2",
+  "./styles.css?v=4",
+  "./config.js?v=4",
+  "./app.js?v=4",
   "./manifest.webmanifest",
   "../assets/generated/pwa-icon.svg",
   "../assets/generated/pwa/w1d1.json"

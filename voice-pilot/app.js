@@ -3,7 +3,9 @@ const DEMO_MODE = new URLSearchParams(window.location.search).get("demo") === "1
 const MAX_RECORDING_MS = Math.min(Number(CONFIG.stt?.maxRecordingMs || 4000), 4000);
 const STORAGE_KEYS = {
   speaker: "thai25.voicePilot.speaker",
-  day: "thai25.voicePilot.day"
+  day: "thai25.voicePilot.day",
+  audioSpeedPreference: "thai25.audioSpeedPreference",
+  completedLessonIds: "thai25.completedLessonIds"
 };
 
 const state = {
@@ -25,6 +27,9 @@ const state = {
   },
   day: Number(new URLSearchParams(window.location.search).get("day") || localStorage.getItem(STORAGE_KEYS.day) || 1),
   speaker: localStorage.getItem(STORAGE_KEYS.speaker) || "female",
+  audioMode: localStorage.getItem(STORAGE_KEYS.audioSpeedPreference) || "normal",
+  completedIds: parseJsonStorage(STORAGE_KEYS.completedLessonIds, []),
+  audio: null,
   lesson: null,
   target: null,
   mediaRecorder: null,
@@ -56,6 +61,14 @@ function escapeHtml(value) {
     .replaceAll("'", "&#039;");
 }
 
+function parseJsonStorage(key, fallback) {
+  try {
+    return JSON.parse(localStorage.getItem(key) || JSON.stringify(fallback));
+  } catch {
+    return fallback;
+  }
+}
+
 function setStatus(status, message = "") {
   state.status = status;
   if (message) state.auth.message = message;
@@ -64,6 +77,28 @@ function setStatus(status, message = "") {
 
 function readLessonLabel() {
   return `${state.day}일차`;
+}
+
+function primaryPhrases() {
+  return state.lesson?.newPhrases?.length ? state.lesson.newPhrases : state.lesson?.reviewPhrases || [];
+}
+
+function effectiveDisplayKeywords() {
+  if (state.lesson?.displayKeywords?.length) return state.lesson.displayKeywords;
+  if (state.lesson?.keywordDisplayPolicy?.emptyCoreFallback === "show_first_three_keywords") {
+    return (state.lesson.keywords || []).slice(0, 3);
+  }
+  return [];
+}
+
+function isCompleted() {
+  return state.completedIds.includes(state.lesson?.id);
+}
+
+function assetUrl(path) {
+  if (!path) return "";
+  if (/^(https?:|data:|blob:|\/|\.\.\/)/.test(path)) return path;
+  return `../${path}`;
 }
 
 function getSpeech(item) {
@@ -80,6 +115,14 @@ function getSpeech(item) {
 function currentTargetText() {
   const speech = getSpeech(state.target);
   return speech?.thai || "";
+}
+
+function targetKey(item) {
+  return `${item.phraseId || item.id || item.korean || item.koreanPronunciation}`;
+}
+
+function selectedTargetKey() {
+  return targetKey(state.target || {});
 }
 
 function scoreTranscript(targetThai, transcript) {
@@ -242,13 +285,15 @@ function render() {
     return;
   }
 
-  const speech = getSpeech(state.target);
+  document.title = `Thai Voice Pilot - ${readLessonLabel()} ${state.lesson.title}`;
   const canRecord = state.device.verified && !state.recording;
+  const phrases = primaryPhrases();
+  const keywords = effectiveDisplayKeywords();
   app.innerHTML = `
     <header class="pilot-header">
       <div>
-        <p class="header-kicker">승인 학습자 전용</p>
-        <h1>발음 연습 파일럿</h1>
+        <p class="header-kicker">승인 학습자 전용 · ${escapeHtml(readLessonLabel())}</p>
+        <h1>${escapeHtml(state.lesson.title)}</h1>
         <p>${escapeHtml(state.auth.email || state.auth.uid)} · ${escapeHtml(readLessonLabel())}</p>
       </div>
       <button class="ghost-btn" data-action="sign-out">나가기</button>
@@ -257,7 +302,12 @@ function render() {
     <main>
       ${renderDevicePanel()}
 
-      <section class="target-panel" aria-labelledby="target-heading">
+      <section class="target-panel lesson-control-panel" aria-labelledby="control-heading">
+        <div>
+          <p class="section-label">학습 설정</p>
+          <h2 id="control-heading">${escapeHtml(state.lesson.theme || state.lesson.title)}</h2>
+          <p class="lesson-title">${escapeHtml(state.lesson.hook || "")} ${escapeHtml(state.lesson.story || "")}</p>
+        </div>
         <div class="target-toolbar">
           <label>
             일차
@@ -268,17 +318,56 @@ function render() {
               }).join("")}
             </select>
           </label>
-          <div class="speaker-toggle" aria-label="발화 선택">
-            <button data-speaker="female" aria-pressed="${state.speaker === "female"}">여성</button>
-            <button data-speaker="male" aria-pressed="${state.speaker === "male"}">남성</button>
-          </div>
+          ${renderSpeakerToggle()}
         </div>
-        <p class="lesson-title">${escapeHtml(state.lesson.title)}</p>
-        <h2 id="target-heading">${escapeHtml(state.target.korean || state.target.koreanPronunciation)}</h2>
-        <p class="thai-text" lang="th">${escapeHtml(speech.thai)}</p>
-        <p class="korean-pronunciation">${escapeHtml(speech.korean_pronunciation || speech.koreanPronunciation)}</p>
-        <p class="romanization">${escapeHtml(speech.romanization)}</p>
       </section>
+
+      ${renderScene()}
+
+      <section class="target-panel lesson-section" aria-labelledby="sentence-heading">
+        <div class="section-heading">
+          <div>
+            <p class="section-label">오늘의 문장</p>
+            <h2 id="sentence-heading">듣고 익히기</h2>
+          </div>
+          <span>${escapeHtml(state.speaker === "female" ? "여성 발화" : "남성 발화")}</span>
+        </div>
+        <div class="phrase-list">
+          ${phrases.map((phrase, index) => renderPhraseCard(phrase, index)).join("")}
+        </div>
+        <div id="audio-status" class="audio-status" role="status">오디오 버튼을 누르면 재생 상태가 여기에 표시됩니다.</div>
+      </section>
+
+      ${renderReviewList()}
+
+      <section class="target-panel lesson-section" aria-labelledby="keyword-heading">
+        <div class="section-heading">
+          <div>
+            <p class="section-label">핵심 단어</p>
+            <h2 id="keyword-heading">단어 듣기</h2>
+          </div>
+          <span>${keywords.length}개</span>
+        </div>
+        <div class="keyword-list">
+          ${keywords.map(renderKeyword).join("")}
+        </div>
+      </section>
+
+      <section class="target-panel guide-panel" aria-labelledby="guide-heading">
+        <p class="section-label">선교 현장 가이드</p>
+        <h2 id="guide-heading">현장 적용</h2>
+        <p>${escapeHtml(state.lesson.ministryGuide || "")}</p>
+      </section>
+
+      ${renderSupplementLinks()}
+
+      <section class="target-panel practice-mission-panel" aria-labelledby="mission-heading">
+        <p class="section-label">말하기 미션</p>
+        <h2 id="mission-heading">오늘의 실천</h2>
+        <p>${escapeHtml(state.lesson.speakingMission || "")}</p>
+      </section>
+
+      ${renderPracticeTargetPanel()}
 
       <section class="record-panel" aria-labelledby="record-heading">
         <div>
@@ -310,9 +399,166 @@ function render() {
       </section>
 
       ${state.auth.admin ? renderAdminPanel() : ""}
+
+      <section class="target-panel progress-panel" aria-labelledby="progress-heading">
+        <p class="section-label">오늘 학습 완료</p>
+        <h2 id="progress-heading">${isCompleted() ? "완료됨" : "진행 중"}</h2>
+        <p>${isCompleted() ? `${escapeHtml(readLessonLabel())} 학습 완료가 저장되었습니다.` : "문장 오디오를 듣고 바로 따라 말한 뒤 완료를 눌러 주세요."}</p>
+        <button class="complete-btn" data-action="complete">${isCompleted() ? "완료 상태 유지하기" : `${escapeHtml(readLessonLabel())} 완료하기`}</button>
+        <button class="plain-btn" data-action="reset-progress">진도 초기화</button>
+      </section>
     </main>
   `;
   bindPilotEvents();
+}
+
+function renderSpeakerToggle() {
+  return `
+    <div class="speaker-toggle" aria-label="발화 선택">
+      <button data-speaker="female" aria-pressed="${state.speaker === "female"}">여성</button>
+      <button data-speaker="male" aria-pressed="${state.speaker === "male"}">남성</button>
+    </div>
+  `;
+}
+
+function renderScene() {
+  const localPlan = state.lesson.primaryImage?.sourcePlan?.find((item) => item.type === "local_preferred");
+  const path = localPlan?.status === "ready" ? assetUrl(localPlan.assetPath) : "";
+  if (path) {
+    return `
+      <figure class="scene-frame has-image">
+        <img src="${escapeHtml(path)}" alt="${escapeHtml(state.lesson.primaryImage?.altTextKo || state.lesson.title)}" />
+      </figure>
+    `;
+  }
+  return `
+    <div class="scene-frame" role="img" aria-label="${escapeHtml(state.lesson.primaryImage?.altTextKo || state.lesson.title)}">
+      <span>장면 이미지 준비 중</span>
+      <p>${escapeHtml(state.lesson.primaryImage?.altTextKo || state.lesson.story || "")}</p>
+    </div>
+  `;
+}
+
+function renderPhraseCard(phrase, index) {
+  const speech = getSpeech(phrase);
+  const selected = selectedTargetKey() === targetKey(phrase);
+  return `
+    <article class="phrase-card ${selected ? "selected" : ""}">
+      <div class="phrase-heading">
+        <span>${escapeHtml(`문장 ${index + 1}`)}</span>
+        <button class="practice-select-btn" data-action="select-target" data-target-type="phrase" data-target-index="${index}" aria-pressed="${selected}">
+          ${selected ? "연습 대상" : "따라 말하기"}
+        </button>
+      </div>
+      <p class="thai-text" lang="th">${escapeHtml(speech.thai)}</p>
+      <p class="korean-pronunciation">${escapeHtml(speech.korean_pronunciation || speech.koreanPronunciation)}</p>
+      <p class="romanization">${escapeHtml(speech.romanization)}</p>
+      <p class="korean-meaning">${escapeHtml(phrase.korean || "")}</p>
+      ${renderSentenceAudio(phrase, index + 1)}
+    </article>
+  `;
+}
+
+function renderReviewList() {
+  const reviews = state.lesson.reviewPhrases || [];
+  if (!reviews.length || state.lesson.newPhrases?.length === 0) return "";
+  return `
+    <section class="target-panel lesson-section" aria-labelledby="review-heading">
+      <div class="section-heading">
+        <div>
+          <p class="section-label">복습 문장</p>
+          <h2 id="review-heading">다시 듣기</h2>
+        </div>
+        <span>${reviews.length}개</span>
+      </div>
+      <div class="phrase-list">
+        ${reviews.map((phrase, index) => renderPhraseCard(phrase, index + primaryPhrases().length)).join("")}
+      </div>
+    </section>
+  `;
+}
+
+function renderSentenceAudio(phrase, phraseIndex = 1) {
+  const available = phrase.audio?.[state.speaker] || {};
+  return `
+    <div class="audio-toolbar" aria-label="문장 오디오">
+      ${["normal", "slow", "repeat3"]
+        .map((mode) => {
+          const path = assetUrl(available[mode]);
+          return `
+            <button class="audio-btn ${mode === "repeat3" ? "secondary" : ""}"
+              data-audio="${escapeHtml(path)}"
+              data-mode="${mode}"
+              data-audio-label="문장 ${phraseIndex} ${modeLabel(mode)}"
+              aria-pressed="${state.audioMode === mode}"
+              ${path ? "" : "disabled"}>
+              ${playIconSvg()} ${modeLabel(mode)}
+            </button>
+          `;
+        })
+        .join("")}
+    </div>
+  `;
+}
+
+function renderKeyword(keyword, index) {
+  const speakerAudio = keyword.audio?.[state.speaker] || keyword.audio?.female || keyword.audio?.male || {};
+  const selected = selectedTargetKey() === targetKey(keyword);
+  return `
+    <article class="keyword-item ${selected ? "selected" : ""}">
+      <div class="keyword-main">
+        <span class="keyword-pronunciation">${escapeHtml(keyword.koreanPronunciation)}</span>
+        <span class="keyword-meaning">${escapeHtml(keyword.korean)}</span>
+        <span class="keyword-meta">${escapeHtml(keyword.romanization)}</span>
+      </div>
+      <button class="practice-select-btn compact" data-action="select-target" data-target-type="keyword" data-target-index="${index}" aria-pressed="${selected}">
+        ${selected ? "연습 대상" : "따라하기"}
+      </button>
+      <div class="keyword-audio" aria-label="${escapeHtml(keyword.korean)} 단어 오디오">
+        ${["normal", "slow"]
+          .map((mode) => {
+            const path = assetUrl(speakerAudio[mode]);
+            return `
+              <button class="audio-btn secondary"
+                data-audio="${escapeHtml(path)}"
+                data-mode="${mode}"
+                data-audio-label="${escapeHtml(keyword.koreanPronunciation)} ${modeLabel(mode)}"
+                ${path ? "" : "disabled"}>
+                ${playIconSvg()} ${modeLabel(mode)}
+              </button>
+            `;
+          })
+          .join("")}
+      </div>
+    </article>
+  `;
+}
+
+function renderSupplementLinks() {
+  const links = state.lesson.supplementLinks || [];
+  if (!links.length) return "";
+  return `
+    <section class="target-panel lesson-section" aria-labelledby="supplement-heading">
+      <p class="section-label">보조 자료</p>
+      <h2 id="supplement-heading">함께 보기</h2>
+      <div class="supplement-links">
+        ${links.map((link) => `<a href="../?aid=${escapeHtml(link.aid)}">${escapeHtml(link.label || link.title || "학습보조")}</a>`).join("")}
+      </div>
+    </section>
+  `;
+}
+
+function renderPracticeTargetPanel() {
+  const speech = getSpeech(state.target);
+  return `
+    <section class="target-panel current-practice-panel" aria-labelledby="target-heading">
+      <p class="section-label">듣고 바로 따라하기 대상</p>
+      <h2 id="target-heading">${escapeHtml(state.target.korean || state.target.koreanPronunciation)}</h2>
+      <p class="thai-text compact-thai" lang="th">${escapeHtml(speech.thai)}</p>
+      <p class="korean-pronunciation">${escapeHtml(speech.korean_pronunciation || speech.koreanPronunciation)}</p>
+      <p class="romanization">${escapeHtml(speech.romanization)}</p>
+    </section>
+  `;
 }
 
 function renderAccessGate() {
@@ -437,6 +683,41 @@ function bindPilotEvents() {
   document.querySelector('[data-action="replay"]')?.addEventListener("click", replayRecording);
   document.querySelector('[data-action="register-device"]')?.addEventListener("click", registerDevice);
   document.querySelector('[data-action="verify-device"]')?.addEventListener("click", verifyDevice);
+  document.querySelectorAll("[data-audio]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const audioPath = button.dataset.audio;
+      const mode = button.dataset.mode;
+      const label = button.dataset.audioLabel || modeLabel(mode);
+      if (!audioPath) return;
+      state.audioMode = mode;
+      localStorage.setItem(STORAGE_KEYS.audioSpeedPreference, mode);
+      playAudio(audioPath, label);
+      renderAudioPressedState(mode, button);
+    });
+  });
+  document.querySelectorAll('[data-action="select-target"]').forEach((button) => {
+    button.addEventListener("click", () => {
+      const index = Number(button.dataset.targetIndex);
+      const source = button.dataset.targetType === "keyword" ? effectiveDisplayKeywords() : [...primaryPhrases(), ...(state.lesson.reviewPhrases || [])];
+      const target = source[index];
+      if (!target) return;
+      state.target = target;
+      resetRecordingState();
+      render();
+    });
+  });
+  document.querySelector('[data-action="complete"]')?.addEventListener("click", () => {
+    if (!state.completedIds.includes(state.lesson.id)) {
+      state.completedIds = [...state.completedIds, state.lesson.id];
+      localStorage.setItem(STORAGE_KEYS.completedLessonIds, JSON.stringify(state.completedIds));
+    }
+    render();
+  });
+  document.querySelector('[data-action="reset-progress"]')?.addEventListener("click", () => {
+    state.completedIds = state.completedIds.filter((id) => id !== state.lesson.id);
+    localStorage.setItem(STORAGE_KEYS.completedLessonIds, JSON.stringify(state.completedIds));
+    render();
+  });
   document.querySelector('[data-action="select-day"]')?.addEventListener("change", async (event) => {
     await loadLesson(Number(event.target.value));
     resetRecordingState();
@@ -449,6 +730,53 @@ function bindPilotEvents() {
       resetRecordingState();
       render();
     });
+  });
+}
+
+function modeLabel(mode) {
+  if (mode === "slow") return "느린 속도";
+  if (mode === "repeat3") return "3회 반복";
+  return "정상 속도";
+}
+
+function playIconSvg() {
+  return `<span aria-hidden="true">▶</span>`;
+}
+
+function renderAudioPressedState(mode, activeButton = null) {
+  document.querySelectorAll("[data-mode]").forEach((button) => {
+    button.setAttribute("aria-pressed", "false");
+  });
+  if (activeButton) activeButton.setAttribute("aria-pressed", "true");
+  const status = document.getElementById("audio-status");
+  if (status) status.dataset.mode = mode;
+}
+
+function setAudioStatus(message, tone = "neutral") {
+  const status = document.getElementById("audio-status");
+  if (!status) return;
+  status.textContent = message;
+  status.dataset.tone = tone;
+}
+
+function playAudio(src, label) {
+  if (state.audio) {
+    state.audio.pause();
+    state.audio.currentTime = 0;
+  }
+  state.audio = new Audio(src);
+  setAudioStatus(`${label} 오디오를 준비하고 있습니다.`, "neutral");
+  state.audio.addEventListener("playing", () => {
+    setAudioStatus(`${label} 오디오가 재생 중입니다.`, "playing");
+  });
+  state.audio.addEventListener("ended", () => {
+    setAudioStatus(`${label} 오디오 재생이 끝났습니다.`, "done");
+  });
+  state.audio.addEventListener("error", () => {
+    setAudioStatus(`${label} 오디오를 불러오지 못했습니다.`, "error");
+  });
+  state.audio.play().catch(() => {
+    setAudioStatus("브라우저가 오디오 재생을 막았습니다. 버튼을 다시 직접 눌러 주세요.", "error");
   });
 }
 
