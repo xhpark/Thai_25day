@@ -2,6 +2,7 @@ const CONFIG = window.VOICE_PILOT_CONFIG || {};
 const DEMO_MODE = new URLSearchParams(window.location.search).get("demo") === "1";
 const MAX_RECORDING_MS = Math.min(Number(CONFIG.stt?.maxRecordingMs || 4000), 4000);
 const RECORD_START_LEAD_MS = 90;
+const SESSION_REFRESH_BUFFER_MS = 60 * 1000;
 const STORAGE_KEYS = {
   speaker: "thai25.voicePilot.speaker",
   day: "thai25.voicePilot.day",
@@ -24,6 +25,7 @@ const state = {
     registered: false,
     verified: false,
     sessionToken: null,
+    sessionExpiresAt: 0,
     busy: false,
     message: ""
   },
@@ -202,6 +204,7 @@ async function initAuth() {
       registered: true,
       verified: true,
       sessionToken: "demo-session-token",
+      sessionExpiresAt: Date.now() + 24 * 60 * 60 * 1000,
       busy: false,
       message: "로컬 데모에서는 iPhone 등록 확인을 건너뜁니다."
     };
@@ -231,7 +234,7 @@ async function initAuth() {
     authModule.onAuthStateChanged(auth, async (user) => {
       if (!user) {
         state.auth = { ready: true, approved: false, admin: false, uid: null, email: null, idToken: null, message: "" };
-        state.device = { registered: false, verified: false, sessionToken: null, busy: false, message: "" };
+        state.device = { registered: false, verified: false, sessionToken: null, sessionExpiresAt: 0, busy: false, message: "" };
         render();
         return;
       }
@@ -254,7 +257,7 @@ async function initAuth() {
             : "서버에서 승인 여부를 확인합니다."
           : "이 계정은 파일럿 기능 승인을 받지 않았습니다."
       };
-      state.device = { registered: false, verified: false, sessionToken: null, busy: false, message: "" };
+      state.device = { registered: false, verified: false, sessionToken: null, sessionExpiresAt: 0, busy: false, message: "" };
       if (state.auth.approved) refreshDeviceStatus();
       render();
     });
@@ -896,14 +899,37 @@ async function listenThenRecord() {
 }
 
 async function ensureDeviceReadyForPractice() {
-  if (state.device.verified && state.device.sessionToken) return true;
+  if (hasFreshPilotSession()) return true;
   if (!state.device.registered) {
     state.device.message = "녹음 평가는 iPhone 음성 연습 등록 후 사용할 수 있습니다.";
     state.auth.message = "문장 듣기는 계속 사용할 수 있습니다. 녹음 평가는 iPhone 음성 연습 등록 후 가능합니다.";
     return false;
   }
-  state.device.message = "음성 연습을 시작하기 위해 등록된 iPhone을 확인합니다.";
+  state.device.message = state.device.sessionToken
+    ? "음성 연습 확인 시간이 지나 등록된 iPhone을 다시 확인합니다."
+    : "음성 연습을 시작하기 위해 등록된 iPhone을 확인합니다.";
   return verifyDevice({ inline: true });
+}
+
+function hasFreshPilotSession() {
+  if (!state.device.verified || !state.device.sessionToken) return false;
+  if (!state.device.sessionExpiresAt) {
+    state.device.sessionExpiresAt = pilotSessionExpiresAt(state.device.sessionToken);
+  }
+  return state.device.sessionExpiresAt > Date.now() + SESSION_REFRESH_BUFFER_MS;
+}
+
+function pilotSessionExpiresAt(token) {
+  try {
+    const encodedPayload = String(token || "").split(".")[0];
+    if (!encodedPayload) return 0;
+    const base64 = encodedPayload.replace(/-/g, "+").replace(/_/g, "/");
+    const padded = base64.padEnd(Math.ceil(base64.length / 4) * 4, "=");
+    const payload = JSON.parse(atob(padded));
+    return Number(payload.exp || 0) * 1000;
+  } catch {
+    return 0;
+  }
 }
 
 function playAudio(src, label) {
@@ -951,6 +977,10 @@ function clearRecordingTimers() {
 
 async function startRecording() {
   resetRecordingState();
+  if (!(await ensureDeviceReadyForPractice())) {
+    render();
+    return;
+  }
   if (await prepareRecording()) beginPreparedRecording();
 }
 
@@ -961,7 +991,7 @@ async function prepareRecording() {
     return false;
   }
 
-  if (!state.device.verified || !state.device.sessionToken) {
+  if (!hasFreshPilotSession()) {
     state.device.message = "음성 평가를 시작하려면 iPhone 음성 연습 등록이 필요합니다.";
     render();
     return false;
@@ -1123,6 +1153,13 @@ function openSttStream() {
         failAttempt("인식된 태국어가 없습니다. 마이크에 더 가까이 대고 첫 음절부터 또렷하게 말해 주세요.");
       }
       if (payload.type === "error") {
+        if (String(payload.message || "").includes("expired_pilot_session_token")) {
+          state.device.verified = false;
+          state.device.sessionToken = null;
+          state.device.sessionExpiresAt = 0;
+          failAttempt("iPhone 확인 시간이 지났습니다. 문장을 다시 누르면 확인 후 바로 녹음할 수 있습니다.");
+          return;
+        }
         failAttempt(payload.message || "STT 서버 오류");
       }
       render();
@@ -1253,13 +1290,14 @@ async function refreshDeviceStatus() {
     state.device.registered = Boolean(status.registered);
     state.device.verified = false;
     state.device.sessionToken = null;
+    state.device.sessionExpiresAt = 0;
     state.device.message = status.registered ? "등록된 iPhone이 있습니다. 사용 전 확인해 주세요." : "아직 등록된 iPhone이 없습니다.";
     render();
   } catch (error) {
     if (String(error.message || "").includes("not_approved") || String(error.message || "").includes("403")) {
       state.auth.approved = false;
       state.auth.message = "이 계정은 파일럿 기능 승인을 받지 않았습니다.";
-      state.device = { registered: false, verified: false, sessionToken: null, busy: false, message: "" };
+      state.device = { registered: false, verified: false, sessionToken: null, sessionExpiresAt: 0, busy: false, message: "" };
       render();
       return;
     }
@@ -1286,6 +1324,7 @@ async function registerDevice() {
     state.device.registered = Boolean(result.verified);
     state.device.verified = false;
     state.device.sessionToken = null;
+    state.device.sessionExpiresAt = 0;
     state.deviceSetupSkipped = false;
     localStorage.removeItem(STORAGE_KEYS.deviceSetupSkipped);
     state.device.message = "이 iPhone이 등록되었습니다. 학습 문장을 터치하면 필요한 확인 후 녹음 평가가 시작됩니다.";
@@ -1314,11 +1353,13 @@ async function verifyDevice(options = {}) {
     });
     state.device.verified = Boolean(result.verified);
     state.device.sessionToken = result.pilotSessionToken || null;
+    state.device.sessionExpiresAt = pilotSessionExpiresAt(state.device.sessionToken);
     state.device.message = state.device.verified ? "확인 완료. 이제 녹음할 수 있습니다." : "iPhone 확인에 실패했습니다.";
     return state.device.verified && Boolean(state.device.sessionToken);
   } catch (error) {
     state.device.verified = false;
     state.device.sessionToken = null;
+    state.device.sessionExpiresAt = 0;
     state.device.message = `iPhone 확인 실패: ${error.message}`;
     return false;
   } finally {
