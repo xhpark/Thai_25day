@@ -402,20 +402,22 @@ input {
   justify-items: start;
   width: 100%;
   padding: 16px;
-  border-color: #9ecab1;
-  background: #fbfffc;
+  border-color: #0b4ea2;
+  background: #1769d2;
+  color: #fff;
   text-align: left;
+  box-shadow: 0 16px 32px rgba(23, 105, 210, 0.24);
 }
 
 .practice-target-card:disabled {
   cursor: not-allowed;
-  opacity: 0.78;
+  opacity: 1;
 }
 
 .practice-target-card strong {
   display: block;
   margin-top: 8px;
-  color: var(--ink);
+  color: #fff;
   font-size: 1.7rem;
   line-height: 1.2;
 }
@@ -426,8 +428,19 @@ input {
   display: block;
 }
 
+.practice-target-card .thai-text,
+.practice-target-card .romanization {
+  color: #fff;
+}
+
+.practice-target-card .korean-pronunciation {
+  border-color: rgba(255, 255, 255, 0.72);
+  background: rgba(255, 255, 255, 0.16);
+  color: #fff;
+}
+
 .practice-card-label {
-  color: var(--green);
+  color: #eaf4ff;
   font-size: 1.02rem;
   font-weight: 900;
 }
@@ -515,43 +528,44 @@ input {
   align-items: center;
   gap: 10px;
   min-height: 118px;
-  border: 2px solid #f0d77e;
+  border: 2px solid #b8d6ff;
   border-radius: 8px;
-  background: linear-gradient(180deg, #fff9df, #fff);
+  background: linear-gradient(180deg, #eef6ff, #fff);
 }
 
-.mic-dot {
+.mic-icon {
   display: grid;
   width: 58px;
   height: 58px;
   margin-left: 14px;
   place-items: center;
   border-radius: 999px;
-  border: 4px solid #9a6b00;
-  background: var(--yellow);
-  box-shadow: inset 0 -8px 0 rgba(154, 107, 0, 0.2);
+  border: 3px solid #1769d2;
+  background: #e7f1ff;
+  color: #1769d2;
+  box-shadow: 0 10px 22px rgba(23, 105, 210, 0.22);
 }
 
 .record-meter strong {
-  color: #2c2610;
+  color: #0b4ea2;
   font-size: 2.8rem;
   line-height: 1;
   font-weight: 900;
 }
 
 .record-meter small {
-  color: #6b5520;
+  color: #194f91;
   font-size: 1.18rem;
   font-weight: 900;
 }
 
 .record-meter[data-state="recording"] {
-  border-color: #e27863;
-  background: #fff2ef;
+  border-color: #1769d2;
+  background: #e7f1ff;
 }
 
-.record-meter[data-state="recording"] .mic-dot {
-  animation: mic-pulse 0.72s infinite;
+.record-meter[data-state="recording"] .mic-icon {
+  animation: mic-pulse 0.5s infinite;
 }
 
 @keyframes mic-pulse {

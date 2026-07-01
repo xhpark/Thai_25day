@@ -1,6 +1,7 @@
 const CONFIG = window.VOICE_PILOT_CONFIG || {};
 const DEMO_MODE = new URLSearchParams(window.location.search).get("demo") === "1";
 const MAX_RECORDING_MS = Math.min(Number(CONFIG.stt?.maxRecordingMs || 4000), 4000);
+const RECORD_START_LEAD_MS = 90;
 const STORAGE_KEYS = {
   speaker: "thai25.voicePilot.speaker",
   day: "thai25.voicePilot.day",
@@ -46,6 +47,9 @@ const state = {
   sttError: "",
   attemptRecorded: false,
   recording: false,
+  recordStartTimer: null,
+  recordTickTimer: null,
+  recordStopTimer: null,
   countdown: 4,
   status: "idle",
   transcript: "",
@@ -557,7 +561,7 @@ function renderPracticeTargetPanel() {
       </button>
       <p class="record-copy">${escapeHtml(recordCopy())}</p>
       <div class="record-meter" data-state="${state.status}">
-        <span class="mic-dot" aria-hidden="true"></span>
+        <span class="mic-icon" aria-hidden="true">${micIconSvg()}</span>
         <strong>${state.recording ? state.countdown : "4"}</strong>
         <small>${escapeHtml(recordHeading())}</small>
       </div>
@@ -786,6 +790,17 @@ function playIconSvg() {
   return `<span aria-hidden="true">▶</span>`;
 }
 
+function micIconSvg() {
+  return `
+    <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+      <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
+      <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+      <path d="M12 19v3"></path>
+      <path d="M8 22h8"></path>
+    </svg>
+  `;
+}
+
 function renderAudioPressedState(mode, activeButton = null) {
   document.querySelectorAll("[data-mode]").forEach((button) => {
     button.setAttribute("aria-pressed", "false");
@@ -819,22 +834,45 @@ async function listenThenRecord() {
     state.audio.currentTime = 0;
   }
   resetRecordingState();
+  if (!(await prepareRecording())) return;
+
   const audioPath = currentTargetAudio("normal");
   if (!audioPath) {
     state.auth.message = "학습대상 문장 오디오가 없어 바로 녹음을 시작합니다.";
     render();
-    await startRecording();
+    beginPreparedRecording();
     return;
   }
 
   state.status = "listening";
-  state.interimTranscript = "문장 오디오가 끝나면 자동으로 녹음이 시작됩니다.";
+  state.interimTranscript = "문장 오디오가 끝나는 순간 바로 녹음이 시작됩니다.";
   state.audio = new Audio(audioPath);
+  let recordingStartedFromAudio = false;
+  const startFromAudio = () => {
+    if (recordingStartedFromAudio) return;
+    recordingStartedFromAudio = true;
+    if (state.recordStartTimer) {
+      window.clearTimeout(state.recordStartTimer);
+      state.recordStartTimer = null;
+    }
+    beginPreparedRecording();
+  };
+  state.audio.addEventListener("loadedmetadata", () => {
+    if (!Number.isFinite(state.audio.duration) || state.audio.duration <= 0) return;
+    const delay = Math.max(0, state.audio.duration * 1000 - RECORD_START_LEAD_MS);
+    state.recordStartTimer = window.setTimeout(startFromAudio, delay);
+  }, { once: true });
+  state.audio.addEventListener("timeupdate", () => {
+    if (!state.audio || !Number.isFinite(state.audio.duration)) return;
+    if ((state.audio.duration - state.audio.currentTime) * 1000 <= RECORD_START_LEAD_MS) startFromAudio();
+  });
   state.audio.addEventListener("ended", () => {
     state.audio = null;
-    startRecording();
+    startFromAudio();
   }, { once: true });
   state.audio.addEventListener("error", () => {
+    clearRecordingTimers();
+    stopTracks();
     state.status = "idle";
     state.sttError = "문장 오디오를 불러오지 못했습니다.";
     render();
@@ -844,6 +882,8 @@ async function listenThenRecord() {
   try {
     await state.audio.play();
   } catch (error) {
+    clearRecordingTimers();
+    stopTracks();
     state.status = "idle";
     state.sttError = `문장 오디오 재생 실패: ${error.message}`;
     render();
@@ -883,6 +923,7 @@ function playAudio(src, label) {
 }
 
 function resetRecordingState() {
+  clearRecordingTimers();
   if (state.playbackUrl) URL.revokeObjectURL(state.playbackUrl);
   state.recordedBlob = null;
   state.playbackUrl = null;
@@ -894,57 +935,77 @@ function resetRecordingState() {
   state.status = "idle";
 }
 
+function clearRecordingTimers() {
+  if (state.recordStartTimer) window.clearTimeout(state.recordStartTimer);
+  if (state.recordTickTimer) window.clearInterval(state.recordTickTimer);
+  if (state.recordStopTimer) window.clearTimeout(state.recordStopTimer);
+  state.recordStartTimer = null;
+  state.recordTickTimer = null;
+  state.recordStopTimer = null;
+}
+
 async function startRecording() {
+  resetRecordingState();
+  if (await prepareRecording()) beginPreparedRecording();
+}
+
+async function prepareRecording() {
   if (!state.target) {
     state.auth.message = "오늘 따라 말할 문장을 먼저 확인해 주세요.";
     render();
-    return;
+    return false;
   }
 
   if (!state.device.verified || !state.device.sessionToken) {
     state.device.message = "음성 평가를 시작하려면 iPhone 음성 연습 등록이 필요합니다.";
     render();
-    return;
+    return false;
   }
 
   if (!navigator.mediaDevices?.getUserMedia || !window.MediaRecorder) {
     state.auth.message = "이 브라우저는 녹음 기능을 지원하지 않습니다.";
     render();
-    return;
+    return false;
   }
 
-  resetRecordingState();
-  state.chunks = [];
-  state.recording = true;
-  state.countdown = Math.ceil(MAX_RECORDING_MS / 1000);
-  state.status = "recording";
-  render();
-
   try {
+    state.chunks = [];
     state.mediaStream = await navigator.mediaDevices.getUserMedia({ audio: true });
     const mimeType = pickMimeType();
     state.mediaRecorder = new MediaRecorder(state.mediaStream, mimeType ? { mimeType } : undefined);
     openSttStream();
     state.mediaRecorder.addEventListener("dataavailable", handleAudioChunk);
     state.mediaRecorder.addEventListener("stop", finishRecording);
-    state.mediaRecorder.start(400);
-
-    const tick = window.setInterval(() => {
-      state.countdown = Math.max(0, state.countdown - 1);
-      render();
-      if (!state.recording) window.clearInterval(tick);
-    }, 1000);
-
-    window.setTimeout(() => {
-      if (state.mediaRecorder?.state === "recording") state.mediaRecorder.stop();
-    }, MAX_RECORDING_MS);
+    return true;
   } catch (error) {
     stopTracks();
     state.recording = false;
     state.status = "idle";
     state.auth.message = `마이크를 사용할 수 없습니다: ${error.message}`;
     render();
+    return false;
   }
+}
+
+function beginPreparedRecording() {
+  if (state.recording || !state.mediaRecorder || state.mediaRecorder.state !== "inactive") return;
+  state.recording = true;
+  state.countdown = Math.ceil(MAX_RECORDING_MS / 1000);
+  state.status = "recording";
+  render();
+
+  state.mediaRecorder.start(180);
+
+  clearRecordingTimers();
+  state.recordTickTimer = window.setInterval(() => {
+    state.countdown = Math.max(0, state.countdown - 1);
+    render();
+    if (!state.recording) clearRecordingTimers();
+  }, 1000);
+
+  state.recordStopTimer = window.setTimeout(() => {
+    if (state.mediaRecorder?.state === "recording") state.mediaRecorder.stop();
+  }, MAX_RECORDING_MS);
 }
 
 function pickMimeType() {
@@ -1025,6 +1086,7 @@ function openSttStream() {
 async function finishRecording() {
   state.recording = false;
   state.status = "analyzing";
+  clearRecordingTimers();
   stopTracks();
   if (state.websocket?.readyState === WebSocket.OPEN) {
     if (state.sttReady) {
