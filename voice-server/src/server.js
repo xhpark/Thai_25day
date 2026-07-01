@@ -1,8 +1,9 @@
 import http from "node:http";
 import crypto from "node:crypto";
 import { WebSocket, WebSocketServer } from "ws";
-import admin from "firebase-admin";
-import { Firestore } from "@google-cloud/firestore";
+import { initializeApp } from "firebase-admin/app";
+import { getAuth } from "firebase-admin/auth";
+import { FieldValue, Firestore } from "@google-cloud/firestore";
 import { v2 as speechV2 } from "@google-cloud/speech";
 import {
   generateAuthenticationOptions,
@@ -27,7 +28,8 @@ const PILOT_SESSION_TTL_SECONDS = Number(process.env.PILOT_SESSION_TTL_SECONDS |
 const MAX_AUDIO_MS = Number(process.env.MAX_AUDIO_MS || 4000);
 const MAX_AUDIO_BYTES = Number(process.env.MAX_AUDIO_BYTES || 524288);
 
-admin.initializeApp();
+initializeApp();
+const auth = getAuth();
 const firestore = new Firestore();
 const speechClient = new speechV2.SpeechClient();
 
@@ -191,7 +193,7 @@ async function persistSession(ws, session) {
       transcript,
       score,
       audioStored: false,
-      createdAt: admin.firestore.FieldValue.serverTimestamp()
+      createdAt: FieldValue.serverTimestamp()
     });
   }
   send(ws, { type: "saved", transcript, score });
@@ -258,7 +260,7 @@ async function verifyApprovedRequest(request) {
   const authorization = request.headers.authorization || "";
   const token = authorization.startsWith("Bearer ") ? authorization.slice(7) : "";
   if (!token) throw new Error("missing_auth_token");
-  const decoded = await admin.auth().verifyIdToken(token);
+  const decoded = await auth.verifyIdToken(token);
   if (!APPROVED_UIDS.has(decoded.uid)) throw new Error("not_approved_user");
   return {
     uid: decoded.uid,
@@ -310,7 +312,7 @@ async function verifyRegistration(user, body) {
     publicKey: credential.publicKey,
     counter: credential.counter,
     transports: credential.transports,
-    createdAt: admin.firestore.FieldValue.serverTimestamp(),
+    createdAt: FieldValue.serverTimestamp(),
     lastVerifiedAt: null,
     revoked: false
   });
@@ -365,7 +367,7 @@ async function verifyAuthentication(user, body) {
   const newCounter = verification.authenticationInfo?.newCounter ?? credential.counter;
   await firestore.collection(WEBAUTHN_CREDENTIALS_COLLECTION).doc(`${user.uid}_${credential.credentialId}`).update({
     counter: newCounter,
-    lastVerifiedAt: admin.firestore.FieldValue.serverTimestamp()
+    lastVerifiedAt: FieldValue.serverTimestamp()
   });
   await deleteChallenge(user.uid, "authentication");
 
@@ -413,7 +415,7 @@ async function storeChallenge(uid, type, challenge) {
     uid,
     type,
     challenge,
-    createdAt: admin.firestore.FieldValue.serverTimestamp()
+    createdAt: FieldValue.serverTimestamp()
   });
 }
 
