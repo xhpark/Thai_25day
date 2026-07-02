@@ -45,33 +45,33 @@
 - 현재 상태: 준비됨
 - 검색어: handing gospel tract Thailand church; Korean missionary greeting Thai novice monk
 
-### W2D6
+### polite_excuse_reassurance
 - 사용 날짜: W2D6
-- 필요한 장면: 정중하게 말 걸기 학습 장면
-- 권장 파일명: assets/images/scenes/<scene_id>.jpg
-- 현재 상태: 사진 필요
-- 검색어: 정중하게 말 걸기; 사람 사이를 지나가거나 작은 실수를 했을 때 정중하게 말한다.
+- 필요한 장면: 교회 복도에서 정중하게 실례를 구하고 따뜻하게 응답받는 장면
+- 권장 파일명: assets/images/scenes/polite_excuse_reassurance.jpg
+- 현재 상태: 준비됨
+- 검색어: polite wai greeting church hallway Thailand; church hallway polite greeting Asian adults; Thai church respectful excuse me conversation
 
 ### name_intro_conversation
 - 사용 날짜: W2D7, W2D8, W5D22, W2SAT
-- 필요한 장면: 예배 후 처음 만나 이름을 묻고 자기소개하는 장면
+- 필요한 장면: 교회 친교 자리에서 이름을 묻고 자기 이름을 소개하는 장면
 - 권장 파일명: assets/images/scenes/name_intro_conversation.jpg
-- 현재 상태: 사진 필요
+- 현재 상태: 준비됨
 - 검색어: church fellowship two people introducing themselves; Asian church conversation after worship; friendly introduction conversation church
 
-### W2D9
+### age_question_child
 - 사용 날짜: W2D9
-- 필요한 장면: 나이 묻기 학습 장면
-- 권장 파일명: assets/images/scenes/<scene_id>.jpg
-- 현재 상태: 사진 필요
-- 검색어: 나이 묻기; 친한 사이 또는 어린이에게 나이를 묻는 장면을 연습한다.
+- 필요한 장면: 교회 마당에서 어린이에게 나이를 조심스럽고 친근하게 묻는 장면
+- 권장 파일명: assets/images/scenes/age_question_child.jpg
+- 현재 상태: 준비됨
+- 검색어: friendly adult asking child age church yard; Asian woman talking with child garden; warm church courtyard child conversation
 
-### encouragement_and_blessing
-- 사용 날짜: W2D10, W4D16, W4D17, W4D18, W4D19, W4SAT
-- 필요한 장면: 교회 안에서 사랑과 축복의 말을 따뜻하게 전하는 장면
-- 권장 파일명: assets/images/scenes/encouragement_and_blessing.jpg
-- 현재 상태: 사진 필요
-- 검색어: gentle church encouragement conversation; supportive conversation church smiling; blessing prayer church community
+### we_love_you_group
+- 사용 날짜: W2D10
+- 필요한 장면: 태국 교회 마당에서 공동체가 우리는 당신들을 사랑해요라고 따뜻하게 전하는 장면
+- 권장 파일명: assets/images/scenes/we_love_you_group.jpg
+- 현재 상태: 준비됨
+- 검색어: mission team and local church group we love you Thailand; church community welcoming mission team village Thailand; warm group greeting church village Thailand
 
 ### restroom_wayfinding
 - 사용 날짜: W3D11
@@ -100,6 +100,13 @@
 - 권장 파일명: assets/images/scenes/<scene_id>.jpg
 - 현재 상태: 사진 필요
 - 검색어: 작별 인사; 식사와 행사가 끝난 뒤 자연스럽게 헤어진다.
+
+### encouragement_and_blessing
+- 사용 날짜: W4D16, W4D17, W4D18, W4D19, W4SAT
+- 필요한 장면: 교회 안에서 사랑과 축복의 말을 따뜻하게 전하는 장면
+- 권장 파일명: assets/images/scenes/encouragement_and_blessing.jpg
+- 현재 상태: 사진 필요
+- 검색어: gentle church encouragement conversation; supportive conversation church smiling; blessing prayer church community
 
 ### praise_invitation
 - 사용 날짜: W4D20, W5D24
@@ -161,38 +168,38 @@
 
 ### W2D6 정중하게 말 걸기
 - 구분: 평일
-- 필요한 장면: 정중하게 말 걸기 학습 장면
+- 필요한 장면: 교회 복도에서 정중하게 실례를 구하고 따뜻하게 응답받는 장면
 - 스토리: 사람 사이를 지나가거나 작은 실수를 했을 때 정중하게 말한다.
-- 파일명: 
-- 상태: 사진 필요
+- 파일명: assets/images/scenes/polite_excuse_reassurance.jpg
+- 상태: 준비됨
 
 ### W2D7 이름 묻기
 - 구분: 평일
-- 필요한 장면: 예배 후 처음 만나 이름을 묻고 자기소개하는 장면
+- 필요한 장면: 교회 친교 자리에서 이름을 묻고 자기 이름을 소개하는 장면
 - 스토리: 교회 식사 자리에서 처음 만난 사람에게 이름을 묻는다.
 - 파일명: assets/images/scenes/name_intro_conversation.jpg
-- 상태: 사진 필요
+- 상태: 준비됨
 
 ### W2D8 자기소개하기
 - 구분: 평일
-- 필요한 장면: 예배 후 처음 만나 이름을 묻고 자기소개하는 장면
+- 필요한 장면: 교회 친교 자리에서 이름을 묻고 자기 이름을 소개하는 장면
 - 스토리: 처음 만난 사람에게 자기 이름을 소개한다.
 - 파일명: assets/images/scenes/name_intro_conversation.jpg
-- 상태: 사진 필요
+- 상태: 준비됨
 
 ### W2D9 나이 묻기
 - 구분: 평일
-- 필요한 장면: 나이 묻기 학습 장면
+- 필요한 장면: 교회 마당에서 어린이에게 나이를 조심스럽고 친근하게 묻는 장면
 - 스토리: 친한 사이 또는 어린이에게 나이를 묻는 장면을 연습한다.
-- 파일명: 
-- 상태: 사진 필요
+- 파일명: assets/images/scenes/age_question_child.jpg
+- 상태: 준비됨
 
 ### W2D10 우리는 당신들을 사랑해요
 - 구분: 평일
-- 필요한 장면: 교회 안에서 사랑과 축복의 말을 따뜻하게 전하는 장면
+- 필요한 장면: 태국 교회 마당에서 공동체가 우리는 당신들을 사랑해요라고 따뜻하게 전하는 장면
 - 스토리: 예배 후 서로를 환영하며 공동체의 사랑을 전한다.
-- 파일명: assets/images/scenes/encouragement_and_blessing.jpg
-- 상태: 사진 필요
+- 파일명: assets/images/scenes/we_love_you_group.jpg
+- 상태: 준비됨
 
 ### W3D11 화장실 묻기
 - 구분: 평일
@@ -273,10 +280,10 @@
 
 ### W5D22 새 친구와 자기소개 복습
 - 구분: 평일
-- 필요한 장면: 예배 후 처음 만나 이름을 묻고 자기소개하는 장면
+- 필요한 장면: 교회 친교 자리에서 이름을 묻고 자기 이름을 소개하는 장면
 - 스토리: 예배 후 식사 자리에서 새 친구에게 실례합니다로 말을 걸고, 이름과 나이를 묻고, 공동체의 사랑까지 전한다.
 - 파일명: assets/images/scenes/name_intro_conversation.jpg
-- 상태: 사진 필요
+- 상태: 준비됨
 
 ### W5D23 생활 대화와 돌봄 복습
 - 구분: 평일
@@ -308,10 +315,10 @@
 
 ### W2SAT 예배 후 새 친구 만나기
 - 구분: 토요일
-- 필요한 장면: 예배 후 처음 만나 이름을 묻고 자기소개하는 장면
+- 필요한 장면: 교회 친교 자리에서 이름을 묻고 자기 이름을 소개하는 장면
 - 스토리: 예배 후 식사 자리에서 한국 선교팀과 태국 교회 성도가 만난다. 정중히 말을 걸고, 이름을 묻고, 각자 자기소개를 한다.
 - 파일명: assets/images/scenes/name_intro_conversation.jpg
-- 상태: 사진 필요
+- 상태: 준비됨
 
 ### W3SAT 교회 식사 자리에서 다시 만나기
 - 구분: 토요일

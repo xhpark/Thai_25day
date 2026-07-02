@@ -16,6 +16,7 @@ from docx.shared import Inches, Pt, RGBColor
 ROOT = Path(__file__).resolve().parents[1]
 CURRICULUM_PATH = ROOT / "data/thai_curriculum_master.json"
 PHRASES_PATH = ROOT / "data/thai_master_phrases.json"
+ASSETS_INDEX_PATH = ROOT / "data/thai_learning_assets_index.json"
 OUT_PATH = ROOT / "docs/태국어_25일_일별_주차별_학습계획.docx"
 
 PAGE_WIDTH_IN = 6.5
@@ -143,6 +144,33 @@ def phrase_pronunciation_list(ids: list[str], variants: dict[str, dict]) -> str:
     return "\n".join(parts)
 
 
+def keyword_index(assets: dict) -> dict[str, dict]:
+    return {str(keyword["id"]): keyword for keyword in assets["keywords"]}
+
+
+def keyword_list(ids: list[str], keywords: dict[str, dict]) -> str:
+    if not ids:
+        return "-"
+    parts = []
+    for keyword_id in ids:
+        keyword = keywords.get(str(keyword_id))
+        if keyword:
+            pronunciation = keyword.get("koreanPronunciation") or keyword.get("korean_pronunciation")
+            if pronunciation:
+                parts.append(f"{keyword['korean']}({pronunciation})")
+            else:
+                parts.append(keyword["korean"])
+        else:
+            parts.append(str(keyword_id))
+    return "\n".join(parts)
+
+
+def daily_keyword_list(item: dict, keywords: dict[str, dict]) -> str:
+    if item.get("lessonType") != "new":
+        return "새 단어 없음\n(누적 복습)"
+    return keyword_list(item.get("keyWordIds", []), keywords)
+
+
 def item_by_id(schedule: list[dict]) -> dict[str, dict]:
     return {item["id"]: item for item in schedule}
 
@@ -150,7 +178,9 @@ def item_by_id(schedule: list[dict]) -> dict[str, dict]:
 def main() -> None:
     curriculum = load_json(CURRICULUM_PATH)
     phrases = load_json(PHRASES_PATH)
+    assets = load_json(ASSETS_INDEX_PATH)
     variants = phrase_index(phrases)
+    keywords = keyword_index(assets)
     schedule = curriculum["schedule"]
     weeks = {week["week"]: week for week in curriculum["weeks"]}
 
@@ -208,6 +238,7 @@ def main() -> None:
         ("전체 반복 복습", "21~25일, 주제별 복습 후 25일 전체 리허설"),
         ("오프라인 수업", "각 주 토요일, 해당 주 학습 내용을 역할극으로 종합"),
         ("학습 항목 수", "24개 기본 문장. 세부 학습 ID는 좋은 아침/저녁, 예/아니오 분리로 26개"),
+        ("핵심 단어", "일별 학습 문장에서 새로 등장하는 단어를 중복 없이 배치하고 한국식 발음을 함께 표시"),
         ("자료 생성 기준", "카카오 알림 카드, PWA 학습 화면, 토요일 강의자료, 출력용 복습지를 이 계획에서 생성"),
     ]
     for label, detail in summary_rows:
@@ -243,9 +274,9 @@ def main() -> None:
             for item in schedule
             if item.get("week") == week_no and item.get("dayType") == "weekday"
         ]
-        daily_table = doc.add_table(rows=1, cols=6)
+        daily_table = doc.add_table(rows=1, cols=7)
         daily_table.style = "Table Grid"
-        for idx, header in enumerate(["일차", "유형", "제목", "새 문장", "복습 문장", "말하기 미션"]):
+        for idx, header in enumerate(["일차", "유형", "제목", "새 문장", "핵심 단어", "복습 문장", "말하기 미션"]):
             daily_table.rows[0].cells[idx].text = header
         for item in weekdays:
             cells = daily_table.add_row().cells
@@ -253,9 +284,10 @@ def main() -> None:
             cells[1].text = "새 문장" if item.get("lessonType") == "new" else "복습"
             cells[2].text = item["title"]
             cells[3].text = phrase_list(item.get("newPhraseVariantIds", []), variants)
-            cells[4].text = phrase_list(item.get("reviewVariantIds", []), variants)
-            cells[5].text = item.get("speakingMission", "")
-        set_table_widths(daily_table, [0.45, 0.65, 1.1, 1.35, 1.7, 1.25])
+            cells[4].text = daily_keyword_list(item, keywords)
+            cells[5].text = phrase_list(item.get("reviewVariantIds", []), variants)
+            cells[6].text = item.get("speakingMission", "")
+        set_table_widths(daily_table, [0.4, 0.55, 0.9, 1.15, 1.15, 1.25, 1.1])
         style_table(daily_table)
 
     doc.add_section(WD_SECTION.NEW_PAGE)
