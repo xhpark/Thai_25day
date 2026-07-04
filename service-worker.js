@@ -1,9 +1,9 @@
-const CACHE_NAME = "thai25-day1-v18";
+const CACHE_NAME = "thai25-day1-v19";
 const SHELL_ASSETS = [
   "./",
   "./index.html",
-  "./styles.css?v=18",
-  "./app.js?v=18",
+  "./styles.css?v=19",
+  "./app.js?v=19",
   "./manifest.webmanifest",
   "./assets/generated/pwa/w1d1.json",
   "./assets/generated/pwa/w1d2.json",
@@ -12,6 +12,8 @@ const SHELL_ASSETS = [
   "./assets/generated/pwa/w1d5.json",
   "./assets/generated/pwa/w2d6.json",
   "./assets/generated/pwa/w2d7.json",
+  "./assets/generated/pwa/review_2026_07_04.json",
+  "./assets/generated/pwa/review_2026_07_05.json",
   "./assets/generated/pwa/preview_d_minus_2.json",
   "./assets/generated/pwa/preview_d_minus_1.json",
   "./assets/generated/pwa/aid1_numbers.json",

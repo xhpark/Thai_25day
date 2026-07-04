@@ -34,9 +34,21 @@ function requestedPreview() {
   return params.get("preview");
 }
 
+function requestedDateReview() {
+  const params = new URLSearchParams(window.location.search);
+  return params.get("date");
+}
+
 function specUrlForDay(day) {
   const week = Math.ceil(day / 5);
   return `assets/generated/pwa/w${week}d${day}.json`;
+}
+
+function specUrlForDateReview(date) {
+  return {
+    "2026-07-04": "assets/generated/pwa/review_2026_07_04.json",
+    "2026-07-05": "assets/generated/pwa/review_2026_07_05.json"
+  }[date] || null;
 }
 
 function specUrlForPreview(preview) {
@@ -640,7 +652,8 @@ function showToast(message) {
 function renderError(error) {
   const aid = requestedAid();
   const preview = requestedPreview();
-  const label = aid ? `학습보조${escapeHtml(aid)}` : preview ? `미리보기 ${escapeHtml(preview)}` : `${requestedDay()}일차`;
+  const dateReview = requestedDateReview();
+  const label = aid ? `학습보조${escapeHtml(aid)}` : preview ? `미리보기 ${escapeHtml(preview)}` : dateReview ? `${escapeHtml(dateReview)} 복습` : `${requestedDay()}일차`;
   document.getElementById("app").innerHTML = `
     <div class="error-panel">
       <p class="eyebrow">불러오기 실패</p>
@@ -654,8 +667,9 @@ async function boot() {
   try {
     const aid = requestedAid();
     const preview = requestedPreview();
-    const specUrl = aid ? specUrlForAid(aid) : preview ? specUrlForPreview(preview) : specUrlForDay(requestedDay());
-    if (!specUrl) throw new Error(`지원하지 않는 보조자료 번호입니다: ${aid}`);
+    const dateReview = requestedDateReview();
+    const specUrl = aid ? specUrlForAid(aid) : preview ? specUrlForPreview(preview) : dateReview ? specUrlForDateReview(dateReview) : specUrlForDay(requestedDay());
+    if (!specUrl) throw new Error(dateReview ? `지원하지 않는 날짜 복습 자료입니다: ${dateReview}` : `지원하지 않는 보조자료 번호입니다: ${aid}`);
     const response = await fetch(specUrl, { cache: "no-cache" });
     if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
     const spec = await response.json();
