@@ -4,7 +4,7 @@ import { WebSocket, WebSocketServer } from "ws";
 import { initializeApp } from "firebase-admin/app";
 import { getAuth } from "firebase-admin/auth";
 import { FieldValue, Firestore } from "@google-cloud/firestore";
-import { v2 as speechV2 } from "@google-cloud/speech";
+import { v1 as speechV1 } from "@google-cloud/speech";
 import {
   generateAuthenticationOptions,
   generateRegistrationOptions,
@@ -71,7 +71,7 @@ const reviewRateLimits = new Map();
 initializeApp();
 const auth = getAuth();
 const firestore = new Firestore();
-const speechClient = new speechV2.SpeechClient();
+const speechClient = new speechV1.SpeechClient();
 
 const server = http.createServer(async (request, response) => {
   if (request.method === "OPTIONS") {
@@ -175,7 +175,10 @@ async function startSession(ws, session, payload) {
   session.sampleRateHertz = Number(payload.sampleRateHertz || 0);
 
   session.speechStream = speechClient
-    ._streamingRecognize()
+    .streamingRecognize({
+      config: recognitionConfig(session),
+      interimResults: true
+    })
     .on("data", (response) => handleSpeechResponse(ws, session, response))
     .on("error", (error) => {
       sendSpeechError(ws, session, error);
@@ -185,34 +188,26 @@ async function startSession(ws, session, payload) {
       if (!session.closed) send(ws, { type: "stream_end" });
     });
 
-  session.speechStream.write({
-    recognizer: recognizerName(),
-    streamingConfig: {
-      config: {
-        ...recognitionDecodingConfig(session),
-        languageCodes: ["th-TH"],
-        model: "latest_short"
-      },
-      streamingFeatures: {
-        interimResults: true
-      }
-    }
-  });
-
   send(ws, { type: "ready" });
 }
 
-function recognitionDecodingConfig(session) {
+function recognitionConfig(session) {
   if (session.audioEncoding === "LINEAR16" && session.sampleRateHertz >= 8000) {
     return {
-      explicitDecodingConfig: {
-        encoding: "LINEAR16",
-        sampleRateHertz: Math.round(session.sampleRateHertz),
-        audioChannelCount: 1
-      }
+      encoding: "LINEAR16",
+      sampleRateHertz: Math.round(session.sampleRateHertz),
+      audioChannelCount: 1,
+      languageCode: "th-TH",
+      model: "latest_short",
+      enableAutomaticPunctuation: false
     };
   }
-  return { autoDecodingConfig: {} };
+  return {
+    encoding: "ENCODING_UNSPECIFIED",
+    languageCode: "th-TH",
+    model: "latest_short",
+    enableAutomaticPunctuation: false
+  };
 }
 
 function handleAudioChunk(ws, session, chunk) {
@@ -227,7 +222,7 @@ function handleAudioChunk(ws, session, chunk) {
   if (session.audioBytes > MAX_AUDIO_BYTES) throw new Error("audio_too_large");
 
   try {
-    session.speechStream.write({ audio: chunk });
+    session.speechStream.write(chunk);
   } catch (error) {
     sendSpeechError(ws, session, error);
     closeSpeechStream(session);
@@ -311,10 +306,6 @@ function sendSpeechError(ws, session, error) {
     send(ws, { type: "error", message: detail });
     session.errorSent = true;
   }
-}
-
-function recognizerName() {
-  return `projects/${PROJECT_ID}/locations/${SPEECH_LOCATION}/recognizers/${SPEECH_RECOGNIZER}`;
 }
 
 async function routeHttp(request, response) {
