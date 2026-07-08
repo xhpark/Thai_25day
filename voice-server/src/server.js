@@ -80,7 +80,7 @@ const server = http.createServer(async (request, response) => {
   }
 
   const requestPath = new URL(request.url, `http://${request.headers.host}`).pathname.replace(/\/$/, "") || "/";
-  if (requestPath === "/healthz") {
+  if (requestPath === "/health" || requestPath === "/healthz" || requestPath === "/status") {
     writeJson(request, response, 200, { ok: true, service: "thai-voice-pilot-server" });
     return;
   }

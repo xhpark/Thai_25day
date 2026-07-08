@@ -32,6 +32,7 @@ const state = {
   audioSource: null,
   audioProcessor: null,
   audioMuteGain: null,
+  pcmSourceSampleRate: 48000,
   pcmSampleRate: 48000,
   chunks: [],
   recordedBlob: null,
@@ -1092,7 +1093,8 @@ function beginPreparedRecording() {
 function preparePcmStream() {
   const AudioContextCtor = window.AudioContext || window.webkitAudioContext;
   state.audioContext = new AudioContextCtor();
-  state.pcmSampleRate = Math.round(state.audioContext.sampleRate || 48000);
+  state.pcmSourceSampleRate = Math.round(state.audioContext.sampleRate || 48000);
+  state.pcmSampleRate = 16000;
   state.audioSource = state.audioContext.createMediaStreamSource(state.mediaStream);
   state.audioProcessor = state.audioContext.createScriptProcessor(1024, 1, 1);
   state.audioMuteGain = state.audioContext.createGain();
@@ -1100,7 +1102,8 @@ function preparePcmStream() {
   state.audioProcessor.onaudioprocess = (event) => {
     if (!state.recording) return;
     const input = event.inputBuffer.getChannelData(0);
-    sendSttAudio(floatTo16BitPcm(input));
+    const samples = downsampleFloat32(input, state.pcmSourceSampleRate, state.pcmSampleRate);
+    sendSttAudio(floatTo16BitPcm(samples));
   };
   state.audioSource.connect(state.audioProcessor);
   state.audioProcessor.connect(state.audioMuteGain);
@@ -1125,6 +1128,25 @@ function floatTo16BitPcm(float32Samples) {
     view.setInt16(index * 2, sample < 0 ? sample * 0x8000 : sample * 0x7fff, true);
   }
   return buffer;
+}
+
+function downsampleFloat32(samples, sourceRate, targetRate) {
+  if (!sourceRate || !targetRate || targetRate >= sourceRate) return samples;
+  const ratio = sourceRate / targetRate;
+  const outputLength = Math.max(1, Math.floor(samples.length / ratio));
+  const output = new Float32Array(outputLength);
+  for (let outputIndex = 0; outputIndex < outputLength; outputIndex += 1) {
+    const start = Math.floor(outputIndex * ratio);
+    const end = Math.min(samples.length, Math.floor((outputIndex + 1) * ratio));
+    let sum = 0;
+    let count = 0;
+    for (let inputIndex = start; inputIndex < end; inputIndex += 1) {
+      sum += samples[inputIndex];
+      count += 1;
+    }
+    output[outputIndex] = count ? sum / count : samples[start] || 0;
+  }
+  return output;
 }
 
 function pickMimeType() {
