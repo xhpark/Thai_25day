@@ -23,10 +23,50 @@ const WEBAUTHN_CHALLENGES_COLLECTION = process.env.WEBAUTHN_CHALLENGES_COLLECTIO
 const RP_ID = process.env.RP_ID || "localhost";
 const RP_NAME = process.env.RP_NAME || "Thai Voice Pilot";
 const EXPECTED_ORIGIN = process.env.EXPECTED_ORIGIN || `https://${RP_ID}`;
+const ALLOWED_ORIGINS = new Set([EXPECTED_ORIGIN, ...splitEnv(process.env.ALLOWED_ORIGINS)]);
 const PILOT_SESSION_SECRET = process.env.PILOT_SESSION_SECRET || "";
 const PILOT_SESSION_TTL_SECONDS = Number(process.env.PILOT_SESSION_TTL_SECONDS || 600);
+const REVIEW_SESSION_TTL_SECONDS = Number(process.env.REVIEW_SESSION_TTL_SECONDS || 300);
+const REVIEW_RATE_LIMIT_PER_HOUR = Number(process.env.REVIEW_RATE_LIMIT_PER_HOUR || 120);
 const MAX_AUDIO_MS = Number(process.env.MAX_AUDIO_MS || 4000);
 const MAX_AUDIO_BYTES = Number(process.env.MAX_AUDIO_BYTES || 524288);
+const REVIEW_ALLOWED_PHRASES_BY_DAY = new Map([
+  [21, ["17", "18", "19", "20", "21", "22", "23", "24"]],
+  [22, ["1", "2-1", "2-2", "3", "4", "5-1", "5-2", "6", "7", "8", "9", "10", "10-2", "11", "12", "13", "14", "15", "16"]],
+  [23, ["17", "18", "19", "20", "21", "22", "23", "24"]],
+  [24, ["1", "2-1", "2-2", "3", "4", "5-1", "5-2", "6", "7", "8", "9", "10", "10-2", "11", "12", "13", "14", "15", "16"]],
+  [25, ["17", "18", "19", "20", "21", "22", "23", "24"]]
+]);
+const REVIEW_ALLOWED_THAI_BY_PHRASE = new Map([
+  ["1", ["สวัสดีครับ", "สวัสดีค่ะ"]],
+  ["2-1", ["สวัสดีตอนเช้าครับ", "สวัสดีตอนเช้าค่ะ"]],
+  ["2-2", ["สวัสดีตอนเย็นครับ", "สวัสดีตอนเย็นค่ะ"]],
+  ["3", ["ขอบคุณมากครับ", "ขอบคุณมากค่ะ"]],
+  ["4", ["ไม่เป็นไรครับ", "ไม่เป็นไรค่ะ"]],
+  ["5-1", ["ใช่ครับ", "ใช่ค่ะ"]],
+  ["5-2", ["ไม่ใช่ครับ", "ไม่ใช่ค่ะ"]],
+  ["6", ["ขอโทษครับ", "ขอโทษค่ะ"]],
+  ["7", ["ไม่เป็นไรครับ", "ไม่เป็นไรค่ะ"]],
+  ["8", ["คุณชื่ออะไรครับ", "คุณชื่ออะไรคะ"]],
+  ["9", ["ผมชื่อ ~ ครับ", "ฉันชื่อ ~ ค่ะ"]],
+  ["10", ["คุณอายุเท่าไหร่ครับ", "คุณอายุเท่าไหร่คะ"]],
+  ["10-2", ["ผมอายุ ~ ปีครับ", "ฉันอายุ ~ ปีค่ะ"]],
+  ["11", ["ห้องน้ำอยู่ที่ไหนครับ", "ห้องน้ำอยู่ที่ไหนคะ"]],
+  ["12", ["ทานให้อร่อยนะครับ", "ทานให้อร่อยนะคะ"]],
+  ["13", ["อร่อยมากจริง ๆ ครับ", "อร่อยมากจริง ๆ ค่ะ"]],
+  ["14", ["เก่งมากครับ", "เก่งมากค่ะ"]],
+  ["15", ["ลาก่อนครับ", "ลาก่อนค่ะ"]],
+  ["16", ["แล้วพบกันใหม่ครับ", "แล้วพบกันใหม่ค่ะ"]],
+  ["17", ["พระเยซูทรงรักคุณครับ", "พระเยซูทรงรักคุณค่ะ"]],
+  ["18", ["พระเจ้าทรงรักคุณครับ", "พระเจ้าทรงรักคุณค่ะ"]],
+  ["19", ["ขอพระเจ้าอวยพรคุณครับ", "ขอพระเจ้าอวยพรคุณค่ะ"]],
+  ["20", ["พระเจ้าทรงเป็นความรักครับ", "พระเจ้าทรงเป็นความรักค่ะ"]],
+  ["21", ["เชื่อในพระเยซูครับ", "เชื่อในพระเยซูค่ะ"]],
+  ["22", ["พวกเรารักคุณครับ", "พวกเรารักคุณค่ะ"]],
+  ["23", ["ผมจะอธิษฐานให้คุณครับ", "ฉันจะอธิษฐานให้คุณค่ะ"]],
+  ["24", ["มาร้องเพลงสรรเสริญด้วยกันครับ", "มาร้องเพลงสรรเสริญด้วยกันค่ะ"]]
+]);
+const reviewRateLimits = new Map();
 
 initializeApp();
 const auth = getAuth();
@@ -35,22 +75,22 @@ const speechClient = new speechV2.SpeechClient();
 
 const server = http.createServer(async (request, response) => {
   if (request.method === "OPTIONS") {
-    writeJson(response, 204, {});
+    writeJson(request, response, 204, {});
     return;
   }
 
   const requestPath = new URL(request.url, `http://${request.headers.host}`).pathname.replace(/\/$/, "") || "/";
   if (requestPath === "/healthz") {
-    writeJson(response, 200, { ok: true, service: "thai-voice-pilot-server" });
+    writeJson(request, response, 200, { ok: true, service: "thai-voice-pilot-server" });
     return;
   }
 
   try {
     const routeHandled = await routeHttp(request, response);
     if (routeHandled) return;
-    writeJson(response, 404, { error: "not_found" });
+    writeJson(request, response, 404, { error: "not_found" });
   } catch (error) {
-    writeJson(response, statusForError(error), { error: safeError(error) });
+    writeJson(request, response, statusForError(error), { error: safeError(error) });
   }
 });
 
@@ -64,6 +104,8 @@ wss.on("connection", (ws) => {
     targetKorean: "",
     day: null,
     phraseId: null,
+    mode: "iphone_pilot",
+    anonymous: false,
     audioEncoding: "",
     sampleRateHertz: 0,
     transcript: "",
@@ -115,6 +157,9 @@ async function startSession(ws, session, payload) {
   if (!PROJECT_ID) throw new Error("missing_google_cloud_project");
 
   const verifiedSession = verifyPilotSessionToken(payload.sessionToken);
+  if (verifiedSession.mode === "final_review") {
+    assertReviewStartMatchesToken(payload, verifiedSession);
+  }
   const uid = verifiedSession.uid;
 
   session.uid = uid;
@@ -123,6 +168,8 @@ async function startSession(ws, session, payload) {
   session.targetKorean = String(payload.targetKorean || "").slice(0, 200);
   session.day = Number(payload.day || 0);
   session.phraseId = String(payload.phraseId || "").slice(0, 80);
+  session.mode = verifiedSession.mode || "iphone_pilot";
+  session.anonymous = Boolean(verifiedSession.anonymous);
   session.startedAt = Date.now();
   session.audioEncoding = String(payload.audioEncoding || "").toUpperCase();
   session.sampleRateHertz = Number(payload.sampleRateHertz || 0);
@@ -228,6 +275,8 @@ async function persistSession(ws, session) {
     await firestore.collection(FIRESTORE_COLLECTION).add({
       uid: session.uid,
       email: session.email,
+      mode: session.mode,
+      anonymous: session.anonymous,
       day: session.day,
       phraseId: session.phraseId,
       targetThai: session.targetThai,
@@ -272,17 +321,24 @@ async function routeHttp(request, response) {
   const url = new URL(request.url, `http://${request.headers.host}`);
   if (request.method !== "POST") return false;
 
+  if (url.pathname === "/review/session") {
+    const body = await readJson(request);
+    const result = createReviewSession(request, body);
+    writeJson(request, response, 200, result);
+    return true;
+  }
+
   if (url.pathname === "/webauthn/register/options") {
     const user = await verifyApprovedRequest(request);
     const options = await createRegistrationOptions(user);
-    writeJson(response, 200, options);
+    writeJson(request, response, 200, options);
     return true;
   }
 
   if (url.pathname === "/webauthn/status") {
     const user = await verifyApprovedRequest(request);
     const credentials = await listCredentials(user.uid);
-    writeJson(response, 200, { registered: credentials.length > 0, credentialCount: credentials.length });
+    writeJson(request, response, 200, { registered: credentials.length > 0, credentialCount: credentials.length });
     return true;
   }
 
@@ -290,14 +346,14 @@ async function routeHttp(request, response) {
     const user = await verifyApprovedRequest(request);
     const body = await readJson(request);
     const result = await verifyRegistration(user, body);
-    writeJson(response, 200, result);
+    writeJson(request, response, 200, result);
     return true;
   }
 
   if (url.pathname === "/webauthn/auth/options") {
     const user = await verifyApprovedRequest(request);
     const options = await createAuthenticationOptions(user);
-    writeJson(response, 200, options);
+    writeJson(request, response, 200, options);
     return true;
   }
 
@@ -305,11 +361,82 @@ async function routeHttp(request, response) {
     const user = await verifyApprovedRequest(request);
     const body = await readJson(request);
     const result = await verifyAuthentication(user, body);
-    writeJson(response, 200, result);
+    writeJson(request, response, 200, result);
     return true;
   }
 
   return false;
+}
+
+function createReviewSession(request, body) {
+  assertReviewRateLimit(request);
+  const day = Number(body.day || 0);
+  const phraseId = String(body.phraseId || "").slice(0, 80);
+  const targetThai = String(body.targetThai || "").trim().slice(0, 200);
+  const targetKorean = String(body.targetKorean || "").trim().slice(0, 200);
+  const lessonId = String(body.lessonId || "").slice(0, 80);
+  const speaker = String(body.speaker || "").slice(0, 20);
+  if (!isAllowedReviewPhrase(day, phraseId)) throw new Error("review_phrase_not_allowed");
+  if (!targetThai) throw new Error("missing_review_target_thai");
+  if (!isAllowedReviewThai(phraseId, targetThai)) throw new Error("review_target_not_allowed");
+
+  const anonymousId = String(body.anonymousId || "").slice(0, 80);
+  const anonymousHash = anonymousId
+    ? crypto.createHash("sha256").update(`review:${anonymousId}`).digest("hex").slice(0, 24)
+    : "anonymous";
+  const payload = {
+    uid: `anonymous_review:${anonymousHash}`,
+    email: "",
+    mode: "final_review",
+    anonymous: true,
+    day,
+    phraseId,
+    targetThai,
+    targetKorean,
+    lessonId,
+    speaker,
+    exp: Math.floor(Date.now() / 1000) + REVIEW_SESSION_TTL_SECONDS
+  };
+  return {
+    sessionToken: signSessionPayload(payload),
+    expiresInSeconds: REVIEW_SESSION_TTL_SECONDS
+  };
+}
+
+function assertReviewRateLimit(request) {
+  const key = clientIp(request);
+  const now = Date.now();
+  const windowMs = 60 * 60 * 1000;
+  const hits = (reviewRateLimits.get(key) || []).filter((time) => now - time < windowMs);
+  if (hits.length >= REVIEW_RATE_LIMIT_PER_HOUR) throw new Error("review_rate_limited");
+  hits.push(now);
+  reviewRateLimits.set(key, hits);
+}
+
+function clientIp(request) {
+  const forwarded = String(request.headers["x-forwarded-for"] || "").split(",")[0].trim();
+  return forwarded || request.socket.remoteAddress || "unknown";
+}
+
+function isAllowedReviewPhrase(day, phraseId) {
+  const allowed = REVIEW_ALLOWED_PHRASES_BY_DAY.get(Number(day));
+  return Boolean(allowed && allowed.includes(String(phraseId)));
+}
+
+function isAllowedReviewThai(phraseId, targetThai) {
+  const allowed = REVIEW_ALLOWED_THAI_BY_PHRASE.get(String(phraseId));
+  return Boolean(allowed && allowed.includes(String(targetThai || "").trim()));
+}
+
+function assertReviewStartMatchesToken(payload, verifiedSession) {
+  const day = Number(payload.day || 0);
+  const phraseId = String(payload.phraseId || "");
+  const targetThai = String(payload.targetThai || "").trim();
+  if (day !== Number(verifiedSession.day)) throw new Error("review_session_day_mismatch");
+  if (phraseId !== String(verifiedSession.phraseId)) throw new Error("review_session_phrase_mismatch");
+  if (targetThai !== String(verifiedSession.targetThai || "").trim()) throw new Error("review_session_target_mismatch");
+  if (!isAllowedReviewPhrase(day, phraseId)) throw new Error("review_phrase_not_allowed");
+  if (!isAllowedReviewThai(phraseId, targetThai)) throw new Error("review_target_not_allowed");
 }
 
 async function verifyApprovedRequest(request) {
@@ -492,6 +619,11 @@ function createPilotSessionToken(user) {
     email: user.email,
     exp: Math.floor(Date.now() / 1000) + PILOT_SESSION_TTL_SECONDS
   };
+  return signSessionPayload(payload);
+}
+
+function signSessionPayload(payload) {
+  if (!PILOT_SESSION_SECRET) throw new Error("missing_pilot_session_secret");
   const encodedPayload = Buffer.from(JSON.stringify(payload)).toString("base64url");
   const signature = crypto.createHmac("sha256", PILOT_SESSION_SECRET).update(encodedPayload).digest("base64url");
   return `${encodedPayload}.${signature}`;
@@ -506,6 +638,11 @@ function verifyPilotSessionToken(token) {
   if (!crypto.timingSafeEqual(Buffer.from(signature), Buffer.from(expected))) throw new Error("invalid_pilot_session_token");
   const payload = JSON.parse(Buffer.from(encodedPayload, "base64url").toString("utf8"));
   if (!payload.uid || payload.exp < Math.floor(Date.now() / 1000)) throw new Error("expired_pilot_session_token");
+  if (payload.mode === "final_review") {
+    if (!payload.anonymous) throw new Error("invalid_review_session_token");
+    if (!isAllowedReviewPhrase(payload.day, payload.phraseId)) throw new Error("review_phrase_not_allowed");
+    return payload;
+  }
   if (!APPROVED_UIDS.has(payload.uid)) throw new Error("not_approved_user");
   return payload;
 }
@@ -519,9 +656,12 @@ async function readJson(request) {
   return raw ? JSON.parse(raw) : {};
 }
 
-function writeJson(response, status, payload) {
+function writeJson(request, response, status, payload) {
+  const origin = request?.headers?.origin || "";
+  const allowOrigin = ALLOWED_ORIGINS.has(origin) ? origin : EXPECTED_ORIGIN;
   response.writeHead(status, {
-    "access-control-allow-origin": EXPECTED_ORIGIN,
+    "access-control-allow-origin": allowOrigin,
+    "vary": "Origin",
     "access-control-allow-methods": "POST, OPTIONS",
     "access-control-allow-headers": "authorization, content-type",
     "content-type": "application/json"

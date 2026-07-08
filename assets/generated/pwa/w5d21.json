@@ -5,12 +5,12 @@
   "week": 5,
   "day": 21,
   "theme": "전체 반복 복습",
-  "title": "인사와 감사 전체 복습",
-  "hook": "첫 만남에서 가장 먼저 나오는 문장을 다시 붙인다.",
-  "story": "교회 입구에서 인사하고, 시간대 인사와 감사, 예/아니오 응답까지 한 흐름으로 복습한다.",
-  "missionGoal": "첫 만남에서 분위기를 여는 기본 표현을 즉시 꺼낼 수 있게 한다.",
-  "ministryGuide": "처음 만난 사람에게는 긴 설명보다 인사, 미소, 감사가 먼저다. 짧은 문장을 또렷하게 말하면 다음 대화가 훨씬 자연스럽게 열린다.",
-  "speakingMission": "인사, 시간대 인사, 감사와 응답, 예/아니오를 순서대로 3회 연결해 말한다.",
+  "title": "선교언어 전체 문장 복습",
+  "hook": "사랑, 축복, 믿음, 기도, 찬양의 문장을 모두 다시 말한다.",
+  "story": "예수님의 사랑과 하나님의 사랑을 전하고, 축복과 믿음의 초대, 기도와 찬양 초대까지 선교 핵심 문장을 한 번에 복습한다.",
+  "missionGoal": "8개 선교언어 문장을 보고 듣고 바로 따라 말하며 실제 현장에서 꺼낼 수 있게 한다.",
+  "ministryGuide": "사랑과 축복의 말은 짧고 또렷하게, 믿음과 기도와 찬양 초대는 상대의 반응을 보며 따뜻하게 이어 간다.",
+  "speakingMission": "8개 선교언어 문장을 하나씩 듣고 따라 말한 뒤, 점수와 인식 결과를 확인한다.",
   "primaryImage": {
     "sceneId": "greeting_church_gate",
     "altTextKo": "교회 입구에서 태국 성도에게 와이 인사로 반갑게 인사하는 장면",
@@ -48,1213 +48,262 @@
       }
     ]
   },
-  "keywordImages": [
-    {
-      "keywordId": "W005",
-      "priority": "preferred",
-      "sourcePlan": [
-        {
-          "type": "local_preferred",
-          "assetPath": "assets/images/keywords/W005.jpg",
-          "status": "missing"
-        },
-        {
-          "type": "stock_preferred",
-          "queries": [
-            "morning realistic photo",
-            "아침 learning image"
-          ],
-          "status": "search_required"
-        },
-        {
-          "type": "ai_fallback",
-          "prompt": {
-            "scene": "single concept image for morning",
-            "peopleAndAction": "show the concept clearly and simply",
-            "setting": "clean realistic learning image",
-            "mood": "warm and easy to recognize",
-            "cameraFraming": "close or medium crop",
-            "lighting": "bright neutral light",
-            "avoidList": [
-              "blurry or noisy image",
-              "heavy watermark",
-              "text embedded in photo",
-              "theological symbolism without a real scene",
-              "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
-            ]
-          },
-          "status": "generate_if_needed"
-        }
-      ]
-    },
-    {
-      "keywordId": "W006",
-      "priority": "preferred",
-      "sourcePlan": [
-        {
-          "type": "local_preferred",
-          "assetPath": "assets/images/keywords/W006.jpg",
-          "status": "missing"
-        },
-        {
-          "type": "stock_preferred",
-          "queries": [
-            "evening realistic photo",
-            "저녁 learning image"
-          ],
-          "status": "search_required"
-        },
-        {
-          "type": "ai_fallback",
-          "prompt": {
-            "scene": "single concept image for evening",
-            "peopleAndAction": "show the concept clearly and simply",
-            "setting": "clean realistic learning image",
-            "mood": "warm and easy to recognize",
-            "cameraFraming": "close or medium crop",
-            "lighting": "bright neutral light",
-            "avoidList": [
-              "blurry or noisy image",
-              "heavy watermark",
-              "text embedded in photo",
-              "theological symbolism without a real scene",
-              "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
-            ]
-          },
-          "status": "generate_if_needed"
-        }
-      ]
-    },
-    {
-      "keywordId": "W007",
-      "priority": "optional",
-      "sourcePlan": [
-        {
-          "type": "local_preferred",
-          "assetPath": "assets/images/keywords/W007.jpg",
-          "status": "missing"
-        },
-        {
-          "type": "stock_preferred",
-          "queries": [
-            "thank you realistic photo",
-            "감사합니다 learning image"
-          ],
-          "status": "search_required"
-        },
-        {
-          "type": "ai_fallback",
-          "prompt": {
-            "scene": "single concept image for thank you",
-            "peopleAndAction": "show the concept clearly and simply",
-            "setting": "clean realistic learning image",
-            "mood": "warm and easy to recognize",
-            "cameraFraming": "close or medium crop",
-            "lighting": "bright neutral light",
-            "avoidList": [
-              "blurry or noisy image",
-              "heavy watermark",
-              "text embedded in photo",
-              "theological symbolism without a real scene",
-              "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
-            ]
-          },
-          "status": "generate_if_needed"
-        }
-      ]
-    }
-  ],
+  "keywordImages": [],
   "newPhrases": [],
   "reviewPhrases": [
     {
-      "variantId": "1",
-      "phraseId": 1,
-      "category": "daily",
-      "korean": "안녕하세요",
-      "english": "Hello / Hi",
+      "variantId": "17",
+      "phraseId": 17,
+      "category": "mission",
+      "korean": "예수님이 당신을 사랑해요",
+      "english": "Jesus loves you.",
       "speech": {
         "male": {
-          "thai": "สวัสดีครับ",
-          "romanization": "sà-wàt-dii khráp",
-          "korean_pronunciation": "싸왓디 크랍"
+          "thai": "พระเยซูทรงรักคุณครับ",
+          "romanization": "Phrá-yeh-suu song-rák khun khráp",
+          "korean_pronunciation": "프라예쑤 쏭 락 쿤 크랍"
         },
         "female": {
-          "thai": "สวัสดีค่ะ",
-          "romanization": "sà-wàt-dii khâ",
-          "korean_pronunciation": "싸왓디 카"
+          "thai": "พระเยซูทรงรักคุณค่ะ",
+          "romanization": "Phrá-yeh-suu song-rák khun khâ",
+          "korean_pronunciation": "프라예쑤 쏭 락 쿤 카"
         }
       },
       "audio": {
         "male": {
-          "normal": "assets/audio/sentences/S1_male_normal.mp3",
-          "slow": "assets/audio/sentences/S1_male_slow.mp3",
-          "repeat3": "assets/audio/sentences/S1_male_repeat3.mp3"
+          "normal": "assets/audio/sentences/S17_male_normal.mp3",
+          "slow": "assets/audio/sentences/S17_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S17_male_repeat3.mp3"
         },
         "female": {
-          "normal": "assets/audio/sentences/S1_female_normal.mp3",
-          "slow": "assets/audio/sentences/S1_female_slow.mp3",
-          "repeat3": "assets/audio/sentences/S1_female_repeat3.mp3"
+          "normal": "assets/audio/sentences/S17_female_normal.mp3",
+          "slow": "assets/audio/sentences/S17_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S17_female_repeat3.mp3"
         }
       }
     },
     {
-      "variantId": "2-1",
-      "phraseId": 2,
-      "category": "daily",
-      "korean": "좋은 아침",
-      "english": "Good morning.",
+      "variantId": "18",
+      "phraseId": 18,
+      "category": "mission",
+      "korean": "하나님은 당신을 사랑해요",
+      "english": "God loves you.",
       "speech": {
         "male": {
-          "thai": "สวัสดีตอนเช้าครับ",
-          "romanization": "sà-wàt-dii dtaawn-cháao khráp",
-          "korean_pronunciation": "싸왓디 떤 차오 크랍"
+          "thai": "พระเจ้าทรงรักคุณครับ",
+          "romanization": "Phrá-jâo song-rák khun khráp",
+          "korean_pronunciation": "프라짜오 쏭 락 쿤 크랍"
         },
         "female": {
-          "thai": "สวัสดีตอนเช้าค่ะ",
-          "romanization": "sà-wàt-dii dtaawn-cháao khâ",
-          "korean_pronunciation": "싸왓디 떤 차오 카"
+          "thai": "พระเจ้าทรงรักคุณค่ะ",
+          "romanization": "Phrá-jâo song-rák khun khâ",
+          "korean_pronunciation": "프라짜오 쏭 락 쿤 카"
         }
       },
       "audio": {
         "male": {
-          "normal": "assets/audio/sentences/S2_1_male_normal.mp3",
-          "slow": "assets/audio/sentences/S2_1_male_slow.mp3",
-          "repeat3": "assets/audio/sentences/S2_1_male_repeat3.mp3"
+          "normal": "assets/audio/sentences/S18_male_normal.mp3",
+          "slow": "assets/audio/sentences/S18_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S18_male_repeat3.mp3"
         },
         "female": {
-          "normal": "assets/audio/sentences/S2_1_female_normal.mp3",
-          "slow": "assets/audio/sentences/S2_1_female_slow.mp3",
-          "repeat3": "assets/audio/sentences/S2_1_female_repeat3.mp3"
+          "normal": "assets/audio/sentences/S18_female_normal.mp3",
+          "slow": "assets/audio/sentences/S18_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S18_female_repeat3.mp3"
         }
       }
     },
     {
-      "variantId": "2-2",
-      "phraseId": 2,
-      "category": "daily",
-      "korean": "좋은 저녁",
-      "english": "Good evening.",
+      "variantId": "19",
+      "phraseId": 19,
+      "category": "mission",
+      "korean": "하나님의 축복을!",
+      "english": "God bless you!",
       "speech": {
         "male": {
-          "thai": "สวัสดีตอนเย็นครับ",
-          "romanization": "sà-wàt-dii dtaawn-yen khráp",
-          "korean_pronunciation": "싸왓디 떤 옌 크랍"
+          "thai": "ขอพระเจ้าอวยพรคุณครับ",
+          "romanization": "khŏr Phrá-jâo uay-phon khun khráp",
+          "korean_pronunciation": "커 프라짜오 우아이폰 쿤 크랍"
         },
         "female": {
-          "thai": "สวัสดีตอนเย็นค่ะ",
-          "romanization": "sà-wàt-dii dtaawn-yen khâ",
-          "korean_pronunciation": "싸왓디 떤 옌 카"
+          "thai": "ขอพระเจ้าอวยพรคุณค่ะ",
+          "romanization": "khŏr Phrá-jâo uay-phon khun khâ",
+          "korean_pronunciation": "커 프라짜오 우아이폰 쿤 카"
         }
       },
       "audio": {
         "male": {
-          "normal": "assets/audio/sentences/S2_2_male_normal.mp3",
-          "slow": "assets/audio/sentences/S2_2_male_slow.mp3",
-          "repeat3": "assets/audio/sentences/S2_2_male_repeat3.mp3"
+          "normal": "assets/audio/sentences/S19_male_normal.mp3",
+          "slow": "assets/audio/sentences/S19_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S19_male_repeat3.mp3"
         },
         "female": {
-          "normal": "assets/audio/sentences/S2_2_female_normal.mp3",
-          "slow": "assets/audio/sentences/S2_2_female_slow.mp3",
-          "repeat3": "assets/audio/sentences/S2_2_female_repeat3.mp3"
+          "normal": "assets/audio/sentences/S19_female_normal.mp3",
+          "slow": "assets/audio/sentences/S19_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S19_female_repeat3.mp3"
         }
       }
     },
     {
-      "variantId": "3",
-      "phraseId": 3,
-      "category": "daily",
-      "korean": "정말 고마워요",
-      "english": "Thanks a lot!",
+      "variantId": "20",
+      "phraseId": 20,
+      "category": "mission",
+      "korean": "하나님은 사랑이십니다",
+      "english": "God is love.",
       "speech": {
         "male": {
-          "thai": "ขอบคุณมากครับ",
-          "romanization": "khàawp-khun mâak khráp",
-          "korean_pronunciation": "콥 쿤 막 크랍"
+          "thai": "พระเจ้าทรงเป็นความรักครับ",
+          "romanization": "Phrá-jâo song-pen khwaam-rák khráp",
+          "korean_pronunciation": "프라짜오 쏭 뻰 쾀락 크랍"
         },
         "female": {
-          "thai": "ขอบคุณมากค่ะ",
-          "romanization": "khàawp-khun mâak khâ",
-          "korean_pronunciation": "콥 쿤 막 카"
+          "thai": "พระเจ้าทรงเป็นความรักค่ะ",
+          "romanization": "Phrá-jâo song-pen khwaam-rák khâ",
+          "korean_pronunciation": "프라짜오 쏭 뻰 쾀락 카"
         }
       },
       "audio": {
         "male": {
-          "normal": "assets/audio/sentences/S3_male_normal.mp3",
-          "slow": "assets/audio/sentences/S3_male_slow.mp3",
-          "repeat3": "assets/audio/sentences/S3_male_repeat3.mp3"
+          "normal": "assets/audio/sentences/S20_male_normal.mp3",
+          "slow": "assets/audio/sentences/S20_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S20_male_repeat3.mp3"
         },
         "female": {
-          "normal": "assets/audio/sentences/S3_female_normal.mp3",
-          "slow": "assets/audio/sentences/S3_female_slow.mp3",
-          "repeat3": "assets/audio/sentences/S3_female_repeat3.mp3"
+          "normal": "assets/audio/sentences/S20_female_normal.mp3",
+          "slow": "assets/audio/sentences/S20_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S20_female_repeat3.mp3"
         }
       }
     },
     {
-      "variantId": "4",
-      "phraseId": 4,
-      "category": "daily",
-      "korean": "천만에요",
-      "english": "You are welcome.",
+      "variantId": "21",
+      "phraseId": 21,
+      "category": "mission",
+      "korean": "예수님 믿으세요",
+      "english": "Believe in Jesus.",
       "speech": {
         "male": {
-          "thai": "ไม่เป็นไรครับ",
-          "romanization": "mâi-pen-rai khráp",
-          "korean_pronunciation": "마이 뻰 라이 크랍"
+          "thai": "เชื่อในพระเยซูครับ",
+          "romanization": "chûea nai Phrá-yeh-suu khráp",
+          "korean_pronunciation": "츠아 나이 프라예쑤 크랍"
         },
         "female": {
-          "thai": "ไม่เป็นไรค่ะ",
-          "romanization": "mâi-pen-rai khâ",
-          "korean_pronunciation": "마이 뻰 라이 카"
+          "thai": "เชื่อในพระเยซูค่ะ",
+          "romanization": "chûea nai Phrá-yeh-suu khâ",
+          "korean_pronunciation": "츠아 나이 프라예쑤 카"
         }
       },
       "audio": {
         "male": {
-          "normal": "assets/audio/sentences/S4_male_normal.mp3",
-          "slow": "assets/audio/sentences/S4_male_slow.mp3",
-          "repeat3": "assets/audio/sentences/S4_male_repeat3.mp3"
+          "normal": "assets/audio/sentences/S21_male_normal.mp3",
+          "slow": "assets/audio/sentences/S21_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S21_male_repeat3.mp3"
         },
         "female": {
-          "normal": "assets/audio/sentences/S4_female_normal.mp3",
-          "slow": "assets/audio/sentences/S4_female_slow.mp3",
-          "repeat3": "assets/audio/sentences/S4_female_repeat3.mp3"
+          "normal": "assets/audio/sentences/S21_female_normal.mp3",
+          "slow": "assets/audio/sentences/S21_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S21_female_repeat3.mp3"
         }
       }
     },
     {
-      "variantId": "5-1",
-      "phraseId": 5,
-      "category": "daily",
-      "korean": "예",
-      "english": "Yes",
+      "variantId": "22",
+      "phraseId": 22,
+      "category": "mission",
+      "korean": "우리는 당신들을 사랑해요",
+      "english": "We love you.",
       "speech": {
         "male": {
-          "thai": "ใช่ครับ",
-          "romanization": "châi khráp",
-          "korean_pronunciation": "차이 크랍"
+          "thai": "พวกเรารักคุณครับ",
+          "romanization": "phûak-rao rák khun khráp",
+          "korean_pronunciation": "푸악 라오 락 쿤 크랍"
         },
         "female": {
-          "thai": "ใช่ค่ะ",
-          "romanization": "châi khâ",
-          "korean_pronunciation": "차이 카"
+          "thai": "พวกเรารักคุณค่ะ",
+          "romanization": "phûak-rao rák khun khâ",
+          "korean_pronunciation": "푸악 라오 락 쿤 카"
         }
       },
       "audio": {
         "male": {
-          "normal": "assets/audio/sentences/S5_1_male_normal.mp3",
-          "slow": "assets/audio/sentences/S5_1_male_slow.mp3",
-          "repeat3": "assets/audio/sentences/S5_1_male_repeat3.mp3"
+          "normal": "assets/audio/sentences/S22_male_normal.mp3",
+          "slow": "assets/audio/sentences/S22_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S22_male_repeat3.mp3"
         },
         "female": {
-          "normal": "assets/audio/sentences/S5_1_female_normal.mp3",
-          "slow": "assets/audio/sentences/S5_1_female_slow.mp3",
-          "repeat3": "assets/audio/sentences/S5_1_female_repeat3.mp3"
+          "normal": "assets/audio/sentences/S22_female_normal.mp3",
+          "slow": "assets/audio/sentences/S22_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S22_female_repeat3.mp3"
         }
       }
     },
     {
-      "variantId": "5-2",
-      "phraseId": 5,
-      "category": "daily",
-      "korean": "아니오",
-      "english": "No",
+      "variantId": "23",
+      "phraseId": 23,
+      "category": "mission",
+      "korean": "기도해 드릴게요",
+      "english": "I will pray for you.",
       "speech": {
         "male": {
-          "thai": "ไม่ใช่ครับ",
-          "romanization": "mâi-châi khráp",
-          "korean_pronunciation": "마이 차이 크랍"
+          "thai": "ผมจะอธิษฐานให้คุณครับ",
+          "romanization": "phŏm jà à-thít-thăan hâi khun khráp",
+          "korean_pronunciation": "폼 짜 아팃탄 하이 쿤 크랍"
         },
         "female": {
-          "thai": "ไม่ใช่ค่ะ",
-          "romanization": "mâi-châi khâ",
-          "korean_pronunciation": "마이 차이 카"
+          "thai": "ฉันจะอธิษฐานให้คุณค่ะ",
+          "romanization": "chăn jà à-thít-thăan hâi khun khâ",
+          "korean_pronunciation": "찬 짜 아팃탄 하이 쿤 카"
         }
       },
       "audio": {
         "male": {
-          "normal": "assets/audio/sentences/S5_2_male_normal.mp3",
-          "slow": "assets/audio/sentences/S5_2_male_slow.mp3",
-          "repeat3": "assets/audio/sentences/S5_2_male_repeat3.mp3"
+          "normal": "assets/audio/sentences/S23_male_normal.mp3",
+          "slow": "assets/audio/sentences/S23_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S23_male_repeat3.mp3"
         },
         "female": {
-          "normal": "assets/audio/sentences/S5_2_female_normal.mp3",
-          "slow": "assets/audio/sentences/S5_2_female_slow.mp3",
-          "repeat3": "assets/audio/sentences/S5_2_female_repeat3.mp3"
+          "normal": "assets/audio/sentences/S23_female_normal.mp3",
+          "slow": "assets/audio/sentences/S23_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S23_female_repeat3.mp3"
+        }
+      }
+    },
+    {
+      "variantId": "24",
+      "phraseId": 24,
+      "category": "mission",
+      "korean": "함께 찬양해요",
+      "english": "Let's sing praise together.",
+      "speech": {
+        "male": {
+          "thai": "มาร้องเพลงสรรเสริญด้วยกันครับ",
+          "romanization": "maa-róng-phleeng săn-sĕern dûuai-gan khráp",
+          "korean_pronunciation": "마 롱 플렝 싼쓴 두아이깐 크랍"
+        },
+        "female": {
+          "thai": "มาร้องเพลงสรรเสริญด้วยกันค่ะ",
+          "romanization": "maa-róng-phleeng săn-sĕern dûuai-gan khâ",
+          "korean_pronunciation": "마 롱 플렝 싼쓴 두아이깐 카"
+        }
+      },
+      "audio": {
+        "male": {
+          "normal": "assets/audio/sentences/S24_male_normal.mp3",
+          "slow": "assets/audio/sentences/S24_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S24_male_repeat3.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/sentences/S24_female_normal.mp3",
+          "slow": "assets/audio/sentences/S24_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S24_female_repeat3.mp3"
         }
       }
     }
   ],
-  "keywords": [
-    {
-      "id": "W001",
-      "variantIds": [
-        "1",
-        "2-1",
-        "2-2"
-      ],
-      "korean": "안녕하세요",
-      "english": "hello",
-      "thai": "สวัสดี",
-      "romanization": "sà-wàt-dii",
-      "koreanPronunciation": "싸왓디",
-      "tier": "core",
-      "days": [
-        1,
-        2,
-        5,
-        10,
-        15,
-        20,
-        25
-      ],
-      "audio": {
-        "male": {
-          "normal": "assets/audio/words/W001_male_normal.mp3",
-          "slow": "assets/audio/words/W001_male_slow.mp3"
-        },
-        "female": {
-          "normal": "assets/audio/words/W001_female_normal.mp3",
-          "slow": "assets/audio/words/W001_female_slow.mp3"
-        }
-      }
-    },
-    {
-      "id": "W002",
-      "variantIds": [
-        "1",
-        "2-1",
-        "2-2",
-        "3",
-        "4",
-        "5-1",
-        "5-2",
-        "6",
-        "7",
-        "8",
-        "9",
-        "10",
-        "10-2",
-        "11",
-        "12",
-        "13",
-        "14",
-        "15",
-        "16",
-        "17",
-        "18",
-        "19",
-        "20",
-        "21",
-        "22",
-        "23",
-        "24"
-      ],
-      "korean": "남성 존칭 어미",
-      "english": "male polite particle",
-      "thai": "ครับ",
-      "romanization": "khráp",
-      "koreanPronunciation": "크랍",
-      "voices": [
-        "male"
-      ],
-      "tier": "core",
-      "days": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14,
-        15,
-        16,
-        17,
-        18,
-        19,
-        20,
-        21,
-        22,
-        23,
-        24,
-        25
-      ],
-      "audio": {
-        "male": {
-          "normal": "assets/audio/words/W002_male_normal.mp3",
-          "slow": "assets/audio/words/W002_male_slow.mp3"
-        }
-      }
-    },
-    {
-      "id": "W003",
-      "variantIds": [
-        "1",
-        "2-1",
-        "2-2",
-        "3",
-        "4",
-        "5-1",
-        "5-2",
-        "6",
-        "7",
-        "9",
-        "10-2",
-        "13",
-        "14",
-        "15",
-        "16",
-        "17",
-        "18",
-        "19",
-        "20",
-        "21",
-        "22",
-        "23",
-        "24"
-      ],
-      "korean": "여성 존칭 어미",
-      "english": "female polite particle",
-      "thai": "ค่ะ",
-      "romanization": "khâ",
-      "koreanPronunciation": "카",
-      "voices": [
-        "female"
-      ],
-      "tier": "core",
-      "days": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        8,
-        9,
-        10,
-        12,
-        13,
-        14,
-        15,
-        16,
-        17,
-        18,
-        19,
-        20,
-        21,
-        22,
-        23,
-        24,
-        25
-      ],
-      "audio": {
-        "female": {
-          "normal": "assets/audio/words/W003_female_normal.mp3",
-          "slow": "assets/audio/words/W003_female_slow.mp3"
-        }
-      }
-    },
-    {
-      "id": "W005",
-      "variantIds": [
-        "2-1"
-      ],
-      "korean": "아침",
-      "english": "morning",
-      "thai": "ตอนเช้า",
-      "romanization": "dtaawn-cháao",
-      "koreanPronunciation": "떤 차오",
-      "tier": "supplemental",
-      "days": [
-        2,
-        5,
-        10,
-        15,
-        25
-      ],
-      "audio": {
-        "male": {
-          "normal": "assets/audio/words/W005_male_normal.mp3",
-          "slow": "assets/audio/words/W005_male_slow.mp3"
-        },
-        "female": {
-          "normal": "assets/audio/words/W005_female_normal.mp3",
-          "slow": "assets/audio/words/W005_female_slow.mp3"
-        }
-      }
-    },
-    {
-      "id": "W006",
-      "variantIds": [
-        "2-2"
-      ],
-      "korean": "저녁",
-      "english": "evening",
-      "thai": "ตอนเย็น",
-      "romanization": "dtaawn-yen",
-      "koreanPronunciation": "떤 옌",
-      "tier": "supplemental",
-      "days": [
-        2,
-        5,
-        10,
-        15,
-        25
-      ],
-      "audio": {
-        "male": {
-          "normal": "assets/audio/words/W006_male_normal.mp3",
-          "slow": "assets/audio/words/W006_male_slow.mp3"
-        },
-        "female": {
-          "normal": "assets/audio/words/W006_female_normal.mp3",
-          "slow": "assets/audio/words/W006_female_slow.mp3"
-        }
-      }
-    },
-    {
-      "id": "W007",
-      "variantIds": [
-        "3"
-      ],
-      "korean": "감사합니다",
-      "english": "thank you",
-      "thai": "ขอบคุณ",
-      "romanization": "khàawp-khun",
-      "koreanPronunciation": "콥 쿤",
-      "tier": "core",
-      "days": [
-        3,
-        5,
-        10,
-        15,
-        20,
-        25
-      ],
-      "audio": {
-        "male": {
-          "normal": "assets/audio/words/W007_male_normal.mp3",
-          "slow": "assets/audio/words/W007_male_slow.mp3"
-        },
-        "female": {
-          "normal": "assets/audio/words/W007_female_normal.mp3",
-          "slow": "assets/audio/words/W007_female_slow.mp3"
-        }
-      }
-    },
-    {
-      "id": "W008",
-      "variantIds": [
-        "3",
-        "13",
-        "14"
-      ],
-      "korean": "많이/매우",
-      "english": "very/much",
-      "thai": "มาก",
-      "romanization": "mâak",
-      "koreanPronunciation": "막",
-      "tier": "supplemental",
-      "days": [
-        3,
-        5,
-        10,
-        12,
-        13,
-        15,
-        20,
-        25
-      ],
-      "audio": {
-        "male": {
-          "normal": "assets/audio/words/W008_male_normal.mp3",
-          "slow": "assets/audio/words/W008_male_slow.mp3"
-        },
-        "female": {
-          "normal": "assets/audio/words/W008_female_normal.mp3",
-          "slow": "assets/audio/words/W008_female_slow.mp3"
-        }
-      }
-    },
-    {
-      "id": "W009",
-      "variantIds": [
-        "4",
-        "7"
-      ],
-      "korean": "괜찮아요",
-      "english": "never mind / it's okay",
-      "thai": "ไม่เป็นไร",
-      "romanization": "mâi-pen-rai",
-      "koreanPronunciation": "마이 뻰 라이",
-      "tier": "core",
-      "days": [
-        3,
-        5,
-        6,
-        10,
-        15,
-        25
-      ],
-      "audio": {
-        "male": {
-          "normal": "assets/audio/words/W009_male_normal.mp3",
-          "slow": "assets/audio/words/W009_male_slow.mp3"
-        },
-        "female": {
-          "normal": "assets/audio/words/W009_female_normal.mp3",
-          "slow": "assets/audio/words/W009_female_slow.mp3"
-        }
-      }
-    },
-    {
-      "id": "W010",
-      "variantIds": [
-        "5-1"
-      ],
-      "korean": "예",
-      "english": "yes",
-      "thai": "ใช่",
-      "romanization": "châi",
-      "koreanPronunciation": "차이",
-      "tier": "core",
-      "days": [
-        4,
-        5,
-        10,
-        15,
-        25
-      ],
-      "audio": {
-        "male": {
-          "normal": "assets/audio/words/W010_male_normal.mp3",
-          "slow": "assets/audio/words/W010_male_slow.mp3"
-        },
-        "female": {
-          "normal": "assets/audio/words/W010_female_normal.mp3",
-          "slow": "assets/audio/words/W010_female_slow.mp3"
-        }
-      }
-    },
-    {
-      "id": "W011",
-      "variantIds": [
-        "5-2"
-      ],
-      "korean": "아니오",
-      "english": "no",
-      "thai": "ไม่ใช่",
-      "romanization": "mâi-châi",
-      "koreanPronunciation": "마이 차이",
-      "tier": "core",
-      "days": [
-        4,
-        5,
-        10,
-        15,
-        25
-      ],
-      "audio": {
-        "male": {
-          "normal": "assets/audio/words/W011_male_normal.mp3",
-          "slow": "assets/audio/words/W011_male_slow.mp3"
-        },
-        "female": {
-          "normal": "assets/audio/words/W011_female_normal.mp3",
-          "slow": "assets/audio/words/W011_female_slow.mp3"
-        }
-      }
-    }
-  ],
-  "displayKeywords": [
-    {
-      "id": "W001",
-      "variantIds": [
-        "1",
-        "2-1",
-        "2-2"
-      ],
-      "korean": "안녕하세요",
-      "english": "hello",
-      "thai": "สวัสดี",
-      "romanization": "sà-wàt-dii",
-      "koreanPronunciation": "싸왓디",
-      "tier": "core",
-      "days": [
-        1,
-        2,
-        5,
-        10,
-        15,
-        20,
-        25
-      ],
-      "audio": {
-        "male": {
-          "normal": "assets/audio/words/W001_male_normal.mp3",
-          "slow": "assets/audio/words/W001_male_slow.mp3"
-        },
-        "female": {
-          "normal": "assets/audio/words/W001_female_normal.mp3",
-          "slow": "assets/audio/words/W001_female_slow.mp3"
-        }
-      }
-    },
-    {
-      "id": "W002",
-      "variantIds": [
-        "1",
-        "2-1",
-        "2-2",
-        "3",
-        "4",
-        "5-1",
-        "5-2",
-        "6",
-        "7",
-        "8",
-        "9",
-        "10",
-        "10-2",
-        "11",
-        "12",
-        "13",
-        "14",
-        "15",
-        "16",
-        "17",
-        "18",
-        "19",
-        "20",
-        "21",
-        "22",
-        "23",
-        "24"
-      ],
-      "korean": "남성 존칭 어미",
-      "english": "male polite particle",
-      "thai": "ครับ",
-      "romanization": "khráp",
-      "koreanPronunciation": "크랍",
-      "voices": [
-        "male"
-      ],
-      "tier": "core",
-      "days": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14,
-        15,
-        16,
-        17,
-        18,
-        19,
-        20,
-        21,
-        22,
-        23,
-        24,
-        25
-      ],
-      "audio": {
-        "male": {
-          "normal": "assets/audio/words/W002_male_normal.mp3",
-          "slow": "assets/audio/words/W002_male_slow.mp3"
-        }
-      }
-    },
-    {
-      "id": "W003",
-      "variantIds": [
-        "1",
-        "2-1",
-        "2-2",
-        "3",
-        "4",
-        "5-1",
-        "5-2",
-        "6",
-        "7",
-        "9",
-        "10-2",
-        "13",
-        "14",
-        "15",
-        "16",
-        "17",
-        "18",
-        "19",
-        "20",
-        "21",
-        "22",
-        "23",
-        "24"
-      ],
-      "korean": "여성 존칭 어미",
-      "english": "female polite particle",
-      "thai": "ค่ะ",
-      "romanization": "khâ",
-      "koreanPronunciation": "카",
-      "voices": [
-        "female"
-      ],
-      "tier": "core",
-      "days": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        8,
-        9,
-        10,
-        12,
-        13,
-        14,
-        15,
-        16,
-        17,
-        18,
-        19,
-        20,
-        21,
-        22,
-        23,
-        24,
-        25
-      ],
-      "audio": {
-        "female": {
-          "normal": "assets/audio/words/W003_female_normal.mp3",
-          "slow": "assets/audio/words/W003_female_slow.mp3"
-        }
-      }
-    },
-    {
-      "id": "W005",
-      "variantIds": [
-        "2-1"
-      ],
-      "korean": "아침",
-      "english": "morning",
-      "thai": "ตอนเช้า",
-      "romanization": "dtaawn-cháao",
-      "koreanPronunciation": "떤 차오",
-      "tier": "supplemental",
-      "days": [
-        2,
-        5,
-        10,
-        15,
-        25
-      ],
-      "audio": {
-        "male": {
-          "normal": "assets/audio/words/W005_male_normal.mp3",
-          "slow": "assets/audio/words/W005_male_slow.mp3"
-        },
-        "female": {
-          "normal": "assets/audio/words/W005_female_normal.mp3",
-          "slow": "assets/audio/words/W005_female_slow.mp3"
-        }
-      }
-    },
-    {
-      "id": "W006",
-      "variantIds": [
-        "2-2"
-      ],
-      "korean": "저녁",
-      "english": "evening",
-      "thai": "ตอนเย็น",
-      "romanization": "dtaawn-yen",
-      "koreanPronunciation": "떤 옌",
-      "tier": "supplemental",
-      "days": [
-        2,
-        5,
-        10,
-        15,
-        25
-      ],
-      "audio": {
-        "male": {
-          "normal": "assets/audio/words/W006_male_normal.mp3",
-          "slow": "assets/audio/words/W006_male_slow.mp3"
-        },
-        "female": {
-          "normal": "assets/audio/words/W006_female_normal.mp3",
-          "slow": "assets/audio/words/W006_female_slow.mp3"
-        }
-      }
-    },
-    {
-      "id": "W007",
-      "variantIds": [
-        "3"
-      ],
-      "korean": "감사합니다",
-      "english": "thank you",
-      "thai": "ขอบคุณ",
-      "romanization": "khàawp-khun",
-      "koreanPronunciation": "콥 쿤",
-      "tier": "core",
-      "days": [
-        3,
-        5,
-        10,
-        15,
-        20,
-        25
-      ],
-      "audio": {
-        "male": {
-          "normal": "assets/audio/words/W007_male_normal.mp3",
-          "slow": "assets/audio/words/W007_male_slow.mp3"
-        },
-        "female": {
-          "normal": "assets/audio/words/W007_female_normal.mp3",
-          "slow": "assets/audio/words/W007_female_slow.mp3"
-        }
-      }
-    },
-    {
-      "id": "W008",
-      "variantIds": [
-        "3",
-        "13",
-        "14"
-      ],
-      "korean": "많이/매우",
-      "english": "very/much",
-      "thai": "มาก",
-      "romanization": "mâak",
-      "koreanPronunciation": "막",
-      "tier": "supplemental",
-      "days": [
-        3,
-        5,
-        10,
-        12,
-        13,
-        15,
-        20,
-        25
-      ],
-      "audio": {
-        "male": {
-          "normal": "assets/audio/words/W008_male_normal.mp3",
-          "slow": "assets/audio/words/W008_male_slow.mp3"
-        },
-        "female": {
-          "normal": "assets/audio/words/W008_female_normal.mp3",
-          "slow": "assets/audio/words/W008_female_slow.mp3"
-        }
-      }
-    },
-    {
-      "id": "W009",
-      "variantIds": [
-        "4",
-        "7"
-      ],
-      "korean": "괜찮아요",
-      "english": "never mind / it's okay",
-      "thai": "ไม่เป็นไร",
-      "romanization": "mâi-pen-rai",
-      "koreanPronunciation": "마이 뻰 라이",
-      "tier": "core",
-      "days": [
-        3,
-        5,
-        6,
-        10,
-        15,
-        25
-      ],
-      "audio": {
-        "male": {
-          "normal": "assets/audio/words/W009_male_normal.mp3",
-          "slow": "assets/audio/words/W009_male_slow.mp3"
-        },
-        "female": {
-          "normal": "assets/audio/words/W009_female_normal.mp3",
-          "slow": "assets/audio/words/W009_female_slow.mp3"
-        }
-      }
-    },
-    {
-      "id": "W010",
-      "variantIds": [
-        "5-1"
-      ],
-      "korean": "예",
-      "english": "yes",
-      "thai": "ใช่",
-      "romanization": "châi",
-      "koreanPronunciation": "차이",
-      "tier": "core",
-      "days": [
-        4,
-        5,
-        10,
-        15,
-        25
-      ],
-      "audio": {
-        "male": {
-          "normal": "assets/audio/words/W010_male_normal.mp3",
-          "slow": "assets/audio/words/W010_male_slow.mp3"
-        },
-        "female": {
-          "normal": "assets/audio/words/W010_female_normal.mp3",
-          "slow": "assets/audio/words/W010_female_slow.mp3"
-        }
-      }
-    },
-    {
-      "id": "W011",
-      "variantIds": [
-        "5-2"
-      ],
-      "korean": "아니오",
-      "english": "no",
-      "thai": "ไม่ใช่",
-      "romanization": "mâi-châi",
-      "koreanPronunciation": "마이 차이",
-      "tier": "core",
-      "days": [
-        4,
-        5,
-        10,
-        15,
-        25
-      ],
-      "audio": {
-        "male": {
-          "normal": "assets/audio/words/W011_male_normal.mp3",
-          "slow": "assets/audio/words/W011_male_slow.mp3"
-        },
-        "female": {
-          "normal": "assets/audio/words/W011_female_normal.mp3",
-          "slow": "assets/audio/words/W011_female_slow.mp3"
-        }
-      }
-    }
-  ],
+  "keywords": [],
+  "displayKeywords": [],
   "supplementLinks": [],
-  "supplementalKeywords": [
-    {
-      "id": "W005",
-      "variantIds": [
-        "2-1"
-      ],
-      "korean": "아침",
-      "english": "morning",
-      "thai": "ตอนเช้า",
-      "romanization": "dtaawn-cháao",
-      "koreanPronunciation": "떤 차오",
-      "tier": "supplemental",
-      "days": [
-        2,
-        5,
-        10,
-        15,
-        25
-      ],
-      "audio": {
-        "male": {
-          "normal": "assets/audio/words/W005_male_normal.mp3",
-          "slow": "assets/audio/words/W005_male_slow.mp3"
-        },
-        "female": {
-          "normal": "assets/audio/words/W005_female_normal.mp3",
-          "slow": "assets/audio/words/W005_female_slow.mp3"
-        }
-      }
-    },
-    {
-      "id": "W006",
-      "variantIds": [
-        "2-2"
-      ],
-      "korean": "저녁",
-      "english": "evening",
-      "thai": "ตอนเย็น",
-      "romanization": "dtaawn-yen",
-      "koreanPronunciation": "떤 옌",
-      "tier": "supplemental",
-      "days": [
-        2,
-        5,
-        10,
-        15,
-        25
-      ],
-      "audio": {
-        "male": {
-          "normal": "assets/audio/words/W006_male_normal.mp3",
-          "slow": "assets/audio/words/W006_male_slow.mp3"
-        },
-        "female": {
-          "normal": "assets/audio/words/W006_female_normal.mp3",
-          "slow": "assets/audio/words/W006_female_slow.mp3"
-        }
-      }
-    },
-    {
-      "id": "W008",
-      "variantIds": [
-        "3",
-        "13",
-        "14"
-      ],
-      "korean": "많이/매우",
-      "english": "very/much",
-      "thai": "มาก",
-      "romanization": "mâak",
-      "koreanPronunciation": "막",
-      "tier": "supplemental",
-      "days": [
-        3,
-        5,
-        10,
-        12,
-        13,
-        15,
-        20,
-        25
-      ],
-      "audio": {
-        "male": {
-          "normal": "assets/audio/words/W008_male_normal.mp3",
-          "slow": "assets/audio/words/W008_male_slow.mp3"
-        },
-        "female": {
-          "normal": "assets/audio/words/W008_female_normal.mp3",
-          "slow": "assets/audio/words/W008_female_slow.mp3"
-        }
-      }
-    }
-  ],
+  "supplementalKeywords": [],
   "keywordDisplayPolicy": {
     "default": "keyWordIds_order",
     "toggleSupplemental": false,
@@ -1349,5 +398,9 @@
     "checkAction": "lesson_complete",
     "shareAction": "open_kakao_share_card",
     "nextAction": "next_day_or_review"
-  }
+  },
+  "sentenceOnly": true,
+  "pronunciationAssessment": true,
+  "finalReviewMode": "mission_language",
+  "reviewSourceDay": 21
 }

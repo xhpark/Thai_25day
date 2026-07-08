@@ -258,6 +258,35 @@ h1 {
   margin-top: 12px;
 }
 
+.phrase-pair-card {
+  background: #fbfdff;
+}
+
+.phrase-pair-grid {
+  display: grid;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.phrase-pair-item {
+  padding: 14px;
+  border: 1px solid #bcd7fb;
+  border-radius: 8px;
+  background: #f1f7ff;
+}
+
+.pair-role {
+  display: inline-grid;
+  min-height: 32px;
+  place-items: center;
+  padding: 5px 10px;
+  border-radius: 8px;
+  background: #1769d2;
+  color: #fff;
+  font-size: 0.98rem;
+  font-weight: 900;
+}
+
 .phrase-topline {
   display: flex;
   align-items: center;
@@ -292,6 +321,13 @@ h1 {
   margin: 3px 0 0;
   color: var(--muted);
   font-size: 0.95rem;
+}
+
+.pair-meaning {
+  margin: 8px 0 0;
+  color: var(--green-dark);
+  font-size: 1.08rem;
+  font-weight: 900;
 }
 
 .speaker-toggle,
@@ -369,6 +405,167 @@ h1 {
 
 .audio-toolbar {
   margin-top: 18px;
+}
+
+.pronunciation-practice {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+  padding: 14px;
+  border: 1px solid #bcd7fb;
+  border-radius: 8px;
+  background: #eef6ff;
+}
+
+.practice-start-btn {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+  width: 100%;
+  min-height: 70px;
+  padding: 13px 14px;
+  border: 1px solid #1769d2;
+  border-radius: 8px;
+  background: #1769d2;
+  color: #fff;
+  cursor: pointer;
+  text-align: left;
+}
+
+.practice-start-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.62;
+}
+
+.practice-start-btn strong {
+  display: block;
+  font-size: 1.08rem;
+  font-weight: 900;
+  line-height: 1.3;
+}
+
+.practice-start-btn small {
+  display: block;
+  margin-top: 3px;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.92rem;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.practice-mic,
+.mic-icon {
+  display: grid;
+  place-items: center;
+  color: #1769d2;
+}
+
+.practice-mic {
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  background: #fff;
+}
+
+.record-meter {
+  display: grid;
+  grid-template-columns: auto auto minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+  min-height: 54px;
+  padding: 10px 12px;
+  border: 1px solid #bcd7fb;
+  border-radius: 8px;
+  background: #fff;
+  color: var(--green-dark);
+}
+
+.record-meter strong {
+  display: grid;
+  min-width: 40px;
+  min-height: 40px;
+  place-items: center;
+  border-radius: 999px;
+  background: #eaf4ff;
+  color: #1769d2;
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+
+.record-meter small {
+  color: var(--green-dark);
+  font-size: 0.98rem;
+  font-weight: 900;
+}
+
+.record-meter[data-state="recording"] .mic-icon,
+.pronunciation-practice[data-state="recording"] .practice-mic {
+  animation: micPulse 0.58s ease-in-out infinite alternate;
+}
+
+.practice-result {
+  padding: 12px;
+  border: 1px solid #d5dfd8;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.result-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.result-head span {
+  color: var(--green-dark);
+  font-weight: 900;
+}
+
+.result-head strong {
+  color: #1769d2;
+  font-size: 1.42rem;
+  font-weight: 900;
+}
+
+.transcript {
+  min-height: 34px;
+  margin: 8px 0 0;
+  color: #111;
+  font-size: 1.24rem;
+  font-weight: 900;
+  line-height: 1.35;
+}
+
+.result-note {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.replay-btn {
+  min-height: 48px;
+  padding: 11px 14px;
+  border: 1px solid #acd1ff;
+  border-radius: 8px;
+  background: #fff;
+  color: #1769d2;
+  cursor: pointer;
+  font-weight: 900;
+}
+
+@keyframes micPulse {
+  from {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(23, 105, 210, 0.22);
+  }
+  to {
+    transform: scale(1.08);
+    box-shadow: 0 0 0 8px rgba(23, 105, 210, 0.08);
+  }
 }
 
 .review-list {

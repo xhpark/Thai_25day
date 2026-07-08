@@ -196,7 +196,7 @@ def _weekday_bundle(
     image_plan = _image_plan_for_schedule(item, image_manifest, scene_lookup, keywords)
     day_number = item.get("day")
     slug = _sanitize_slug(item["id"])
-    return {
+    bundle = {
         "id": item["id"],
         "dayType": item["dayType"],
         "week": item["week"],
@@ -222,6 +222,16 @@ def _weekday_bundle(
             }
         }
     }
+    for optional_key in [
+        "sentenceOnly",
+        "pronunciationAssessment",
+        "finalReviewMode",
+        "phrasePairIds",
+        "reviewSourceDay"
+    ]:
+        if optional_key in item:
+            bundle[optional_key] = item[optional_key]
+    return bundle
 
 
 def _weekend_bundle(
@@ -411,7 +421,7 @@ def _kakao_spec(item: dict[str, Any]) -> dict[str, Any]:
 def _pwa_spec(item: dict[str, Any]) -> dict[str, Any]:
     supplemental_keywords = [keyword for keyword in item["keywords"] if keyword.get("tier") == "supplemental"]
     pwa_template = item["delivery"]["pwaTemplate"]
-    return {
+    spec = {
         "version": 1,
         "kind": "pwa_lesson_spec",
         "id": item["id"],
@@ -452,6 +462,16 @@ def _pwa_spec(item: dict[str, Any]) -> dict[str, Any]:
             "nextAction": "next_day_or_review"
         }
     }
+    for optional_key in [
+        "sentenceOnly",
+        "pronunciationAssessment",
+        "finalReviewMode",
+        "phrasePairIds",
+        "reviewSourceDay"
+    ]:
+        if optional_key in item:
+            spec[optional_key] = item[optional_key]
+    return spec
 
 
 def _ppt_spec(item: dict[str, Any]) -> dict[str, Any]:

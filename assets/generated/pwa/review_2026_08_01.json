@@ -1,26 +1,55 @@
 {
   "version": 1,
-  "kind": "teacher_script_spec",
-  "id": "W5SAT",
+  "kind": "pwa_lesson_spec",
+  "id": "DATE_REVIEW_2026_08_01",
   "week": 5,
-  "title": "생활회화 전체 문장 토요 복습",
-  "roleplayScene": "인사, 감사, 예/아니오, 실례합니다와 괜찮아요, 이름과 나이 묻고 답하기, 식사와 칭찬, 작별까지 생활회화 전체를 토요일에 다시 반복한다.",
-  "contextHeader": {
-    "lessonGoal": "22일차 생활회화 전체 문장을 토요일에 다시 반복해 현장 대화 흐름을 안정화한다.",
-    "learnersHaveCovered": "학습자는 5주차 평일 표현과 이번 주 누적 복습을 마친 상태다.",
-    "successLooksLike": "학습자가 남성형/여성형 어미를 구분하며 핵심 표현을 짝과 함께 소리 내어 말하고, 따뜻한 선교적 태도로 역할극에 참여하면 성공이다."
+  "day": 22,
+  "theme": "전체 반복 복습",
+  "title": "토요일 생활회화 전체 문장 복습",
+  "hook": "22일차 생활회화 전체 문장을 토요일에 같은 구성으로 반복한다.",
+  "story": "인사부터 작별까지 생활회화 전체를 다시 듣고 따라 말하며, 나이 질문과 대답은 한 카드 안에서 짝으로 연습한다.",
+  "missionGoal": "생활회화 18개 학습 항목을 보고 듣고 바로 따라 말하며 현장 대화의 첫 흐름을 익힌다.",
+  "ministryGuide": "나이를 묻는 문장은 대답 문장과 한 카드 안에서 함께 연습한다. 자신의 실제 나이는 숫자 보조자료를 참고해 미리 바꿔 말한다.",
+  "speakingMission": "생활회화 문장을 하나씩 듣고 따라 말한 뒤, 점수와 인식 결과를 확인한다.",
+  "primaryImage": {
+    "sceneId": "name_intro_conversation",
+    "altTextKo": "교회 친교 자리에서 이름을 묻고 자기 이름을 소개하는 장면",
+    "sourcePlan": [
+      {
+        "type": "local_preferred",
+        "assetPath": "assets/images/scenes/name_intro_conversation.jpg",
+        "status": "ready"
+      },
+      {
+        "type": "stock_preferred",
+        "queries": [
+          "church fellowship two people introducing themselves",
+          "Asian church conversation after worship",
+          "friendly introduction conversation church"
+        ],
+        "status": "search_required"
+      },
+      {
+        "type": "ai_fallback",
+        "prompt": {
+          "scene": "new friends meeting after worship",
+          "peopleAndAction": "two adults introducing themselves, relaxed smile, respectful posture",
+          "setting": "church fellowship hall",
+          "mood": "friendly, welcoming, personal",
+          "cameraFraming": "medium shot",
+          "lighting": "bright indoor natural light",
+          "avoidList": [
+            "formal business handshake",
+            "stage presentation feel"
+          ]
+        },
+        "status": "generate_if_needed"
+      }
+    ]
   },
-  "missionGoal": "22일차 생활회화 전체 문장을 토요일에 다시 반복해 현장 대화 흐름을 안정화한다.",
-  "ministryGuide": "주말에는 새 문장을 늘리기보다 생활회화 전체를 두 번 이상 반복해 입이 먼저 기억하게 한다.",
-  "teacherFlow": [
-    "생활회화 전체 복습 목표 안내",
-    "인사와 감사 표현 빠른 듣기",
-    "이름과 나이 질문/대답 짝 연습",
-    "식사와 칭찬 표현 따라 말하기",
-    "작별 표현으로 마무리 역할극",
-    "8월 1일 토요 반복 복습 안내"
-  ],
-  "phrases": [
+  "keywordImages": [],
+  "newPhrases": [],
+  "reviewPhrases": [
     {
       "variantId": "1",
       "phraseId": 1,
@@ -612,54 +641,131 @@
     }
   ],
   "keywords": [],
-  "imageNotes": {
-    "primaryImage": {
-      "sceneId": "full_mission_roleplay_review",
-      "altTextKo": "처음 만남부터 기도와 찬양 초대까지 전체 흐름을 역할극으로 복습하는 장면",
-      "sourcePlan": [
-        {
-          "type": "local_preferred",
-          "assetPath": "assets/images/scenes/full_mission_roleplay_review.jpg",
-          "status": "missing"
-        },
-        {
-          "type": "stock_preferred",
-          "queries": [
-            "church mission team roleplay small group conversation",
-            "small group church fellowship greeting prayer singing",
-            "mission training roleplay church group"
-          ],
-          "status": "search_required"
-        },
-        {
-          "type": "ai_fallback",
-          "prompt": {
-            "scene": "full review roleplay for mission conversation",
-            "peopleAndAction": "small group practicing greeting, introduction, prayer support, and praise invitation in a friendly roleplay",
-            "setting": "Thai church fellowship room",
-            "mood": "warm, practical, encouraging, communal",
-            "cameraFraming": "wide documentary small-group scene",
-            "lighting": "bright natural indoor light",
-            "avoidList": [
-              "formal lecture podium",
-              "concert stage lighting",
-              "dramatic religious painting style"
-            ]
-          },
-          "status": "generate_if_needed"
-        }
-      ]
-    },
-    "keywordImages": []
+  "displayKeywords": [],
+  "supplementLinks": [],
+  "supplementalKeywords": [],
+  "keywordDisplayPolicy": {
+    "default": "keyWordIds_order",
+    "toggleSupplemental": false,
+    "emptyCoreFallback": "show_first_three_keywords"
   },
-  "scriptSections": [
-    "lesson_objective",
-    "opening_words",
-    "phrase_coaching_notes",
-    "male_female_ending_reminder",
-    "image_cue_notes",
-    "roleplay_instructions",
-    "ministry_guide_summary",
-    "closing_encouragement"
+  "learnerProfile": {
+    "ageRange": "primarily older Korean adults; source plan average age about 58",
+    "smartphoneLiteracy": "low_to_moderate",
+    "uxDefaults": {
+      "minimumTapTargetPx": 48,
+      "audioPlayback": "manual_user_triggered",
+      "localStorageFailure": "silent_degrade_with_reset_option",
+      "defaultTextScale": "large"
+    }
+  },
+  "statePolicy": {
+    "storage": "localStorage",
+    "schemaVersion": 1,
+    "namespace": "thai25",
+    "keys": {
+      "schemaVersion": {
+        "key": "thai25.schemaVersion",
+        "type": "number",
+        "default": 1
+      },
+      "currentDay": {
+        "key": "thai25.currentDay",
+        "type": "number",
+        "default": 1
+      },
+      "completedLessonIds": {
+        "key": "thai25.completedLessonIds",
+        "type": "string[]",
+        "default": []
+      },
+      "lastOpenedLessonId": {
+        "key": "thai25.lastOpenedLessonId",
+        "type": "string|null",
+        "default": null
+      },
+      "speakerPreference": {
+        "key": "thai25.speakerPreference",
+        "type": "\"male\"|\"female\"",
+        "default": "female"
+      },
+      "audioSpeedPreference": {
+        "key": "thai25.audioSpeedPreference",
+        "type": "\"normal\"|\"slow\"|\"repeat3\"",
+        "default": "normal"
+      },
+      "showSupplementalKeywords": {
+        "key": "thai25.showSupplementalKeywords",
+        "type": "boolean",
+        "default": false
+      }
+    },
+    "resetSupported": true,
+    "fallback": "If localStorage is unavailable, keep the lesson usable with stateless navigation and show no blocking error."
+  },
+  "imageMissingFallback": {
+    "behavior": "show_placeholder_panel",
+    "placeholderTextSource": "primaryImage.altTextKo",
+    "visualStyle": "light neutral panel with scene label; preserve image aspect ratio so layout does not shift when real image is added",
+    "allowRenderWithoutImageFile": true
+  },
+  "controls": {
+    "sentenceAudioModes": [
+      "normal",
+      "slow",
+      "repeat3"
+    ],
+    "wordAudioModes": [
+      "normal",
+      "slow"
+    ],
+    "speakerModes": [
+      "male",
+      "female"
+    ],
+    "audioSpeedControlPlacement": {
+      "placement": "inline_sentence_audio_toolbar",
+      "visibleOptions": [
+        "normal",
+        "slow",
+        "repeat3"
+      ],
+      "default": "normal",
+      "reason": "Older learners should not have to find a settings screen to slow down audio."
+    }
+  },
+  "completion": {
+    "checkAction": "lesson_complete",
+    "shareAction": "open_kakao_share_card",
+    "nextAction": "final_review_complete"
+  },
+  "sentenceOnly": true,
+  "pronunciationAssessment": true,
+  "finalReviewMode": "daily_conversation",
+  "phrasePairIds": [
+    [
+      "10",
+      "10-2"
+    ]
+  ],
+  "reviewSourceDay": 22,
+  "dayType": "date_review",
+  "displayDayLabel": "2026-08-01 복습",
+  "previewNavLinks": [
+    {
+      "label": "8/1 복습",
+      "href": "?date=2026-08-01",
+      "active": true
+    },
+    {
+      "label": "22일차 보기",
+      "href": "?day=22",
+      "active": false
+    },
+    {
+      "label": "24일차 보기",
+      "href": "?day=24",
+      "active": false
+    }
   ]
 }
