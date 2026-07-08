@@ -475,8 +475,8 @@ function renderPronunciationPractice(phrase) {
       <button class="practice-start-btn" data-action="review-practice" data-target-key="${escapeHtml(key)}" ${disabled && !active ? "disabled" : ""}>
         <span class="practice-mic" aria-hidden="true">${micIconSvg()}</span>
         <span>
-          <strong>${escapeHtml(practiceButtonLabel(active, status))}</strong>
-          <small>${escapeHtml(practiceButtonCopy(active, status))}</small>
+          <strong>${escapeHtml(practiceButtonLabel(active, status, error))}</strong>
+          <small>${escapeHtml(practiceButtonCopy(active, status, error))}</small>
         </span>
       </button>
       <div class="record-meter" data-state="${escapeHtml(status)}">
@@ -491,25 +491,27 @@ function renderPronunciationPractice(phrase) {
           <strong>${Number.isFinite(score) ? `${score}점` : "--"}</strong>
         </div>
         <p class="transcript" lang="th">${escapeHtml(transcript || "아직 인식 결과가 없습니다.")}</p>
-        <p class="result-note">${escapeHtml(error ? `인식 점검: ${error}` : resultNote(active, status))}</p>
+        <p class="result-note">${escapeHtml(error ? errorNote(error) : resultNote(active, status))}</p>
       </div>
     </div>
   `;
 }
 
-function practiceButtonLabel(active, status) {
+function practiceButtonLabel(active, status, error = "") {
   if (active && status === "listening") return "재생 중 · 끝나면 자동 녹음";
   if (active && status === "recording") return "녹음 중 · 지금 따라 말하세요";
   if (active && status === "analyzing") return "분석 중";
+  if (status === "error" && isMicrophonePermissionError(error)) return "마이크 권한 허용 후 다시 시도";
   if (status === "done") return "다시 듣고 따라 말하기";
   if (status === "error") return "다시 시도하기";
   return "듣고 바로 따라 말하기";
 }
 
-function practiceButtonCopy(active, status) {
+function practiceButtonCopy(active, status, error = "") {
   if (active && status === "listening") return "오디오가 끝나기 직전 마이크를 준비합니다.";
   if (active && status === "recording") return "4초 안에 한 번만 또렷하게 말합니다.";
   if (active && status === "analyzing") return "내 목소리를 들으며 결과를 확인합니다.";
+  if (status === "error" && isMicrophonePermissionError(error)) return "브라우저 설정에서 마이크를 허용해야 합니다.";
   return "문장 재생 후 자동으로 녹음합니다.";
 }
 
@@ -528,6 +530,31 @@ function resultNote(active, status) {
   if (active && status === "analyzing") return "점수와 transcript만 저장하고 오디오 원본은 저장하지 않습니다.";
   if (status === "done") return "점수와 transcript가 익명 저장되었습니다.";
   return "Google STT가 알아들은 태국어와 목표 문장의 유사도로 계산합니다.";
+}
+
+function errorNote(error) {
+  if (isMicrophonePermissionError(error)) {
+    return "마이크 권한이 차단되어 녹음을 시작하지 못했습니다. 주소창 왼쪽의 사이트 설정에서 마이크를 허용하거나, 카카오톡 안에서 열었다면 Safari/Chrome 같은 기본 브라우저로 다시 열어 주세요.";
+  }
+  if (isSecureContextError(error)) {
+    return "마이크 기능은 HTTPS 또는 localhost에서만 사용할 수 있습니다. 휴대폰에서는 GitHub Pages의 https 링크로 접속해야 합니다.";
+  }
+  if (isBrowserRecordingSupportError(error)) {
+    return "이 브라우저는 녹음 기능을 지원하지 않습니다. Safari 또는 Chrome 최신 버전으로 열어 주세요.";
+  }
+  return `인식 점검: ${error}`;
+}
+
+function isMicrophonePermissionError(error) {
+  return /permission|notallowed|denied|권한|차단/i.test(String(error || ""));
+}
+
+function isSecureContextError(error) {
+  return /https|secure context|보안 연결/i.test(String(error || ""));
+}
+
+function isBrowserRecordingSupportError(error) {
+  return /지원하지|MediaRecorder|getUserMedia|AudioContext/i.test(String(error || ""));
 }
 
 function renderSupplementLinks(spec) {
@@ -939,14 +966,32 @@ async function listenThenRecordReview(phrase) {
 
 async function prepareRecording() {
   if (!state.target) return false;
+  if (!window.isSecureContext) {
+    failAttempt("보안 연결이 아니어서 마이크를 사용할 수 없습니다. HTTPS 주소로 다시 열어 주세요.");
+    render();
+    return false;
+  }
   if (!navigator.mediaDevices?.getUserMedia || !window.MediaRecorder || !(window.AudioContext || window.webkitAudioContext)) {
-    failAttempt("이 브라우저는 녹음 기능을 지원하지 않습니다.");
+    failAttempt("이 브라우저는 녹음 기능을 지원하지 않습니다. Safari 또는 Chrome 최신 버전으로 열어 주세요.");
     render();
     return false;
   }
 
   try {
+    const permissionState = await microphonePermissionState();
+    if (permissionState === "denied") {
+      failAttempt("마이크 권한이 차단되어 있습니다.");
+      render();
+      return false;
+    }
     state.reviewSessionToken = reviewDemoMode() ? "demo-review-session-token" : await requestReviewSessionToken(state.target);
+  } catch (error) {
+    failAttempt(`인식 서버 세션을 준비하지 못했습니다: ${error.message}`);
+    render();
+    return false;
+  }
+
+  try {
     state.chunks = [];
     state.mediaStream = await navigator.mediaDevices.getUserMedia({ audio: true });
     const mimeType = pickMimeType();
@@ -960,10 +1005,35 @@ async function prepareRecording() {
   } catch (error) {
     stopTracks();
     state.recording = false;
-    failAttempt(`마이크 또는 인식 서버를 준비하지 못했습니다: ${error.message}`);
+    failAttempt(formatMicrophoneError(error));
     render();
     return false;
   }
+}
+
+async function microphonePermissionState() {
+  try {
+    if (!navigator.permissions?.query) return "unknown";
+    const status = await navigator.permissions.query({ name: "microphone" });
+    return status.state || "unknown";
+  } catch {
+    return "unknown";
+  }
+}
+
+function formatMicrophoneError(error) {
+  const name = String(error?.name || "");
+  const message = String(error?.message || error || "");
+  if (/NotAllowedError|SecurityError|PermissionDeniedError/i.test(name) || /permission|denied/i.test(message)) {
+    return "마이크 권한이 차단되어 녹음을 시작하지 못했습니다.";
+  }
+  if (/NotFoundError|DevicesNotFoundError/i.test(name)) {
+    return "사용 가능한 마이크를 찾지 못했습니다.";
+  }
+  if (/NotReadableError|TrackStartError/i.test(name)) {
+    return "다른 앱이 마이크를 사용 중이거나 브라우저가 마이크를 열 수 없습니다.";
+  }
+  return `마이크를 준비하지 못했습니다: ${message}`;
 }
 
 async function requestReviewSessionToken(phrase) {

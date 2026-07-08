@@ -1,9 +1,9 @@
-const CACHE_NAME = "thai25-day1-v20";
+const CACHE_NAME = "thai25-day1-v21";
 const SHELL_ASSETS = [
   "./",
   "./index.html",
-  "./styles.css?v=20",
-  "./app.js?v=20",
+  "./styles.css?v=21",
+  "./app.js?v=21",
   "./manifest.webmanifest",
   "./assets/generated/pwa/w1d1.json",
   "./assets/generated/pwa/w1d2.json",
