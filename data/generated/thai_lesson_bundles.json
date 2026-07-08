@@ -7,10 +7,10 @@
     "imageManifest": "data/thai_image_source_manifest.json"
   },
   "sourceHashes": {
-    "curriculum": "6bbe5c2b9a6375ab097363726bf5e298b70c6fc8d8af75bf5eb854c38a412bc6",
+    "curriculum": "3fadad4dab088de8135819287eace665d5f18b57ca2ee58305d581e8d99cc00e",
     "assets": "c8c63283edcbc359c95bef3be52fc305539c7e7cff6dfd731b6f22c426c3ef64",
-    "templateSpecs": "b02f47651239e478b3156c95a4e2ea064d9a9d6989b048d54f4a8ffbbc725811",
-    "imageManifest": "629171190ff113e4c4649fafcb52b959b16aab4ba63044b790a5fc393fee9ca0"
+    "templateSpecs": "887efdd6e9a0570368278be4b74a597430a6f41b9e6ba53652127dc8fe96659b",
+    "imageManifest": "25ac81f5e5757745dd38ab939f74ca975360e160eb73283bb22109930d97aa95"
   },
   "bundles": {
     "weekdayLessons": [
@@ -369,8 +369,8 @@
               "contentMode": "review_recap",
               "rule": "Sunday cards use the same mobile card renderer as weekdays, but emphasize review phrases and personalMission instead of newPhrases.",
               "contentSource": {
-                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show up to 3 primary review phrases on the card.",
-                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show up to 4 core keywords.",
+                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show all assigned review phrases when the lesson is configured as a full weekend repeat.",
+                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show enough core keywords to support the full repeat flow.",
                 "missionText": "Sunday personalMission rendered as the main action box.",
                 "ministryGuide": "Sunday ministryGuide rendered as the relational guide line."
               }
@@ -903,8 +903,8 @@
               "contentMode": "review_recap",
               "rule": "Sunday cards use the same mobile card renderer as weekdays, but emphasize review phrases and personalMission instead of newPhrases.",
               "contentSource": {
-                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show up to 3 primary review phrases on the card.",
-                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show up to 4 core keywords.",
+                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show all assigned review phrases when the lesson is configured as a full weekend repeat.",
+                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show enough core keywords to support the full repeat flow.",
                 "missionText": "Sunday personalMission rendered as the main action box.",
                 "ministryGuide": "Sunday ministryGuide rendered as the relational guide line."
               }
@@ -1497,8 +1497,8 @@
               "contentMode": "review_recap",
               "rule": "Sunday cards use the same mobile card renderer as weekdays, but emphasize review phrases and personalMission instead of newPhrases.",
               "contentSource": {
-                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show up to 3 primary review phrases on the card.",
-                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show up to 4 core keywords.",
+                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show all assigned review phrases when the lesson is configured as a full weekend repeat.",
+                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show enough core keywords to support the full repeat flow.",
                 "missionText": "Sunday personalMission rendered as the main action box.",
                 "ministryGuide": "Sunday ministryGuide rendered as the relational guide line."
               }
@@ -2077,8 +2077,8 @@
               "contentMode": "review_recap",
               "rule": "Sunday cards use the same mobile card renderer as weekdays, but emphasize review phrases and personalMission instead of newPhrases.",
               "contentSource": {
-                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show up to 3 primary review phrases on the card.",
-                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show up to 4 core keywords.",
+                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show all assigned review phrases when the lesson is configured as a full weekend repeat.",
+                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show enough core keywords to support the full repeat flow.",
                 "missionText": "Sunday personalMission rendered as the main action box.",
                 "ministryGuide": "Sunday ministryGuide rendered as the relational guide line."
               }
@@ -2750,8 +2750,8 @@
               "contentMode": "review_recap",
               "rule": "Sunday cards use the same mobile card renderer as weekdays, but emphasize review phrases and personalMission instead of newPhrases.",
               "contentSource": {
-                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show up to 3 primary review phrases on the card.",
-                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show up to 4 core keywords.",
+                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show all assigned review phrases when the lesson is configured as a full weekend repeat.",
+                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show enough core keywords to support the full repeat flow.",
                 "missionText": "Sunday personalMission rendered as the main action box.",
                 "ministryGuide": "Sunday ministryGuide rendered as the relational guide line."
               }
@@ -3271,8 +3271,8 @@
               "contentMode": "review_recap",
               "rule": "Sunday cards use the same mobile card renderer as weekdays, but emphasize review phrases and personalMission instead of newPhrases.",
               "contentSource": {
-                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show up to 3 primary review phrases on the card.",
-                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show up to 4 core keywords.",
+                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show all assigned review phrases when the lesson is configured as a full weekend repeat.",
+                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show enough core keywords to support the full repeat flow.",
                 "missionText": "Sunday personalMission rendered as the main action box.",
                 "ministryGuide": "Sunday ministryGuide rendered as the relational guide line."
               }
@@ -3808,8 +3808,8 @@
               "contentMode": "review_recap",
               "rule": "Sunday cards use the same mobile card renderer as weekdays, but emphasize review phrases and personalMission instead of newPhrases.",
               "contentSource": {
-                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show up to 3 primary review phrases on the card.",
-                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show up to 4 core keywords.",
+                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show all assigned review phrases when the lesson is configured as a full weekend repeat.",
+                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show enough core keywords to support the full repeat flow.",
                 "missionText": "Sunday personalMission rendered as the main action box.",
                 "ministryGuide": "Sunday ministryGuide rendered as the relational guide line."
               }
@@ -4307,8 +4307,8 @@
               "contentMode": "review_recap",
               "rule": "Sunday cards use the same mobile card renderer as weekdays, but emphasize review phrases and personalMission instead of newPhrases.",
               "contentSource": {
-                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show up to 3 primary review phrases on the card.",
-                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show up to 4 core keywords.",
+                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show all assigned review phrases when the lesson is configured as a full weekend repeat.",
+                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show enough core keywords to support the full repeat flow.",
                 "missionText": "Sunday personalMission rendered as the main action box.",
                 "ministryGuide": "Sunday ministryGuide rendered as the relational guide line."
               }
@@ -4972,8 +4972,8 @@
               "contentMode": "review_recap",
               "rule": "Sunday cards use the same mobile card renderer as weekdays, but emphasize review phrases and personalMission instead of newPhrases.",
               "contentSource": {
-                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show up to 3 primary review phrases on the card.",
-                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show up to 4 core keywords.",
+                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show all assigned review phrases when the lesson is configured as a full weekend repeat.",
+                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show enough core keywords to support the full repeat flow.",
                 "missionText": "Sunday personalMission rendered as the main action box.",
                 "ministryGuide": "Sunday ministryGuide rendered as the relational guide line."
               }
@@ -5594,8 +5594,8 @@
               "contentMode": "review_recap",
               "rule": "Sunday cards use the same mobile card renderer as weekdays, but emphasize review phrases and personalMission instead of newPhrases.",
               "contentSource": {
-                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show up to 3 primary review phrases on the card.",
-                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show up to 4 core keywords.",
+                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show all assigned review phrases when the lesson is configured as a full weekend repeat.",
+                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show enough core keywords to support the full repeat flow.",
                 "missionText": "Sunday personalMission rendered as the main action box.",
                 "ministryGuide": "Sunday ministryGuide rendered as the relational guide line."
               }
@@ -6116,8 +6116,8 @@
               "contentMode": "review_recap",
               "rule": "Sunday cards use the same mobile card renderer as weekdays, but emphasize review phrases and personalMission instead of newPhrases.",
               "contentSource": {
-                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show up to 3 primary review phrases on the card.",
-                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show up to 4 core keywords.",
+                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show all assigned review phrases when the lesson is configured as a full weekend repeat.",
+                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show enough core keywords to support the full repeat flow.",
                 "missionText": "Sunday personalMission rendered as the main action box.",
                 "ministryGuide": "Sunday ministryGuide rendered as the relational guide line."
               }
@@ -6767,8 +6767,8 @@
               "contentMode": "review_recap",
               "rule": "Sunday cards use the same mobile card renderer as weekdays, but emphasize review phrases and personalMission instead of newPhrases.",
               "contentSource": {
-                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show up to 3 primary review phrases on the card.",
-                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show up to 4 core keywords.",
+                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show all assigned review phrases when the lesson is configured as a full weekend repeat.",
+                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show enough core keywords to support the full repeat flow.",
                 "missionText": "Sunday personalMission rendered as the main action box.",
                 "ministryGuide": "Sunday ministryGuide rendered as the relational guide line."
               }
@@ -7270,8 +7270,8 @@
               "contentMode": "review_recap",
               "rule": "Sunday cards use the same mobile card renderer as weekdays, but emphasize review phrases and personalMission instead of newPhrases.",
               "contentSource": {
-                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show up to 3 primary review phrases on the card.",
-                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show up to 4 core keywords.",
+                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show all assigned review phrases when the lesson is configured as a full weekend repeat.",
+                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show enough core keywords to support the full repeat flow.",
                 "missionText": "Sunday personalMission rendered as the main action box.",
                 "ministryGuide": "Sunday ministryGuide rendered as the relational guide line."
               }
@@ -7881,8 +7881,8 @@
               "contentMode": "review_recap",
               "rule": "Sunday cards use the same mobile card renderer as weekdays, but emphasize review phrases and personalMission instead of newPhrases.",
               "contentSource": {
-                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show up to 3 primary review phrases on the card.",
-                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show up to 4 core keywords.",
+                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show all assigned review phrases when the lesson is configured as a full weekend repeat.",
+                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show enough core keywords to support the full repeat flow.",
                 "missionText": "Sunday personalMission rendered as the main action box.",
                 "ministryGuide": "Sunday ministryGuide rendered as the relational guide line."
               }
@@ -8630,8 +8630,8 @@
               "contentMode": "review_recap",
               "rule": "Sunday cards use the same mobile card renderer as weekdays, but emphasize review phrases and personalMission instead of newPhrases.",
               "contentSource": {
-                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show up to 3 primary review phrases on the card.",
-                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show up to 4 core keywords.",
+                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show all assigned review phrases when the lesson is configured as a full weekend repeat.",
+                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show enough core keywords to support the full repeat flow.",
                 "missionText": "Sunday personalMission rendered as the main action box.",
                 "ministryGuide": "Sunday ministryGuide rendered as the relational guide line."
               }
@@ -9234,8 +9234,8 @@
               "contentMode": "review_recap",
               "rule": "Sunday cards use the same mobile card renderer as weekdays, but emphasize review phrases and personalMission instead of newPhrases.",
               "contentSource": {
-                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show up to 3 primary review phrases on the card.",
-                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show up to 4 core keywords.",
+                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show all assigned review phrases when the lesson is configured as a full weekend repeat.",
+                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show enough core keywords to support the full repeat flow.",
                 "missionText": "Sunday personalMission rendered as the main action box.",
                 "ministryGuide": "Sunday ministryGuide rendered as the relational guide line."
               }
@@ -9778,8 +9778,8 @@
               "contentMode": "review_recap",
               "rule": "Sunday cards use the same mobile card renderer as weekdays, but emphasize review phrases and personalMission instead of newPhrases.",
               "contentSource": {
-                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show up to 3 primary review phrases on the card.",
-                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show up to 4 core keywords.",
+                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show all assigned review phrases when the lesson is configured as a full weekend repeat.",
+                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show enough core keywords to support the full repeat flow.",
                 "missionText": "Sunday personalMission rendered as the main action box.",
                 "ministryGuide": "Sunday ministryGuide rendered as the relational guide line."
               }
@@ -10345,8 +10345,8 @@
               "contentMode": "review_recap",
               "rule": "Sunday cards use the same mobile card renderer as weekdays, but emphasize review phrases and personalMission instead of newPhrases.",
               "contentSource": {
-                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show up to 3 primary review phrases on the card.",
-                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show up to 4 core keywords.",
+                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show all assigned review phrases when the lesson is configured as a full weekend repeat.",
+                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show enough core keywords to support the full repeat flow.",
                 "missionText": "Sunday personalMission rendered as the main action box.",
                 "ministryGuide": "Sunday ministryGuide rendered as the relational guide line."
               }
@@ -10933,8 +10933,8 @@
               "contentMode": "review_recap",
               "rule": "Sunday cards use the same mobile card renderer as weekdays, but emphasize review phrases and personalMission instead of newPhrases.",
               "contentSource": {
-                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show up to 3 primary review phrases on the card.",
-                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show up to 4 core keywords.",
+                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show all assigned review phrases when the lesson is configured as a full weekend repeat.",
+                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show enough core keywords to support the full repeat flow.",
                 "missionText": "Sunday personalMission rendered as the main action box.",
                 "ministryGuide": "Sunday ministryGuide rendered as the relational guide line."
               }
@@ -11575,8 +11575,8 @@
               "contentMode": "review_recap",
               "rule": "Sunday cards use the same mobile card renderer as weekdays, but emphasize review phrases and personalMission instead of newPhrases.",
               "contentSource": {
-                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show up to 3 primary review phrases on the card.",
-                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show up to 4 core keywords.",
+                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show all assigned review phrases when the lesson is configured as a full weekend repeat.",
+                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show enough core keywords to support the full repeat flow.",
                 "missionText": "Sunday personalMission rendered as the main action box.",
                 "ministryGuide": "Sunday ministryGuide rendered as the relational guide line."
               }
@@ -12599,8 +12599,8 @@
               "contentMode": "review_recap",
               "rule": "Sunday cards use the same mobile card renderer as weekdays, but emphasize review phrases and personalMission instead of newPhrases.",
               "contentSource": {
-                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show up to 3 primary review phrases on the card.",
-                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show up to 4 core keywords.",
+                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show all assigned review phrases when the lesson is configured as a full weekend repeat.",
+                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show enough core keywords to support the full repeat flow.",
                 "missionText": "Sunday personalMission rendered as the main action box.",
                 "ministryGuide": "Sunday ministryGuide rendered as the relational guide line."
               }
@@ -13529,8 +13529,8 @@
               "contentMode": "review_recap",
               "rule": "Sunday cards use the same mobile card renderer as weekdays, but emphasize review phrases and personalMission instead of newPhrases.",
               "contentSource": {
-                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show up to 3 primary review phrases on the card.",
-                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show up to 4 core keywords.",
+                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show all assigned review phrases when the lesson is configured as a full weekend repeat.",
+                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show enough core keywords to support the full repeat flow.",
                 "missionText": "Sunday personalMission rendered as the main action box.",
                 "ministryGuide": "Sunday ministryGuide rendered as the relational guide line."
               }
@@ -14636,8 +14636,8 @@
               "contentMode": "review_recap",
               "rule": "Sunday cards use the same mobile card renderer as weekdays, but emphasize review phrases and personalMission instead of newPhrases.",
               "contentSource": {
-                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show up to 3 primary review phrases on the card.",
-                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show up to 4 core keywords.",
+                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show all assigned review phrases when the lesson is configured as a full weekend repeat.",
+                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show enough core keywords to support the full repeat flow.",
                 "missionText": "Sunday personalMission rendered as the main action box.",
                 "ministryGuide": "Sunday ministryGuide rendered as the relational guide line."
               }
@@ -15666,8 +15666,8 @@
               "contentMode": "review_recap",
               "rule": "Sunday cards use the same mobile card renderer as weekdays, but emphasize review phrases and personalMission instead of newPhrases.",
               "contentSource": {
-                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show up to 3 primary review phrases on the card.",
-                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show up to 4 core keywords.",
+                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show all assigned review phrases when the lesson is configured as a full weekend repeat.",
+                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show enough core keywords to support the full repeat flow.",
                 "missionText": "Sunday personalMission rendered as the main action box.",
                 "ministryGuide": "Sunday ministryGuide rendered as the relational guide line."
               }
@@ -17578,8 +17578,8 @@
               "contentMode": "review_recap",
               "rule": "Sunday cards use the same mobile card renderer as weekdays, but emphasize review phrases and personalMission instead of newPhrases.",
               "contentSource": {
-                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show up to 3 primary review phrases on the card.",
-                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show up to 4 core keywords.",
+                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show all assigned review phrases when the lesson is configured as a full weekend repeat.",
+                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show enough core keywords to support the full repeat flow.",
                 "missionText": "Sunday personalMission rendered as the main action box.",
                 "ministryGuide": "Sunday ministryGuide rendered as the relational guide line."
               }
@@ -18305,9 +18305,9 @@
         "dayType": "saturday",
         "week": 2,
         "theme": "새 친구 만나기",
-        "title": "예배 후 새 친구 만나기",
-        "missionGoal": "정중한 접근과 자기소개 흐름을 현장형 대화로 연습한다.",
-        "ministryGuide": "상대의 이름을 기억하고 다시 불러 주면 관계가 깊어지고 대화의 문도 넓어진다.",
+        "title": "예배 후 새 친구 만나기 종합 복습",
+        "missionGoal": "정중한 접근, 자기소개, 나이 질문과 대답, 공동체 사랑 표현을 한 흐름으로 연습한다.",
+        "ministryGuide": "상대의 이름을 기억하고 다시 불러 주며, 자기소개와 나이 대답 뒤에 공동체의 사랑을 전하면 첫 만남이 따뜻한 환대로 이어진다.",
         "phrases": [
           {
             "variantId": "1",
@@ -18525,6 +18525,37 @@
                 "repeat3": "assets/audio/sentences/S10_2_female_repeat3.mp3"
               }
             }
+          },
+          {
+            "variantId": "22",
+            "phraseId": 22,
+            "category": "mission",
+            "korean": "우리는 당신들을 사랑해요",
+            "english": "We love you.",
+            "speech": {
+              "male": {
+                "thai": "พวกเรารักคุณครับ",
+                "romanization": "phûak-rao rák khun khráp",
+                "korean_pronunciation": "푸악 라오 락 쿤 크랍"
+              },
+              "female": {
+                "thai": "พวกเรารักคุณค่ะ",
+                "romanization": "phûak-rao rák khun khâ",
+                "korean_pronunciation": "푸악 라오 락 쿤 카"
+              }
+            },
+            "audio": {
+              "male": {
+                "normal": "assets/audio/sentences/S22_male_normal.mp3",
+                "slow": "assets/audio/sentences/S22_male_slow.mp3",
+                "repeat3": "assets/audio/sentences/S22_male_repeat3.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/sentences/S22_female_normal.mp3",
+                "slow": "assets/audio/sentences/S22_female_slow.mp3",
+                "repeat3": "assets/audio/sentences/S22_female_repeat3.mp3"
+              }
+            }
           }
         ],
         "keywords": [
@@ -18688,6 +18719,148 @@
                 "slow": "assets/audio/words/W017_female_slow.mp3"
               }
             }
+          },
+          {
+            "id": "W018",
+            "variantIds": [
+              "10",
+              "10-2"
+            ],
+            "korean": "나이",
+            "english": "age",
+            "thai": "อายุ",
+            "romanization": "aa-yú",
+            "koreanPronunciation": "아유",
+            "tier": "supplemental",
+            "days": [
+              9,
+              10,
+              15,
+              25
+            ],
+            "audio": {
+              "male": {
+                "normal": "assets/audio/words/W018_male_normal.mp3",
+                "slow": "assets/audio/words/W018_male_slow.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/words/W018_female_normal.mp3",
+                "slow": "assets/audio/words/W018_female_slow.mp3"
+              }
+            }
+          },
+          {
+            "id": "W019",
+            "variantIds": [
+              "10"
+            ],
+            "korean": "얼마",
+            "english": "how much/how many",
+            "thai": "เท่าไหร่",
+            "romanization": "thâo-rài",
+            "koreanPronunciation": "타오 라이",
+            "tier": "supplemental",
+            "days": [
+              9,
+              10,
+              15,
+              25
+            ],
+            "audio": {
+              "male": {
+                "normal": "assets/audio/words/W019_male_normal.mp3",
+                "slow": "assets/audio/words/W019_male_slow.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/words/W019_female_normal.mp3",
+                "slow": "assets/audio/words/W019_female_slow.mp3"
+              }
+            }
+          },
+          {
+            "id": "W050",
+            "variantIds": [
+              "10-2"
+            ],
+            "korean": "살/년",
+            "english": "year(s)",
+            "thai": "ปี",
+            "romanization": "bpii",
+            "koreanPronunciation": "삐",
+            "tier": "core",
+            "days": [
+              9,
+              10,
+              15,
+              25
+            ],
+            "audio": {
+              "male": {
+                "normal": "assets/audio/words/W050_male_normal.mp3",
+                "slow": "assets/audio/words/W050_male_slow.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/words/W050_female_normal.mp3",
+                "slow": "assets/audio/words/W050_female_slow.mp3"
+              }
+            }
+          },
+          {
+            "id": "W043",
+            "variantIds": [
+              "22"
+            ],
+            "korean": "우리",
+            "english": "we/us",
+            "thai": "พวกเรา",
+            "romanization": "phûak-rao",
+            "koreanPronunciation": "푸악 라오",
+            "tier": "supplemental",
+            "days": [
+              22,
+              25
+            ],
+            "audio": {
+              "male": {
+                "normal": "assets/audio/words/W043_male_normal.mp3",
+                "slow": "assets/audio/words/W043_male_slow.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/words/W043_female_normal.mp3",
+                "slow": "assets/audio/words/W043_female_slow.mp3"
+              }
+            }
+          },
+          {
+            "id": "W035",
+            "variantIds": [
+              "17",
+              "18",
+              "22"
+            ],
+            "korean": "사랑하다",
+            "english": "love",
+            "thai": "รัก",
+            "romanization": "rák",
+            "koreanPronunciation": "락",
+            "tier": "core",
+            "days": [
+              16,
+              17,
+              20,
+              22,
+              25
+            ],
+            "audio": {
+              "male": {
+                "normal": "assets/audio/words/W035_male_normal.mp3",
+                "slow": "assets/audio/words/W035_male_slow.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/words/W035_female_normal.mp3",
+                "slow": "assets/audio/words/W035_female_slow.mp3"
+              }
+            }
           }
         ],
         "images": {
@@ -18765,20 +18938,59 @@
                   "status": "generate_if_needed"
                 }
               ]
+            },
+            {
+              "keywordId": "W018",
+              "priority": "optional",
+              "sourcePlan": [
+                {
+                  "type": "local_preferred",
+                  "assetPath": "assets/images/keywords/W018.jpg",
+                  "status": "missing"
+                },
+                {
+                  "type": "stock_preferred",
+                  "queries": [
+                    "age realistic photo",
+                    "나이 learning image"
+                  ],
+                  "status": "search_required"
+                },
+                {
+                  "type": "ai_fallback",
+                  "prompt": {
+                    "scene": "single concept image for age",
+                    "peopleAndAction": "show the concept clearly and simply",
+                    "setting": "clean realistic learning image",
+                    "mood": "warm and easy to recognize",
+                    "cameraFraming": "close or medium crop",
+                    "lighting": "bright neutral light",
+                    "avoidList": [
+                      "blurry or noisy image",
+                      "heavy watermark",
+                      "text embedded in photo",
+                      "theological symbolism without a real scene",
+                      "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
+                    ]
+                  },
+                  "status": "generate_if_needed"
+                }
+              ]
             }
           ]
         },
-        "roleplayScene": "예배 후 식사 자리에서 한국 선교팀과 태국 교회 성도가 만난다. 정중히 말을 걸고, 이름을 묻고, 각자 자기소개를 한다.",
+        "roleplayScene": "예배 후 식사 자리에서 한국 선교팀과 태국 교회 성도가 만난다. 정중히 말을 걸고, 이름을 묻고, 각자 자기소개를 하며, 나이를 묻고 답한 뒤 공동체의 사랑을 전한다.",
         "teacherFlow": [
           "예배 후 식사 장면 소개",
           "핵심 문장 따라 말하기",
           "질문형/평서형 어미 구분",
           "이름 묻기 역할극",
-          "자기소개 역할극",
+          "자기소개와 나이 묻고 답하기 역할극",
+          "공동체 사랑 표현 연결",
           "주일 활용 미션 안내"
         ],
         "contextHeader": {
-          "lessonGoal": "정중한 접근과 자기소개 흐름을 현장형 대화로 연습한다.",
+          "lessonGoal": "정중한 접근, 자기소개, 나이 질문과 대답, 공동체 사랑 표현을 한 흐름으로 연습한다.",
           "learnersHaveCovered": "학습자는 2주차 평일 표현과 이번 주 누적 복습을 마친 상태다.",
           "successLooksLike": "학습자가 남성형/여성형 어미를 구분하며 핵심 표현을 짝과 함께 소리 내어 말하고, 따뜻한 선교적 태도로 역할극에 참여하면 성공이다."
         },
@@ -18907,9 +19119,9 @@
         "dayType": "saturday",
         "week": 3,
         "theme": "교회 식사와 작별",
-        "title": "교회 식사 자리에서 다시 만나기",
-        "missionGoal": "생활 속 대화로 관계를 더 따뜻하게 이어 간다.",
-        "ministryGuide": "돕고 칭찬하고 따뜻하게 헤어지는 흐름이 쌓이면 복음적 대화도 훨씬 자연스럽게 이어진다.",
+        "title": "생활 대화와 돌봄 종합 복습",
+        "missionGoal": "화장실 묻기, 식사 대화, 격려, 작별, 기도 제안을 한 흐름으로 복습한다.",
+        "ministryGuide": "돕고 칭찬하고 따뜻하게 헤어진 뒤 기도로 돌보겠다고 말하면 생활 대화가 자연스럽게 선교적 돌봄으로 이어진다.",
         "phrases": [
           {
             "variantId": "11",
@@ -19096,6 +19308,37 @@
                 "repeat3": "assets/audio/sentences/S16_female_repeat3.mp3"
               }
             }
+          },
+          {
+            "variantId": "23",
+            "phraseId": 23,
+            "category": "mission",
+            "korean": "기도해 드릴게요",
+            "english": "I will pray for you.",
+            "speech": {
+              "male": {
+                "thai": "ผมจะอธิษฐานให้คุณครับ",
+                "romanization": "phŏm jà à-thít-thăan hâi khun khráp",
+                "korean_pronunciation": "폼 짜 아팃탄 하이 쿤 크랍"
+              },
+              "female": {
+                "thai": "ฉันจะอธิษฐานให้คุณค่ะ",
+                "romanization": "chăn jà à-thít-thăan hâi khun khâ",
+                "korean_pronunciation": "찬 짜 아팃탄 하이 쿤 카"
+              }
+            },
+            "audio": {
+              "male": {
+                "normal": "assets/audio/sentences/S23_male_normal.mp3",
+                "slow": "assets/audio/sentences/S23_male_slow.mp3",
+                "repeat3": "assets/audio/sentences/S23_male_repeat3.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/sentences/S23_female_normal.mp3",
+                "slow": "assets/audio/sentences/S23_female_slow.mp3",
+                "repeat3": "assets/audio/sentences/S23_female_repeat3.mp3"
+              }
+            }
           }
         ],
         "keywords": [
@@ -19208,42 +19451,64 @@
                 "slow": "assets/audio/words/W029_female_slow.mp3"
               }
             }
+          },
+          {
+            "id": "W045",
+            "variantIds": [
+              "23"
+            ],
+            "korean": "기도하다",
+            "english": "pray",
+            "thai": "อธิษฐาน",
+            "romanization": "à-thít-thăan",
+            "koreanPronunciation": "아팃탄",
+            "tier": "core",
+            "days": [
+              23,
+              25
+            ],
+            "audio": {
+              "male": {
+                "normal": "assets/audio/words/W045_male_normal.mp3",
+                "slow": "assets/audio/words/W045_male_slow.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/words/W045_female_normal.mp3",
+                "slow": "assets/audio/words/W045_female_slow.mp3"
+              }
+            }
           }
         ],
         "images": {
           "primaryImage": {
-            "sceneId": "meal_table_fellowship",
-            "altTextKo": "교회 식사 자리에서 음식을 나누며 대화하는 장면",
+            "sceneId": "prayer_support",
+            "altTextKo": "상대를 위로하며 기도해 주겠다고 말하는 장면",
             "sourcePlan": [
               {
                 "type": "local_preferred",
-                "assetPath": "assets/images/scenes/meal_table_fellowship.jpg",
+                "assetPath": "assets/images/scenes/prayer_support.jpg",
                 "status": "ready"
               },
               {
                 "type": "stock_preferred",
                 "queries": [
-                  "church meal fellowship table Thailand",
-                  "people sharing food church fellowship",
-                  "warm community meal church"
+                  "prayer support two people church",
+                  "gentle prayer with friend church"
                 ],
                 "status": "search_required"
               },
               {
                 "type": "ai_fallback",
                 "prompt": {
-                  "scene": "church meal fellowship conversation",
-                  "peopleAndAction": "people share food and smile while offering and enjoying a meal",
-                  "setting": "small Thai church fellowship table",
-                  "mood": "warm, grateful, friendly",
-                  "cameraFraming": "medium wide table scene",
-                  "lighting": "bright warm daylight",
+                  "scene": "offering prayer for someone",
+                  "peopleAndAction": "one person listening with care, another offering prayer support with gentle posture",
+                  "setting": "quiet church corner",
+                  "mood": "peaceful, caring, sincere",
+                  "cameraFraming": "medium shot",
+                  "lighting": "soft indoor light",
                   "avoidList": [
-                    "blurry or noisy image",
-                    "heavy watermark",
-                    "text embedded in photo",
-                    "theological symbolism without a real scene",
-                    "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
+                    "crowded worship stage",
+                    "extreme emotion"
                   ]
                 },
                 "status": "generate_if_needed"
@@ -19402,20 +19667,58 @@
                   "status": "generate_if_needed"
                 }
               ]
+            },
+            {
+              "keywordId": "W045",
+              "priority": "preferred",
+              "sourcePlan": [
+                {
+                  "type": "local_preferred",
+                  "assetPath": "assets/images/keywords/W045.jpg",
+                  "status": "missing"
+                },
+                {
+                  "type": "stock_preferred",
+                  "queries": [
+                    "pray realistic photo",
+                    "기도하다 learning image"
+                  ],
+                  "status": "search_required"
+                },
+                {
+                  "type": "ai_fallback",
+                  "prompt": {
+                    "scene": "single concept image for pray",
+                    "peopleAndAction": "show the concept clearly and simply",
+                    "setting": "clean realistic learning image",
+                    "mood": "warm and easy to recognize",
+                    "cameraFraming": "close or medium crop",
+                    "lighting": "bright neutral light",
+                    "avoidList": [
+                      "blurry or noisy image",
+                      "heavy watermark",
+                      "text embedded in photo",
+                      "theological symbolism without a real scene",
+                      "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
+                    ]
+                  },
+                  "status": "generate_if_needed"
+                }
+              ]
             }
           ]
         },
-        "roleplayScene": "교회 행사에 참여한 방문객이 식사 자리에서 도움을 요청하고, 음식을 칭찬하며, 봉사자에게 감사한 뒤 다음 만남을 약속한다.",
+        "roleplayScene": "교회 행사에 참여한 방문객이 화장실 위치를 묻고, 식사 자리에서 음식을 권하고 칭찬하며, 서로 격려하고 작별 인사를 나눈 뒤 기도해 드리겠다고 말한다.",
         "teacherFlow": [
-          "교회 식사 자리 장면 소개",
-          "화장실 질문과 식사 표현 따라 말하기",
-          "칭찬과 작별 표현 억양 점검",
-          "두 역할로 역할극",
-          "역할 바꾸기",
-          "다음 주 사랑·축복 예고"
+          "교회 행사와 식사 자리 장면 소개",
+          "화장실 묻기와 식사 대화 따라 말하기",
+          "격려와 작별 표현 연결",
+          "기도해 드릴게요 문장 연습",
+          "생활 대화에서 돌봄으로 이어지는 역할극",
+          "주일 동일 복습 미션 안내"
         ],
         "contextHeader": {
-          "lessonGoal": "생활 속 대화로 관계를 더 따뜻하게 이어 간다.",
+          "lessonGoal": "화장실 묻기, 식사 대화, 격려, 작별, 기도 제안을 한 흐름으로 복습한다.",
           "learnersHaveCovered": "학습자는 3주차 평일 표현과 이번 주 누적 복습을 마친 상태다.",
           "successLooksLike": "학습자가 남성형/여성형 어미를 구분하며 핵심 표현을 짝과 함께 소리 내어 말하고, 따뜻한 선교적 태도로 역할극에 참여하면 성공이다."
         },
@@ -19544,9 +19847,9 @@
         "dayType": "saturday",
         "week": 4,
         "theme": "사랑과 축복 전하기",
-        "title": "마음을 돌보고 축복하기",
-        "missionGoal": "관계 위에 사랑과 축복의 메시지를 자연스럽게 얹는 법을 익힌다.",
-        "ministryGuide": "먼저 따뜻하게 격려하고 축복할 때 선교 문장이 더 자연스럽고 거부감 없이 전해진다.",
+        "title": "사랑·축복·찬양 초대 종합 복습",
+        "missionGoal": "사랑, 축복, 하나님은 사랑, 찬양 초대 문장을 한 흐름으로 복습한다.",
+        "ministryGuide": "먼저 따뜻하게 격려하고 축복한 뒤 찬양 초대로 이어 가면 선교 문장이 공동체 안으로 자연스럽게 연결된다.",
         "phrases": [
           {
             "variantId": "1",
@@ -19733,6 +20036,37 @@
                 "repeat3": "assets/audio/sentences/S20_female_repeat3.mp3"
               }
             }
+          },
+          {
+            "variantId": "24",
+            "phraseId": 24,
+            "category": "mission",
+            "korean": "함께 찬양해요",
+            "english": "Let's sing praise together.",
+            "speech": {
+              "male": {
+                "thai": "มาร้องเพลงสรรเสริญด้วยกันครับ",
+                "romanization": "maa-róng-phleeng săn-sĕern dûuai-gan khráp",
+                "korean_pronunciation": "마 롱 플렝 싼쓴 두아이깐 크랍"
+              },
+              "female": {
+                "thai": "มาร้องเพลงสรรเสริญด้วยกันค่ะ",
+                "romanization": "maa-róng-phleeng săn-sĕern dûuai-gan khâ",
+                "korean_pronunciation": "마 롱 플렝 싼쓴 두아이깐 카"
+              }
+            },
+            "audio": {
+              "male": {
+                "normal": "assets/audio/sentences/S24_male_normal.mp3",
+                "slow": "assets/audio/sentences/S24_male_slow.mp3",
+                "repeat3": "assets/audio/sentences/S24_male_repeat3.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/sentences/S24_female_normal.mp3",
+                "slow": "assets/audio/sentences/S24_female_slow.mp3",
+                "repeat3": "assets/audio/sentences/S24_female_repeat3.mp3"
+              }
+            }
           }
         ],
         "keywords": [
@@ -19881,6 +20215,58 @@
               "female": {
                 "normal": "assets/audio/words/W040_female_normal.mp3",
                 "slow": "assets/audio/words/W040_female_slow.mp3"
+              }
+            }
+          },
+          {
+            "id": "W048",
+            "variantIds": [
+              "24"
+            ],
+            "korean": "찬양하다",
+            "english": "praise",
+            "thai": "สรรเสริญ",
+            "romanization": "săn-sĕern",
+            "koreanPronunciation": "싼쓴",
+            "tier": "core",
+            "days": [
+              24,
+              25
+            ],
+            "audio": {
+              "male": {
+                "normal": "assets/audio/words/W048_male_normal.mp3",
+                "slow": "assets/audio/words/W048_male_slow.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/words/W048_female_normal.mp3",
+                "slow": "assets/audio/words/W048_female_slow.mp3"
+              }
+            }
+          },
+          {
+            "id": "W049",
+            "variantIds": [
+              "24"
+            ],
+            "korean": "함께",
+            "english": "together",
+            "thai": "ด้วยกัน",
+            "romanization": "dûuai-gan",
+            "koreanPronunciation": "두아이깐",
+            "tier": "core",
+            "days": [
+              24,
+              25
+            ],
+            "audio": {
+              "male": {
+                "normal": "assets/audio/words/W049_male_normal.mp3",
+                "slow": "assets/audio/words/W049_male_slow.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/words/W049_female_normal.mp3",
+                "slow": "assets/audio/words/W049_female_slow.mp3"
               }
             }
           }
@@ -20039,20 +20425,58 @@
                   "status": "generate_if_needed"
                 }
               ]
+            },
+            {
+              "keywordId": "W048",
+              "priority": "preferred",
+              "sourcePlan": [
+                {
+                  "type": "local_preferred",
+                  "assetPath": "assets/images/keywords/W048.jpg",
+                  "status": "missing"
+                },
+                {
+                  "type": "stock_preferred",
+                  "queries": [
+                    "praise realistic photo",
+                    "찬양하다 learning image"
+                  ],
+                  "status": "search_required"
+                },
+                {
+                  "type": "ai_fallback",
+                  "prompt": {
+                    "scene": "single concept image for praise",
+                    "peopleAndAction": "show the concept clearly and simply",
+                    "setting": "clean realistic learning image",
+                    "mood": "warm and easy to recognize",
+                    "cameraFraming": "close or medium crop",
+                    "lighting": "bright neutral light",
+                    "avoidList": [
+                      "blurry or noisy image",
+                      "heavy watermark",
+                      "text embedded in photo",
+                      "theological symbolism without a real scene",
+                      "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
+                    ]
+                  },
+                  "status": "generate_if_needed"
+                }
+              ]
             }
           ]
         },
-        "roleplayScene": "교회 행사에서 만난 이웃에게 인사하고, 삶을 격려하며, 하나님의 사랑과 축복을 전한다.",
+        "roleplayScene": "교회 행사에서 만난 이웃에게 인사하고, 삶을 격려하며, 예수님과 하나님의 사랑, 하나님의 축복, 하나님은 사랑이십니다, 함께 찬양해요를 한 흐름으로 전한다.",
         "teacherFlow": [
-          "사랑과 축복의 장면 소개",
-          "핵심 문장 전체 따라 말하기",
-          "사랑 표현과 축복 표현 비교",
-          "격려 후 선교 문장 연결하기",
-          "짝 역할극",
-          "기도와 찬양 초대 예고"
+          "사랑과 축복을 전하는 장면 소개",
+          "예수님의 사랑과 하나님의 사랑 문장 따라 말하기",
+          "하나님의 축복과 하나님은 사랑이십니다 연결",
+          "함께 찬양해요 초대 문장 연습",
+          "사랑·축복·찬양 초대 역할극",
+          "주일 동일 복습 미션 안내"
         ],
         "contextHeader": {
-          "lessonGoal": "관계 위에 사랑과 축복의 메시지를 자연스럽게 얹는 법을 익힌다.",
+          "lessonGoal": "사랑, 축복, 하나님은 사랑, 찬양 초대 문장을 한 흐름으로 복습한다.",
           "learnersHaveCovered": "학습자는 4주차 평일 표현과 이번 주 누적 복습을 마친 상태다.",
           "successLooksLike": "학습자가 남성형/여성형 어미를 구분하며 핵심 표현을 짝과 함께 소리 내어 말하고, 따뜻한 선교적 태도로 역할극에 참여하면 성공이다."
         },
@@ -21803,8 +22227,8 @@
               "contentMode": "review_recap",
               "rule": "Sunday cards use the same mobile card renderer as weekdays, but emphasize review phrases and personalMission instead of newPhrases.",
               "contentSource": {
-                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show up to 3 primary review phrases on the card.",
-                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show up to 4 core keywords.",
+                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show all assigned review phrases when the lesson is configured as a full weekend repeat.",
+                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show enough core keywords to support the full repeat flow.",
                 "missionText": "Sunday personalMission rendered as the main action box.",
                 "ministryGuide": "Sunday ministryGuide rendered as the relational guide line."
               }
@@ -21870,10 +22294,103 @@
         "dayType": "sunday",
         "week": 2,
         "theme": "새 친구 만나기",
-        "title": "자기소개를 가족·친구에게 말해 보기",
-        "missionGoal": "배운 소개 문장을 실제 생활에 붙인다.",
-        "ministryGuide": "자기소개가 편해지면 현장 첫 만남의 긴장도 훨씬 줄어든다.",
+        "title": "예배 후 새 친구 만나기 종합 복습",
+        "missionGoal": "정중한 접근, 자기소개, 나이 질문과 대답, 공동체 사랑 표현을 주일에 한 번 더 반복해 입에 붙인다.",
+        "ministryGuide": "같은 흐름을 주말에 두 번 반복하면 실제 현장에서 첫 문장을 꺼내기가 훨씬 쉬워진다.",
         "phrases": [
+          {
+            "variantId": "1",
+            "phraseId": 1,
+            "category": "daily",
+            "korean": "안녕하세요",
+            "english": "Hello / Hi",
+            "speech": {
+              "male": {
+                "thai": "สวัสดีครับ",
+                "romanization": "sà-wàt-dii khráp",
+                "korean_pronunciation": "싸왓디 크랍"
+              },
+              "female": {
+                "thai": "สวัสดีค่ะ",
+                "romanization": "sà-wàt-dii khâ",
+                "korean_pronunciation": "싸왓디 카"
+              }
+            },
+            "audio": {
+              "male": {
+                "normal": "assets/audio/sentences/S1_male_normal.mp3",
+                "slow": "assets/audio/sentences/S1_male_slow.mp3",
+                "repeat3": "assets/audio/sentences/S1_male_repeat3.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/sentences/S1_female_normal.mp3",
+                "slow": "assets/audio/sentences/S1_female_slow.mp3",
+                "repeat3": "assets/audio/sentences/S1_female_repeat3.mp3"
+              }
+            }
+          },
+          {
+            "variantId": "6",
+            "phraseId": 6,
+            "category": "daily",
+            "korean": "실례/죄송합니다",
+            "english": "Excuse me.",
+            "speech": {
+              "male": {
+                "thai": "ขอโทษครับ",
+                "romanization": "khŏr-thôot khráp",
+                "korean_pronunciation": "커 톳 크랍"
+              },
+              "female": {
+                "thai": "ขอโทษค่ะ",
+                "romanization": "khŏr-thôot khâ",
+                "korean_pronunciation": "커 톳 카"
+              }
+            },
+            "audio": {
+              "male": {
+                "normal": "assets/audio/sentences/S6_male_normal.mp3",
+                "slow": "assets/audio/sentences/S6_male_slow.mp3",
+                "repeat3": "assets/audio/sentences/S6_male_repeat3.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/sentences/S6_female_normal.mp3",
+                "slow": "assets/audio/sentences/S6_female_slow.mp3",
+                "repeat3": "assets/audio/sentences/S6_female_repeat3.mp3"
+              }
+            }
+          },
+          {
+            "variantId": "7",
+            "phraseId": 7,
+            "category": "daily",
+            "korean": "괜찮아요",
+            "english": "It's O.K.",
+            "speech": {
+              "male": {
+                "thai": "ไม่เป็นไรครับ",
+                "romanization": "mâi-pen-rai khráp",
+                "korean_pronunciation": "마이 뻰 라이 크랍"
+              },
+              "female": {
+                "thai": "ไม่เป็นไรค่ะ",
+                "romanization": "mâi-pen-rai khâ",
+                "korean_pronunciation": "마이 뻰 라이 카"
+              }
+            },
+            "audio": {
+              "male": {
+                "normal": "assets/audio/sentences/S7_male_normal.mp3",
+                "slow": "assets/audio/sentences/S7_male_slow.mp3",
+                "repeat3": "assets/audio/sentences/S7_male_repeat3.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/sentences/S7_female_normal.mp3",
+                "slow": "assets/audio/sentences/S7_female_slow.mp3",
+                "repeat3": "assets/audio/sentences/S7_female_repeat3.mp3"
+              }
+            }
+          },
           {
             "variantId": "8",
             "phraseId": 8,
@@ -21935,9 +22452,171 @@
                 "repeat3": "assets/audio/sentences/S9_female_repeat3.mp3"
               }
             }
+          },
+          {
+            "variantId": "10",
+            "phraseId": 10,
+            "category": "daily",
+            "korean": "몇 살이니?",
+            "english": "How old are you?",
+            "speech": {
+              "male": {
+                "thai": "คุณอายุเท่าไหร่ครับ",
+                "romanization": "khun aa-yú thâo-rài khráp",
+                "korean_pronunciation": "아유 타오 라이 크랍"
+              },
+              "female": {
+                "thai": "คุณอายุเท่าไหร่คะ",
+                "romanization": "khun aa-yú thâo-rài khá",
+                "korean_pronunciation": "아유 타오 라이 카"
+              }
+            },
+            "audio": {
+              "male": {
+                "normal": "assets/audio/sentences/S10_male_normal.mp3",
+                "slow": "assets/audio/sentences/S10_male_slow.mp3",
+                "repeat3": "assets/audio/sentences/S10_male_repeat3.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/sentences/S10_female_normal.mp3",
+                "slow": "assets/audio/sentences/S10_female_slow.mp3",
+                "repeat3": "assets/audio/sentences/S10_female_repeat3.mp3"
+              }
+            }
+          },
+          {
+            "variantId": "10-2",
+            "phraseId": 10,
+            "category": "daily",
+            "korean": "저는 ~살입니다",
+            "english": "I am ~ years old.",
+            "speech": {
+              "male": {
+                "thai": "ผมอายุ ~ ปีครับ",
+                "romanization": "phŏm aa-yú ~ bpii khráp",
+                "korean_pronunciation": "폼 아유 ~ 삐 크랍"
+              },
+              "female": {
+                "thai": "ฉันอายุ ~ ปีค่ะ",
+                "romanization": "chăn aa-yú ~ bpii khâ",
+                "korean_pronunciation": "찬 아유 ~ 삐 카"
+              }
+            },
+            "audio": {
+              "male": {
+                "normal": "assets/audio/sentences/S10_2_male_normal.mp3",
+                "slow": "assets/audio/sentences/S10_2_male_slow.mp3",
+                "repeat3": "assets/audio/sentences/S10_2_male_repeat3.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/sentences/S10_2_female_normal.mp3",
+                "slow": "assets/audio/sentences/S10_2_female_slow.mp3",
+                "repeat3": "assets/audio/sentences/S10_2_female_repeat3.mp3"
+              }
+            }
+          },
+          {
+            "variantId": "22",
+            "phraseId": 22,
+            "category": "mission",
+            "korean": "우리는 당신들을 사랑해요",
+            "english": "We love you.",
+            "speech": {
+              "male": {
+                "thai": "พวกเรารักคุณครับ",
+                "romanization": "phûak-rao rák khun khráp",
+                "korean_pronunciation": "푸악 라오 락 쿤 크랍"
+              },
+              "female": {
+                "thai": "พวกเรารักคุณค่ะ",
+                "romanization": "phûak-rao rák khun khâ",
+                "korean_pronunciation": "푸악 라오 락 쿤 카"
+              }
+            },
+            "audio": {
+              "male": {
+                "normal": "assets/audio/sentences/S22_male_normal.mp3",
+                "slow": "assets/audio/sentences/S22_male_slow.mp3",
+                "repeat3": "assets/audio/sentences/S22_male_repeat3.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/sentences/S22_female_normal.mp3",
+                "slow": "assets/audio/sentences/S22_female_slow.mp3",
+                "repeat3": "assets/audio/sentences/S22_female_repeat3.mp3"
+              }
+            }
           }
         ],
         "keywords": [
+          {
+            "id": "W012",
+            "variantIds": [
+              "6"
+            ],
+            "korean": "실례합니다/죄송합니다",
+            "english": "excuse me / sorry",
+            "thai": "ขอโทษ",
+            "romanization": "khŏr-thôot",
+            "koreanPronunciation": "커 톳",
+            "tier": "core",
+            "days": [
+              6,
+              10,
+              15,
+              25
+            ],
+            "audio": {
+              "male": {
+                "normal": "assets/audio/words/W012_male_normal.mp3",
+                "slow": "assets/audio/words/W012_male_slow.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/words/W012_female_normal.mp3",
+                "slow": "assets/audio/words/W012_female_slow.mp3"
+              }
+            }
+          },
+          {
+            "id": "W013",
+            "variantIds": [
+              "8",
+              "10",
+              "17",
+              "18",
+              "19",
+              "22",
+              "23"
+            ],
+            "korean": "당신",
+            "english": "you",
+            "thai": "คุณ",
+            "romanization": "khun",
+            "koreanPronunciation": "쿤",
+            "tier": "supplemental",
+            "days": [
+              7,
+              9,
+              10,
+              15,
+              16,
+              17,
+              18,
+              20,
+              22,
+              23,
+              25
+            ],
+            "audio": {
+              "male": {
+                "normal": "assets/audio/words/W013_male_normal.mp3",
+                "slow": "assets/audio/words/W013_male_slow.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/words/W013_female_normal.mp3",
+                "slow": "assets/audio/words/W013_female_slow.mp3"
+              }
+            }
+          },
           {
             "id": "W014",
             "variantIds": [
@@ -22029,36 +22708,181 @@
                 "slow": "assets/audio/words/W017_female_slow.mp3"
               }
             }
+          },
+          {
+            "id": "W018",
+            "variantIds": [
+              "10",
+              "10-2"
+            ],
+            "korean": "나이",
+            "english": "age",
+            "thai": "อายุ",
+            "romanization": "aa-yú",
+            "koreanPronunciation": "아유",
+            "tier": "supplemental",
+            "days": [
+              9,
+              10,
+              15,
+              25
+            ],
+            "audio": {
+              "male": {
+                "normal": "assets/audio/words/W018_male_normal.mp3",
+                "slow": "assets/audio/words/W018_male_slow.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/words/W018_female_normal.mp3",
+                "slow": "assets/audio/words/W018_female_slow.mp3"
+              }
+            }
+          },
+          {
+            "id": "W019",
+            "variantIds": [
+              "10"
+            ],
+            "korean": "얼마",
+            "english": "how much/how many",
+            "thai": "เท่าไหร่",
+            "romanization": "thâo-rài",
+            "koreanPronunciation": "타오 라이",
+            "tier": "supplemental",
+            "days": [
+              9,
+              10,
+              15,
+              25
+            ],
+            "audio": {
+              "male": {
+                "normal": "assets/audio/words/W019_male_normal.mp3",
+                "slow": "assets/audio/words/W019_male_slow.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/words/W019_female_normal.mp3",
+                "slow": "assets/audio/words/W019_female_slow.mp3"
+              }
+            }
+          },
+          {
+            "id": "W050",
+            "variantIds": [
+              "10-2"
+            ],
+            "korean": "살/년",
+            "english": "year(s)",
+            "thai": "ปี",
+            "romanization": "bpii",
+            "koreanPronunciation": "삐",
+            "tier": "core",
+            "days": [
+              9,
+              10,
+              15,
+              25
+            ],
+            "audio": {
+              "male": {
+                "normal": "assets/audio/words/W050_male_normal.mp3",
+                "slow": "assets/audio/words/W050_male_slow.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/words/W050_female_normal.mp3",
+                "slow": "assets/audio/words/W050_female_slow.mp3"
+              }
+            }
+          },
+          {
+            "id": "W043",
+            "variantIds": [
+              "22"
+            ],
+            "korean": "우리",
+            "english": "we/us",
+            "thai": "พวกเรา",
+            "romanization": "phûak-rao",
+            "koreanPronunciation": "푸악 라오",
+            "tier": "supplemental",
+            "days": [
+              22,
+              25
+            ],
+            "audio": {
+              "male": {
+                "normal": "assets/audio/words/W043_male_normal.mp3",
+                "slow": "assets/audio/words/W043_male_slow.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/words/W043_female_normal.mp3",
+                "slow": "assets/audio/words/W043_female_slow.mp3"
+              }
+            }
+          },
+          {
+            "id": "W035",
+            "variantIds": [
+              "17",
+              "18",
+              "22"
+            ],
+            "korean": "사랑하다",
+            "english": "love",
+            "thai": "รัก",
+            "romanization": "rák",
+            "koreanPronunciation": "락",
+            "tier": "core",
+            "days": [
+              16,
+              17,
+              20,
+              22,
+              25
+            ],
+            "audio": {
+              "male": {
+                "normal": "assets/audio/words/W035_male_normal.mp3",
+                "slow": "assets/audio/words/W035_male_slow.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/words/W035_female_normal.mp3",
+                "slow": "assets/audio/words/W035_female_slow.mp3"
+              }
+            }
           }
         ],
         "images": {
           "primaryImage": {
-            "sceneId": null,
-            "altTextKo": "자기소개를 가족·친구에게 말해 보기 학습 장면",
+            "sceneId": "name_intro_conversation",
+            "altTextKo": "교회 친교 자리에서 이름을 묻고 자기 이름을 소개하는 장면",
             "sourcePlan": [
+              {
+                "type": "local_preferred",
+                "assetPath": "assets/images/scenes/name_intro_conversation.jpg",
+                "status": "ready"
+              },
               {
                 "type": "stock_preferred",
                 "queries": [
-                  "자기소개를 가족·친구에게 말해 보기",
-                  ""
+                  "church fellowship two people introducing themselves",
+                  "Asian church conversation after worship",
+                  "friendly introduction conversation church"
                 ],
                 "status": "search_required"
               },
               {
                 "type": "ai_fallback",
                 "prompt": {
-                  "scene": "자기소개를 가족·친구에게 말해 보기",
-                  "peopleAndAction": "",
-                  "setting": "Thai church or daily-life mission context",
-                  "mood": "warm, respectful, practical",
-                  "cameraFraming": "documentary style",
-                  "lighting": "bright natural light",
+                  "scene": "new friends meeting after worship",
+                  "peopleAndAction": "two adults introducing themselves, relaxed smile, respectful posture",
+                  "setting": "church fellowship hall",
+                  "mood": "friendly, welcoming, personal",
+                  "cameraFraming": "medium shot",
+                  "lighting": "bright indoor natural light",
                   "avoidList": [
-                    "blurry or noisy image",
-                    "heavy watermark",
-                    "text embedded in photo",
-                    "theological symbolism without a real scene",
-                    "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
+                    "formal business handshake",
+                    "stage presentation feel"
                   ]
                 },
                 "status": "generate_if_needed"
@@ -22103,10 +22927,48 @@
                   "status": "generate_if_needed"
                 }
               ]
+            },
+            {
+              "keywordId": "W018",
+              "priority": "optional",
+              "sourcePlan": [
+                {
+                  "type": "local_preferred",
+                  "assetPath": "assets/images/keywords/W018.jpg",
+                  "status": "missing"
+                },
+                {
+                  "type": "stock_preferred",
+                  "queries": [
+                    "age realistic photo",
+                    "나이 learning image"
+                  ],
+                  "status": "search_required"
+                },
+                {
+                  "type": "ai_fallback",
+                  "prompt": {
+                    "scene": "single concept image for age",
+                    "peopleAndAction": "show the concept clearly and simply",
+                    "setting": "clean realistic learning image",
+                    "mood": "warm and easy to recognize",
+                    "cameraFraming": "close or medium crop",
+                    "lighting": "bright neutral light",
+                    "avoidList": [
+                      "blurry or noisy image",
+                      "heavy watermark",
+                      "text embedded in photo",
+                      "theological symbolism without a real scene",
+                      "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
+                    ]
+                  },
+                  "status": "generate_if_needed"
+                }
+              ]
             }
           ]
         },
-        "personalMission": "자기 이름을 넣어 3회 말하고, 가까운 사람 한 명에게 태국어로 자기소개한다.",
+        "personalMission": "토요일과 같은 흐름으로 실례합니다, 이름 묻기, 자기소개, 나이 묻고 답하기, 우리는 당신들을 사랑해요까지 3회 반복한다.",
         "delivery": {
           "kakaoCardTemplate": {
             "target": "weekday and sunday shareable mobile card",
@@ -22198,8 +23060,8 @@
               "contentMode": "review_recap",
               "rule": "Sunday cards use the same mobile card renderer as weekdays, but emphasize review phrases and personalMission instead of newPhrases.",
               "contentSource": {
-                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show up to 3 primary review phrases on the card.",
-                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show up to 4 core keywords.",
+                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show all assigned review phrases when the lesson is configured as a full weekend repeat.",
+                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show enough core keywords to support the full repeat flow.",
                 "missionText": "Sunday personalMission rendered as the main action box.",
                 "ministryGuide": "Sunday ministryGuide rendered as the relational guide line."
               }
@@ -22265,10 +23127,41 @@
         "dayType": "sunday",
         "week": 3,
         "theme": "교회 식사와 작별",
-        "title": "식사·칭찬·작별 표현 활용하기",
-        "missionGoal": "일상에서 자주 쓸 수 있는 생활언어를 실제로 꺼내 본다.",
-        "ministryGuide": "생활 속 표현을 먼저 많이 써야 이후 선교 표현도 부담 없이 입에 붙는다.",
+        "title": "생활 대화와 돌봄 종합 복습",
+        "missionGoal": "화장실 묻기, 식사 대화, 격려, 작별, 기도 제안을 주일에 한 번 더 반복해 입에 붙인다.",
+        "ministryGuide": "같은 생활 대화 흐름을 두 번 반복하면 현장에서 도움과 돌봄의 말을 훨씬 자연스럽게 꺼낼 수 있다.",
         "phrases": [
+          {
+            "variantId": "11",
+            "phraseId": 11,
+            "category": "daily",
+            "korean": "화장실 어디 있어요?",
+            "english": "Where is the restroom?",
+            "speech": {
+              "male": {
+                "thai": "ห้องน้ำอยู่ที่ไหนครับ",
+                "romanization": "hông-náam yùu thîi-năi khráp",
+                "korean_pronunciation": "헝남 유 티 나이 크랍"
+              },
+              "female": {
+                "thai": "ห้องน้ำอยู่ที่ไหนคะ",
+                "romanization": "hông-náam yùu thîi-năi khá",
+                "korean_pronunciation": "헝남 유 티 나이 카"
+              }
+            },
+            "audio": {
+              "male": {
+                "normal": "assets/audio/sentences/S11_male_normal.mp3",
+                "slow": "assets/audio/sentences/S11_male_slow.mp3",
+                "repeat3": "assets/audio/sentences/S11_male_repeat3.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/sentences/S11_female_normal.mp3",
+                "slow": "assets/audio/sentences/S11_female_slow.mp3",
+                "repeat3": "assets/audio/sentences/S11_female_repeat3.mp3"
+              }
+            }
+          },
           {
             "variantId": "12",
             "phraseId": 12,
@@ -22423,9 +23316,67 @@
                 "repeat3": "assets/audio/sentences/S16_female_repeat3.mp3"
               }
             }
+          },
+          {
+            "variantId": "23",
+            "phraseId": 23,
+            "category": "mission",
+            "korean": "기도해 드릴게요",
+            "english": "I will pray for you.",
+            "speech": {
+              "male": {
+                "thai": "ผมจะอธิษฐานให้คุณครับ",
+                "romanization": "phŏm jà à-thít-thăan hâi khun khráp",
+                "korean_pronunciation": "폼 짜 아팃탄 하이 쿤 크랍"
+              },
+              "female": {
+                "thai": "ฉันจะอธิษฐานให้คุณค่ะ",
+                "romanization": "chăn jà à-thít-thăan hâi khun khâ",
+                "korean_pronunciation": "찬 짜 아팃탄 하이 쿤 카"
+              }
+            },
+            "audio": {
+              "male": {
+                "normal": "assets/audio/sentences/S23_male_normal.mp3",
+                "slow": "assets/audio/sentences/S23_male_slow.mp3",
+                "repeat3": "assets/audio/sentences/S23_male_repeat3.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/sentences/S23_female_normal.mp3",
+                "slow": "assets/audio/sentences/S23_female_slow.mp3",
+                "repeat3": "assets/audio/sentences/S23_female_repeat3.mp3"
+              }
+            }
           }
         ],
         "keywords": [
+          {
+            "id": "W020",
+            "variantIds": [
+              "11"
+            ],
+            "korean": "화장실",
+            "english": "restroom",
+            "thai": "ห้องน้ำ",
+            "romanization": "hông-náam",
+            "koreanPronunciation": "헝남",
+            "tier": "core",
+            "days": [
+              11,
+              15,
+              25
+            ],
+            "audio": {
+              "male": {
+                "normal": "assets/audio/words/W020_male_normal.mp3",
+                "slow": "assets/audio/words/W020_male_slow.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/words/W020_female_normal.mp3",
+                "slow": "assets/audio/words/W020_female_slow.mp3"
+              }
+            }
+          },
           {
             "id": "W025",
             "variantIds": [
@@ -22508,42 +23459,64 @@
                 "slow": "assets/audio/words/W029_female_slow.mp3"
               }
             }
+          },
+          {
+            "id": "W045",
+            "variantIds": [
+              "23"
+            ],
+            "korean": "기도하다",
+            "english": "pray",
+            "thai": "อธิษฐาน",
+            "romanization": "à-thít-thăan",
+            "koreanPronunciation": "아팃탄",
+            "tier": "core",
+            "days": [
+              23,
+              25
+            ],
+            "audio": {
+              "male": {
+                "normal": "assets/audio/words/W045_male_normal.mp3",
+                "slow": "assets/audio/words/W045_male_slow.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/words/W045_female_normal.mp3",
+                "slow": "assets/audio/words/W045_female_slow.mp3"
+              }
+            }
           }
         ],
         "images": {
           "primaryImage": {
-            "sceneId": "meal_table_fellowship",
-            "altTextKo": "교회 식사 자리에서 음식을 나누며 대화하는 장면",
+            "sceneId": "prayer_support",
+            "altTextKo": "상대를 위로하며 기도해 주겠다고 말하는 장면",
             "sourcePlan": [
               {
                 "type": "local_preferred",
-                "assetPath": "assets/images/scenes/meal_table_fellowship.jpg",
+                "assetPath": "assets/images/scenes/prayer_support.jpg",
                 "status": "ready"
               },
               {
                 "type": "stock_preferred",
                 "queries": [
-                  "church meal fellowship table Thailand",
-                  "people sharing food church fellowship",
-                  "warm community meal church"
+                  "prayer support two people church",
+                  "gentle prayer with friend church"
                 ],
                 "status": "search_required"
               },
               {
                 "type": "ai_fallback",
                 "prompt": {
-                  "scene": "church meal fellowship conversation",
-                  "peopleAndAction": "people share food and smile while offering and enjoying a meal",
-                  "setting": "small Thai church fellowship table",
-                  "mood": "warm, grateful, friendly",
-                  "cameraFraming": "medium wide table scene",
-                  "lighting": "bright warm daylight",
+                  "scene": "offering prayer for someone",
+                  "peopleAndAction": "one person listening with care, another offering prayer support with gentle posture",
+                  "setting": "quiet church corner",
+                  "mood": "peaceful, caring, sincere",
+                  "cameraFraming": "medium shot",
+                  "lighting": "soft indoor light",
                   "avoidList": [
-                    "blurry or noisy image",
-                    "heavy watermark",
-                    "text embedded in photo",
-                    "theological symbolism without a real scene",
-                    "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
+                    "crowded worship stage",
+                    "extreme emotion"
                   ]
                 },
                 "status": "generate_if_needed"
@@ -22551,6 +23524,44 @@
             ]
           },
           "keywordImages": [
+            {
+              "keywordId": "W020",
+              "priority": "preferred",
+              "sourcePlan": [
+                {
+                  "type": "local_preferred",
+                  "assetPath": "assets/images/keywords/W020.jpg",
+                  "status": "missing"
+                },
+                {
+                  "type": "stock_preferred",
+                  "queries": [
+                    "restroom realistic photo",
+                    "화장실 learning image"
+                  ],
+                  "status": "search_required"
+                },
+                {
+                  "type": "ai_fallback",
+                  "prompt": {
+                    "scene": "single concept image for restroom",
+                    "peopleAndAction": "show the concept clearly and simply",
+                    "setting": "clean realistic learning image",
+                    "mood": "warm and easy to recognize",
+                    "cameraFraming": "close or medium crop",
+                    "lighting": "bright neutral light",
+                    "avoidList": [
+                      "blurry or noisy image",
+                      "heavy watermark",
+                      "text embedded in photo",
+                      "theological symbolism without a real scene",
+                      "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
+                    ]
+                  },
+                  "status": "generate_if_needed"
+                }
+              ]
+            },
             {
               "keywordId": "W025",
               "priority": "preferred",
@@ -22664,10 +23675,48 @@
                   "status": "generate_if_needed"
                 }
               ]
+            },
+            {
+              "keywordId": "W045",
+              "priority": "preferred",
+              "sourcePlan": [
+                {
+                  "type": "local_preferred",
+                  "assetPath": "assets/images/keywords/W045.jpg",
+                  "status": "missing"
+                },
+                {
+                  "type": "stock_preferred",
+                  "queries": [
+                    "pray realistic photo",
+                    "기도하다 learning image"
+                  ],
+                  "status": "search_required"
+                },
+                {
+                  "type": "ai_fallback",
+                  "prompt": {
+                    "scene": "single concept image for pray",
+                    "peopleAndAction": "show the concept clearly and simply",
+                    "setting": "clean realistic learning image",
+                    "mood": "warm and easy to recognize",
+                    "cameraFraming": "close or medium crop",
+                    "lighting": "bright neutral light",
+                    "avoidList": [
+                      "blurry or noisy image",
+                      "heavy watermark",
+                      "text embedded in photo",
+                      "theological symbolism without a real scene",
+                      "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
+                    ]
+                  },
+                  "status": "generate_if_needed"
+                }
+              ]
             }
           ]
         },
-        "personalMission": "식사 자리에서 맛있어요를 1회 말하고, 가까운 사람에게 참 잘했어요 또는 다시 만나요를 말한다.",
+        "personalMission": "토요일과 같은 흐름으로 화장실 묻기, 식사 대화, 격려, 작별, 기도해 드릴게요까지 3회 반복한다.",
         "delivery": {
           "kakaoCardTemplate": {
             "target": "weekday and sunday shareable mobile card",
@@ -22759,8 +23808,8 @@
               "contentMode": "review_recap",
               "rule": "Sunday cards use the same mobile card renderer as weekdays, but emphasize review phrases and personalMission instead of newPhrases.",
               "contentSource": {
-                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show up to 3 primary review phrases on the card.",
-                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show up to 4 core keywords.",
+                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show all assigned review phrases when the lesson is configured as a full weekend repeat.",
+                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show enough core keywords to support the full repeat flow.",
                 "missionText": "Sunday personalMission rendered as the main action box.",
                 "ministryGuide": "Sunday ministryGuide rendered as the relational guide line."
               }
@@ -22826,10 +23875,72 @@
         "dayType": "sunday",
         "week": 4,
         "theme": "사랑과 축복 전하기",
-        "title": "사랑·축복 문장을 천천히 말해 보기",
-        "missionGoal": "선교 문장을 기계적으로 외우지 않고 진심과 함께 말한다.",
-        "ministryGuide": "마음을 담아 천천히 말할수록 같은 문장도 훨씬 깊게 전달된다.",
+        "title": "사랑·축복·찬양 초대 종합 복습",
+        "missionGoal": "사랑, 축복, 하나님은 사랑, 찬양 초대 문장을 주일에 한 번 더 반복해 입에 붙인다.",
+        "ministryGuide": "같은 선교 언어 흐름을 주말에 두 번 반복하면 실제 현장에서 사랑과 축복의 말을 더 차분하게 전할 수 있다.",
         "phrases": [
+          {
+            "variantId": "1",
+            "phraseId": 1,
+            "category": "daily",
+            "korean": "안녕하세요",
+            "english": "Hello / Hi",
+            "speech": {
+              "male": {
+                "thai": "สวัสดีครับ",
+                "romanization": "sà-wàt-dii khráp",
+                "korean_pronunciation": "싸왓디 크랍"
+              },
+              "female": {
+                "thai": "สวัสดีค่ะ",
+                "romanization": "sà-wàt-dii khâ",
+                "korean_pronunciation": "싸왓디 카"
+              }
+            },
+            "audio": {
+              "male": {
+                "normal": "assets/audio/sentences/S1_male_normal.mp3",
+                "slow": "assets/audio/sentences/S1_male_slow.mp3",
+                "repeat3": "assets/audio/sentences/S1_male_repeat3.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/sentences/S1_female_normal.mp3",
+                "slow": "assets/audio/sentences/S1_female_slow.mp3",
+                "repeat3": "assets/audio/sentences/S1_female_repeat3.mp3"
+              }
+            }
+          },
+          {
+            "variantId": "14",
+            "phraseId": 14,
+            "category": "daily",
+            "korean": "참 잘했어요",
+            "english": "Very good!",
+            "speech": {
+              "male": {
+                "thai": "เก่งมากครับ",
+                "romanization": "gèng mâak khráp",
+                "korean_pronunciation": "깽 막 크랍"
+              },
+              "female": {
+                "thai": "เก่งมากค่ะ",
+                "romanization": "gèng mâak khâ",
+                "korean_pronunciation": "깽 막 카"
+              }
+            },
+            "audio": {
+              "male": {
+                "normal": "assets/audio/sentences/S14_male_normal.mp3",
+                "slow": "assets/audio/sentences/S14_male_slow.mp3",
+                "repeat3": "assets/audio/sentences/S14_male_repeat3.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/sentences/S14_female_normal.mp3",
+                "slow": "assets/audio/sentences/S14_female_slow.mp3",
+                "repeat3": "assets/audio/sentences/S14_female_repeat3.mp3"
+              }
+            }
+          },
           {
             "variantId": "17",
             "phraseId": 17,
@@ -22953,9 +24064,101 @@
                 "repeat3": "assets/audio/sentences/S20_female_repeat3.mp3"
               }
             }
+          },
+          {
+            "variantId": "24",
+            "phraseId": 24,
+            "category": "mission",
+            "korean": "함께 찬양해요",
+            "english": "Let's sing praise together.",
+            "speech": {
+              "male": {
+                "thai": "มาร้องเพลงสรรเสริญด้วยกันครับ",
+                "romanization": "maa-róng-phleeng săn-sĕern dûuai-gan khráp",
+                "korean_pronunciation": "마 롱 플렝 싼쓴 두아이깐 크랍"
+              },
+              "female": {
+                "thai": "มาร้องเพลงสรรเสริญด้วยกันค่ะ",
+                "romanization": "maa-róng-phleeng săn-sĕern dûuai-gan khâ",
+                "korean_pronunciation": "마 롱 플렝 싼쓴 두아이깐 카"
+              }
+            },
+            "audio": {
+              "male": {
+                "normal": "assets/audio/sentences/S24_male_normal.mp3",
+                "slow": "assets/audio/sentences/S24_male_slow.mp3",
+                "repeat3": "assets/audio/sentences/S24_male_repeat3.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/sentences/S24_female_normal.mp3",
+                "slow": "assets/audio/sentences/S24_female_slow.mp3",
+                "repeat3": "assets/audio/sentences/S24_female_repeat3.mp3"
+              }
+            }
           }
         ],
         "keywords": [
+          {
+            "id": "W001",
+            "variantIds": [
+              "1",
+              "2-1",
+              "2-2"
+            ],
+            "korean": "안녕하세요",
+            "english": "hello",
+            "thai": "สวัสดี",
+            "romanization": "sà-wàt-dii",
+            "koreanPronunciation": "싸왓디",
+            "tier": "core",
+            "days": [
+              1,
+              2,
+              5,
+              10,
+              15,
+              20,
+              25
+            ],
+            "audio": {
+              "male": {
+                "normal": "assets/audio/words/W001_male_normal.mp3",
+                "slow": "assets/audio/words/W001_male_slow.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/words/W001_female_normal.mp3",
+                "slow": "assets/audio/words/W001_female_slow.mp3"
+              }
+            }
+          },
+          {
+            "id": "W028",
+            "variantIds": [
+              "14"
+            ],
+            "korean": "잘하다/똑똑하다",
+            "english": "good/skilled",
+            "thai": "เก่ง",
+            "romanization": "gèng",
+            "koreanPronunciation": "깽",
+            "tier": "core",
+            "days": [
+              13,
+              15,
+              20,
+              25
+            ],
+            "audio": {
+              "male": {
+                "normal": "assets/audio/words/W028_male_normal.mp3",
+                "slow": "assets/audio/words/W028_male_slow.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/words/W028_female_normal.mp3",
+                "slow": "assets/audio/words/W028_female_slow.mp3"
+              }
+            }
+          },
           {
             "id": "W033",
             "variantIds": [
@@ -23042,6 +24245,58 @@
                 "slow": "assets/audio/words/W040_female_slow.mp3"
               }
             }
+          },
+          {
+            "id": "W048",
+            "variantIds": [
+              "24"
+            ],
+            "korean": "찬양하다",
+            "english": "praise",
+            "thai": "สรรเสริญ",
+            "romanization": "săn-sĕern",
+            "koreanPronunciation": "싼쓴",
+            "tier": "core",
+            "days": [
+              24,
+              25
+            ],
+            "audio": {
+              "male": {
+                "normal": "assets/audio/words/W048_male_normal.mp3",
+                "slow": "assets/audio/words/W048_male_slow.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/words/W048_female_normal.mp3",
+                "slow": "assets/audio/words/W048_female_slow.mp3"
+              }
+            }
+          },
+          {
+            "id": "W049",
+            "variantIds": [
+              "24"
+            ],
+            "korean": "함께",
+            "english": "together",
+            "thai": "ด้วยกัน",
+            "romanization": "dûuai-gan",
+            "koreanPronunciation": "두아이깐",
+            "tier": "core",
+            "days": [
+              24,
+              25
+            ],
+            "audio": {
+              "male": {
+                "normal": "assets/audio/words/W049_male_normal.mp3",
+                "slow": "assets/audio/words/W049_male_slow.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/words/W049_female_normal.mp3",
+                "slow": "assets/audio/words/W049_female_slow.mp3"
+              }
+            }
           }
         ],
         "images": {
@@ -23085,6 +24340,44 @@
             ]
           },
           "keywordImages": [
+            {
+              "keywordId": "W028",
+              "priority": "optional",
+              "sourcePlan": [
+                {
+                  "type": "local_preferred",
+                  "assetPath": "assets/images/keywords/W028.jpg",
+                  "status": "missing"
+                },
+                {
+                  "type": "stock_preferred",
+                  "queries": [
+                    "good/skilled realistic photo",
+                    "잘하다/똑똑하다 learning image"
+                  ],
+                  "status": "search_required"
+                },
+                {
+                  "type": "ai_fallback",
+                  "prompt": {
+                    "scene": "single concept image for good/skilled",
+                    "peopleAndAction": "show the concept clearly and simply",
+                    "setting": "clean realistic learning image",
+                    "mood": "warm and easy to recognize",
+                    "cameraFraming": "close or medium crop",
+                    "lighting": "bright neutral light",
+                    "avoidList": [
+                      "blurry or noisy image",
+                      "heavy watermark",
+                      "text embedded in photo",
+                      "theological symbolism without a real scene",
+                      "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
+                    ]
+                  },
+                  "status": "generate_if_needed"
+                }
+              ]
+            },
             {
               "keywordId": "W033",
               "priority": "optional",
@@ -23160,10 +24453,48 @@
                   "status": "generate_if_needed"
                 }
               ]
+            },
+            {
+              "keywordId": "W048",
+              "priority": "preferred",
+              "sourcePlan": [
+                {
+                  "type": "local_preferred",
+                  "assetPath": "assets/images/keywords/W048.jpg",
+                  "status": "missing"
+                },
+                {
+                  "type": "stock_preferred",
+                  "queries": [
+                    "praise realistic photo",
+                    "찬양하다 learning image"
+                  ],
+                  "status": "search_required"
+                },
+                {
+                  "type": "ai_fallback",
+                  "prompt": {
+                    "scene": "single concept image for praise",
+                    "peopleAndAction": "show the concept clearly and simply",
+                    "setting": "clean realistic learning image",
+                    "mood": "warm and easy to recognize",
+                    "cameraFraming": "close or medium crop",
+                    "lighting": "bright neutral light",
+                    "avoidList": [
+                      "blurry or noisy image",
+                      "heavy watermark",
+                      "text embedded in photo",
+                      "theological symbolism without a real scene",
+                      "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
+                    ]
+                  },
+                  "status": "generate_if_needed"
+                }
+              ]
             }
           ]
         },
-        "personalMission": "가까운 사람 한 명을 떠올리며 사랑 문장 1회, 축복 문장 1회를 진심으로 말한다.",
+        "personalMission": "토요일과 같은 흐름으로 인사, 격려, 예수님의 사랑, 하나님의 사랑, 축복, 하나님은 사랑, 함께 찬양해요까지 3회 반복한다.",
         "delivery": {
           "kakaoCardTemplate": {
             "target": "weekday and sunday shareable mobile card",
@@ -23255,8 +24586,8 @@
               "contentMode": "review_recap",
               "rule": "Sunday cards use the same mobile card renderer as weekdays, but emphasize review phrases and personalMission instead of newPhrases.",
               "contentSource": {
-                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show up to 3 primary review phrases on the card.",
-                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show up to 4 core keywords.",
+                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show all assigned review phrases when the lesson is configured as a full weekend repeat.",
+                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show enough core keywords to support the full repeat flow.",
                 "missionText": "Sunday personalMission rendered as the main action box.",
                 "ministryGuide": "Sunday ministryGuide rendered as the relational guide line."
               }
@@ -24253,8 +25584,8 @@
               "contentMode": "review_recap",
               "rule": "Sunday cards use the same mobile card renderer as weekdays, but emphasize review phrases and personalMission instead of newPhrases.",
               "contentSource": {
-                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show up to 3 primary review phrases on the card.",
-                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show up to 4 core keywords.",
+                "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show all assigned review phrases when the lesson is configured as a full weekend repeat.",
+                "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show enough core keywords to support the full repeat flow.",
                 "missionText": "Sunday personalMission rendered as the main action box.",
                 "ministryGuide": "Sunday ministryGuide rendered as the relational guide line."
               }

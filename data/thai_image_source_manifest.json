@@ -136,7 +136,8 @@
         "W2D7",
         "W2D8",
         "W5D22",
-        "W2SAT"
+        "W2SAT",
+        "W2SUN"
       ],
       "localAsset": "assets/images/scenes/name_intro_conversation.jpg",
       "stockSearchQueries": [
@@ -168,7 +169,10 @@
     {
       "sceneId": "prayer_support",
       "useFor": [
-        "W5D23"
+        "W3D15",
+        "W5D23",
+        "W3SAT",
+        "W3SUN"
       ],
       "localAsset": null,
       "stockSearchQueries": [
@@ -493,9 +497,7 @@
     {
       "sceneId": "meal_table_fellowship",
       "useFor": [
-        "W3D12",
-        "W3SAT",
-        "W3SUN"
+        "W3D12"
       ],
       "localAsset": "assets/images/scenes/meal_table_fellowship.jpg",
       "stockSearchQueries": [

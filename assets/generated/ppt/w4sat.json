@@ -4,10 +4,10 @@
   "id": "W4SAT",
   "week": 4,
   "theme": "사랑과 축복 전하기",
-  "title": "마음을 돌보고 축복하기",
-  "roleplayScene": "교회 행사에서 만난 이웃에게 인사하고, 삶을 격려하며, 하나님의 사랑과 축복을 전한다.",
-  "missionGoal": "관계 위에 사랑과 축복의 메시지를 자연스럽게 얹는 법을 익힌다.",
-  "ministryGuide": "먼저 따뜻하게 격려하고 축복할 때 선교 문장이 더 자연스럽고 거부감 없이 전해진다.",
+  "title": "사랑·축복·찬양 초대 종합 복습",
+  "roleplayScene": "교회 행사에서 만난 이웃에게 인사하고, 삶을 격려하며, 예수님과 하나님의 사랑, 하나님의 축복, 하나님은 사랑이십니다, 함께 찬양해요를 한 흐름으로 전한다.",
+  "missionGoal": "사랑, 축복, 하나님은 사랑, 찬양 초대 문장을 한 흐름으로 복습한다.",
+  "ministryGuide": "먼저 따뜻하게 격려하고 축복한 뒤 찬양 초대로 이어 가면 선교 문장이 공동체 안으로 자연스럽게 연결된다.",
   "primaryImage": {
     "sceneId": "god_bless_you",
     "altTextKo": "하나님의 축복을 전하며 따뜻하게 격려하는 장면",
@@ -145,6 +145,44 @@
           "type": "ai_fallback",
           "prompt": {
             "scene": "single concept image for God",
+            "peopleAndAction": "show the concept clearly and simply",
+            "setting": "clean realistic learning image",
+            "mood": "warm and easy to recognize",
+            "cameraFraming": "close or medium crop",
+            "lighting": "bright neutral light",
+            "avoidList": [
+              "blurry or noisy image",
+              "heavy watermark",
+              "text embedded in photo",
+              "theological symbolism without a real scene",
+              "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
+            ]
+          },
+          "status": "generate_if_needed"
+        }
+      ]
+    },
+    {
+      "keywordId": "W048",
+      "priority": "preferred",
+      "sourcePlan": [
+        {
+          "type": "local_preferred",
+          "assetPath": "assets/images/keywords/W048.jpg",
+          "status": "missing"
+        },
+        {
+          "type": "stock_preferred",
+          "queries": [
+            "praise realistic photo",
+            "찬양하다 learning image"
+          ],
+          "status": "search_required"
+        },
+        {
+          "type": "ai_fallback",
+          "prompt": {
+            "scene": "single concept image for praise",
             "peopleAndAction": "show the concept clearly and simply",
             "setting": "clean realistic learning image",
             "mood": "warm and easy to recognize",
@@ -349,6 +387,37 @@
           "repeat3": "assets/audio/sentences/S20_female_repeat3.mp3"
         }
       }
+    },
+    {
+      "variantId": "24",
+      "phraseId": 24,
+      "category": "mission",
+      "korean": "함께 찬양해요",
+      "english": "Let's sing praise together.",
+      "speech": {
+        "male": {
+          "thai": "มาร้องเพลงสรรเสริญด้วยกันครับ",
+          "romanization": "maa-róng-phleeng săn-sĕern dûuai-gan khráp",
+          "korean_pronunciation": "마 롱 플렝 싼쓴 두아이깐 크랍"
+        },
+        "female": {
+          "thai": "มาร้องเพลงสรรเสริญด้วยกันค่ะ",
+          "romanization": "maa-róng-phleeng săn-sĕern dûuai-gan khâ",
+          "korean_pronunciation": "마 롱 플렝 싼쓴 두아이깐 카"
+        }
+      },
+      "audio": {
+        "male": {
+          "normal": "assets/audio/sentences/S24_male_normal.mp3",
+          "slow": "assets/audio/sentences/S24_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S24_male_repeat3.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/sentences/S24_female_normal.mp3",
+          "slow": "assets/audio/sentences/S24_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S24_female_repeat3.mp3"
+        }
+      }
     }
   ],
   "keywords": [
@@ -497,6 +566,58 @@
         "female": {
           "normal": "assets/audio/words/W040_female_normal.mp3",
           "slow": "assets/audio/words/W040_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W048",
+      "variantIds": [
+        "24"
+      ],
+      "korean": "찬양하다",
+      "english": "praise",
+      "thai": "สรรเสริญ",
+      "romanization": "săn-sĕern",
+      "koreanPronunciation": "싼쓴",
+      "tier": "core",
+      "days": [
+        24,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W048_male_normal.mp3",
+          "slow": "assets/audio/words/W048_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W048_female_normal.mp3",
+          "slow": "assets/audio/words/W048_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W049",
+      "variantIds": [
+        "24"
+      ],
+      "korean": "함께",
+      "english": "together",
+      "thai": "ด้วยกัน",
+      "romanization": "dûuai-gan",
+      "koreanPronunciation": "두아이깐",
+      "tier": "core",
+      "days": [
+        24,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W049_male_normal.mp3",
+          "slow": "assets/audio/words/W049_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W049_female_normal.mp3",
+          "slow": "assets/audio/words/W049_female_slow.mp3"
         }
       }
     }

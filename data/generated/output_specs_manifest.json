@@ -2,10 +2,10 @@
   "version": 1,
   "generatedFrom": "data/generated/thai_lesson_bundles.json",
   "sourceHashes": {
-    "curriculum": "6bbe5c2b9a6375ab097363726bf5e298b70c6fc8d8af75bf5eb854c38a412bc6",
+    "curriculum": "3fadad4dab088de8135819287eace665d5f18b57ca2ee58305d581e8d99cc00e",
     "assets": "c8c63283edcbc359c95bef3be52fc305539c7e7cff6dfd731b6f22c426c3ef64",
-    "templateSpecs": "b02f47651239e478b3156c95a4e2ea064d9a9d6989b048d54f4a8ffbbc725811",
-    "imageManifest": "629171190ff113e4c4649fafcb52b959b16aab4ba63044b790a5fc393fee9ca0"
+    "templateSpecs": "887efdd6e9a0570368278be4b74a597430a6f41b9e6ba53652127dc8fe96659b",
+    "imageManifest": "25ac81f5e5757745dd38ab939f74ca975360e160eb73283bb22109930d97aa95"
   },
   "files": [
     {

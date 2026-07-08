@@ -1,31 +1,13 @@
 {
   "version": 1,
-  "kind": "kakao_card_spec",
-  "id": "W4SUN",
-  "dayType": "sunday",
-  "contentMode": "review_recap",
-  "sundayFormat": {
-    "rendererTemplate": "same_canvas_same_renderer",
-    "contentMode": "review_recap",
-    "rule": "Sunday cards use the same mobile card renderer as weekdays, but emphasize review phrases and personalMission instead of newPhrases.",
-    "contentSource": {
-      "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show all assigned review phrases when the lesson is configured as a full weekend repeat.",
-      "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show enough core keywords to support the full repeat flow.",
-      "missionText": "Sunday personalMission rendered as the main action box.",
-      "ministryGuide": "Sunday ministryGuide rendered as the relational guide line."
-    }
-  },
-  "contentSource": {
-    "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show all assigned review phrases when the lesson is configured as a full weekend repeat.",
-    "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show enough core keywords to support the full repeat flow.",
-    "missionText": "Sunday personalMission rendered as the main action box.",
-    "ministryGuide": "Sunday ministryGuide rendered as the relational guide line."
-  },
+  "kind": "pwa_lesson_spec",
+  "id": "DATE_REVIEW_2026_07_25",
   "week": 4,
   "day": null,
-  "theme": "사랑과 축복 전하기",
-  "title": "사랑·축복·찬양 초대 종합 복습",
+  "theme": "사랑·축복·찬양 초대",
+  "title": "토요일 4주차 복습",
   "hook": "토요일과 같은 흐름으로 인사, 격려, 예수님의 사랑, 하나님의 사랑, 축복, 하나님은 사랑, 함께 찬양해요까지 3회 반복한다.",
+  "story": "4주차에 배운 사랑, 축복, 하나님은 사랑, 찬양 초대 문장을 같은 흐름으로 반복한다.",
   "missionGoal": "사랑, 축복, 하나님은 사랑, 찬양 초대 문장을 주일에 한 번 더 반복해 입에 붙인다.",
   "ministryGuide": "같은 선교 언어 흐름을 주말에 두 번 반복하면 실제 현장에서 사랑과 축복의 말을 더 차분하게 전할 수 있다.",
   "speakingMission": "토요일과 같은 흐름으로 인사, 격려, 예수님의 사랑, 하나님의 사랑, 축복, 하나님은 사랑, 함께 찬양해요까지 3회 반복한다.",
@@ -222,225 +204,7 @@
       ]
     }
   ],
-  "mainPhrases": [
-    {
-      "variantId": "1",
-      "phraseId": 1,
-      "category": "daily",
-      "korean": "안녕하세요",
-      "english": "Hello / Hi",
-      "speech": {
-        "male": {
-          "thai": "สวัสดีครับ",
-          "romanization": "sà-wàt-dii khráp",
-          "korean_pronunciation": "싸왓디 크랍"
-        },
-        "female": {
-          "thai": "สวัสดีค่ะ",
-          "romanization": "sà-wàt-dii khâ",
-          "korean_pronunciation": "싸왓디 카"
-        }
-      },
-      "audio": {
-        "male": {
-          "normal": "assets/audio/sentences/S1_male_normal.mp3",
-          "slow": "assets/audio/sentences/S1_male_slow.mp3",
-          "repeat3": "assets/audio/sentences/S1_male_repeat3.mp3"
-        },
-        "female": {
-          "normal": "assets/audio/sentences/S1_female_normal.mp3",
-          "slow": "assets/audio/sentences/S1_female_slow.mp3",
-          "repeat3": "assets/audio/sentences/S1_female_repeat3.mp3"
-        }
-      }
-    },
-    {
-      "variantId": "14",
-      "phraseId": 14,
-      "category": "daily",
-      "korean": "참 잘했어요",
-      "english": "Very good!",
-      "speech": {
-        "male": {
-          "thai": "เก่งมากครับ",
-          "romanization": "gèng mâak khráp",
-          "korean_pronunciation": "깽 막 크랍"
-        },
-        "female": {
-          "thai": "เก่งมากค่ะ",
-          "romanization": "gèng mâak khâ",
-          "korean_pronunciation": "깽 막 카"
-        }
-      },
-      "audio": {
-        "male": {
-          "normal": "assets/audio/sentences/S14_male_normal.mp3",
-          "slow": "assets/audio/sentences/S14_male_slow.mp3",
-          "repeat3": "assets/audio/sentences/S14_male_repeat3.mp3"
-        },
-        "female": {
-          "normal": "assets/audio/sentences/S14_female_normal.mp3",
-          "slow": "assets/audio/sentences/S14_female_slow.mp3",
-          "repeat3": "assets/audio/sentences/S14_female_repeat3.mp3"
-        }
-      }
-    },
-    {
-      "variantId": "17",
-      "phraseId": 17,
-      "category": "mission",
-      "korean": "예수님이 당신을 사랑해요",
-      "english": "Jesus loves you.",
-      "speech": {
-        "male": {
-          "thai": "พระเยซูทรงรักคุณครับ",
-          "romanization": "Phrá-yeh-suu song-rák khun khráp",
-          "korean_pronunciation": "프라예쑤 쏭 락 쿤 크랍"
-        },
-        "female": {
-          "thai": "พระเยซูทรงรักคุณค่ะ",
-          "romanization": "Phrá-yeh-suu song-rák khun khâ",
-          "korean_pronunciation": "프라예쑤 쏭 락 쿤 카"
-        }
-      },
-      "audio": {
-        "male": {
-          "normal": "assets/audio/sentences/S17_male_normal.mp3",
-          "slow": "assets/audio/sentences/S17_male_slow.mp3",
-          "repeat3": "assets/audio/sentences/S17_male_repeat3.mp3"
-        },
-        "female": {
-          "normal": "assets/audio/sentences/S17_female_normal.mp3",
-          "slow": "assets/audio/sentences/S17_female_slow.mp3",
-          "repeat3": "assets/audio/sentences/S17_female_repeat3.mp3"
-        }
-      }
-    },
-    {
-      "variantId": "18",
-      "phraseId": 18,
-      "category": "mission",
-      "korean": "하나님은 당신을 사랑해요",
-      "english": "God loves you.",
-      "speech": {
-        "male": {
-          "thai": "พระเจ้าทรงรักคุณครับ",
-          "romanization": "Phrá-jâo song-rák khun khráp",
-          "korean_pronunciation": "프라짜오 쏭 락 쿤 크랍"
-        },
-        "female": {
-          "thai": "พระเจ้าทรงรักคุณค่ะ",
-          "romanization": "Phrá-jâo song-rák khun khâ",
-          "korean_pronunciation": "프라짜오 쏭 락 쿤 카"
-        }
-      },
-      "audio": {
-        "male": {
-          "normal": "assets/audio/sentences/S18_male_normal.mp3",
-          "slow": "assets/audio/sentences/S18_male_slow.mp3",
-          "repeat3": "assets/audio/sentences/S18_male_repeat3.mp3"
-        },
-        "female": {
-          "normal": "assets/audio/sentences/S18_female_normal.mp3",
-          "slow": "assets/audio/sentences/S18_female_slow.mp3",
-          "repeat3": "assets/audio/sentences/S18_female_repeat3.mp3"
-        }
-      }
-    },
-    {
-      "variantId": "19",
-      "phraseId": 19,
-      "category": "mission",
-      "korean": "하나님의 축복을!",
-      "english": "God bless you!",
-      "speech": {
-        "male": {
-          "thai": "ขอพระเจ้าอวยพรคุณครับ",
-          "romanization": "khŏr Phrá-jâo uay-phon khun khráp",
-          "korean_pronunciation": "커 프라짜오 우아이폰 쿤 크랍"
-        },
-        "female": {
-          "thai": "ขอพระเจ้าอวยพรคุณค่ะ",
-          "romanization": "khŏr Phrá-jâo uay-phon khun khâ",
-          "korean_pronunciation": "커 프라짜오 우아이폰 쿤 카"
-        }
-      },
-      "audio": {
-        "male": {
-          "normal": "assets/audio/sentences/S19_male_normal.mp3",
-          "slow": "assets/audio/sentences/S19_male_slow.mp3",
-          "repeat3": "assets/audio/sentences/S19_male_repeat3.mp3"
-        },
-        "female": {
-          "normal": "assets/audio/sentences/S19_female_normal.mp3",
-          "slow": "assets/audio/sentences/S19_female_slow.mp3",
-          "repeat3": "assets/audio/sentences/S19_female_repeat3.mp3"
-        }
-      }
-    },
-    {
-      "variantId": "20",
-      "phraseId": 20,
-      "category": "mission",
-      "korean": "하나님은 사랑이십니다",
-      "english": "God is love.",
-      "speech": {
-        "male": {
-          "thai": "พระเจ้าทรงเป็นความรักครับ",
-          "romanization": "Phrá-jâo song-pen khwaam-rák khráp",
-          "korean_pronunciation": "프라짜오 쏭 뻰 쾀락 크랍"
-        },
-        "female": {
-          "thai": "พระเจ้าทรงเป็นความรักค่ะ",
-          "romanization": "Phrá-jâo song-pen khwaam-rák khâ",
-          "korean_pronunciation": "프라짜오 쏭 뻰 쾀락 카"
-        }
-      },
-      "audio": {
-        "male": {
-          "normal": "assets/audio/sentences/S20_male_normal.mp3",
-          "slow": "assets/audio/sentences/S20_male_slow.mp3",
-          "repeat3": "assets/audio/sentences/S20_male_repeat3.mp3"
-        },
-        "female": {
-          "normal": "assets/audio/sentences/S20_female_normal.mp3",
-          "slow": "assets/audio/sentences/S20_female_slow.mp3",
-          "repeat3": "assets/audio/sentences/S20_female_repeat3.mp3"
-        }
-      }
-    },
-    {
-      "variantId": "24",
-      "phraseId": 24,
-      "category": "mission",
-      "korean": "함께 찬양해요",
-      "english": "Let's sing praise together.",
-      "speech": {
-        "male": {
-          "thai": "มาร้องเพลงสรรเสริญด้วยกันครับ",
-          "romanization": "maa-róng-phleeng săn-sĕern dûuai-gan khráp",
-          "korean_pronunciation": "마 롱 플렝 싼쓴 두아이깐 크랍"
-        },
-        "female": {
-          "thai": "มาร้องเพลงสรรเสริญด้วยกันค่ะ",
-          "romanization": "maa-róng-phleeng săn-sĕern dûuai-gan khâ",
-          "korean_pronunciation": "마 롱 플렝 싼쓴 두아이깐 카"
-        }
-      },
-      "audio": {
-        "male": {
-          "normal": "assets/audio/sentences/S24_male_normal.mp3",
-          "slow": "assets/audio/sentences/S24_male_slow.mp3",
-          "repeat3": "assets/audio/sentences/S24_male_repeat3.mp3"
-        },
-        "female": {
-          "normal": "assets/audio/sentences/S24_female_normal.mp3",
-          "slow": "assets/audio/sentences/S24_female_slow.mp3",
-          "repeat3": "assets/audio/sentences/S24_female_repeat3.mp3"
-        }
-      }
-    }
-  ],
+  "newPhrases": [],
   "reviewPhrases": [
     {
       "variantId": "1",
@@ -834,6 +598,32 @@
           "slow": "assets/audio/words/W048_female_slow.mp3"
         }
       }
+    },
+    {
+      "id": "W049",
+      "variantIds": [
+        "24"
+      ],
+      "korean": "함께",
+      "english": "together",
+      "thai": "ด้วยกัน",
+      "romanization": "dûuai-gan",
+      "koreanPronunciation": "두아이깐",
+      "tier": "core",
+      "days": [
+        24,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W049_male_normal.mp3",
+          "slow": "assets/audio/words/W049_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W049_female_normal.mp3",
+          "slow": "assets/audio/words/W049_female_slow.mp3"
+        }
+      }
     }
   ],
   "displayKeywords": [
@@ -1012,29 +802,115 @@
       }
     }
   ],
+  "supplementLinks": [],
   "supplementalKeywords": [],
   "keywordDisplayPolicy": {
-    "default": "keyWordIds_order",
-    "toggleSupplemental": false
+    "default": "week1_weekend_date_review_keywords",
+    "toggleSupplemental": false,
+    "emptyCoreFallback": "show_first_three_keywords"
   },
-  "audioModes": [
-    "normal",
-    "slow",
-    "repeat3"
-  ],
-  "layout": {
-    "canvas": {
-      "width": 1080,
-      "height": 1350
+  "learnerProfile": {
+    "ageRange": "primarily older Korean adults; source plan average age about 58",
+    "smartphoneLiteracy": "low_to_moderate",
+    "uxDefaults": {
+      "minimumTapTargetPx": 48,
+      "audioPlayback": "manual_user_triggered",
+      "localStorageFailure": "silent_degrade_with_reset_option",
+      "defaultTextScale": "large"
+    }
+  },
+  "statePolicy": {
+    "storage": "localStorage",
+    "schemaVersion": 1,
+    "namespace": "thai25",
+    "keys": {
+      "schemaVersion": {
+        "key": "thai25.schemaVersion",
+        "type": "number",
+        "default": 1
+      },
+      "currentDay": {
+        "key": "thai25.currentDay",
+        "type": "number",
+        "default": 1
+      },
+      "completedLessonIds": {
+        "key": "thai25.completedLessonIds",
+        "type": "string[]",
+        "default": []
+      },
+      "lastOpenedLessonId": {
+        "key": "thai25.lastOpenedLessonId",
+        "type": "string|null",
+        "default": null
+      },
+      "speakerPreference": {
+        "key": "thai25.speakerPreference",
+        "type": "\"male\"|\"female\"",
+        "default": "female"
+      },
+      "audioSpeedPreference": {
+        "key": "thai25.audioSpeedPreference",
+        "type": "\"normal\"|\"slow\"|\"repeat3\"",
+        "default": "normal"
+      },
+      "showSupplementalKeywords": {
+        "key": "thai25.showSupplementalKeywords",
+        "type": "boolean",
+        "default": false
+      }
     },
-    "sections": [
-      "header",
-      "heroImage",
-      "mainPhrases",
-      "reviewStrip",
-      "keywordStrip",
-      "missionBox",
-      "footer"
-    ]
-  }
+    "resetSupported": true,
+    "fallback": "If localStorage is unavailable, keep the lesson usable with stateless navigation and show no blocking error."
+  },
+  "imageMissingFallback": {
+    "behavior": "show_placeholder_panel",
+    "placeholderTextSource": "primaryImage.altTextKo",
+    "visualStyle": "light neutral panel with scene label; preserve image aspect ratio so layout does not shift when real image is added",
+    "allowRenderWithoutImageFile": true
+  },
+  "controls": {
+    "sentenceAudioModes": [
+      "normal",
+      "slow",
+      "repeat3"
+    ],
+    "wordAudioModes": [
+      "normal",
+      "slow"
+    ],
+    "speakerModes": [
+      "male",
+      "female"
+    ],
+    "audioSpeedControlPlacement": {
+      "placement": "inline_sentence_audio_toolbar",
+      "visibleOptions": [
+        "normal",
+        "slow",
+        "repeat3"
+      ],
+      "default": "normal",
+      "reason": "Older learners should not have to find a settings screen to slow down audio."
+    }
+  },
+  "completion": {
+    "checkAction": "lesson_complete",
+    "shareAction": "open_kakao_share_card",
+    "nextAction": "open_2026_07_05_review_or_repeat"
+  },
+  "dayType": "date_review",
+  "displayDayLabel": "2026-07-25 복습",
+  "previewNavLinks": [
+    {
+      "label": "7/25 복습",
+      "href": "?date=2026-07-25",
+      "active": true
+    },
+    {
+      "label": "7/26 복습",
+      "href": "?date=2026-07-26",
+      "active": false
+    }
+  ]
 }

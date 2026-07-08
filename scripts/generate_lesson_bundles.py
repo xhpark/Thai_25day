@@ -366,6 +366,8 @@ def _kakao_spec(item: dict[str, Any]) -> dict[str, Any]:
     supplemental_keywords = [keyword for keyword in item["keywords"] if keyword.get("tier") == "supplemental"]
     kakao_template = item["delivery"]["kakaoCardTemplate"]
     content_mode = "review_recap" if item["dayType"] == "sunday" or not item.get("newPhrases") else "daily_lesson"
+    review_display = review if item["dayType"] == "sunday" else review[:4]
+    keyword_display_limit = 6 if item["dayType"] == "sunday" else 4
     return {
         "version": 1,
         "kind": "kakao_card_spec",
@@ -390,9 +392,9 @@ def _kakao_spec(item: dict[str, Any]) -> dict[str, Any]:
         "primaryImage": item["images"]["primaryImage"],
         "keywordImages": item["images"]["keywordImages"],
         "mainPhrases": phrases,
-        "reviewPhrases": review[:4],
+        "reviewPhrases": review_display,
         "keywords": item["keywords"][:6],
-        "displayKeywords": item["keywords"][:4],
+        "displayKeywords": item["keywords"][:keyword_display_limit],
         "supplementalKeywords": supplemental_keywords,
         "keywordDisplayPolicy": {
             "default": "keyWordIds_order",

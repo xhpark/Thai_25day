@@ -81,7 +81,7 @@
 - 검색어: church hallway restroom direction; person asking where restroom is church; friendly wayfinding in church building
 
 ### meal_table_fellowship
-- 사용 날짜: W3D12, W3SAT
+- 사용 날짜: W3D12
 - 필요한 장면: 교회 식사 자리에서 음식을 나누며 대화하는 장면
 - 권장 파일명: assets/images/scenes/meal_table_fellowship.jpg
 - 현재 상태: 준비됨
@@ -102,7 +102,7 @@
 - 검색어: church farewell waving goodbye Thailand; warm goodbye after church meeting; people saying see you again church
 
 ### prayer_support
-- 사용 날짜: W3D15, W5D23
+- 사용 날짜: W3D15, W5D23, W3SAT
 - 필요한 장면: 상대의 이야기를 듣고 기도해 드리겠다고 따뜻하게 말하는 장면
 - 권장 파일명: assets/images/scenes/prayer_support.jpg
 - 현재 상태: 준비됨
@@ -334,24 +334,24 @@
 - 파일명: assets/images/scenes/greeting_church_gate.jpg
 - 상태: 준비됨
 
-### W2SAT 예배 후 새 친구 만나기
+### W2SAT 예배 후 새 친구 만나기 종합 복습
 - 구분: 토요일
 - 필요한 장면: 교회 친교 자리에서 이름을 묻고 자기 이름을 소개하는 장면
-- 스토리: 예배 후 식사 자리에서 한국 선교팀과 태국 교회 성도가 만난다. 정중히 말을 걸고, 이름을 묻고, 각자 자기소개를 한다.
+- 스토리: 예배 후 식사 자리에서 한국 선교팀과 태국 교회 성도가 만난다. 정중히 말을 걸고, 이름을 묻고, 각자 자기소개를 하며, 나이를 묻고 답한 뒤 공동체의 사랑을 전한다.
 - 파일명: assets/images/scenes/name_intro_conversation.jpg
 - 상태: 준비됨
 
-### W3SAT 교회 식사 자리에서 다시 만나기
+### W3SAT 생활 대화와 돌봄 종합 복습
 - 구분: 토요일
-- 필요한 장면: 교회 식사 자리에서 음식을 나누며 대화하는 장면
-- 스토리: 교회 행사에 참여한 방문객이 식사 자리에서 도움을 요청하고, 음식을 칭찬하며, 봉사자에게 감사한 뒤 다음 만남을 약속한다.
-- 파일명: assets/images/scenes/meal_table_fellowship.jpg
+- 필요한 장면: 상대를 위로하며 기도해 주겠다고 말하는 장면
+- 스토리: 교회 행사에 참여한 방문객이 화장실 위치를 묻고, 식사 자리에서 음식을 권하고 칭찬하며, 서로 격려하고 작별 인사를 나눈 뒤 기도해 드리겠다고 말한다.
+- 파일명: assets/images/scenes/prayer_support.jpg
 - 상태: 준비됨
 
-### W4SAT 마음을 돌보고 축복하기
+### W4SAT 사랑·축복·찬양 초대 종합 복습
 - 구분: 토요일
 - 필요한 장면: 하나님의 축복을 전하며 따뜻하게 격려하는 장면
-- 스토리: 교회 행사에서 만난 이웃에게 인사하고, 삶을 격려하며, 하나님의 사랑과 축복을 전한다.
+- 스토리: 교회 행사에서 만난 이웃에게 인사하고, 삶을 격려하며, 예수님과 하나님의 사랑, 하나님의 축복, 하나님은 사랑이십니다, 함께 찬양해요를 한 흐름으로 전한다.
 - 파일명: assets/images/scenes/god_bless_you.jpg
 - 상태: 준비됨
 

@@ -3,21 +3,22 @@
   "kind": "teacher_script_spec",
   "id": "W2SAT",
   "week": 2,
-  "title": "예배 후 새 친구 만나기",
-  "roleplayScene": "예배 후 식사 자리에서 한국 선교팀과 태국 교회 성도가 만난다. 정중히 말을 걸고, 이름을 묻고, 각자 자기소개를 한다.",
+  "title": "예배 후 새 친구 만나기 종합 복습",
+  "roleplayScene": "예배 후 식사 자리에서 한국 선교팀과 태국 교회 성도가 만난다. 정중히 말을 걸고, 이름을 묻고, 각자 자기소개를 하며, 나이를 묻고 답한 뒤 공동체의 사랑을 전한다.",
   "contextHeader": {
-    "lessonGoal": "정중한 접근과 자기소개 흐름을 현장형 대화로 연습한다.",
+    "lessonGoal": "정중한 접근, 자기소개, 나이 질문과 대답, 공동체 사랑 표현을 한 흐름으로 연습한다.",
     "learnersHaveCovered": "학습자는 2주차 평일 표현과 이번 주 누적 복습을 마친 상태다.",
     "successLooksLike": "학습자가 남성형/여성형 어미를 구분하며 핵심 표현을 짝과 함께 소리 내어 말하고, 따뜻한 선교적 태도로 역할극에 참여하면 성공이다."
   },
-  "missionGoal": "정중한 접근과 자기소개 흐름을 현장형 대화로 연습한다.",
-  "ministryGuide": "상대의 이름을 기억하고 다시 불러 주면 관계가 깊어지고 대화의 문도 넓어진다.",
+  "missionGoal": "정중한 접근, 자기소개, 나이 질문과 대답, 공동체 사랑 표현을 한 흐름으로 연습한다.",
+  "ministryGuide": "상대의 이름을 기억하고 다시 불러 주며, 자기소개와 나이 대답 뒤에 공동체의 사랑을 전하면 첫 만남이 따뜻한 환대로 이어진다.",
   "teacherFlow": [
     "예배 후 식사 장면 소개",
     "핵심 문장 따라 말하기",
     "질문형/평서형 어미 구분",
     "이름 묻기 역할극",
-    "자기소개 역할극",
+    "자기소개와 나이 묻고 답하기 역할극",
+    "공동체 사랑 표현 연결",
     "주일 활용 미션 안내"
   ],
   "phrases": [
@@ -237,6 +238,37 @@
           "repeat3": "assets/audio/sentences/S10_2_female_repeat3.mp3"
         }
       }
+    },
+    {
+      "variantId": "22",
+      "phraseId": 22,
+      "category": "mission",
+      "korean": "우리는 당신들을 사랑해요",
+      "english": "We love you.",
+      "speech": {
+        "male": {
+          "thai": "พวกเรารักคุณครับ",
+          "romanization": "phûak-rao rák khun khráp",
+          "korean_pronunciation": "푸악 라오 락 쿤 크랍"
+        },
+        "female": {
+          "thai": "พวกเรารักคุณค่ะ",
+          "romanization": "phûak-rao rák khun khâ",
+          "korean_pronunciation": "푸악 라오 락 쿤 카"
+        }
+      },
+      "audio": {
+        "male": {
+          "normal": "assets/audio/sentences/S22_male_normal.mp3",
+          "slow": "assets/audio/sentences/S22_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S22_male_repeat3.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/sentences/S22_female_normal.mp3",
+          "slow": "assets/audio/sentences/S22_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S22_female_repeat3.mp3"
+        }
+      }
     }
   ],
   "keywords": [
@@ -400,6 +432,148 @@
           "slow": "assets/audio/words/W017_female_slow.mp3"
         }
       }
+    },
+    {
+      "id": "W018",
+      "variantIds": [
+        "10",
+        "10-2"
+      ],
+      "korean": "나이",
+      "english": "age",
+      "thai": "อายุ",
+      "romanization": "aa-yú",
+      "koreanPronunciation": "아유",
+      "tier": "supplemental",
+      "days": [
+        9,
+        10,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W018_male_normal.mp3",
+          "slow": "assets/audio/words/W018_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W018_female_normal.mp3",
+          "slow": "assets/audio/words/W018_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W019",
+      "variantIds": [
+        "10"
+      ],
+      "korean": "얼마",
+      "english": "how much/how many",
+      "thai": "เท่าไหร่",
+      "romanization": "thâo-rài",
+      "koreanPronunciation": "타오 라이",
+      "tier": "supplemental",
+      "days": [
+        9,
+        10,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W019_male_normal.mp3",
+          "slow": "assets/audio/words/W019_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W019_female_normal.mp3",
+          "slow": "assets/audio/words/W019_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W050",
+      "variantIds": [
+        "10-2"
+      ],
+      "korean": "살/년",
+      "english": "year(s)",
+      "thai": "ปี",
+      "romanization": "bpii",
+      "koreanPronunciation": "삐",
+      "tier": "core",
+      "days": [
+        9,
+        10,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W050_male_normal.mp3",
+          "slow": "assets/audio/words/W050_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W050_female_normal.mp3",
+          "slow": "assets/audio/words/W050_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W043",
+      "variantIds": [
+        "22"
+      ],
+      "korean": "우리",
+      "english": "we/us",
+      "thai": "พวกเรา",
+      "romanization": "phûak-rao",
+      "koreanPronunciation": "푸악 라오",
+      "tier": "supplemental",
+      "days": [
+        22,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W043_male_normal.mp3",
+          "slow": "assets/audio/words/W043_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W043_female_normal.mp3",
+          "slow": "assets/audio/words/W043_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W035",
+      "variantIds": [
+        "17",
+        "18",
+        "22"
+      ],
+      "korean": "사랑하다",
+      "english": "love",
+      "thai": "รัก",
+      "romanization": "rák",
+      "koreanPronunciation": "락",
+      "tier": "core",
+      "days": [
+        16,
+        17,
+        20,
+        22,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W035_male_normal.mp3",
+          "slow": "assets/audio/words/W035_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W035_female_normal.mp3",
+          "slow": "assets/audio/words/W035_female_slow.mp3"
+        }
+      }
     }
   ],
   "imageNotes": {
@@ -461,6 +635,44 @@
             "type": "ai_fallback",
             "prompt": {
               "scene": "single concept image for name",
+              "peopleAndAction": "show the concept clearly and simply",
+              "setting": "clean realistic learning image",
+              "mood": "warm and easy to recognize",
+              "cameraFraming": "close or medium crop",
+              "lighting": "bright neutral light",
+              "avoidList": [
+                "blurry or noisy image",
+                "heavy watermark",
+                "text embedded in photo",
+                "theological symbolism without a real scene",
+                "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
+              ]
+            },
+            "status": "generate_if_needed"
+          }
+        ]
+      },
+      {
+        "keywordId": "W018",
+        "priority": "optional",
+        "sourcePlan": [
+          {
+            "type": "local_preferred",
+            "assetPath": "assets/images/keywords/W018.jpg",
+            "status": "missing"
+          },
+          {
+            "type": "stock_preferred",
+            "queries": [
+              "age realistic photo",
+              "나이 learning image"
+            ],
+            "status": "search_required"
+          },
+          {
+            "type": "ai_fallback",
+            "prompt": {
+              "scene": "single concept image for age",
               "peopleAndAction": "show the concept clearly and simply",
               "setting": "clean realistic learning image",
               "mood": "warm and easy to recognize",

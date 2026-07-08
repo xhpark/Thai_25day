@@ -3,22 +3,22 @@
   "kind": "teacher_script_spec",
   "id": "W3SAT",
   "week": 3,
-  "title": "교회 식사 자리에서 다시 만나기",
-  "roleplayScene": "교회 행사에 참여한 방문객이 식사 자리에서 도움을 요청하고, 음식을 칭찬하며, 봉사자에게 감사한 뒤 다음 만남을 약속한다.",
+  "title": "생활 대화와 돌봄 종합 복습",
+  "roleplayScene": "교회 행사에 참여한 방문객이 화장실 위치를 묻고, 식사 자리에서 음식을 권하고 칭찬하며, 서로 격려하고 작별 인사를 나눈 뒤 기도해 드리겠다고 말한다.",
   "contextHeader": {
-    "lessonGoal": "생활 속 대화로 관계를 더 따뜻하게 이어 간다.",
+    "lessonGoal": "화장실 묻기, 식사 대화, 격려, 작별, 기도 제안을 한 흐름으로 복습한다.",
     "learnersHaveCovered": "학습자는 3주차 평일 표현과 이번 주 누적 복습을 마친 상태다.",
     "successLooksLike": "학습자가 남성형/여성형 어미를 구분하며 핵심 표현을 짝과 함께 소리 내어 말하고, 따뜻한 선교적 태도로 역할극에 참여하면 성공이다."
   },
-  "missionGoal": "생활 속 대화로 관계를 더 따뜻하게 이어 간다.",
-  "ministryGuide": "돕고 칭찬하고 따뜻하게 헤어지는 흐름이 쌓이면 복음적 대화도 훨씬 자연스럽게 이어진다.",
+  "missionGoal": "화장실 묻기, 식사 대화, 격려, 작별, 기도 제안을 한 흐름으로 복습한다.",
+  "ministryGuide": "돕고 칭찬하고 따뜻하게 헤어진 뒤 기도로 돌보겠다고 말하면 생활 대화가 자연스럽게 선교적 돌봄으로 이어진다.",
   "teacherFlow": [
-    "교회 식사 자리 장면 소개",
-    "화장실 질문과 식사 표현 따라 말하기",
-    "칭찬과 작별 표현 억양 점검",
-    "두 역할로 역할극",
-    "역할 바꾸기",
-    "다음 주 사랑·축복 예고"
+    "교회 행사와 식사 자리 장면 소개",
+    "화장실 묻기와 식사 대화 따라 말하기",
+    "격려와 작별 표현 연결",
+    "기도해 드릴게요 문장 연습",
+    "생활 대화에서 돌봄으로 이어지는 역할극",
+    "주일 동일 복습 미션 안내"
   ],
   "phrases": [
     {
@@ -206,6 +206,37 @@
           "repeat3": "assets/audio/sentences/S16_female_repeat3.mp3"
         }
       }
+    },
+    {
+      "variantId": "23",
+      "phraseId": 23,
+      "category": "mission",
+      "korean": "기도해 드릴게요",
+      "english": "I will pray for you.",
+      "speech": {
+        "male": {
+          "thai": "ผมจะอธิษฐานให้คุณครับ",
+          "romanization": "phŏm jà à-thít-thăan hâi khun khráp",
+          "korean_pronunciation": "폼 짜 아팃탄 하이 쿤 크랍"
+        },
+        "female": {
+          "thai": "ฉันจะอธิษฐานให้คุณค่ะ",
+          "romanization": "chăn jà à-thít-thăan hâi khun khâ",
+          "korean_pronunciation": "찬 짜 아팃탄 하이 쿤 카"
+        }
+      },
+      "audio": {
+        "male": {
+          "normal": "assets/audio/sentences/S23_male_normal.mp3",
+          "slow": "assets/audio/sentences/S23_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S23_male_repeat3.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/sentences/S23_female_normal.mp3",
+          "slow": "assets/audio/sentences/S23_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S23_female_repeat3.mp3"
+        }
+      }
     }
   ],
   "keywords": [
@@ -318,42 +349,64 @@
           "slow": "assets/audio/words/W029_female_slow.mp3"
         }
       }
+    },
+    {
+      "id": "W045",
+      "variantIds": [
+        "23"
+      ],
+      "korean": "기도하다",
+      "english": "pray",
+      "thai": "อธิษฐาน",
+      "romanization": "à-thít-thăan",
+      "koreanPronunciation": "아팃탄",
+      "tier": "core",
+      "days": [
+        23,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W045_male_normal.mp3",
+          "slow": "assets/audio/words/W045_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W045_female_normal.mp3",
+          "slow": "assets/audio/words/W045_female_slow.mp3"
+        }
+      }
     }
   ],
   "imageNotes": {
     "primaryImage": {
-      "sceneId": "meal_table_fellowship",
-      "altTextKo": "교회 식사 자리에서 음식을 나누며 대화하는 장면",
+      "sceneId": "prayer_support",
+      "altTextKo": "상대를 위로하며 기도해 주겠다고 말하는 장면",
       "sourcePlan": [
         {
           "type": "local_preferred",
-          "assetPath": "assets/images/scenes/meal_table_fellowship.jpg",
+          "assetPath": "assets/images/scenes/prayer_support.jpg",
           "status": "ready"
         },
         {
           "type": "stock_preferred",
           "queries": [
-            "church meal fellowship table Thailand",
-            "people sharing food church fellowship",
-            "warm community meal church"
+            "prayer support two people church",
+            "gentle prayer with friend church"
           ],
           "status": "search_required"
         },
         {
           "type": "ai_fallback",
           "prompt": {
-            "scene": "church meal fellowship conversation",
-            "peopleAndAction": "people share food and smile while offering and enjoying a meal",
-            "setting": "small Thai church fellowship table",
-            "mood": "warm, grateful, friendly",
-            "cameraFraming": "medium wide table scene",
-            "lighting": "bright warm daylight",
+            "scene": "offering prayer for someone",
+            "peopleAndAction": "one person listening with care, another offering prayer support with gentle posture",
+            "setting": "quiet church corner",
+            "mood": "peaceful, caring, sincere",
+            "cameraFraming": "medium shot",
+            "lighting": "soft indoor light",
             "avoidList": [
-              "blurry or noisy image",
-              "heavy watermark",
-              "text embedded in photo",
-              "theological symbolism without a real scene",
-              "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
+              "crowded worship stage",
+              "extreme emotion"
             ]
           },
           "status": "generate_if_needed"
@@ -496,6 +549,44 @@
             "type": "ai_fallback",
             "prompt": {
               "scene": "single concept image for goodbye",
+              "peopleAndAction": "show the concept clearly and simply",
+              "setting": "clean realistic learning image",
+              "mood": "warm and easy to recognize",
+              "cameraFraming": "close or medium crop",
+              "lighting": "bright neutral light",
+              "avoidList": [
+                "blurry or noisy image",
+                "heavy watermark",
+                "text embedded in photo",
+                "theological symbolism without a real scene",
+                "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
+              ]
+            },
+            "status": "generate_if_needed"
+          }
+        ]
+      },
+      {
+        "keywordId": "W045",
+        "priority": "preferred",
+        "sourcePlan": [
+          {
+            "type": "local_preferred",
+            "assetPath": "assets/images/keywords/W045.jpg",
+            "status": "missing"
+          },
+          {
+            "type": "stock_preferred",
+            "queries": [
+              "pray realistic photo",
+              "기도하다 learning image"
+            ],
+            "status": "search_required"
+          },
+          {
+            "type": "ai_fallback",
+            "prompt": {
+              "scene": "single concept image for pray",
               "peopleAndAction": "show the concept clearly and simply",
               "setting": "clean realistic learning image",
               "mood": "warm and easy to recognize",

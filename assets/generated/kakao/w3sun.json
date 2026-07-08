@@ -9,59 +9,55 @@
     "contentMode": "review_recap",
     "rule": "Sunday cards use the same mobile card renderer as weekdays, but emphasize review phrases and personalMission instead of newPhrases.",
     "contentSource": {
-      "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show up to 3 primary review phrases on the card.",
-      "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show up to 4 core keywords.",
+      "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show all assigned review phrases when the lesson is configured as a full weekend repeat.",
+      "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show enough core keywords to support the full repeat flow.",
       "missionText": "Sunday personalMission rendered as the main action box.",
       "ministryGuide": "Sunday ministryGuide rendered as the relational guide line."
     }
   },
   "contentSource": {
-    "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show up to 3 primary review phrases on the card.",
-    "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show up to 4 core keywords.",
+    "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show all assigned review phrases when the lesson is configured as a full weekend repeat.",
+    "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show enough core keywords to support the full repeat flow.",
     "missionText": "Sunday personalMission rendered as the main action box.",
     "ministryGuide": "Sunday ministryGuide rendered as the relational guide line."
   },
   "week": 3,
   "day": null,
   "theme": "교회 식사와 작별",
-  "title": "식사·칭찬·작별 표현 활용하기",
-  "hook": "식사 자리에서 맛있어요를 1회 말하고, 가까운 사람에게 참 잘했어요 또는 다시 만나요를 말한다.",
-  "missionGoal": "일상에서 자주 쓸 수 있는 생활언어를 실제로 꺼내 본다.",
-  "ministryGuide": "생활 속 표현을 먼저 많이 써야 이후 선교 표현도 부담 없이 입에 붙는다.",
-  "speakingMission": "식사 자리에서 맛있어요를 1회 말하고, 가까운 사람에게 참 잘했어요 또는 다시 만나요를 말한다.",
+  "title": "생활 대화와 돌봄 종합 복습",
+  "hook": "토요일과 같은 흐름으로 화장실 묻기, 식사 대화, 격려, 작별, 기도해 드릴게요까지 3회 반복한다.",
+  "missionGoal": "화장실 묻기, 식사 대화, 격려, 작별, 기도 제안을 주일에 한 번 더 반복해 입에 붙인다.",
+  "ministryGuide": "같은 생활 대화 흐름을 두 번 반복하면 현장에서 도움과 돌봄의 말을 훨씬 자연스럽게 꺼낼 수 있다.",
+  "speakingMission": "토요일과 같은 흐름으로 화장실 묻기, 식사 대화, 격려, 작별, 기도해 드릴게요까지 3회 반복한다.",
   "primaryImage": {
-    "sceneId": "meal_table_fellowship",
-    "altTextKo": "교회 식사 자리에서 음식을 나누며 대화하는 장면",
+    "sceneId": "prayer_support",
+    "altTextKo": "상대를 위로하며 기도해 주겠다고 말하는 장면",
     "sourcePlan": [
       {
         "type": "local_preferred",
-        "assetPath": "assets/images/scenes/meal_table_fellowship.jpg",
+        "assetPath": "assets/images/scenes/prayer_support.jpg",
         "status": "ready"
       },
       {
         "type": "stock_preferred",
         "queries": [
-          "church meal fellowship table Thailand",
-          "people sharing food church fellowship",
-          "warm community meal church"
+          "prayer support two people church",
+          "gentle prayer with friend church"
         ],
         "status": "search_required"
       },
       {
         "type": "ai_fallback",
         "prompt": {
-          "scene": "church meal fellowship conversation",
-          "peopleAndAction": "people share food and smile while offering and enjoying a meal",
-          "setting": "small Thai church fellowship table",
-          "mood": "warm, grateful, friendly",
-          "cameraFraming": "medium wide table scene",
-          "lighting": "bright warm daylight",
+          "scene": "offering prayer for someone",
+          "peopleAndAction": "one person listening with care, another offering prayer support with gentle posture",
+          "setting": "quiet church corner",
+          "mood": "peaceful, caring, sincere",
+          "cameraFraming": "medium shot",
+          "lighting": "soft indoor light",
           "avoidList": [
-            "blurry or noisy image",
-            "heavy watermark",
-            "text embedded in photo",
-            "theological symbolism without a real scene",
-            "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
+            "crowded worship stage",
+            "extreme emotion"
           ]
         },
         "status": "generate_if_needed"
@@ -69,6 +65,44 @@
     ]
   },
   "keywordImages": [
+    {
+      "keywordId": "W020",
+      "priority": "preferred",
+      "sourcePlan": [
+        {
+          "type": "local_preferred",
+          "assetPath": "assets/images/keywords/W020.jpg",
+          "status": "missing"
+        },
+        {
+          "type": "stock_preferred",
+          "queries": [
+            "restroom realistic photo",
+            "화장실 learning image"
+          ],
+          "status": "search_required"
+        },
+        {
+          "type": "ai_fallback",
+          "prompt": {
+            "scene": "single concept image for restroom",
+            "peopleAndAction": "show the concept clearly and simply",
+            "setting": "clean realistic learning image",
+            "mood": "warm and easy to recognize",
+            "cameraFraming": "close or medium crop",
+            "lighting": "bright neutral light",
+            "avoidList": [
+              "blurry or noisy image",
+              "heavy watermark",
+              "text embedded in photo",
+              "theological symbolism without a real scene",
+              "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
+            ]
+          },
+          "status": "generate_if_needed"
+        }
+      ]
+    },
     {
       "keywordId": "W025",
       "priority": "preferred",
@@ -182,9 +216,78 @@
           "status": "generate_if_needed"
         }
       ]
+    },
+    {
+      "keywordId": "W045",
+      "priority": "preferred",
+      "sourcePlan": [
+        {
+          "type": "local_preferred",
+          "assetPath": "assets/images/keywords/W045.jpg",
+          "status": "missing"
+        },
+        {
+          "type": "stock_preferred",
+          "queries": [
+            "pray realistic photo",
+            "기도하다 learning image"
+          ],
+          "status": "search_required"
+        },
+        {
+          "type": "ai_fallback",
+          "prompt": {
+            "scene": "single concept image for pray",
+            "peopleAndAction": "show the concept clearly and simply",
+            "setting": "clean realistic learning image",
+            "mood": "warm and easy to recognize",
+            "cameraFraming": "close or medium crop",
+            "lighting": "bright neutral light",
+            "avoidList": [
+              "blurry or noisy image",
+              "heavy watermark",
+              "text embedded in photo",
+              "theological symbolism without a real scene",
+              "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
+            ]
+          },
+          "status": "generate_if_needed"
+        }
+      ]
     }
   ],
   "mainPhrases": [
+    {
+      "variantId": "11",
+      "phraseId": 11,
+      "category": "daily",
+      "korean": "화장실 어디 있어요?",
+      "english": "Where is the restroom?",
+      "speech": {
+        "male": {
+          "thai": "ห้องน้ำอยู่ที่ไหนครับ",
+          "romanization": "hông-náam yùu thîi-năi khráp",
+          "korean_pronunciation": "헝남 유 티 나이 크랍"
+        },
+        "female": {
+          "thai": "ห้องน้ำอยู่ที่ไหนคะ",
+          "romanization": "hông-náam yùu thîi-năi khá",
+          "korean_pronunciation": "헝남 유 티 나이 카"
+        }
+      },
+      "audio": {
+        "male": {
+          "normal": "assets/audio/sentences/S11_male_normal.mp3",
+          "slow": "assets/audio/sentences/S11_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S11_male_repeat3.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/sentences/S11_female_normal.mp3",
+          "slow": "assets/audio/sentences/S11_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S11_female_repeat3.mp3"
+        }
+      }
+    },
     {
       "variantId": "12",
       "phraseId": 12,
@@ -339,9 +442,71 @@
           "repeat3": "assets/audio/sentences/S16_female_repeat3.mp3"
         }
       }
+    },
+    {
+      "variantId": "23",
+      "phraseId": 23,
+      "category": "mission",
+      "korean": "기도해 드릴게요",
+      "english": "I will pray for you.",
+      "speech": {
+        "male": {
+          "thai": "ผมจะอธิษฐานให้คุณครับ",
+          "romanization": "phŏm jà à-thít-thăan hâi khun khráp",
+          "korean_pronunciation": "폼 짜 아팃탄 하이 쿤 크랍"
+        },
+        "female": {
+          "thai": "ฉันจะอธิษฐานให้คุณค่ะ",
+          "romanization": "chăn jà à-thít-thăan hâi khun khâ",
+          "korean_pronunciation": "찬 짜 아팃탄 하이 쿤 카"
+        }
+      },
+      "audio": {
+        "male": {
+          "normal": "assets/audio/sentences/S23_male_normal.mp3",
+          "slow": "assets/audio/sentences/S23_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S23_male_repeat3.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/sentences/S23_female_normal.mp3",
+          "slow": "assets/audio/sentences/S23_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S23_female_repeat3.mp3"
+        }
+      }
     }
   ],
   "reviewPhrases": [
+    {
+      "variantId": "11",
+      "phraseId": 11,
+      "category": "daily",
+      "korean": "화장실 어디 있어요?",
+      "english": "Where is the restroom?",
+      "speech": {
+        "male": {
+          "thai": "ห้องน้ำอยู่ที่ไหนครับ",
+          "romanization": "hông-náam yùu thîi-năi khráp",
+          "korean_pronunciation": "헝남 유 티 나이 크랍"
+        },
+        "female": {
+          "thai": "ห้องน้ำอยู่ที่ไหนคะ",
+          "romanization": "hông-náam yùu thîi-năi khá",
+          "korean_pronunciation": "헝남 유 티 나이 카"
+        }
+      },
+      "audio": {
+        "male": {
+          "normal": "assets/audio/sentences/S11_male_normal.mp3",
+          "slow": "assets/audio/sentences/S11_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S11_male_repeat3.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/sentences/S11_female_normal.mp3",
+          "slow": "assets/audio/sentences/S11_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S11_female_repeat3.mp3"
+        }
+      }
+    },
     {
       "variantId": "12",
       "phraseId": 12,
@@ -465,9 +630,98 @@
           "repeat3": "assets/audio/sentences/S15_female_repeat3.mp3"
         }
       }
+    },
+    {
+      "variantId": "16",
+      "phraseId": 16,
+      "category": "daily",
+      "korean": "다시 만나요",
+      "english": "See you again.",
+      "speech": {
+        "male": {
+          "thai": "แล้วพบกันใหม่ครับ",
+          "romanization": "láew phóp-gan mài khráp",
+          "korean_pronunciation": "래우 폽깐 마이 크랍"
+        },
+        "female": {
+          "thai": "แล้วพบกันใหม่ค่ะ",
+          "romanization": "láew phóp-gan mài khâ",
+          "korean_pronunciation": "래우 폽깐 마이 카"
+        }
+      },
+      "audio": {
+        "male": {
+          "normal": "assets/audio/sentences/S16_male_normal.mp3",
+          "slow": "assets/audio/sentences/S16_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S16_male_repeat3.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/sentences/S16_female_normal.mp3",
+          "slow": "assets/audio/sentences/S16_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S16_female_repeat3.mp3"
+        }
+      }
+    },
+    {
+      "variantId": "23",
+      "phraseId": 23,
+      "category": "mission",
+      "korean": "기도해 드릴게요",
+      "english": "I will pray for you.",
+      "speech": {
+        "male": {
+          "thai": "ผมจะอธิษฐานให้คุณครับ",
+          "romanization": "phŏm jà à-thít-thăan hâi khun khráp",
+          "korean_pronunciation": "폼 짜 아팃탄 하이 쿤 크랍"
+        },
+        "female": {
+          "thai": "ฉันจะอธิษฐานให้คุณค่ะ",
+          "romanization": "chăn jà à-thít-thăan hâi khun khâ",
+          "korean_pronunciation": "찬 짜 아팃탄 하이 쿤 카"
+        }
+      },
+      "audio": {
+        "male": {
+          "normal": "assets/audio/sentences/S23_male_normal.mp3",
+          "slow": "assets/audio/sentences/S23_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S23_male_repeat3.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/sentences/S23_female_normal.mp3",
+          "slow": "assets/audio/sentences/S23_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S23_female_repeat3.mp3"
+        }
+      }
     }
   ],
   "keywords": [
+    {
+      "id": "W020",
+      "variantIds": [
+        "11"
+      ],
+      "korean": "화장실",
+      "english": "restroom",
+      "thai": "ห้องน้ำ",
+      "romanization": "hông-náam",
+      "koreanPronunciation": "헝남",
+      "tier": "core",
+      "days": [
+        11,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W020_male_normal.mp3",
+          "slow": "assets/audio/words/W020_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W020_female_normal.mp3",
+          "slow": "assets/audio/words/W020_female_slow.mp3"
+        }
+      }
+    },
     {
       "id": "W025",
       "variantIds": [
@@ -548,12 +802,65 @@
         "female": {
           "normal": "assets/audio/words/W029_female_normal.mp3",
           "slow": "assets/audio/words/W029_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W045",
+      "variantIds": [
+        "23"
+      ],
+      "korean": "기도하다",
+      "english": "pray",
+      "thai": "อธิษฐาน",
+      "romanization": "à-thít-thăan",
+      "koreanPronunciation": "아팃탄",
+      "tier": "core",
+      "days": [
+        23,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W045_male_normal.mp3",
+          "slow": "assets/audio/words/W045_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W045_female_normal.mp3",
+          "slow": "assets/audio/words/W045_female_slow.mp3"
         }
       }
     }
   ],
   "displayKeywords": [
     {
+      "id": "W020",
+      "variantIds": [
+        "11"
+      ],
+      "korean": "화장실",
+      "english": "restroom",
+      "thai": "ห้องน้ำ",
+      "romanization": "hông-náam",
+      "koreanPronunciation": "헝남",
+      "tier": "core",
+      "days": [
+        11,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W020_male_normal.mp3",
+          "slow": "assets/audio/words/W020_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W020_female_normal.mp3",
+          "slow": "assets/audio/words/W020_female_slow.mp3"
+        }
+      }
+    },
+    {
       "id": "W025",
       "variantIds": [
         "12",
@@ -633,6 +940,32 @@
         "female": {
           "normal": "assets/audio/words/W029_female_normal.mp3",
           "slow": "assets/audio/words/W029_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W045",
+      "variantIds": [
+        "23"
+      ],
+      "korean": "기도하다",
+      "english": "pray",
+      "thai": "อธิษฐาน",
+      "romanization": "à-thít-thăan",
+      "koreanPronunciation": "아팃탄",
+      "tier": "core",
+      "days": [
+        23,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W045_male_normal.mp3",
+          "slow": "assets/audio/words/W045_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W045_female_normal.mp3",
+          "slow": "assets/audio/words/W045_female_slow.mp3"
         }
       }
     }

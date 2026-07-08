@@ -168,8 +168,8 @@
         "contentMode": "review_recap",
         "rule": "Sunday cards use the same mobile card renderer as weekdays, but emphasize review phrases and personalMission instead of newPhrases.",
         "contentSource": {
-          "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show up to 3 primary review phrases on the card.",
-          "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show up to 4 core keywords.",
+          "phrases": "Sunday schedule reviewVariantIds rendered as reviewPhrases; show all assigned review phrases when the lesson is configured as a full weekend repeat.",
+          "keywords": "Sunday schedule keyWordIds filtered through displayKeywords; show enough core keywords to support the full repeat flow.",
           "missionText": "Sunday personalMission rendered as the main action box.",
           "ministryGuide": "Sunday ministryGuide rendered as the relational guide line."
         }

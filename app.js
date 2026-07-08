@@ -47,7 +47,13 @@ function specUrlForDay(day) {
 function specUrlForDateReview(date) {
   return {
     "2026-07-04": "assets/generated/pwa/review_2026_07_04.json",
-    "2026-07-05": "assets/generated/pwa/review_2026_07_05.json"
+    "2026-07-05": "assets/generated/pwa/review_2026_07_05.json",
+    "2026-07-11": "assets/generated/pwa/review_2026_07_11.json",
+    "2026-07-12": "assets/generated/pwa/review_2026_07_12.json",
+    "2026-07-18": "assets/generated/pwa/review_2026_07_18.json",
+    "2026-07-19": "assets/generated/pwa/review_2026_07_19.json",
+    "2026-07-25": "assets/generated/pwa/review_2026_07_25.json",
+    "2026-07-26": "assets/generated/pwa/review_2026_07_26.json"
   }[date] || null;
 }
 

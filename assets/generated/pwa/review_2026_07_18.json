@@ -1,13 +1,16 @@
 {
   "version": 1,
-  "kind": "review_sheet_spec",
-  "id": "W3SUN",
+  "kind": "pwa_lesson_spec",
+  "id": "DATE_REVIEW_2026_07_18",
   "week": 3,
-  "theme": "교회 식사와 작별",
-  "title": "생활 대화와 돌봄 종합 복습",
+  "day": null,
+  "theme": "생활 대화와 돌봄",
+  "title": "토요일 3주차 복습",
+  "hook": "토요일과 같은 흐름으로 화장실 묻기, 식사 대화, 격려, 작별, 기도해 드릴게요까지 3회 반복한다.",
+  "story": "3주차에 배운 화장실 묻기, 식사 대화, 격려, 작별, 기도 제안을 같은 흐름으로 반복한다.",
   "missionGoal": "화장실 묻기, 식사 대화, 격려, 작별, 기도 제안을 주일에 한 번 더 반복해 입에 붙인다.",
   "ministryGuide": "같은 생활 대화 흐름을 두 번 반복하면 현장에서 도움과 돌봄의 말을 훨씬 자연스럽게 꺼낼 수 있다.",
-  "personalMission": "토요일과 같은 흐름으로 화장실 묻기, 식사 대화, 격려, 작별, 기도해 드릴게요까지 3회 반복한다.",
+  "speakingMission": "토요일과 같은 흐름으로 화장실 묻기, 식사 대화, 격려, 작별, 기도해 드릴게요까지 3회 반복한다.",
   "primaryImage": {
     "sceneId": "prayer_support",
     "altTextKo": "상대를 위로하며 기도해 주겠다고 말하는 장면",
@@ -235,7 +238,8 @@
       ]
     }
   ],
-  "phrases": [
+  "newPhrases": [],
+  "reviewPhrases": [
     {
       "variantId": "11",
       "phraseId": 11,
@@ -592,15 +596,253 @@
       }
     }
   ],
-  "print": {
-    "pageSize": "A4",
-    "orientation": "portrait",
-    "sections": [
-      "weekSummary",
-      "corePhrases",
-      "keywordBoxes",
-      "writeAndSpeak",
-      "prayerAndBlessing"
-    ]
-  }
+  "displayKeywords": [
+    {
+      "id": "W020",
+      "variantIds": [
+        "11"
+      ],
+      "korean": "화장실",
+      "english": "restroom",
+      "thai": "ห้องน้ำ",
+      "romanization": "hông-náam",
+      "koreanPronunciation": "헝남",
+      "tier": "core",
+      "days": [
+        11,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W020_male_normal.mp3",
+          "slow": "assets/audio/words/W020_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W020_female_normal.mp3",
+          "slow": "assets/audio/words/W020_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W025",
+      "variantIds": [
+        "12",
+        "13"
+      ],
+      "korean": "맛있다",
+      "english": "delicious",
+      "thai": "อร่อย",
+      "romanization": "a-ròi",
+      "koreanPronunciation": "아러이",
+      "tier": "core",
+      "days": [
+        12,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W025_male_normal.mp3",
+          "slow": "assets/audio/words/W025_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W025_female_normal.mp3",
+          "slow": "assets/audio/words/W025_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W028",
+      "variantIds": [
+        "14"
+      ],
+      "korean": "잘하다/똑똑하다",
+      "english": "good/skilled",
+      "thai": "เก่ง",
+      "romanization": "gèng",
+      "koreanPronunciation": "깽",
+      "tier": "core",
+      "days": [
+        13,
+        15,
+        20,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W028_male_normal.mp3",
+          "slow": "assets/audio/words/W028_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W028_female_normal.mp3",
+          "slow": "assets/audio/words/W028_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W029",
+      "variantIds": [
+        "15"
+      ],
+      "korean": "안녕히 가세요",
+      "english": "goodbye",
+      "thai": "ลาก่อน",
+      "romanization": "laa-gàawn",
+      "koreanPronunciation": "라껀",
+      "tier": "core",
+      "days": [
+        14,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W029_male_normal.mp3",
+          "slow": "assets/audio/words/W029_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W029_female_normal.mp3",
+          "slow": "assets/audio/words/W029_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W045",
+      "variantIds": [
+        "23"
+      ],
+      "korean": "기도하다",
+      "english": "pray",
+      "thai": "อธิษฐาน",
+      "romanization": "à-thít-thăan",
+      "koreanPronunciation": "아팃탄",
+      "tier": "core",
+      "days": [
+        23,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W045_male_normal.mp3",
+          "slow": "assets/audio/words/W045_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W045_female_normal.mp3",
+          "slow": "assets/audio/words/W045_female_slow.mp3"
+        }
+      }
+    }
+  ],
+  "supplementLinks": [],
+  "supplementalKeywords": [],
+  "keywordDisplayPolicy": {
+    "default": "week1_weekend_date_review_keywords",
+    "toggleSupplemental": false,
+    "emptyCoreFallback": "show_first_three_keywords"
+  },
+  "learnerProfile": {
+    "ageRange": "primarily older Korean adults; source plan average age about 58",
+    "smartphoneLiteracy": "low_to_moderate",
+    "uxDefaults": {
+      "minimumTapTargetPx": 48,
+      "audioPlayback": "manual_user_triggered",
+      "localStorageFailure": "silent_degrade_with_reset_option",
+      "defaultTextScale": "large"
+    }
+  },
+  "statePolicy": {
+    "storage": "localStorage",
+    "schemaVersion": 1,
+    "namespace": "thai25",
+    "keys": {
+      "schemaVersion": {
+        "key": "thai25.schemaVersion",
+        "type": "number",
+        "default": 1
+      },
+      "currentDay": {
+        "key": "thai25.currentDay",
+        "type": "number",
+        "default": 1
+      },
+      "completedLessonIds": {
+        "key": "thai25.completedLessonIds",
+        "type": "string[]",
+        "default": []
+      },
+      "lastOpenedLessonId": {
+        "key": "thai25.lastOpenedLessonId",
+        "type": "string|null",
+        "default": null
+      },
+      "speakerPreference": {
+        "key": "thai25.speakerPreference",
+        "type": "\"male\"|\"female\"",
+        "default": "female"
+      },
+      "audioSpeedPreference": {
+        "key": "thai25.audioSpeedPreference",
+        "type": "\"normal\"|\"slow\"|\"repeat3\"",
+        "default": "normal"
+      },
+      "showSupplementalKeywords": {
+        "key": "thai25.showSupplementalKeywords",
+        "type": "boolean",
+        "default": false
+      }
+    },
+    "resetSupported": true,
+    "fallback": "If localStorage is unavailable, keep the lesson usable with stateless navigation and show no blocking error."
+  },
+  "imageMissingFallback": {
+    "behavior": "show_placeholder_panel",
+    "placeholderTextSource": "primaryImage.altTextKo",
+    "visualStyle": "light neutral panel with scene label; preserve image aspect ratio so layout does not shift when real image is added",
+    "allowRenderWithoutImageFile": true
+  },
+  "controls": {
+    "sentenceAudioModes": [
+      "normal",
+      "slow",
+      "repeat3"
+    ],
+    "wordAudioModes": [
+      "normal",
+      "slow"
+    ],
+    "speakerModes": [
+      "male",
+      "female"
+    ],
+    "audioSpeedControlPlacement": {
+      "placement": "inline_sentence_audio_toolbar",
+      "visibleOptions": [
+        "normal",
+        "slow",
+        "repeat3"
+      ],
+      "default": "normal",
+      "reason": "Older learners should not have to find a settings screen to slow down audio."
+    }
+  },
+  "completion": {
+    "checkAction": "lesson_complete",
+    "shareAction": "open_kakao_share_card",
+    "nextAction": "open_2026_07_05_review_or_repeat"
+  },
+  "dayType": "date_review",
+  "displayDayLabel": "2026-07-18 복습",
+  "previewNavLinks": [
+    {
+      "label": "7/18 복습",
+      "href": "?date=2026-07-18",
+      "active": true
+    },
+    {
+      "label": "7/19 복습",
+      "href": "?date=2026-07-19",
+      "active": false
+    }
+  ]
 }
