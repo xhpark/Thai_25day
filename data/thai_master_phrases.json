@@ -371,9 +371,9 @@
     {
       "id": 10,
       "category": "daily",
-      "korean": "몇 살이니?",
-      "english": "How old are you?",
-      "source_korean_pronunciation": "아유 타오 라이 크랍/카",
+      "korean": "몇 살이니? / 저는 ~살입니다",
+      "english": "How old are you? / I am ~ years old.",
+      "source_korean_pronunciation": "아유 타오 라이 크랍/카 / 폼/찬 아유 ~ 삐 크랍/카",
       "caution": "Use only with children or close relationships. Avoid asking newly met adults.",
       "variants": [
         {
@@ -390,6 +390,23 @@
               "thai": "คุณอายุเท่าไหร่คะ",
               "romanization": "khun aa-yú thâo-rài khá",
               "korean_pronunciation": "아유 타오 라이 카"
+            }
+          }
+        },
+        {
+          "id": "10-2",
+          "korean": "저는 ~살입니다",
+          "english": "I am ~ years old.",
+          "speech": {
+            "male": {
+              "thai": "ผมอายุ ~ ปีครับ",
+              "romanization": "phŏm aa-yú ~ bpii khráp",
+              "korean_pronunciation": "폼 아유 ~ 삐 크랍"
+            },
+            "female": {
+              "thai": "ฉันอายุ ~ ปีค่ะ",
+              "romanization": "chăn aa-yú ~ bpii khâ",
+              "korean_pronunciation": "찬 아유 ~ 삐 카"
             }
           }
         }

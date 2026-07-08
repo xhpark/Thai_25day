@@ -85,7 +85,8 @@
       "day": 9,
       "type": "new",
       "variantIds": [
-        "10"
+        "10",
+        "10-2"
       ]
     },
     {
@@ -103,7 +104,8 @@
         "7",
         "8",
         "9",
-        "10"
+        "10",
+        "10-2"
       ]
     },
     {
@@ -152,6 +154,7 @@
         "8",
         "9",
         "10",
+        "10-2",
         "11",
         "12",
         "13",
@@ -245,6 +248,7 @@
         "8",
         "9",
         "10",
+        "10-2",
         "11",
         "12",
         "13",
@@ -632,6 +636,37 @@
           "normal": "assets/audio/sentences/S10_female_normal.mp3",
           "slow": "assets/audio/sentences/S10_female_slow.mp3",
           "repeat3": "assets/audio/sentences/S10_female_repeat3.mp3"
+        }
+      }
+    },
+    {
+      "variantId": "10-2",
+      "phraseId": 10,
+      "category": "daily",
+      "korean": "저는 ~살입니다",
+      "english": "I am ~ years old.",
+      "speech": {
+        "male": {
+          "thai": "ผมอายุ ~ ปีครับ",
+          "romanization": "phŏm aa-yú ~ bpii khráp",
+          "korean_pronunciation": "폼 아유 ~ 삐 크랍"
+        },
+        "female": {
+          "thai": "ฉันอายุ ~ ปีค่ะ",
+          "romanization": "chăn aa-yú ~ bpii khâ",
+          "korean_pronunciation": "찬 아유 ~ 삐 카"
+        }
+      },
+      "audio": {
+        "male": {
+          "normal": "assets/audio/sentences/S10_2_male_normal.mp3",
+          "slow": "assets/audio/sentences/S10_2_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S10_2_male_repeat3.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/sentences/S10_2_female_normal.mp3",
+          "slow": "assets/audio/sentences/S10_2_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S10_2_female_repeat3.mp3"
         }
       }
     },
@@ -1119,6 +1154,7 @@
         "8",
         "9",
         "10",
+        "10-2",
         "11",
         "12",
         "13",
@@ -1190,6 +1226,7 @@
         "6",
         "7",
         "9",
+        "10-2",
         "13",
         "14",
         "15",
@@ -1220,6 +1257,7 @@
         5,
         6,
         8,
+        9,
         10,
         12,
         13,
@@ -1618,6 +1656,7 @@
       "id": "W016",
       "variantIds": [
         "9",
+        "10-2",
         "23"
       ],
       "korean": "나(남성)",
@@ -1631,6 +1670,7 @@
       "tier": "core",
       "days": [
         8,
+        9,
         10,
         15,
         23,
@@ -1647,6 +1687,7 @@
       "id": "W017",
       "variantIds": [
         "9",
+        "10-2",
         "23"
       ],
       "korean": "나(여성)",
@@ -1660,6 +1701,7 @@
       "tier": "core",
       "days": [
         8,
+        9,
         10,
         15,
         23,
@@ -1675,7 +1717,8 @@
     {
       "id": "W018",
       "variantIds": [
-        "10"
+        "10",
+        "10-2"
       ],
       "korean": "나이",
       "english": "age",
@@ -2544,6 +2587,34 @@
         "female": {
           "normal": "assets/audio/words/W049_female_normal.mp3",
           "slow": "assets/audio/words/W049_female_slow.mp3"
+        }
+      }
+    },
+    {
+      "id": "W050",
+      "variantIds": [
+        "10-2"
+      ],
+      "korean": "살/년",
+      "english": "year(s)",
+      "thai": "ปี",
+      "romanization": "bpii",
+      "koreanPronunciation": "삐",
+      "tier": "core",
+      "days": [
+        9,
+        10,
+        15,
+        25
+      ],
+      "audio": {
+        "male": {
+          "normal": "assets/audio/words/W050_male_normal.mp3",
+          "slow": "assets/audio/words/W050_male_slow.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/words/W050_female_normal.mp3",
+          "slow": "assets/audio/words/W050_female_slow.mp3"
         }
       }
     }

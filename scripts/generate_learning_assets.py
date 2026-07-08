@@ -33,13 +33,13 @@ DAY_PLAN: list[dict[str, Any]] = [
     {"day": 6, "type": "new", "variantIds": ["6", "7"]},
     {"day": 7, "type": "new", "variantIds": ["8"]},
     {"day": 8, "type": "new", "variantIds": ["9"]},
-    {"day": 9, "type": "new", "variantIds": ["10"]},
-    {"day": 10, "type": "review", "variantIds": ["1", "2-1", "2-2", "3", "4", "5-1", "5-2", "6", "7", "8", "9", "10"]},
+    {"day": 9, "type": "new", "variantIds": ["10", "10-2"]},
+    {"day": 10, "type": "review", "variantIds": ["1", "2-1", "2-2", "3", "4", "5-1", "5-2", "6", "7", "8", "9", "10", "10-2"]},
     {"day": 11, "type": "new", "variantIds": ["11"]},
     {"day": 12, "type": "new", "variantIds": ["12", "13"]},
     {"day": 13, "type": "new", "variantIds": ["14"]},
     {"day": 14, "type": "new", "variantIds": ["15", "16"]},
-    {"day": 15, "type": "review", "variantIds": ["1", "2-1", "2-2", "3", "4", "5-1", "5-2", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16"]},
+    {"day": 15, "type": "review", "variantIds": ["1", "2-1", "2-2", "3", "4", "5-1", "5-2", "6", "7", "8", "9", "10", "10-2", "11", "12", "13", "14", "15", "16"]},
     {"day": 16, "type": "new", "variantIds": ["17"]},
     {"day": 17, "type": "new", "variantIds": ["18"]},
     {"day": 18, "type": "new", "variantIds": ["19"]},
@@ -49,14 +49,14 @@ DAY_PLAN: list[dict[str, Any]] = [
     {"day": 22, "type": "new", "variantIds": ["22"]},
     {"day": 23, "type": "new", "variantIds": ["23"]},
     {"day": 24, "type": "new", "variantIds": ["24"]},
-    {"day": 25, "type": "review", "variantIds": ["1", "2-1", "2-2", "3", "4", "5-1", "5-2", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24"]},
+    {"day": 25, "type": "review", "variantIds": ["1", "2-1", "2-2", "3", "4", "5-1", "5-2", "6", "7", "8", "9", "10", "10-2", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24"]},
 ]
 
 
 KEYWORDS: list[dict[str, Any]] = [
     {"id": "W001", "variantIds": ["1", "2-1", "2-2"], "korean": "안녕하세요", "english": "hello", "thai": "สวัสดี", "romanization": "sà-wàt-dii", "koreanPronunciation": "싸왓디"},
-    {"id": "W002", "variantIds": ["1", "2-1", "2-2", "3", "4", "5-1", "5-2", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24"], "korean": "남성 존칭 어미", "english": "male polite particle", "thai": "ครับ", "romanization": "khráp", "koreanPronunciation": "크랍", "voices": ["male"], "tier": "core"},
-    {"id": "W003", "variantIds": ["1", "2-1", "2-2", "3", "4", "5-1", "5-2", "6", "7", "9", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24"], "korean": "여성 존칭 어미", "english": "female polite particle", "thai": "ค่ะ", "romanization": "khâ", "koreanPronunciation": "카", "voices": ["female"], "tier": "core"},
+    {"id": "W002", "variantIds": ["1", "2-1", "2-2", "3", "4", "5-1", "5-2", "6", "7", "8", "9", "10", "10-2", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24"], "korean": "남성 존칭 어미", "english": "male polite particle", "thai": "ครับ", "romanization": "khráp", "koreanPronunciation": "크랍", "voices": ["male"], "tier": "core"},
+    {"id": "W003", "variantIds": ["1", "2-1", "2-2", "3", "4", "5-1", "5-2", "6", "7", "9", "10-2", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24"], "korean": "여성 존칭 어미", "english": "female polite particle", "thai": "ค่ะ", "romanization": "khâ", "koreanPronunciation": "카", "voices": ["female"], "tier": "core"},
     {"id": "W004", "variantIds": ["8", "10", "11", "12"], "korean": "여성 질문/권유 어미", "english": "female question/request particle", "thai": "คะ", "romanization": "khá", "koreanPronunciation": "카", "voices": ["female"], "tier": "core"},
     {"id": "W005", "variantIds": ["2-1"], "korean": "아침", "english": "morning", "thai": "ตอนเช้า", "romanization": "dtaawn-cháao", "koreanPronunciation": "떤 차오"},
     {"id": "W006", "variantIds": ["2-2"], "korean": "저녁", "english": "evening", "thai": "ตอนเย็น", "romanization": "dtaawn-yen", "koreanPronunciation": "떤 옌"},
@@ -69,9 +69,9 @@ KEYWORDS: list[dict[str, Any]] = [
     {"id": "W013", "variantIds": ["8", "10", "17", "18", "19", "22", "23"], "korean": "당신", "english": "you", "thai": "คุณ", "romanization": "khun", "koreanPronunciation": "쿤"},
     {"id": "W014", "variantIds": ["8", "9"], "korean": "이름", "english": "name", "thai": "ชื่อ", "romanization": "chûue", "koreanPronunciation": "츠"},
     {"id": "W015", "variantIds": ["8"], "korean": "무엇", "english": "what", "thai": "อะไร", "romanization": "à-rai", "koreanPronunciation": "아라이"},
-    {"id": "W016", "variantIds": ["9", "23"], "korean": "나(남성)", "english": "I/me, male speaker", "thai": "ผม", "romanization": "phŏm", "koreanPronunciation": "폼", "voices": ["male"]},
-    {"id": "W017", "variantIds": ["9", "23"], "korean": "나(여성)", "english": "I/me, female speaker", "thai": "ฉัน", "romanization": "chăn", "koreanPronunciation": "찬", "voices": ["female"]},
-    {"id": "W018", "variantIds": ["10"], "korean": "나이", "english": "age", "thai": "อายุ", "romanization": "aa-yú", "koreanPronunciation": "아유"},
+    {"id": "W016", "variantIds": ["9", "10-2", "23"], "korean": "나(남성)", "english": "I/me, male speaker", "thai": "ผม", "romanization": "phŏm", "koreanPronunciation": "폼", "voices": ["male"]},
+    {"id": "W017", "variantIds": ["9", "10-2", "23"], "korean": "나(여성)", "english": "I/me, female speaker", "thai": "ฉัน", "romanization": "chăn", "koreanPronunciation": "찬", "voices": ["female"]},
+    {"id": "W018", "variantIds": ["10", "10-2"], "korean": "나이", "english": "age", "thai": "อายุ", "romanization": "aa-yú", "koreanPronunciation": "아유"},
     {"id": "W019", "variantIds": ["10"], "korean": "얼마", "english": "how much/how many", "thai": "เท่าไหร่", "romanization": "thâo-rài", "koreanPronunciation": "타오 라이"},
     {"id": "W020", "variantIds": ["11"], "korean": "화장실", "english": "restroom", "thai": "ห้องน้ำ", "romanization": "hông-náam", "koreanPronunciation": "헝남"},
     {"id": "W021", "variantIds": ["11"], "korean": "~에 있다", "english": "to be located", "thai": "อยู่", "romanization": "yùu", "koreanPronunciation": "유"},
@@ -102,14 +102,15 @@ KEYWORDS: list[dict[str, Any]] = [
     {"id": "W046", "variantIds": ["24"], "korean": "오다", "english": "come", "thai": "มา", "romanization": "maa", "koreanPronunciation": "마"},
     {"id": "W047", "variantIds": ["24"], "korean": "노래하다", "english": "sing", "thai": "ร้องเพลง", "romanization": "róng-phleeng", "koreanPronunciation": "롱 플렝"},
     {"id": "W048", "variantIds": ["24"], "korean": "찬양하다", "english": "praise", "thai": "สรรเสริญ", "romanization": "săn-sĕern", "koreanPronunciation": "싼쓴"},
-    {"id": "W049", "variantIds": ["24"], "korean": "함께", "english": "together", "thai": "ด้วยกัน", "romanization": "dûuai-gan", "koreanPronunciation": "두아이깐"}
+    {"id": "W049", "variantIds": ["24"], "korean": "함께", "english": "together", "thai": "ด้วยกัน", "romanization": "dûuai-gan", "koreanPronunciation": "두아이깐"},
+    {"id": "W050", "variantIds": ["10-2"], "korean": "살/년", "english": "year(s)", "thai": "ปี", "romanization": "bpii", "koreanPronunciation": "삐"}
 ]
 
 CORE_KEYWORD_IDS = {
     "W001", "W002", "W003", "W004", "W007", "W009", "W010", "W011",
     "W012", "W014", "W016", "W017", "W020", "W025", "W028", "W029",
     "W033", "W035", "W036", "W038", "W040", "W041", "W045", "W047",
-    "W048", "W049",
+    "W048", "W049", "W050",
 }
 
 
@@ -310,8 +311,8 @@ def _validate_index(index: dict[str, Any]) -> list[str]:
     errors: list[str] = []
     if len(index["days"]) != 25:
         errors.append(f"expected 25 days, got {len(index['days'])}")
-    if len(index["sentences"]) != 26:
-        errors.append(f"expected 26 sentence variants, got {len(index['sentences'])}")
+    if len(index["sentences"]) != 27:
+        errors.append(f"expected 27 sentence variants, got {len(index['sentences'])}")
     if len(index["keywords"]) != len(KEYWORDS):
         errors.append(f"expected {len(KEYWORDS)} keywords, got {len(index['keywords'])}")
     for keyword in index["keywords"]:

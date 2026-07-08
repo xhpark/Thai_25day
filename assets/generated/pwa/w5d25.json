@@ -5,10 +5,10 @@
   "week": 5,
   "day": 25,
   "theme": "전체 반복 복습",
-  "title": "전체 24문장 종합 리허설",
+  "title": "전체 문장 종합 리허설",
   "hook": "처음 만남부터 찬양 초대까지 전체 흐름을 완성한다.",
   "story": "처음 만남, 자기소개, 식사와 도움, 사랑과 축복, 믿음의 초대, 기도와 찬양, 작별까지 전체 장면을 연결한다.",
-  "missionGoal": "24개 기본 문장을 실제 선교 현장 대화 흐름으로 통합한다.",
+  "missionGoal": "전체 기본 문장을 실제 선교 현장 대화 흐름으로 통합한다.",
   "ministryGuide": "생활언어, 사랑, 축복, 믿음의 초대, 기도, 찬양이 한 흐름으로 이어질 때 현장 선교 대화가 훨씬 자연스럽다.",
   "speakingMission": "전체 문장을 장면별로 끊어 1회, 처음부터 끝까지 연결해 2회 리허설한다.",
   "primaryImage": {
@@ -763,6 +763,37 @@
           "normal": "assets/audio/sentences/S10_female_normal.mp3",
           "slow": "assets/audio/sentences/S10_female_slow.mp3",
           "repeat3": "assets/audio/sentences/S10_female_repeat3.mp3"
+        }
+      }
+    },
+    {
+      "variantId": "10-2",
+      "phraseId": 10,
+      "category": "daily",
+      "korean": "저는 ~살입니다",
+      "english": "I am ~ years old.",
+      "speech": {
+        "male": {
+          "thai": "ผมอายุ ~ ปีครับ",
+          "romanization": "phŏm aa-yú ~ bpii khráp",
+          "korean_pronunciation": "폼 아유 ~ 삐 크랍"
+        },
+        "female": {
+          "thai": "ฉันอายุ ~ ปีค่ะ",
+          "romanization": "chăn aa-yú ~ bpii khâ",
+          "korean_pronunciation": "찬 아유 ~ 삐 카"
+        }
+      },
+      "audio": {
+        "male": {
+          "normal": "assets/audio/sentences/S10_2_male_normal.mp3",
+          "slow": "assets/audio/sentences/S10_2_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S10_2_male_repeat3.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/sentences/S10_2_female_normal.mp3",
+          "slow": "assets/audio/sentences/S10_2_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S10_2_female_repeat3.mp3"
         }
       }
     },

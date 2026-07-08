@@ -7,10 +7,10 @@
     "imageManifest": "data/thai_image_source_manifest.json"
   },
   "sourceHashes": {
-    "curriculum": "ed8864cda83e0470d95ec3613b189c6727776e9fb1abc75ff60e4d83c8dd9664",
-    "assets": "72a6eb71da8078e1db34e788cd8fdb73be79ba793c0da1aca32a1063b8f702e9",
+    "curriculum": "6bbe5c2b9a6375ab097363726bf5e298b70c6fc8d8af75bf5eb854c38a412bc6",
+    "assets": "c8c63283edcbc359c95bef3be52fc305539c7e7cff6dfd731b6f22c426c3ef64",
     "templateSpecs": "b02f47651239e478b3156c95a4e2ea064d9a9d6989b048d54f4a8ffbbc725811",
-    "imageManifest": "398c55ea66ee9547ea5b31474a06ccb713092297745a543d9cc5045200f1f25d"
+    "imageManifest": "3edb7a878886ea629942f51f8328205dda1787f9234b60cd1ce1af114c44af0c"
   },
   "bundles": {
     "weekdayLessons": [
@@ -109,6 +109,7 @@
               "8",
               "9",
               "10",
+              "10-2",
               "11",
               "12",
               "13",
@@ -180,6 +181,7 @@
               "6",
               "7",
               "9",
+              "10-2",
               "13",
               "14",
               "15",
@@ -210,6 +212,7 @@
               5,
               6,
               8,
+              9,
               10,
               12,
               13,
@@ -4075,6 +4078,7 @@
             "id": "W016",
             "variantIds": [
               "9",
+              "10-2",
               "23"
             ],
             "korean": "나(남성)",
@@ -4088,6 +4092,7 @@
             "tier": "core",
             "days": [
               8,
+              9,
               10,
               15,
               23,
@@ -4104,6 +4109,7 @@
             "id": "W017",
             "variantIds": [
               "9",
+              "10-2",
               "23"
             ],
             "korean": "나(여성)",
@@ -4117,6 +4123,7 @@
             "tier": "core",
             "days": [
               8,
+              9,
               10,
               15,
               23,
@@ -4463,12 +4470,12 @@
         "week": 2,
         "day": 9,
         "theme": "새 친구 만나기",
-        "title": "나이 묻기",
-        "hook": "관계 안에서 조심스럽게 묻는 질문을 배운다.",
-        "story": "친한 사이 또는 어린이에게 나이를 묻는 장면을 연습한다.",
-        "missionGoal": "상대와의 관계를 살피며 질문을 자연스럽게 이어 가는 법을 배운다.",
+        "title": "나이 묻고 답하기",
+        "hook": "관계 안에서 조심스럽게 묻고 내 나이를 말하는 표현을 배운다.",
+        "story": "친한 사이 또는 어린이에게 나이를 묻고, 내 나이를 짧게 대답하는 장면을 연습한다.",
+        "missionGoal": "상대와의 관계를 살피며 나이를 묻고 자기 나이도 말하는 흐름을 배운다.",
         "ministryGuide": "자신의 나이를 태국어로 말할 수 있도록 미리 학습하여 말할 수 있도록 하자. 태국어 나이: 십의 자리 + 일의 자리, \"하씹 까오\" = 59",
-        "speakingMission": "질문문 전체를 5회 말하고, 이름 묻기와 연결해 2회 연습한다.",
+        "speakingMission": "나이 질문과 대답을 각각 5회 말하고, 이름 묻기와 연결해 2회 연습한다.",
         "newPhrases": [
           {
             "variantId": "10",
@@ -4498,6 +4505,37 @@
                 "normal": "assets/audio/sentences/S10_female_normal.mp3",
                 "slow": "assets/audio/sentences/S10_female_slow.mp3",
                 "repeat3": "assets/audio/sentences/S10_female_repeat3.mp3"
+              }
+            }
+          },
+          {
+            "variantId": "10-2",
+            "phraseId": 10,
+            "category": "daily",
+            "korean": "저는 ~살입니다",
+            "english": "I am ~ years old.",
+            "speech": {
+              "male": {
+                "thai": "ผมอายุ ~ ปีครับ",
+                "romanization": "phŏm aa-yú ~ bpii khráp",
+                "korean_pronunciation": "폼 아유 ~ 삐 크랍"
+              },
+              "female": {
+                "thai": "ฉันอายุ ~ ปีค่ะ",
+                "romanization": "chăn aa-yú ~ bpii khâ",
+                "korean_pronunciation": "찬 아유 ~ 삐 카"
+              }
+            },
+            "audio": {
+              "male": {
+                "normal": "assets/audio/sentences/S10_2_male_normal.mp3",
+                "slow": "assets/audio/sentences/S10_2_male_slow.mp3",
+                "repeat3": "assets/audio/sentences/S10_2_male_repeat3.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/sentences/S10_2_female_normal.mp3",
+                "slow": "assets/audio/sentences/S10_2_female_slow.mp3",
+                "repeat3": "assets/audio/sentences/S10_2_female_repeat3.mp3"
               }
             }
           }
@@ -4609,9 +4647,72 @@
             }
           },
           {
+            "id": "W016",
+            "variantIds": [
+              "9",
+              "10-2",
+              "23"
+            ],
+            "korean": "나(남성)",
+            "english": "I/me, male speaker",
+            "thai": "ผม",
+            "romanization": "phŏm",
+            "koreanPronunciation": "폼",
+            "voices": [
+              "male"
+            ],
+            "tier": "core",
+            "days": [
+              8,
+              9,
+              10,
+              15,
+              23,
+              25
+            ],
+            "audio": {
+              "male": {
+                "normal": "assets/audio/words/W016_male_normal.mp3",
+                "slow": "assets/audio/words/W016_male_slow.mp3"
+              }
+            }
+          },
+          {
+            "id": "W017",
+            "variantIds": [
+              "9",
+              "10-2",
+              "23"
+            ],
+            "korean": "나(여성)",
+            "english": "I/me, female speaker",
+            "thai": "ฉัน",
+            "romanization": "chăn",
+            "koreanPronunciation": "찬",
+            "voices": [
+              "female"
+            ],
+            "tier": "core",
+            "days": [
+              8,
+              9,
+              10,
+              15,
+              23,
+              25
+            ],
+            "audio": {
+              "female": {
+                "normal": "assets/audio/words/W017_female_normal.mp3",
+                "slow": "assets/audio/words/W017_female_slow.mp3"
+              }
+            }
+          },
+          {
             "id": "W018",
             "variantIds": [
-              "10"
+              "10",
+              "10-2"
             ],
             "korean": "나이",
             "english": "age",
@@ -4663,6 +4764,34 @@
                 "slow": "assets/audio/words/W019_female_slow.mp3"
               }
             }
+          },
+          {
+            "id": "W050",
+            "variantIds": [
+              "10-2"
+            ],
+            "korean": "살/년",
+            "english": "year(s)",
+            "thai": "ปี",
+            "romanization": "bpii",
+            "koreanPronunciation": "삐",
+            "tier": "core",
+            "days": [
+              9,
+              10,
+              15,
+              25
+            ],
+            "audio": {
+              "male": {
+                "normal": "assets/audio/words/W050_male_normal.mp3",
+                "slow": "assets/audio/words/W050_male_slow.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/words/W050_female_normal.mp3",
+                "slow": "assets/audio/words/W050_female_slow.mp3"
+              }
+            }
           }
         ],
         "supplementLinks": [
@@ -4675,12 +4804,12 @@
         ],
         "images": {
           "primaryImage": {
-            "sceneId": "age_question_child",
+            "sceneId": "howoldareyou",
             "altTextKo": "교회 마당에서 어린이에게 나이를 조심스럽고 친근하게 묻는 장면",
             "sourcePlan": [
               {
                 "type": "local_preferred",
-                "assetPath": "assets/images/scenes/age_question_child.jpg",
+                "assetPath": "assets/images/scenes/howoldareyou.jpg",
                 "status": "ready"
               },
               {
@@ -5198,6 +5327,37 @@
                 "normal": "assets/audio/sentences/S10_female_normal.mp3",
                 "slow": "assets/audio/sentences/S10_female_slow.mp3",
                 "repeat3": "assets/audio/sentences/S10_female_repeat3.mp3"
+              }
+            }
+          },
+          {
+            "variantId": "10-2",
+            "phraseId": 10,
+            "category": "daily",
+            "korean": "저는 ~살입니다",
+            "english": "I am ~ years old.",
+            "speech": {
+              "male": {
+                "thai": "ผมอายุ ~ ปีครับ",
+                "romanization": "phŏm aa-yú ~ bpii khráp",
+                "korean_pronunciation": "폼 아유 ~ 삐 크랍"
+              },
+              "female": {
+                "thai": "ฉันอายุ ~ ปีค่ะ",
+                "romanization": "chăn aa-yú ~ bpii khâ",
+                "korean_pronunciation": "찬 아유 ~ 삐 카"
+              }
+            },
+            "audio": {
+              "male": {
+                "normal": "assets/audio/sentences/S10_2_male_normal.mp3",
+                "slow": "assets/audio/sentences/S10_2_male_slow.mp3",
+                "repeat3": "assets/audio/sentences/S10_2_male_repeat3.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/sentences/S10_2_female_normal.mp3",
+                "slow": "assets/audio/sentences/S10_2_female_slow.mp3",
+                "repeat3": "assets/audio/sentences/S10_2_female_repeat3.mp3"
               }
             }
           }
@@ -8097,6 +8257,7 @@
             "id": "W016",
             "variantIds": [
               "9",
+              "10-2",
               "23"
             ],
             "korean": "나(남성)",
@@ -8110,6 +8271,7 @@
             "tier": "core",
             "days": [
               8,
+              9,
               10,
               15,
               23,
@@ -8126,6 +8288,7 @@
             "id": "W017",
             "variantIds": [
               "9",
+              "10-2",
               "23"
             ],
             "korean": "나(여성)",
@@ -8139,6 +8302,7 @@
             "tier": "core",
             "days": [
               8,
+              9,
               10,
               15,
               23,
@@ -11815,6 +11979,7 @@
               "8",
               "9",
               "10",
+              "10-2",
               "11",
               "12",
               "13",
@@ -11886,6 +12051,7 @@
               "6",
               "7",
               "9",
+              "10-2",
               "13",
               "14",
               "15",
@@ -11916,6 +12082,7 @@
               5,
               6,
               8,
+              9,
               10,
               12,
               13,
@@ -12725,6 +12892,37 @@
             }
           },
           {
+            "variantId": "10-2",
+            "phraseId": 10,
+            "category": "daily",
+            "korean": "저는 ~살입니다",
+            "english": "I am ~ years old.",
+            "speech": {
+              "male": {
+                "thai": "ผมอายุ ~ ปีครับ",
+                "romanization": "phŏm aa-yú ~ bpii khráp",
+                "korean_pronunciation": "폼 아유 ~ 삐 크랍"
+              },
+              "female": {
+                "thai": "ฉันอายุ ~ ปีค่ะ",
+                "romanization": "chăn aa-yú ~ bpii khâ",
+                "korean_pronunciation": "찬 아유 ~ 삐 카"
+              }
+            },
+            "audio": {
+              "male": {
+                "normal": "assets/audio/sentences/S10_2_male_normal.mp3",
+                "slow": "assets/audio/sentences/S10_2_male_slow.mp3",
+                "repeat3": "assets/audio/sentences/S10_2_male_repeat3.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/sentences/S10_2_female_normal.mp3",
+                "slow": "assets/audio/sentences/S10_2_female_slow.mp3",
+                "repeat3": "assets/audio/sentences/S10_2_female_repeat3.mp3"
+              }
+            }
+          },
+          {
             "variantId": "22",
             "phraseId": 22,
             "category": "mission",
@@ -12888,6 +13086,7 @@
             "id": "W016",
             "variantIds": [
               "9",
+              "10-2",
               "23"
             ],
             "korean": "나(남성)",
@@ -12901,6 +13100,7 @@
             "tier": "core",
             "days": [
               8,
+              9,
               10,
               15,
               23,
@@ -12917,6 +13117,7 @@
             "id": "W017",
             "variantIds": [
               "9",
+              "10-2",
               "23"
             ],
             "korean": "나(여성)",
@@ -12930,6 +13131,7 @@
             "tier": "core",
             "days": [
               8,
+              9,
               10,
               15,
               23,
@@ -12945,7 +13147,8 @@
           {
             "id": "W018",
             "variantIds": [
-              "10"
+              "10",
+              "10-2"
             ],
             "korean": "나이",
             "english": "age",
@@ -12995,6 +13198,34 @@
               "female": {
                 "normal": "assets/audio/words/W019_female_normal.mp3",
                 "slow": "assets/audio/words/W019_female_slow.mp3"
+              }
+            }
+          },
+          {
+            "id": "W050",
+            "variantIds": [
+              "10-2"
+            ],
+            "korean": "살/년",
+            "english": "year(s)",
+            "thai": "ปี",
+            "romanization": "bpii",
+            "koreanPronunciation": "삐",
+            "tier": "core",
+            "days": [
+              9,
+              10,
+              15,
+              25
+            ],
+            "audio": {
+              "male": {
+                "normal": "assets/audio/words/W050_male_normal.mp3",
+                "slow": "assets/audio/words/W050_male_slow.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/words/W050_female_normal.mp3",
+                "slow": "assets/audio/words/W050_female_slow.mp3"
               }
             }
           },
@@ -15560,10 +15791,10 @@
         "week": 5,
         "day": 25,
         "theme": "전체 반복 복습",
-        "title": "전체 24문장 종합 리허설",
+        "title": "전체 문장 종합 리허설",
         "hook": "처음 만남부터 찬양 초대까지 전체 흐름을 완성한다.",
         "story": "처음 만남, 자기소개, 식사와 도움, 사랑과 축복, 믿음의 초대, 기도와 찬양, 작별까지 전체 장면을 연결한다.",
-        "missionGoal": "24개 기본 문장을 실제 선교 현장 대화 흐름으로 통합한다.",
+        "missionGoal": "전체 기본 문장을 실제 선교 현장 대화 흐름으로 통합한다.",
         "ministryGuide": "생활언어, 사랑, 축복, 믿음의 초대, 기도, 찬양이 한 흐름으로 이어질 때 현장 선교 대화가 훨씬 자연스럽다.",
         "speakingMission": "전체 문장을 장면별로 끊어 1회, 처음부터 끝까지 연결해 2회 리허설한다.",
         "newPhrases": [],
@@ -15937,6 +16168,37 @@
                 "normal": "assets/audio/sentences/S10_female_normal.mp3",
                 "slow": "assets/audio/sentences/S10_female_slow.mp3",
                 "repeat3": "assets/audio/sentences/S10_female_repeat3.mp3"
+              }
+            }
+          },
+          {
+            "variantId": "10-2",
+            "phraseId": 10,
+            "category": "daily",
+            "korean": "저는 ~살입니다",
+            "english": "I am ~ years old.",
+            "speech": {
+              "male": {
+                "thai": "ผมอายุ ~ ปีครับ",
+                "romanization": "phŏm aa-yú ~ bpii khráp",
+                "korean_pronunciation": "폼 아유 ~ 삐 크랍"
+              },
+              "female": {
+                "thai": "ฉันอายุ ~ ปีค่ะ",
+                "romanization": "chăn aa-yú ~ bpii khâ",
+                "korean_pronunciation": "찬 아유 ~ 삐 카"
+              }
+            },
+            "audio": {
+              "male": {
+                "normal": "assets/audio/sentences/S10_2_male_normal.mp3",
+                "slow": "assets/audio/sentences/S10_2_male_slow.mp3",
+                "repeat3": "assets/audio/sentences/S10_2_male_repeat3.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/sentences/S10_2_female_normal.mp3",
+                "slow": "assets/audio/sentences/S10_2_female_slow.mp3",
+                "repeat3": "assets/audio/sentences/S10_2_female_repeat3.mp3"
               }
             }
           },
@@ -18194,6 +18456,37 @@
                 "repeat3": "assets/audio/sentences/S10_female_repeat3.mp3"
               }
             }
+          },
+          {
+            "variantId": "10-2",
+            "phraseId": 10,
+            "category": "daily",
+            "korean": "저는 ~살입니다",
+            "english": "I am ~ years old.",
+            "speech": {
+              "male": {
+                "thai": "ผมอายุ ~ ปีครับ",
+                "romanization": "phŏm aa-yú ~ bpii khráp",
+                "korean_pronunciation": "폼 아유 ~ 삐 크랍"
+              },
+              "female": {
+                "thai": "ฉันอายุ ~ ปีค่ะ",
+                "romanization": "chăn aa-yú ~ bpii khâ",
+                "korean_pronunciation": "찬 아유 ~ 삐 카"
+              }
+            },
+            "audio": {
+              "male": {
+                "normal": "assets/audio/sentences/S10_2_male_normal.mp3",
+                "slow": "assets/audio/sentences/S10_2_male_slow.mp3",
+                "repeat3": "assets/audio/sentences/S10_2_male_repeat3.mp3"
+              },
+              "female": {
+                "normal": "assets/audio/sentences/S10_2_female_normal.mp3",
+                "slow": "assets/audio/sentences/S10_2_female_slow.mp3",
+                "repeat3": "assets/audio/sentences/S10_2_female_repeat3.mp3"
+              }
+            }
           }
         ],
         "keywords": [
@@ -18300,6 +18593,7 @@
             "id": "W016",
             "variantIds": [
               "9",
+              "10-2",
               "23"
             ],
             "korean": "나(남성)",
@@ -18313,6 +18607,7 @@
             "tier": "core",
             "days": [
               8,
+              9,
               10,
               15,
               23,
@@ -18329,6 +18624,7 @@
             "id": "W017",
             "variantIds": [
               "9",
+              "10-2",
               "23"
             ],
             "korean": "나(여성)",
@@ -18342,6 +18638,7 @@
             "tier": "core",
             "days": [
               8,
+              9,
               10,
               15,
               23,
@@ -19840,7 +20137,7 @@
         "dayType": "saturday",
         "week": 5,
         "theme": "전체 반복 복습",
-        "title": "전체 24문장 종합 역할극",
+        "title": "전체 문장 종합 역할극",
         "missionGoal": "전체 표현을 실제 선교 현장 스토리 안에서 연결해 사용한다.",
         "ministryGuide": "짧은 생활언어로 관계를 열고, 사랑·축복·믿음·기도·찬양으로 이어 가는 흐름이 이번 과정의 핵심이다.",
         "phrases": [
@@ -21631,6 +21928,7 @@
             "id": "W016",
             "variantIds": [
               "9",
+              "10-2",
               "23"
             ],
             "korean": "나(남성)",
@@ -21644,6 +21942,7 @@
             "tier": "core",
             "days": [
               8,
+              9,
               10,
               15,
               23,
@@ -21660,6 +21959,7 @@
             "id": "W017",
             "variantIds": [
               "9",
+              "10-2",
               "23"
             ],
             "korean": "나(여성)",
@@ -21673,6 +21973,7 @@
             "tier": "core",
             "days": [
               8,
+              9,
               10,
               15,
               23,
@@ -23810,7 +24111,7 @@
             }
           ]
         },
-        "personalMission": "전체 24개 기본 문장 중 현장에서 가장 먼저 사용할 5문장을 고르고, 어느 장면에서 사용할지 한 줄씩 기록한다.",
+        "personalMission": "전체 기본 문장 중 현장에서 가장 먼저 사용할 5문장을 고르고, 어느 장면에서 사용할지 한 줄씩 기록한다.",
         "delivery": {
           "kakaoCardTemplate": {
             "target": "weekday and sunday shareable mobile card",

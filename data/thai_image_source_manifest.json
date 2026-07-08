@@ -526,11 +526,11 @@
       }
     },
     {
-      "sceneId": "age_question_child",
+      "sceneId": "howoldareyou",
       "useFor": [
         "W2D9"
       ],
-      "localAsset": "assets/images/scenes/age_question_child.jpg",
+      "localAsset": "assets/images/scenes/howoldareyou.jpg",
       "stockSearchQueries": [
         "friendly adult asking child age church yard",
         "Asian woman talking with child garden",

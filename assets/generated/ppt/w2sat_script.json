@@ -206,6 +206,37 @@
           "repeat3": "assets/audio/sentences/S10_female_repeat3.mp3"
         }
       }
+    },
+    {
+      "variantId": "10-2",
+      "phraseId": 10,
+      "category": "daily",
+      "korean": "저는 ~살입니다",
+      "english": "I am ~ years old.",
+      "speech": {
+        "male": {
+          "thai": "ผมอายุ ~ ปีครับ",
+          "romanization": "phŏm aa-yú ~ bpii khráp",
+          "korean_pronunciation": "폼 아유 ~ 삐 크랍"
+        },
+        "female": {
+          "thai": "ฉันอายุ ~ ปีค่ะ",
+          "romanization": "chăn aa-yú ~ bpii khâ",
+          "korean_pronunciation": "찬 아유 ~ 삐 카"
+        }
+      },
+      "audio": {
+        "male": {
+          "normal": "assets/audio/sentences/S10_2_male_normal.mp3",
+          "slow": "assets/audio/sentences/S10_2_male_slow.mp3",
+          "repeat3": "assets/audio/sentences/S10_2_male_repeat3.mp3"
+        },
+        "female": {
+          "normal": "assets/audio/sentences/S10_2_female_normal.mp3",
+          "slow": "assets/audio/sentences/S10_2_female_slow.mp3",
+          "repeat3": "assets/audio/sentences/S10_2_female_repeat3.mp3"
+        }
+      }
     }
   ],
   "keywords": [
@@ -312,6 +343,7 @@
       "id": "W016",
       "variantIds": [
         "9",
+        "10-2",
         "23"
       ],
       "korean": "나(남성)",
@@ -325,6 +357,7 @@
       "tier": "core",
       "days": [
         8,
+        9,
         10,
         15,
         23,
@@ -341,6 +374,7 @@
       "id": "W017",
       "variantIds": [
         "9",
+        "10-2",
         "23"
       ],
       "korean": "나(여성)",
@@ -354,6 +388,7 @@
       "tier": "core",
       "days": [
         8,
+        9,
         10,
         15,
         23,

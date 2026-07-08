@@ -1,6 +1,6 @@
 # 태국어 선교회화 25일 이미지 수급 요청서
 
-작성일: 2026-06-26
+작성일: 2026-07-08
 
 ## 현재 상태
 
@@ -59,10 +59,10 @@
 - 현재 상태: 준비됨
 - 검색어: church fellowship two people introducing themselves; Asian church conversation after worship; friendly introduction conversation church
 
-### age_question_child
+### howoldareyou
 - 사용 날짜: W2D9
 - 필요한 장면: 교회 마당에서 어린이에게 나이를 조심스럽고 친근하게 묻는 장면
-- 권장 파일명: assets/images/scenes/age_question_child.jpg
+- 권장 파일명: assets/images/scenes/howoldareyou.jpg
 - 현재 상태: 준비됨
 - 검색어: friendly adult asking child age church yard; Asian woman talking with child garden; warm church courtyard child conversation
 
@@ -187,11 +187,11 @@
 - 파일명: assets/images/scenes/name_intro_conversation.jpg
 - 상태: 준비됨
 
-### W2D9 나이 묻기
+### W2D9 나이 묻고 답하기
 - 구분: 평일
 - 필요한 장면: 교회 마당에서 어린이에게 나이를 조심스럽고 친근하게 묻는 장면
-- 스토리: 친한 사이 또는 어린이에게 나이를 묻는 장면을 연습한다.
-- 파일명: assets/images/scenes/age_question_child.jpg
+- 스토리: 친한 사이 또는 어린이에게 나이를 묻고, 내 나이를 짧게 대답하는 장면을 연습한다.
+- 파일명: assets/images/scenes/howoldareyou.jpg
 - 상태: 준비됨
 
 ### W2D10 우리는 당신들을 사랑해요
@@ -299,7 +299,7 @@
 - 파일명: assets/images/scenes/praise_invitation.jpg
 - 상태: 사진 필요
 
-### W5D25 전체 24문장 종합 리허설
+### W5D25 전체 문장 종합 리허설
 - 구분: 평일
 - 필요한 장면: 처음 만남부터 기도와 찬양 초대까지 전체 흐름을 역할극으로 복습하는 장면
 - 스토리: 처음 만남, 자기소개, 식사와 도움, 사랑과 축복, 믿음의 초대, 기도와 찬양, 작별까지 전체 장면을 연결한다.
@@ -334,7 +334,7 @@
 - 파일명: assets/images/scenes/encouragement_and_blessing.jpg
 - 상태: 사진 필요
 
-### W5SAT 전체 24문장 종합 역할극
+### W5SAT 전체 문장 종합 역할극
 - 구분: 토요일
 - 필요한 장면: 처음 만남부터 기도와 찬양 초대까지 전체 흐름을 역할극으로 복습하는 장면
 - 스토리: 한국 선교팀, 태국 교회 성도, 처음 온 방문객이 만난다. 인사와 자기소개, 식사와 도움, 사랑과 축복, 믿음의 초대, 기도와 찬양 초대, 작별까지 전체 흐름으로 연습한다.
