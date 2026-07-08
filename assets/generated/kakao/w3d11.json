@@ -36,28 +36,32 @@
       {
         "type": "local_preferred",
         "assetPath": "assets/images/scenes/restroom_wayfinding.jpg",
-        "status": "missing"
+        "status": "ready"
       },
       {
         "type": "stock_preferred",
         "queries": [
-          "restroom sign clean hallway",
-          "bathroom direction sign public building"
+          "church hallway restroom direction",
+          "person asking where restroom is church",
+          "friendly wayfinding in church building"
         ],
         "status": "search_required"
       },
       {
         "type": "ai_fallback",
         "prompt": {
-          "scene": "asking where the restroom is",
-          "peopleAndAction": "one person politely asking, another person pointing helpfully",
-          "setting": "clean church hallway near restroom sign",
-          "mood": "practical, calm, helpful",
-          "cameraFraming": "medium shot with visible sign",
-          "lighting": "clear indoor lighting",
+          "scene": "asking where the restroom is in a church building",
+          "peopleAndAction": "one adult politely asks for directions while another points toward a restroom hallway",
+          "setting": "small Thai church hallway or courtyard entrance",
+          "mood": "practical, respectful, calm",
+          "cameraFraming": "medium documentary scene",
+          "lighting": "bright natural daylight",
           "avoidList": [
-            "messy restroom interior",
-            "humor or exaggerated expressions"
+            "blurry or noisy image",
+            "heavy watermark",
+            "text embedded in photo",
+            "theological symbolism without a real scene",
+            "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
           ]
         },
         "status": "generate_if_needed"

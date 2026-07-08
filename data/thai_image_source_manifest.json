@@ -166,109 +166,6 @@
       }
     },
     {
-      "sceneId": "restroom_wayfinding",
-      "useFor": [
-        "W3D11"
-      ],
-      "localAsset": null,
-      "stockSearchQueries": [
-        "restroom sign clean hallway",
-        "bathroom direction sign public building"
-      ],
-      "aiPrompt": {
-        "scene": "asking where the restroom is",
-        "peopleAndAction": "one person politely asking, another person pointing helpfully",
-        "setting": "clean church hallway near restroom sign",
-        "mood": "practical, calm, helpful",
-        "cameraFraming": "medium shot with visible sign",
-        "lighting": "clear indoor lighting",
-        "avoidList": [
-          "messy restroom interior",
-          "humor or exaggerated expressions"
-        ]
-      },
-      "altTextKo": "교회 안에서 화장실 위치를 정중하게 묻는 장면",
-      "licensing": {
-        "licenseType": null,
-        "sourceUrl": null,
-        "attributionRequired": null,
-        "attributionText": null,
-        "approvalStatus": "pending"
-      }
-    },
-    {
-      "sceneId": "meal_table_fellowship",
-      "useFor": [
-        "W3D12",
-        "W3D15",
-        "W3SAT",
-        "W3SUN"
-      ],
-      "localAsset": null,
-      "stockSearchQueries": [
-        "church meal table fellowship asian family style",
-        "friends sharing meal smiling table",
-        "community lunch church"
-      ],
-      "aiPrompt": {
-        "scene": "sharing a meal in church fellowship",
-        "peopleAndAction": "small group smiling over food, one person offering food, another praising it",
-        "setting": "church meal table",
-        "mood": "warm, generous, communal",
-        "cameraFraming": "wide table scene",
-        "lighting": "soft natural light",
-        "avoidList": [
-          "restaurant luxury styling",
-          "food close-up without people"
-        ]
-      },
-      "altTextKo": "교회 식사 자리에서 음식을 나누며 대화하는 장면",
-      "licensing": {
-        "licenseType": null,
-        "sourceUrl": null,
-        "attributionRequired": null,
-        "attributionText": null,
-        "approvalStatus": "pending"
-      }
-    },
-    {
-      "sceneId": "encouragement_and_blessing",
-      "useFor": [
-        "W4D16",
-        "W4D17",
-        "W4D18",
-        "W4D19",
-        "W4SAT",
-        "W4SUN"
-      ],
-      "localAsset": null,
-      "stockSearchQueries": [
-        "gentle church encouragement conversation",
-        "supportive conversation church smiling",
-        "blessing prayer church community"
-      ],
-      "aiPrompt": {
-        "scene": "gentle encouragement and blessing",
-        "peopleAndAction": "two adults speaking warmly, one encouraging the other, caring expression",
-        "setting": "church yard or fellowship room",
-        "mood": "comforting, hopeful, respectful",
-        "cameraFraming": "medium close conversation shot",
-        "lighting": "warm daylight",
-        "avoidList": [
-          "preaching at someone",
-          "dramatic spotlight"
-        ]
-      },
-      "altTextKo": "교회 안에서 사랑과 축복의 말을 따뜻하게 전하는 장면",
-      "licensing": {
-        "licenseType": null,
-        "sourceUrl": null,
-        "attributionRequired": null,
-        "attributionText": null,
-        "approvalStatus": "pending"
-      }
-    },
-    {
       "sceneId": "prayer_support",
       "useFor": [
         "W5D23"
@@ -291,39 +188,6 @@
         ]
       },
       "altTextKo": "상대를 위로하며 기도해 주겠다고 말하는 장면",
-      "licensing": {
-        "licenseType": null,
-        "sourceUrl": null,
-        "attributionRequired": null,
-        "attributionText": null,
-        "approvalStatus": "pending"
-      }
-    },
-    {
-      "sceneId": "praise_invitation",
-      "useFor": [
-        "W4D20",
-        "W5D24"
-      ],
-      "localAsset": null,
-      "stockSearchQueries": [
-        "small church praise group singing together",
-        "church worship small group joyful singing",
-        "community praise gathering"
-      ],
-      "aiPrompt": {
-        "scene": "inviting people to sing praise together",
-        "peopleAndAction": "small group singing with joy, one person inviting others to join",
-        "setting": "small church worship gathering",
-        "mood": "joyful, open, communal",
-        "cameraFraming": "wide small-group scene",
-        "lighting": "bright warm light",
-        "avoidList": [
-          "concert stage lighting",
-          "celebrity worship style"
-        ]
-      },
-      "altTextKo": "작은 교회 모임에서 함께 찬양하도록 초대하는 장면",
       "licensing": {
         "licenseType": null,
         "sourceUrl": null,
@@ -586,6 +450,359 @@
       "licensing": {
         "licenseType": "user_provided",
         "sourceUrl": "D:/문서/태국선교/image/Weloveyou.png",
+        "attributionRequired": false,
+        "attributionText": null,
+        "approvalStatus": "approved_for_pilot"
+      }
+    },
+    {
+      "sceneId": "restroom_wayfinding",
+      "useFor": [
+        "W3D11"
+      ],
+      "localAsset": "assets/images/scenes/restroom_wayfinding.jpg",
+      "stockSearchQueries": [
+        "church hallway restroom direction",
+        "person asking where restroom is church",
+        "friendly wayfinding in church building"
+      ],
+      "aiPrompt": {
+        "scene": "asking where the restroom is in a church building",
+        "peopleAndAction": "one adult politely asks for directions while another points toward a restroom hallway",
+        "setting": "small Thai church hallway or courtyard entrance",
+        "mood": "practical, respectful, calm",
+        "cameraFraming": "medium documentary scene",
+        "lighting": "bright natural daylight",
+        "avoidList": [
+          "blurry or noisy image",
+          "heavy watermark",
+          "text embedded in photo",
+          "theological symbolism without a real scene",
+          "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
+        ]
+      },
+      "altTextKo": "교회 안에서 화장실 위치를 정중하게 묻는 장면",
+      "licensing": {
+        "licenseType": "user_provided",
+        "sourceUrl": "D:/문서/태국선교/image/restroom_wayfinding.jpgrestroom_wayfinding.png",
+        "attributionRequired": false,
+        "attributionText": null,
+        "approvalStatus": "approved_for_pilot"
+      }
+    },
+    {
+      "sceneId": "meal_table_fellowship",
+      "useFor": [
+        "W3D12",
+        "W3SAT",
+        "W3SUN"
+      ],
+      "localAsset": "assets/images/scenes/meal_table_fellowship.jpg",
+      "stockSearchQueries": [
+        "church meal fellowship table Thailand",
+        "people sharing food church fellowship",
+        "warm community meal church"
+      ],
+      "aiPrompt": {
+        "scene": "church meal fellowship conversation",
+        "peopleAndAction": "people share food and smile while offering and enjoying a meal",
+        "setting": "small Thai church fellowship table",
+        "mood": "warm, grateful, friendly",
+        "cameraFraming": "medium wide table scene",
+        "lighting": "bright warm daylight",
+        "avoidList": [
+          "blurry or noisy image",
+          "heavy watermark",
+          "text embedded in photo",
+          "theological symbolism without a real scene",
+          "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
+        ]
+      },
+      "altTextKo": "교회 식사 자리에서 음식을 나누며 대화하는 장면",
+      "licensing": {
+        "licenseType": "user_provided",
+        "sourceUrl": "D:/문서/태국선교/image/meal_table_fellowship.jpgmeal_table_fellowship.png",
+        "attributionRequired": false,
+        "attributionText": null,
+        "approvalStatus": "approved_for_pilot"
+      }
+    },
+    {
+      "sceneId": "encouraging_child_or_volunteer",
+      "useFor": [
+        "W3D13"
+      ],
+      "localAsset": "assets/images/scenes/encouraging_child_or_volunteer.jpg",
+      "stockSearchQueries": [
+        "church volunteer encouragement good job",
+        "adult encouraging child church activity",
+        "warm praise after volunteer work"
+      ],
+      "aiPrompt": {
+        "scene": "encouraging someone by saying very good after a church activity",
+        "peopleAndAction": "an adult smiles and encourages a child or volunteer with a friendly gesture",
+        "setting": "small Thai church courtyard or classroom",
+        "mood": "encouraging, kind, joyful",
+        "cameraFraming": "medium shot",
+        "lighting": "soft natural daylight",
+        "avoidList": [
+          "blurry or noisy image",
+          "heavy watermark",
+          "text embedded in photo",
+          "theological symbolism without a real scene",
+          "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
+        ]
+      },
+      "altTextKo": "교회 봉사나 활동 후 따뜻하게 잘했다고 격려하는 장면",
+      "licensing": {
+        "licenseType": "user_provided",
+        "sourceUrl": "D:/문서/태국선교/image/encouraging_child_or_volunteer.png",
+        "attributionRequired": false,
+        "attributionText": null,
+        "approvalStatus": "approved_for_pilot"
+      }
+    },
+    {
+      "sceneId": "warm_church_farewell",
+      "useFor": [
+        "W3D14"
+      ],
+      "localAsset": "assets/images/scenes/warm_church_farewell.jpg",
+      "stockSearchQueries": [
+        "church farewell waving goodbye Thailand",
+        "warm goodbye after church meeting",
+        "people saying see you again church"
+      ],
+      "aiPrompt": {
+        "scene": "warm farewell after a church gathering",
+        "peopleAndAction": "two or three adults smile and wave goodbye near a church entrance",
+        "setting": "small Thai church entrance after fellowship",
+        "mood": "warm, hopeful, friendly",
+        "cameraFraming": "medium wide scene",
+        "lighting": "late afternoon natural light",
+        "avoidList": [
+          "blurry or noisy image",
+          "heavy watermark",
+          "text embedded in photo",
+          "theological symbolism without a real scene",
+          "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
+        ]
+      },
+      "altTextKo": "교회 모임 후 따뜻하게 작별 인사를 나누는 장면",
+      "licensing": {
+        "licenseType": "user_provided",
+        "sourceUrl": "D:/문서/태국선교/image/warm_church_farewell.png",
+        "attributionRequired": false,
+        "attributionText": null,
+        "approvalStatus": "approved_for_pilot"
+      }
+    },
+    {
+      "sceneId": "prayer_support",
+      "useFor": [
+        "W3D15",
+        "W5D23"
+      ],
+      "localAsset": "assets/images/scenes/prayer_support.jpg",
+      "stockSearchQueries": [
+        "offering prayer support church conversation",
+        "person listening and praying for friend church",
+        "gentle prayer support conversation"
+      ],
+      "aiPrompt": {
+        "scene": "offering to pray for someone after listening carefully",
+        "peopleAndAction": "one adult listens kindly and offers prayer support to another person",
+        "setting": "quiet corner of a small Thai church or courtyard",
+        "mood": "gentle, caring, respectful",
+        "cameraFraming": "medium close conversation",
+        "lighting": "soft warm daylight",
+        "avoidList": [
+          "blurry or noisy image",
+          "heavy watermark",
+          "text embedded in photo",
+          "theological symbolism without a real scene",
+          "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
+        ]
+      },
+      "altTextKo": "상대의 이야기를 듣고 기도해 드리겠다고 따뜻하게 말하는 장면",
+      "licensing": {
+        "licenseType": "user_provided",
+        "sourceUrl": "D:/문서/태국선교/image/rayer_support.png",
+        "attributionRequired": false,
+        "attributionText": null,
+        "approvalStatus": "approved_for_pilot"
+      }
+    },
+    {
+      "sceneId": "jesus_loves_you",
+      "useFor": [
+        "W4D16"
+      ],
+      "localAsset": "assets/images/scenes/jesus_loves_you.jpg",
+      "stockSearchQueries": [
+        "Jesus loves you warm church conversation",
+        "mission team sharing Jesus love Thailand",
+        "gentle gospel conversation church"
+      ],
+      "aiPrompt": {
+        "scene": "warmly sharing that Jesus loves you",
+        "peopleAndAction": "a Korean mission team member speaks gently with a Thai church visitor",
+        "setting": "small Thai church courtyard",
+        "mood": "warm, respectful, sincere",
+        "cameraFraming": "medium conversation scene",
+        "lighting": "bright natural daylight",
+        "avoidList": [
+          "blurry or noisy image",
+          "heavy watermark",
+          "text embedded in photo",
+          "theological symbolism without a real scene",
+          "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
+        ]
+      },
+      "altTextKo": "예수님이 당신을 사랑하신다고 따뜻하게 전하는 장면",
+      "licensing": {
+        "licenseType": "user_provided",
+        "sourceUrl": "D:/문서/태국선교/image/encouragement_and_blessing_Jesus loves you.png",
+        "attributionRequired": false,
+        "attributionText": null,
+        "approvalStatus": "approved_for_pilot"
+      }
+    },
+    {
+      "sceneId": "god_loves_you",
+      "useFor": [
+        "W4D17"
+      ],
+      "localAsset": "assets/images/scenes/god_loves_you.jpg",
+      "stockSearchQueries": [
+        "God loves you church conversation",
+        "sharing God loves you warm mission conversation",
+        "Thai church visitor hearing God loves you"
+      ],
+      "aiPrompt": {
+        "scene": "warmly sharing that God loves you",
+        "peopleAndAction": "two adults sit or stand in a gentle church conversation with a small Bible or church background",
+        "setting": "small Thai church fellowship area",
+        "mood": "peaceful, loving, respectful",
+        "cameraFraming": "medium shot",
+        "lighting": "soft natural daylight",
+        "avoidList": [
+          "blurry or noisy image",
+          "heavy watermark",
+          "text embedded in photo",
+          "theological symbolism without a real scene",
+          "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
+        ]
+      },
+      "altTextKo": "하나님이 당신을 사랑하신다고 따뜻하게 전하는 장면",
+      "licensing": {
+        "licenseType": "user_provided",
+        "sourceUrl": "D:/문서/태국선교/image/encouragement_and_blessing_The Lord love you.png",
+        "attributionRequired": false,
+        "attributionText": null,
+        "approvalStatus": "approved_for_pilot"
+      }
+    },
+    {
+      "sceneId": "god_bless_you",
+      "useFor": [
+        "W4D18",
+        "W4SAT",
+        "W4SUN"
+      ],
+      "localAsset": "assets/images/scenes/god_bless_you.jpg",
+      "stockSearchQueries": [
+        "God bless you church blessing conversation",
+        "warm blessing prayer church Thailand",
+        "mission team blessing local church member"
+      ],
+      "aiPrompt": {
+        "scene": "saying God bless you with gentle encouragement",
+        "peopleAndAction": "one person offers a kind blessing to another without dramatic gestures",
+        "setting": "small Thai church or garden",
+        "mood": "peaceful, hopeful, encouraging",
+        "cameraFraming": "medium conversation scene",
+        "lighting": "warm natural daylight",
+        "avoidList": [
+          "blurry or noisy image",
+          "heavy watermark",
+          "text embedded in photo",
+          "theological symbolism without a real scene",
+          "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
+        ]
+      },
+      "altTextKo": "하나님의 축복을 전하며 따뜻하게 격려하는 장면",
+      "licensing": {
+        "licenseType": "user_provided",
+        "sourceUrl": "D:/문서/태국선교/image/God_bless_you.png",
+        "attributionRequired": false,
+        "attributionText": null,
+        "approvalStatus": "approved_for_pilot"
+      }
+    },
+    {
+      "sceneId": "god_is_love",
+      "useFor": [
+        "W4D19"
+      ],
+      "localAsset": "assets/images/scenes/god_is_love.jpg",
+      "stockSearchQueries": [
+        "God is love small church conversation",
+        "sharing Bible message God is love",
+        "peaceful gospel conversation church"
+      ],
+      "aiPrompt": {
+        "scene": "sharing the message God is love",
+        "peopleAndAction": "two adults talk calmly with a Bible or simple gospel material visible",
+        "setting": "small Thai church indoor or shaded courtyard",
+        "mood": "calm, sincere, loving",
+        "cameraFraming": "medium close scene",
+        "lighting": "soft warm light",
+        "avoidList": [
+          "blurry or noisy image",
+          "heavy watermark",
+          "text embedded in photo",
+          "theological symbolism without a real scene",
+          "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
+        ]
+      },
+      "altTextKo": "하나님은 사랑이십니다라는 핵심 메시지를 차분히 나누는 장면",
+      "licensing": {
+        "licenseType": "user_provided",
+        "sourceUrl": "D:/문서/태국선교/image/God_is_love.png",
+        "attributionRequired": false,
+        "attributionText": null,
+        "approvalStatus": "approved_for_pilot"
+      }
+    },
+    {
+      "sceneId": "praise_invitation",
+      "useFor": [
+        "W4D20",
+        "W5D24"
+      ],
+      "localAsset": "assets/images/scenes/praise_invitation.jpg",
+      "stockSearchQueries": [
+        "small church praise group singing together",
+        "church worship small group joyful singing",
+        "community praise gathering"
+      ],
+      "aiPrompt": {
+        "scene": "inviting people to sing praise together",
+        "peopleAndAction": "small group singing with joy, one person inviting others to join",
+        "setting": "small church worship gathering",
+        "mood": "joyful, open, communal",
+        "cameraFraming": "wide small-group scene",
+        "lighting": "bright warm light",
+        "avoidList": [
+          "concert stage lighting",
+          "celebrity worship style"
+        ]
+      },
+      "altTextKo": "작은 교회 모임에서 함께 찬양하도록 초대하는 장면",
+      "licensing": {
+        "licenseType": "user_provided",
+        "sourceUrl": "D:/문서/태국선교/image/Let_singing_together.png",
         "attributionRequired": false,
         "attributionText": null,
         "approvalStatus": "approved_for_pilot"

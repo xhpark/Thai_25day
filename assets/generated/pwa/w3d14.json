@@ -12,26 +12,32 @@
   "ministryGuide": "좋은 작별 인사는 다음 만남의 문을 열어 주고, 선교 관계를 계속 이어 가게 한다.",
   "speakingMission": "잘 가요와 다시 만나요를 한 세트로 5회 연습한다.",
   "primaryImage": {
-    "sceneId": null,
-    "altTextKo": "작별 인사 학습 장면",
+    "sceneId": "warm_church_farewell",
+    "altTextKo": "교회 모임 후 따뜻하게 작별 인사를 나누는 장면",
     "sourcePlan": [
+      {
+        "type": "local_preferred",
+        "assetPath": "assets/images/scenes/warm_church_farewell.jpg",
+        "status": "ready"
+      },
       {
         "type": "stock_preferred",
         "queries": [
-          "작별 인사",
-          "식사와 행사가 끝난 뒤 자연스럽게 헤어진다."
+          "church farewell waving goodbye Thailand",
+          "warm goodbye after church meeting",
+          "people saying see you again church"
         ],
         "status": "search_required"
       },
       {
         "type": "ai_fallback",
         "prompt": {
-          "scene": "작별 인사",
-          "peopleAndAction": "식사와 행사가 끝난 뒤 자연스럽게 헤어진다.",
-          "setting": "Thai church or daily-life mission context",
-          "mood": "warm, respectful, practical",
-          "cameraFraming": "documentary style",
-          "lighting": "bright natural light",
+          "scene": "warm farewell after a church gathering",
+          "peopleAndAction": "two or three adults smile and wave goodbye near a church entrance",
+          "setting": "small Thai church entrance after fellowship",
+          "mood": "warm, hopeful, friendly",
+          "cameraFraming": "medium wide scene",
+          "lighting": "late afternoon natural light",
           "avoidList": [
             "blurry or noisy image",
             "heavy watermark",

@@ -77,50 +77,71 @@
 - 사용 날짜: W3D11
 - 필요한 장면: 교회 안에서 화장실 위치를 정중하게 묻는 장면
 - 권장 파일명: assets/images/scenes/restroom_wayfinding.jpg
-- 현재 상태: 사진 필요
-- 검색어: restroom sign clean hallway; bathroom direction sign public building
+- 현재 상태: 준비됨
+- 검색어: church hallway restroom direction; person asking where restroom is church; friendly wayfinding in church building
 
 ### meal_table_fellowship
-- 사용 날짜: W3D12, W3D15, W3SAT
+- 사용 날짜: W3D12, W3SAT
 - 필요한 장면: 교회 식사 자리에서 음식을 나누며 대화하는 장면
 - 권장 파일명: assets/images/scenes/meal_table_fellowship.jpg
-- 현재 상태: 사진 필요
-- 검색어: church meal table fellowship asian family style; friends sharing meal smiling table; community lunch church
+- 현재 상태: 준비됨
+- 검색어: church meal fellowship table Thailand; people sharing food church fellowship; warm community meal church
 
-### W3D13
+### encouraging_child_or_volunteer
 - 사용 날짜: W3D13
-- 필요한 장면: 격려하기 학습 장면
-- 권장 파일명: assets/images/scenes/<scene_id>.jpg
-- 현재 상태: 사진 필요
-- 검색어: 격려하기; 어린이와 봉사자를 향해 격려한다.
+- 필요한 장면: 교회 봉사나 활동 후 따뜻하게 잘했다고 격려하는 장면
+- 권장 파일명: assets/images/scenes/encouraging_child_or_volunteer.jpg
+- 현재 상태: 준비됨
+- 검색어: church volunteer encouragement good job; adult encouraging child church activity; warm praise after volunteer work
 
-### W3D14
+### warm_church_farewell
 - 사용 날짜: W3D14
-- 필요한 장면: 작별 인사 학습 장면
-- 권장 파일명: assets/images/scenes/<scene_id>.jpg
-- 현재 상태: 사진 필요
-- 검색어: 작별 인사; 식사와 행사가 끝난 뒤 자연스럽게 헤어진다.
+- 필요한 장면: 교회 모임 후 따뜻하게 작별 인사를 나누는 장면
+- 권장 파일명: assets/images/scenes/warm_church_farewell.jpg
+- 현재 상태: 준비됨
+- 검색어: church farewell waving goodbye Thailand; warm goodbye after church meeting; people saying see you again church
 
-### encouragement_and_blessing
-- 사용 날짜: W4D16, W4D17, W4D18, W4D19, W4SAT
-- 필요한 장면: 교회 안에서 사랑과 축복의 말을 따뜻하게 전하는 장면
-- 권장 파일명: assets/images/scenes/encouragement_and_blessing.jpg
-- 현재 상태: 사진 필요
-- 검색어: gentle church encouragement conversation; supportive conversation church smiling; blessing prayer church community
+### prayer_support
+- 사용 날짜: W3D15, W5D23
+- 필요한 장면: 상대의 이야기를 듣고 기도해 드리겠다고 따뜻하게 말하는 장면
+- 권장 파일명: assets/images/scenes/prayer_support.jpg
+- 현재 상태: 준비됨
+- 검색어: offering prayer support church conversation; person listening and praying for friend church; gentle prayer support conversation
+
+### jesus_loves_you
+- 사용 날짜: W4D16
+- 필요한 장면: 예수님이 당신을 사랑하신다고 따뜻하게 전하는 장면
+- 권장 파일명: assets/images/scenes/jesus_loves_you.jpg
+- 현재 상태: 준비됨
+- 검색어: Jesus loves you warm church conversation; mission team sharing Jesus love Thailand; gentle gospel conversation church
+
+### god_loves_you
+- 사용 날짜: W4D17
+- 필요한 장면: 하나님이 당신을 사랑하신다고 따뜻하게 전하는 장면
+- 권장 파일명: assets/images/scenes/god_loves_you.jpg
+- 현재 상태: 준비됨
+- 검색어: God loves you church conversation; sharing God loves you warm mission conversation; Thai church visitor hearing God loves you
+
+### god_bless_you
+- 사용 날짜: W4D18, W4SAT
+- 필요한 장면: 하나님의 축복을 전하며 따뜻하게 격려하는 장면
+- 권장 파일명: assets/images/scenes/god_bless_you.jpg
+- 현재 상태: 준비됨
+- 검색어: God bless you church blessing conversation; warm blessing prayer church Thailand; mission team blessing local church member
+
+### god_is_love
+- 사용 날짜: W4D19
+- 필요한 장면: 하나님은 사랑이십니다라는 핵심 메시지를 차분히 나누는 장면
+- 권장 파일명: assets/images/scenes/god_is_love.jpg
+- 현재 상태: 준비됨
+- 검색어: God is love small church conversation; sharing Bible message God is love; peaceful gospel conversation church
 
 ### praise_invitation
 - 사용 날짜: W4D20, W5D24
 - 필요한 장면: 작은 교회 모임에서 함께 찬양하도록 초대하는 장면
 - 권장 파일명: assets/images/scenes/praise_invitation.jpg
-- 현재 상태: 사진 필요
+- 현재 상태: 준비됨
 - 검색어: small church praise group singing together; church worship small group joyful singing; community praise gathering
-
-### prayer_support
-- 사용 날짜: W5D23
-- 필요한 장면: 상대를 위로하며 기도해 주겠다고 말하는 장면
-- 권장 파일명: assets/images/scenes/prayer_support.jpg
-- 현재 상태: 사진 필요
-- 검색어: prayer support two people church; gentle prayer with friend church
 
 ### full_mission_roleplay_review
 - 사용 날짜: W5D25, W5SAT
@@ -206,70 +227,70 @@
 - 필요한 장면: 교회 안에서 화장실 위치를 정중하게 묻는 장면
 - 스토리: 낯선 장소에서 화장실 위치를 정중하게 묻는다.
 - 파일명: assets/images/scenes/restroom_wayfinding.jpg
-- 상태: 사진 필요
+- 상태: 준비됨
 
 ### W3D12 식사 대화
 - 구분: 평일
 - 필요한 장면: 교회 식사 자리에서 음식을 나누며 대화하는 장면
 - 스토리: 식사 전과 식사 중에 자연스럽게 반응한다.
 - 파일명: assets/images/scenes/meal_table_fellowship.jpg
-- 상태: 사진 필요
+- 상태: 준비됨
 
 ### W3D13 격려하기
 - 구분: 평일
-- 필요한 장면: 격려하기 학습 장면
+- 필요한 장면: 교회 봉사나 활동 후 따뜻하게 잘했다고 격려하는 장면
 - 스토리: 어린이와 봉사자를 향해 격려한다.
-- 파일명: 
-- 상태: 사진 필요
+- 파일명: assets/images/scenes/encouraging_child_or_volunteer.jpg
+- 상태: 준비됨
 
 ### W3D14 작별 인사
 - 구분: 평일
-- 필요한 장면: 작별 인사 학습 장면
+- 필요한 장면: 교회 모임 후 따뜻하게 작별 인사를 나누는 장면
 - 스토리: 식사와 행사가 끝난 뒤 자연스럽게 헤어진다.
-- 파일명: 
-- 상태: 사진 필요
+- 파일명: assets/images/scenes/warm_church_farewell.jpg
+- 상태: 준비됨
 
 ### W3D15 기도해 드릴게요
 - 구분: 평일
-- 필요한 장면: 교회 식사 자리에서 음식을 나누며 대화하는 장면
+- 필요한 장면: 상대의 이야기를 듣고 기도해 드리겠다고 따뜻하게 말하는 장면
 - 스토리: 교회 식사 자리나 도움 요청 장면에서 기도하겠다고 제안한다.
-- 파일명: assets/images/scenes/meal_table_fellowship.jpg
-- 상태: 사진 필요
+- 파일명: assets/images/scenes/prayer_support.jpg
+- 상태: 준비됨
 
 ### W4D16 예수님의 사랑 전하기
 - 구분: 평일
-- 필요한 장면: 교회 안에서 사랑과 축복의 말을 따뜻하게 전하는 장면
+- 필요한 장면: 예수님이 당신을 사랑하신다고 따뜻하게 전하는 장면
 - 스토리: 관계를 만든 뒤 사랑의 메시지를 전한다.
-- 파일명: assets/images/scenes/encouragement_and_blessing.jpg
-- 상태: 사진 필요
+- 파일명: assets/images/scenes/jesus_loves_you.jpg
+- 상태: 준비됨
 
 ### W4D17 하나님의 사랑 전하기
 - 구분: 평일
-- 필요한 장면: 교회 안에서 사랑과 축복의 말을 따뜻하게 전하는 장면
+- 필요한 장면: 하나님이 당신을 사랑하신다고 따뜻하게 전하는 장면
 - 스토리: 사랑의 메시지를 다른 표현으로 비교해 익힌다.
-- 파일명: assets/images/scenes/encouragement_and_blessing.jpg
-- 상태: 사진 필요
+- 파일명: assets/images/scenes/god_loves_you.jpg
+- 상태: 준비됨
 
 ### W4D18 축복하기
 - 구분: 평일
-- 필요한 장면: 교회 안에서 사랑과 축복의 말을 따뜻하게 전하는 장면
+- 필요한 장면: 하나님의 축복을 전하며 따뜻하게 격려하는 장면
 - 스토리: 만남이나 헤어짐, 기도 후에 축복을 전한다.
-- 파일명: assets/images/scenes/encouragement_and_blessing.jpg
-- 상태: 사진 필요
+- 파일명: assets/images/scenes/god_bless_you.jpg
+- 상태: 준비됨
 
 ### W4D19 하나님은 사랑이십니다
 - 구분: 평일
-- 필요한 장면: 교회 안에서 사랑과 축복의 말을 따뜻하게 전하는 장면
+- 필요한 장면: 하나님은 사랑이십니다라는 핵심 메시지를 차분히 나누는 장면
 - 스토리: 복음의 핵심을 짧은 선언문으로 전한다.
-- 파일명: assets/images/scenes/encouragement_and_blessing.jpg
-- 상태: 사진 필요
+- 파일명: assets/images/scenes/god_is_love.jpg
+- 상태: 준비됨
 
 ### W4D20 함께 찬양해요
 - 구분: 평일
 - 필요한 장면: 작은 교회 모임에서 함께 찬양하도록 초대하는 장면
 - 스토리: 교회 모임이나 기도 후에 함께 찬양하자고 부드럽게 초대한다.
 - 파일명: assets/images/scenes/praise_invitation.jpg
-- 상태: 사진 필요
+- 상태: 준비됨
 
 ### W5D21 인사와 감사 전체 복습
 - 구분: 평일
@@ -287,17 +308,17 @@
 
 ### W5D23 생활 대화와 돌봄 복습
 - 구분: 평일
-- 필요한 장면: 상대를 위로하며 기도해 주겠다고 말하는 장면
+- 필요한 장면: 상대의 이야기를 듣고 기도해 드리겠다고 따뜻하게 말하는 장면
 - 스토리: 교회 식사 자리에서 도움을 묻고, 식사 표현과 칭찬을 나눈 뒤, 다시 만남과 기도 약속으로 이어 간다.
 - 파일명: assets/images/scenes/prayer_support.jpg
-- 상태: 사진 필요
+- 상태: 준비됨
 
 ### W5D24 사랑·축복·믿음·찬양 복습
 - 구분: 평일
 - 필요한 장면: 작은 교회 모임에서 함께 찬양하도록 초대하는 장면
 - 스토리: 하나님의 사랑과 축복을 전하고, 예수님을 믿으세요와 함께 찬양해요까지 부드럽게 이어 말한다.
 - 파일명: assets/images/scenes/praise_invitation.jpg
-- 상태: 사진 필요
+- 상태: 준비됨
 
 ### W5D25 전체 문장 종합 리허설
 - 구분: 평일
@@ -325,14 +346,14 @@
 - 필요한 장면: 교회 식사 자리에서 음식을 나누며 대화하는 장면
 - 스토리: 교회 행사에 참여한 방문객이 식사 자리에서 도움을 요청하고, 음식을 칭찬하며, 봉사자에게 감사한 뒤 다음 만남을 약속한다.
 - 파일명: assets/images/scenes/meal_table_fellowship.jpg
-- 상태: 사진 필요
+- 상태: 준비됨
 
 ### W4SAT 마음을 돌보고 축복하기
 - 구분: 토요일
-- 필요한 장면: 교회 안에서 사랑과 축복의 말을 따뜻하게 전하는 장면
+- 필요한 장면: 하나님의 축복을 전하며 따뜻하게 격려하는 장면
 - 스토리: 교회 행사에서 만난 이웃에게 인사하고, 삶을 격려하며, 하나님의 사랑과 축복을 전한다.
-- 파일명: assets/images/scenes/encouragement_and_blessing.jpg
-- 상태: 사진 필요
+- 파일명: assets/images/scenes/god_bless_you.jpg
+- 상태: 준비됨
 
 ### W5SAT 전체 문장 종합 역할극
 - 구분: 토요일

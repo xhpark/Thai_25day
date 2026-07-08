@@ -30,26 +30,32 @@
   "ministryGuide": "따뜻한 격려는 관계를 깊게 하고 복음적 메시지를 들을 마음도 열어 준다.",
   "speakingMission": "참 잘했어요를 미소와 함께 5회 말한다.",
   "primaryImage": {
-    "sceneId": null,
-    "altTextKo": "격려하기 학습 장면",
+    "sceneId": "encouraging_child_or_volunteer",
+    "altTextKo": "교회 봉사나 활동 후 따뜻하게 잘했다고 격려하는 장면",
     "sourcePlan": [
+      {
+        "type": "local_preferred",
+        "assetPath": "assets/images/scenes/encouraging_child_or_volunteer.jpg",
+        "status": "ready"
+      },
       {
         "type": "stock_preferred",
         "queries": [
-          "격려하기",
-          "어린이와 봉사자를 향해 격려한다."
+          "church volunteer encouragement good job",
+          "adult encouraging child church activity",
+          "warm praise after volunteer work"
         ],
         "status": "search_required"
       },
       {
         "type": "ai_fallback",
         "prompt": {
-          "scene": "격려하기",
-          "peopleAndAction": "어린이와 봉사자를 향해 격려한다.",
-          "setting": "Thai church or daily-life mission context",
-          "mood": "warm, respectful, practical",
-          "cameraFraming": "documentary style",
-          "lighting": "bright natural light",
+          "scene": "encouraging someone by saying very good after a church activity",
+          "peopleAndAction": "an adult smiles and encourages a child or volunteer with a friendly gesture",
+          "setting": "small Thai church courtyard or classroom",
+          "mood": "encouraging, kind, joyful",
+          "cameraFraming": "medium shot",
+          "lighting": "soft natural daylight",
           "avoidList": [
             "blurry or noisy image",
             "heavy watermark",

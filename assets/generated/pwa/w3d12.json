@@ -18,29 +18,32 @@
       {
         "type": "local_preferred",
         "assetPath": "assets/images/scenes/meal_table_fellowship.jpg",
-        "status": "missing"
+        "status": "ready"
       },
       {
         "type": "stock_preferred",
         "queries": [
-          "church meal table fellowship asian family style",
-          "friends sharing meal smiling table",
-          "community lunch church"
+          "church meal fellowship table Thailand",
+          "people sharing food church fellowship",
+          "warm community meal church"
         ],
         "status": "search_required"
       },
       {
         "type": "ai_fallback",
         "prompt": {
-          "scene": "sharing a meal in church fellowship",
-          "peopleAndAction": "small group smiling over food, one person offering food, another praising it",
-          "setting": "church meal table",
-          "mood": "warm, generous, communal",
-          "cameraFraming": "wide table scene",
-          "lighting": "soft natural light",
+          "scene": "church meal fellowship conversation",
+          "peopleAndAction": "people share food and smile while offering and enjoying a meal",
+          "setting": "small Thai church fellowship table",
+          "mood": "warm, grateful, friendly",
+          "cameraFraming": "medium wide table scene",
+          "lighting": "bright warm daylight",
           "avoidList": [
-            "restaurant luxury styling",
-            "food close-up without people"
+            "blurry or noisy image",
+            "heavy watermark",
+            "text embedded in photo",
+            "theological symbolism without a real scene",
+            "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
           ]
         },
         "status": "generate_if_needed"

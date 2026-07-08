@@ -12,35 +12,38 @@
   "ministryGuide": "기도 제안은 많은 경우 직접적인 설명보다 더 따뜻하고 실제적인 돌봄으로 받아들여진다.",
   "speakingMission": "기도해 드릴게요를 5회 말하고, 식사와 격려 문장 뒤에 이어 2회 연습한다.",
   "primaryImage": {
-    "sceneId": "meal_table_fellowship",
-    "altTextKo": "교회 식사 자리에서 음식을 나누며 대화하는 장면",
+    "sceneId": "prayer_support",
+    "altTextKo": "상대의 이야기를 듣고 기도해 드리겠다고 따뜻하게 말하는 장면",
     "sourcePlan": [
       {
         "type": "local_preferred",
-        "assetPath": "assets/images/scenes/meal_table_fellowship.jpg",
-        "status": "missing"
+        "assetPath": "assets/images/scenes/prayer_support.jpg",
+        "status": "ready"
       },
       {
         "type": "stock_preferred",
         "queries": [
-          "church meal table fellowship asian family style",
-          "friends sharing meal smiling table",
-          "community lunch church"
+          "offering prayer support church conversation",
+          "person listening and praying for friend church",
+          "gentle prayer support conversation"
         ],
         "status": "search_required"
       },
       {
         "type": "ai_fallback",
         "prompt": {
-          "scene": "sharing a meal in church fellowship",
-          "peopleAndAction": "small group smiling over food, one person offering food, another praising it",
-          "setting": "church meal table",
-          "mood": "warm, generous, communal",
-          "cameraFraming": "wide table scene",
-          "lighting": "soft natural light",
+          "scene": "offering to pray for someone after listening carefully",
+          "peopleAndAction": "one adult listens kindly and offers prayer support to another person",
+          "setting": "quiet corner of a small Thai church or courtyard",
+          "mood": "gentle, caring, respectful",
+          "cameraFraming": "medium close conversation",
+          "lighting": "soft warm daylight",
           "avoidList": [
-            "restaurant luxury styling",
-            "food close-up without people"
+            "blurry or noisy image",
+            "heavy watermark",
+            "text embedded in photo",
+            "theological symbolism without a real scene",
+            "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
           ]
         },
         "status": "generate_if_needed"

@@ -13,33 +13,37 @@
   "speakingMission": "화장실 질문, 식사 표현, 칭찬, 작별, 기도해 드릴게요를 순서대로 3회 말한다.",
   "primaryImage": {
     "sceneId": "prayer_support",
-    "altTextKo": "상대를 위로하며 기도해 주겠다고 말하는 장면",
+    "altTextKo": "상대의 이야기를 듣고 기도해 드리겠다고 따뜻하게 말하는 장면",
     "sourcePlan": [
       {
         "type": "local_preferred",
         "assetPath": "assets/images/scenes/prayer_support.jpg",
-        "status": "missing"
+        "status": "ready"
       },
       {
         "type": "stock_preferred",
         "queries": [
-          "prayer support two people church",
-          "gentle prayer with friend church"
+          "offering prayer support church conversation",
+          "person listening and praying for friend church",
+          "gentle prayer support conversation"
         ],
         "status": "search_required"
       },
       {
         "type": "ai_fallback",
         "prompt": {
-          "scene": "offering prayer for someone",
-          "peopleAndAction": "one person listening with care, another offering prayer support with gentle posture",
-          "setting": "quiet church corner",
-          "mood": "peaceful, caring, sincere",
-          "cameraFraming": "medium shot",
-          "lighting": "soft indoor light",
+          "scene": "offering to pray for someone after listening carefully",
+          "peopleAndAction": "one adult listens kindly and offers prayer support to another person",
+          "setting": "quiet corner of a small Thai church or courtyard",
+          "mood": "gentle, caring, respectful",
+          "cameraFraming": "medium close conversation",
+          "lighting": "soft warm daylight",
           "avoidList": [
-            "crowded worship stage",
-            "extreme emotion"
+            "blurry or noisy image",
+            "heavy watermark",
+            "text embedded in photo",
+            "theological symbolism without a real scene",
+            "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
           ]
         },
         "status": "generate_if_needed"

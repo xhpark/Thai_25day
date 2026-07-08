@@ -30,35 +30,38 @@
   "ministryGuide": "마음을 담아 천천히 말할수록 같은 문장도 훨씬 깊게 전달된다.",
   "speakingMission": "가까운 사람 한 명을 떠올리며 사랑 문장 1회, 축복 문장 1회를 진심으로 말한다.",
   "primaryImage": {
-    "sceneId": "encouragement_and_blessing",
-    "altTextKo": "교회 안에서 사랑과 축복의 말을 따뜻하게 전하는 장면",
+    "sceneId": "god_bless_you",
+    "altTextKo": "하나님의 축복을 전하며 따뜻하게 격려하는 장면",
     "sourcePlan": [
       {
         "type": "local_preferred",
-        "assetPath": "assets/images/scenes/encouragement_and_blessing.jpg",
-        "status": "missing"
+        "assetPath": "assets/images/scenes/god_bless_you.jpg",
+        "status": "ready"
       },
       {
         "type": "stock_preferred",
         "queries": [
-          "gentle church encouragement conversation",
-          "supportive conversation church smiling",
-          "blessing prayer church community"
+          "God bless you church blessing conversation",
+          "warm blessing prayer church Thailand",
+          "mission team blessing local church member"
         ],
         "status": "search_required"
       },
       {
         "type": "ai_fallback",
         "prompt": {
-          "scene": "gentle encouragement and blessing",
-          "peopleAndAction": "two adults speaking warmly, one encouraging the other, caring expression",
-          "setting": "church yard or fellowship room",
-          "mood": "comforting, hopeful, respectful",
-          "cameraFraming": "medium close conversation shot",
-          "lighting": "warm daylight",
+          "scene": "saying God bless you with gentle encouragement",
+          "peopleAndAction": "one person offers a kind blessing to another without dramatic gestures",
+          "setting": "small Thai church or garden",
+          "mood": "peaceful, hopeful, encouraging",
+          "cameraFraming": "medium conversation scene",
+          "lighting": "warm natural daylight",
           "avoidList": [
-            "preaching at someone",
-            "dramatic spotlight"
+            "blurry or noisy image",
+            "heavy watermark",
+            "text embedded in photo",
+            "theological symbolism without a real scene",
+            "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
           ]
         },
         "status": "generate_if_needed"

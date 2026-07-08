@@ -18,7 +18,7 @@
       {
         "type": "local_preferred",
         "assetPath": "assets/images/scenes/praise_invitation.jpg",
-        "status": "missing"
+        "status": "ready"
       },
       {
         "type": "stock_preferred",
