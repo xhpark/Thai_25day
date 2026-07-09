@@ -202,11 +202,7 @@
     },
     {
       "sceneId": "full_mission_roleplay_review",
-      "useFor": [
-        "W5D25",
-        "W5SAT",
-        "W5SUN"
-      ],
+      "useFor": [],
       "localAsset": null,
       "stockSearchQueries": [
         "church mission team roleplay small group conversation",
@@ -603,7 +599,10 @@
       "sceneId": "prayer_support",
       "useFor": [
         "W3D15",
-        "W5D23"
+        "W5D23",
+        "W5D25",
+        "W5SAT",
+        "W5SUN"
       ],
       "localAsset": "assets/images/scenes/prayer_support.jpg",
       "stockSearchQueries": [

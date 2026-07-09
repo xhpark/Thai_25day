@@ -9,8 +9,8 @@
   "sourceHashes": {
     "curriculum": "98ac4fd5e63ca72ff1b9e6d9bfdba2d2312841ca898e7f985385040cec75adf5",
     "assets": "c8c63283edcbc359c95bef3be52fc305539c7e7cff6dfd731b6f22c426c3ef64",
-    "templateSpecs": "887efdd6e9a0570368278be4b74a597430a6f41b9e6ba53652127dc8fe96659b",
-    "imageManifest": "25ac81f5e5757745dd38ab939f74ca975360e160eb73283bb22109930d97aa95"
+    "templateSpecs": "738180d58bf981181140567e29e40ff64295fe75fe1afab72fd0a9ff49e7d4c5",
+    "imageManifest": "c9d21eea6c7c667c79bf3c1fbdf943a4480d61e7433a43483866a39c86716003"
   },
   "bundles": {
     "weekdayLessons": [
@@ -14921,36 +14921,38 @@
         "supplementLinks": [],
         "images": {
           "primaryImage": {
-            "sceneId": "full_mission_roleplay_review",
-            "altTextKo": "처음 만남부터 기도와 찬양 초대까지 전체 흐름을 역할극으로 복습하는 장면",
+            "sceneId": "prayer_support",
+            "altTextKo": "상대의 이야기를 듣고 기도해 드리겠다고 따뜻하게 말하는 장면",
             "sourcePlan": [
               {
                 "type": "local_preferred",
-                "assetPath": "assets/images/scenes/full_mission_roleplay_review.jpg",
-                "status": "missing"
+                "assetPath": "assets/images/scenes/prayer_support.jpg",
+                "status": "ready"
               },
               {
                 "type": "stock_preferred",
                 "queries": [
-                  "church mission team roleplay small group conversation",
-                  "small group church fellowship greeting prayer singing",
-                  "mission training roleplay church group"
+                  "offering prayer support church conversation",
+                  "person listening and praying for friend church",
+                  "gentle prayer support conversation"
                 ],
                 "status": "search_required"
               },
               {
                 "type": "ai_fallback",
                 "prompt": {
-                  "scene": "full review roleplay for mission conversation",
-                  "peopleAndAction": "small group practicing greeting, introduction, prayer support, and praise invitation in a friendly roleplay",
-                  "setting": "Thai church fellowship room",
-                  "mood": "warm, practical, encouraging, communal",
-                  "cameraFraming": "wide documentary small-group scene",
-                  "lighting": "bright natural indoor light",
+                  "scene": "offering to pray for someone after listening carefully",
+                  "peopleAndAction": "one adult listens kindly and offers prayer support to another person",
+                  "setting": "quiet corner of a small Thai church or courtyard",
+                  "mood": "gentle, caring, respectful",
+                  "cameraFraming": "medium close conversation",
+                  "lighting": "soft warm daylight",
                   "avoidList": [
-                    "formal lecture podium",
-                    "concert stage lighting",
-                    "dramatic religious painting style"
+                    "blurry or noisy image",
+                    "heavy watermark",
+                    "text embedded in photo",
+                    "theological symbolism without a real scene",
+                    "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
                   ]
                 },
                 "status": "generate_if_needed"
@@ -18678,36 +18680,38 @@
         "keywords": [],
         "images": {
           "primaryImage": {
-            "sceneId": "full_mission_roleplay_review",
-            "altTextKo": "처음 만남부터 기도와 찬양 초대까지 전체 흐름을 역할극으로 복습하는 장면",
+            "sceneId": "prayer_support",
+            "altTextKo": "상대의 이야기를 듣고 기도해 드리겠다고 따뜻하게 말하는 장면",
             "sourcePlan": [
               {
                 "type": "local_preferred",
-                "assetPath": "assets/images/scenes/full_mission_roleplay_review.jpg",
-                "status": "missing"
+                "assetPath": "assets/images/scenes/prayer_support.jpg",
+                "status": "ready"
               },
               {
                 "type": "stock_preferred",
                 "queries": [
-                  "church mission team roleplay small group conversation",
-                  "small group church fellowship greeting prayer singing",
-                  "mission training roleplay church group"
+                  "offering prayer support church conversation",
+                  "person listening and praying for friend church",
+                  "gentle prayer support conversation"
                 ],
                 "status": "search_required"
               },
               {
                 "type": "ai_fallback",
                 "prompt": {
-                  "scene": "full review roleplay for mission conversation",
-                  "peopleAndAction": "small group practicing greeting, introduction, prayer support, and praise invitation in a friendly roleplay",
-                  "setting": "Thai church fellowship room",
-                  "mood": "warm, practical, encouraging, communal",
-                  "cameraFraming": "wide documentary small-group scene",
-                  "lighting": "bright natural indoor light",
+                  "scene": "offering to pray for someone after listening carefully",
+                  "peopleAndAction": "one adult listens kindly and offers prayer support to another person",
+                  "setting": "quiet corner of a small Thai church or courtyard",
+                  "mood": "gentle, caring, respectful",
+                  "cameraFraming": "medium close conversation",
+                  "lighting": "soft warm daylight",
                   "avoidList": [
-                    "formal lecture podium",
-                    "concert stage lighting",
-                    "dramatic religious painting style"
+                    "blurry or noisy image",
+                    "heavy watermark",
+                    "text embedded in photo",
+                    "theological symbolism without a real scene",
+                    "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
                   ]
                 },
                 "status": "generate_if_needed"
@@ -22254,36 +22258,38 @@
         ],
         "images": {
           "primaryImage": {
-            "sceneId": "full_mission_roleplay_review",
-            "altTextKo": "처음 만남부터 기도와 찬양 초대까지 전체 흐름을 역할극으로 복습하는 장면",
+            "sceneId": "prayer_support",
+            "altTextKo": "상대의 이야기를 듣고 기도해 드리겠다고 따뜻하게 말하는 장면",
             "sourcePlan": [
               {
                 "type": "local_preferred",
-                "assetPath": "assets/images/scenes/full_mission_roleplay_review.jpg",
-                "status": "missing"
+                "assetPath": "assets/images/scenes/prayer_support.jpg",
+                "status": "ready"
               },
               {
                 "type": "stock_preferred",
                 "queries": [
-                  "church mission team roleplay small group conversation",
-                  "small group church fellowship greeting prayer singing",
-                  "mission training roleplay church group"
+                  "offering prayer support church conversation",
+                  "person listening and praying for friend church",
+                  "gentle prayer support conversation"
                 ],
                 "status": "search_required"
               },
               {
                 "type": "ai_fallback",
                 "prompt": {
-                  "scene": "full review roleplay for mission conversation",
-                  "peopleAndAction": "small group practicing greeting, introduction, prayer support, and praise invitation in a friendly roleplay",
-                  "setting": "Thai church fellowship room",
-                  "mood": "warm, practical, encouraging, communal",
-                  "cameraFraming": "wide documentary small-group scene",
-                  "lighting": "bright natural indoor light",
+                  "scene": "offering to pray for someone after listening carefully",
+                  "peopleAndAction": "one adult listens kindly and offers prayer support to another person",
+                  "setting": "quiet corner of a small Thai church or courtyard",
+                  "mood": "gentle, caring, respectful",
+                  "cameraFraming": "medium close conversation",
+                  "lighting": "soft warm daylight",
                   "avoidList": [
-                    "formal lecture podium",
-                    "concert stage lighting",
-                    "dramatic religious painting style"
+                    "blurry or noisy image",
+                    "heavy watermark",
+                    "text embedded in photo",
+                    "theological symbolism without a real scene",
+                    "sad or confrontational mood when the lesson goal is greeting, welcome, or blessing"
                   ]
                 },
                 "status": "generate_if_needed"

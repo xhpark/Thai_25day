@@ -131,32 +131,17 @@ Week 5 review follows the user's decision:
 
 ## Known Remaining Issue
 
-### Missing day 25 primary image
+### Closed: day 25 primary image
 
-`assets/generated/pwa/w5d25.json` references:
+This issue is closed. The user decided that day 25 should reuse the same image as day 23 instead of creating a new image.
 
-```text
-assets/images/scenes/full_mission_roleplay_review.jpg
-```
-
-But `assets/images/scenes/full_mission_roleplay_review.jpg` does not currently exist. The PWA has a placeholder fallback, so the page should still render, but the visual result is not final.
-
-Recommended fix:
-
-1. Add or generate `assets/images/scenes/full_mission_roleplay_review.jpg`.
-2. Re-run:
-
-```powershell
-python scripts/validate_asset_links.py
-```
-
-3. Open:
+Day 25 now references:
 
 ```text
-https://xhpark.github.io/Thai_25day/?day=25
+assets/images/scenes/prayer_support.jpg
 ```
 
-4. Confirm the hero image appears and is contextually correct.
+The old missing `full_mission_roleplay_review.jpg` reference should not reappear in generated PWA/Kakao/PPT/print outputs. If regeneration brings it back, check `data/thai_image_source_manifest.json` first.
 
 ## Audio And STT State
 
@@ -436,8 +421,8 @@ Lesson:
 
 ### Weaknesses / risks
 
-- Day 25 primary image file is missing and should be added.
-- `scripts/validate_asset_links.py` passed even though the day 25 primary image file was missing; its coverage should be improved to fail on missing local image asset paths marked `local_preferred`.
+- Day 25 previously referenced a missing primary image, but the issue was closed by reusing day 23's `prayer_support.jpg`.
+- `scripts/validate_asset_links.py` previously passed even though the day 25 primary image file was missing; this is now fixed so generated `local_preferred` image paths are checked.
 - Some old handoff docs still mention earlier Firebase Hosting or Cloud Run URLs/revisions. Treat older handoffs as historical unless verified against current code and `gcloud run services describe`.
 - The public final-review STT flow depends on browser microphone permission, Cloud Run availability, Google STT, and network stability.
 - Mobile live testing after v22 was browser/deployment verified, but the very last USB ADB check did not see the device. Re-run physical-device testing when the phone is connected and authorized.
@@ -445,15 +430,12 @@ Lesson:
 
 ### Recommended next actions
 
-1. Add `assets/images/scenes/full_mission_roleplay_review.jpg` for day 25.
-2. Strengthen `scripts/validate_asset_links.py` to check all `local_preferred.assetPath` image files.
-3. Re-run Android real-device test using the deployed URL after the phone appears in `adb devices -l`.
-4. Review week 5 scoring UX with an older learner:
+1. Re-run Android real-device test using the deployed URL after the phone appears in `adb devices -l`.
+2. Review week 5 scoring UX with an older learner:
    - Is "듣고 바로 따라 말하기" obvious?
    - Does the 4-second window feel too short for long mission-language phrases?
    - Is score feedback encouraging rather than discouraging?
-5. Consider adding a visible "마이크 권한 안내" help panel only on final-review pages.
-6. If Claude continues work, begin with the missing day 25 image and validator improvement before any new feature work.
+3. Consider adding a visible "마이크 권한 안내" help panel only on final-review pages.
 
 ## Quick Links For Claude
 
@@ -483,4 +465,3 @@ Day 25: https://xhpark.github.io/Thai_25day/?day=25
 - Use `/health` or `/status` for the voice server operational check.
 - Use deployed GitHub Pages for real STT testing; localhost is demo mode.
 - When touching PWA runtime files, bump cache/script versions together.
-

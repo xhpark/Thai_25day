@@ -26,6 +26,21 @@ def check_audio(owner: str, item: dict[str, Any], errors: list[str]) -> None:
                 errors.append(f"{owner}: missing audio for {item_id} {gender}/{mode}: {rel_path}")
 
 
+def check_local_image_source_plan(owner: str, image: dict[str, Any] | None, errors: list[str]) -> None:
+    if not image:
+        return
+    scene_id = image.get("sceneId") or "unknown-scene"
+    for source in image.get("sourcePlan", []):
+        if source.get("type") != "local_preferred":
+            continue
+        rel_path = source.get("assetPath")
+        if not rel_path:
+            errors.append(f"{owner}: local image source for {scene_id} has no assetPath")
+            continue
+        if not (ROOT / rel_path).exists():
+            errors.append(f"{owner}: missing local image for {scene_id}: {rel_path}")
+
+
 def check_learning_aid(errors: list[str]) -> None:
     aid_path = ROOT / "assets/generated/pwa/aid1_numbers.json"
     if not aid_path.exists():
@@ -96,6 +111,8 @@ def main() -> int:
             errors.append(f"{entry['path']}: id mismatch expected {entry['id']} got {data.get('id')}")
         if entry["kind"] == "kakao_card_spec" and not data.get("mainPhrases"):
             errors.append(f"{entry['id']}: kakao mainPhrases is empty")
+        check_local_image_source_plan(entry["id"], data.get("primaryImage"), errors)
+        check_local_image_source_plan(entry["id"], data.get("imageNotes", {}).get("primaryImage"), errors)
 
     for group in ("weekdayLessons", "saturdayPacks", "sundayReviews"):
         for bundle in bundles["bundles"].get(group, []):

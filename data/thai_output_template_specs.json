@@ -544,7 +544,10 @@
     {
       "sceneId": "prayer_support",
       "useFor": [
-        "W5D23"
+        "W5D23",
+        "W5D25",
+        "W5SAT",
+        "W5SUN"
       ],
       "description": "Supportive prayer moment between church members, respectful and calm",
       "altTextKo": "상대를 위로하며 기도해 주겠다고 말하는 장면"
@@ -560,11 +563,7 @@
     },
     {
       "sceneId": "full_mission_roleplay_review",
-      "useFor": [
-        "W5D25",
-        "W5SAT",
-        "W5SUN"
-      ],
+      "useFor": [],
       "description": "full review roleplay for mission conversation: small group practicing greeting, introduction, prayer support, and praise invitation in a friendly roleplay",
       "altTextKo": "처음 만남부터 기도와 찬양 초대까지 전체 흐름을 역할극으로 복습하는 장면"
     }

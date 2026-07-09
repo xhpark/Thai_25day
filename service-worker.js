@@ -1,4 +1,4 @@
-const CACHE_NAME = "thai25-day1-v22";
+const CACHE_NAME = "thai25-day1-v23";
 const SHELL_ASSETS = [
   "./",
   "./index.html",
